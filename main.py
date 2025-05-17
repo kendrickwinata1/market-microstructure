@@ -1,67 +1,110 @@
-# main.py
 import logging
-import time
 from config import Config
-from exchange import BinanceTestnetExchange
-from strategy import MarketMakerStrategy, SimulatedExchange
+from exchange import BinanceFuturesExchange
+from strategy import MarketMakerStrategy
+import matplotlib.pyplot as plt
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[logging.StreamHandler(), logging.FileHandler("market_maker.log", mode="w")]
-)
+def setup_logger(log_file):
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s %(levelname)s %(message)s',
+        handlers=[logging.FileHandler(log_file), logging.StreamHandler()]
+    )
 
-def run_live():
-    config = Config()
-    exchange = BinanceTestnetExchange(config)
-    strategy = MarketMakerStrategy(exchange, config)
-    logging.info("Starting live trading loop...")
-    try:
-        while True:
-            cont = strategy.run_step()
-
-            # --- Add these lines below to check and print balances ---
-            btc_balance = exchange.get_inventory('BTC')
-            usdt_balance = exchange.get_inventory('USDT')
-            print(f"[Balance] BTC: {btc_balance:.6f}   USDT: {usdt_balance:.2f}")
-            # ---------------------------------------------------------
-
-            if not cont:
-                break
-            time.sleep(config.refresh_interval)
-    except KeyboardInterrupt:
-        logging.info("Manual interrupt received, stopping strategy.")
-    finally:
-        try:
-            exchange.cancel_all_orders()
-        except Exception as e:
-            logging.error("Error during final order cancel: %s", e)
-    logging.info("Live trading loop exited.")
-
-def run_backtest():
+def run_backtest(config):
     import numpy as np
-    np.random.seed(42)
-    price_series = 30000 + np.cumsum(np.random.normal(0, 50, 500))
-    config = Config()
-    exchange = SimulatedExchange(config, price_series)
+    # Generate price series (random walk or use file)
+    if config.use_random_walk:
+        np.random.seed(42)
+        price_series = 30000 + np.cumsum(np.random.normal(0, 50, 500))
+    else:
+        # Load from CSV
+        import pandas as pd
+        price_series = pd.read_csv(config.price_series_file)['price'].values
+
+    class SimulatedExchange:
+        def __init__(self, price_series):
+            self.price_series = price_series
+            self.idx = 0
+            self.inventory = 0.0
+            self.balance = 10000.0  # Start with $10k USDT
+
+        def get_order_book(self, limit=5):
+            # Simulate depth as just +/- 1 USDT around current price
+            px = self.price_series[self.idx]
+            return px-1, px+1
+
+        def place_order(self, side, quantity, price, reduce_only=False):
+            # Simulate immediate fill at next tick
+            fill_px = self.price_series[self.idx]
+            if (side == "BUY" and fill_px <= price) or (side == "SELL" and fill_px >= price):
+                if side == "BUY":
+                    self.inventory += quantity
+                    self.balance -= quantity * price
+                else:
+                    self.inventory -= quantity
+                    self.balance += quantity * price
+                return {"status": "FILLED", "side": side, "price": price, "qty": quantity}
+            else:
+                return {"status": "NEW", "side": side, "price": price, "qty": quantity}
+
+        def cancel_all_orders(self):
+            return None
+
+        def get_balance(self, asset="USDT"):
+            return self.balance
+
+    exchange = SimulatedExchange(price_series)
     strategy = MarketMakerStrategy(exchange, config)
-    logging.info("Starting backtest...")
+
+    pnl_curve = []
+    inventory_curve = []
+    price_curve = []
+
+    for i in range(len(price_series)):
+        exchange.idx = i
+        strategy.run_step()
+        price_curve.append(price_series[i])
+        inventory_curve.append(exchange.inventory)
+        # PnL = balance + inventory*price
+        pnl_curve.append(exchange.balance + exchange.inventory * price_series[i])
+
+    print(f"Backtest complete. Final PnL: {pnl_curve[-1]:.2f}")
+
+    # Plot results
+    if config.enable_plotting:
+        fig, ax1 = plt.subplots()
+        ax1.plot(price_curve, label="Price", color="blue")
+        ax2 = ax1.twinx()
+        ax2.plot(inventory_curve, label="Inventory", color="orange")
+        ax1.set_xlabel("Time Step")
+        ax1.set_ylabel("Price (blue)")
+        ax2.set_ylabel("Inventory (orange)")
+        plt.title("Backtest: Price & Inventory")
+        plt.show()
+
+        plt.figure()
+        plt.plot(pnl_curve, label="PnL")
+        plt.xlabel("Time Step")
+        plt.ylabel("PnL")
+        plt.title("PnL Over Time")
+        plt.legend()
+        plt.show()
+
+def run_live(config):
+    exchange = BinanceFuturesExchange(config)
+    strategy = MarketMakerStrategy(exchange, config)
+    import time
     while True:
-        cont = strategy.run_step()
-        if not cont or exchange.current_index >= len(price_series):
-            break
-    final_inventory = exchange.inventory
-    final_balance = exchange.balance
-    starting_balance = exchange.starting_balance
-    final_portfolio_value = final_balance + final_inventory * (exchange.current_price or 0)
-    profit_loss = final_portfolio_value - starting_balance
-    logging.info("Backtest finished. Final PnL: %.2f USDT (Inventory: %.4f BTC, Cash: %.2f USDT)",
-                 profit_loss, final_inventory, final_balance)
-    num_trades = len(exchange.trade_history)
-    logging.info("Number of trades executed: %d", num_trades)
+        strategy.run_step()
+        time.sleep(config.refresh_interval)
 
 if __name__ == "__main__":
-    # To run live trading, uncomment the next line:
-    run_live()
-    # To run backtest, uncomment the next line:
-    # run_backtest()
+    config = Config()
+    setup_logger(config.log_file)
+    if config.mode == "backtest":
+        run_backtest(config)
+    elif config.mode == "live":
+        run_live(config)
+    else:
+        print("Unknown mode in config.")
