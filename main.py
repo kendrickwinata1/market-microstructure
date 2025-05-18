@@ -1,7 +1,9 @@
+# main.py
 import logging
 from config import Config
 from exchange import BinanceFuturesExchange
 from strategy import MarketMakerStrategy
+from risk_manager import RiskManager
 import matplotlib.pyplot as plt
 
 def setup_logger(log_file):
@@ -13,15 +15,16 @@ def setup_logger(log_file):
 
 def run_backtest(config):
     import numpy as np
-    # Generate price series (random walk or use file)
+
+    # Generate price series (random walk or from file)
     if config.use_random_walk:
         np.random.seed(42)
         price_series = 30000 + np.cumsum(np.random.normal(0, 50, 500))
     else:
-        # Load from CSV
         import pandas as pd
         price_series = pd.read_csv(config.price_series_file)['price'].values
 
+    # Simple simulator
     class SimulatedExchange:
         def __init__(self, price_series):
             self.price_series = price_series
@@ -30,12 +33,10 @@ def run_backtest(config):
             self.balance = 10000.0  # Start with $10k USDT
 
         def get_order_book(self, limit=5):
-            # Simulate depth as just +/- 1 USDT around current price
             px = self.price_series[self.idx]
             return px-1, px+1
 
         def place_order(self, side, quantity, price, reduce_only=False):
-            # Simulate immediate fill at next tick
             fill_px = self.price_series[self.idx]
             if (side == "BUY" and fill_px <= price) or (side == "SELL" and fill_px >= price):
                 if side == "BUY":
@@ -55,7 +56,8 @@ def run_backtest(config):
             return self.balance
 
     exchange = SimulatedExchange(price_series)
-    strategy = MarketMakerStrategy(exchange, config)
+    risk_manager = RiskManager(config)
+    strategy = MarketMakerStrategy(exchange, config, risk_manager)
 
     pnl_curve = []
     inventory_curve = []
@@ -66,34 +68,29 @@ def run_backtest(config):
         strategy.run_step()
         price_curve.append(price_series[i])
         inventory_curve.append(exchange.inventory)
-        # PnL = balance + inventory*price
         pnl_curve.append(exchange.balance + exchange.inventory * price_series[i])
 
     print(f"Backtest complete. Final PnL: {pnl_curve[-1]:.2f}")
 
     # Plot results
     if config.enable_plotting:
-        fig, ax1 = plt.subplots()
-        ax1.plot(price_curve, label="Price", color="blue")
-        ax2 = ax1.twinx()
-        ax2.plot(inventory_curve, label="Inventory", color="orange")
-        ax1.set_xlabel("Time Step")
-        ax1.set_ylabel("Price (blue)")
-        ax2.set_ylabel("Inventory (orange)")
-        plt.title("Backtest: Price & Inventory")
-        plt.show()
-
-        plt.figure()
-        plt.plot(pnl_curve, label="PnL")
-        plt.xlabel("Time Step")
-        plt.ylabel("PnL")
-        plt.title("PnL Over Time")
+        plt.figure(figsize=(12, 8))
+        plt.subplot(3, 1, 1)
+        plt.plot(price_curve, label='Price')
         plt.legend()
+        plt.subplot(3, 1, 2)
+        plt.plot(inventory_curve, label='Inventory')
+        plt.legend()
+        plt.subplot(3, 1, 3)
+        plt.plot(pnl_curve, label='PnL')
+        plt.legend()
+        plt.tight_layout()
         plt.show()
 
 def run_live(config):
     exchange = BinanceFuturesExchange(config)
-    strategy = MarketMakerStrategy(exchange, config)
+    risk_manager = RiskManager(config)
+    strategy = MarketMakerStrategy(exchange, config, risk_manager)
     import time
     while True:
         strategy.run_step()

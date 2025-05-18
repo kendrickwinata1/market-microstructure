@@ -1,3 +1,4 @@
+# exchange.py
 import os
 import time
 import hmac
@@ -20,7 +21,6 @@ class BinanceFuturesExchange:
         return {**params, "signature": signature}
 
     def get_order_book(self, limit=5):
-        """Get best bid/ask."""
         url = f"{self.base_url}/fapi/v1/depth"
         response = requests.get(url, params={"symbol": self.symbol, "limit": limit})
         data = response.json()
@@ -67,5 +67,3 @@ class BinanceFuturesExchange:
             if entry["asset"] == asset:
                 return float(entry["availableBalance"])
         return 0.0
-
-    # Add any extra utility for backtest mode as needed
