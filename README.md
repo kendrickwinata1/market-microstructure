@@ -1,138 +1,219 @@
-Crypto Trading Bot – Modular Algorithmic System for Binance Futures
-This project is a modular, event-driven algorithmic trading bot for the Binance Futures Testnet. It features live market data streaming, automated ML-based strategy execution, robust risk management, real-time bookkeeping, and order management.
+# Market Microstructure Trading Engine
 
-Project Features
-Live market data streaming (websocket)
+## Overview
 
-Automated trade execution (Buy/Sell/Hold signals from ML or rule-based models)
+This project is a modular Python framework for developing, backtesting, and running live trading strategies for cryptocurrency (specifically BTC/USDT) on Binance Futures (testnet).
 
-Bookkeeping: Real-time PnL, balance, and audit tracking
+The architecture integrates live data streaming, REST API execution, order management, ML-based signal generation, risk management, bookkeeping, backtesting, and visualization tools.
 
-Risk management: Stop-loss, max drawdown, and order sanity checks
+---
 
-Order management: Limit/market orders, order aging/cancellation
+## Folder Structure
 
-Backtesting and model training (offline utilities)
+```
 
-Rich feature engineering and visualization tools
+market-microstructure/
 
-Project Structure
-.
-├── app.py                           # Main trading loop and orchestrator
+│   app.py
+
+│   README.md
+
+│
+
 ├── gateway/
-│   ├── data_stream.py               # Live Binance websocket data stream
-│   ├── market_data_stream.py        # Simpler websocket market data stream
-│   └── main_gateway.py              # Trade execution API logic
-├── book_keeper/
-│   └── main_book_keeper.py          # BookKeeper: PnL, balance, positions
-├── risk_manager/
-│   └── main_risk_manager.py         # RiskManager: checks stop-loss, limits
-├── trading_engine/
-│   └── main_trading_strategy.py     # TradingStrategy: model & signal generation
+
+│   ├── data_stream.py
+
+│   ├── market_data_stream.py
+
+│   └── main_gateway.py
+
 ├── rest_connect/
-│   └── rest_factory.py              # REST API connection factory for Binance
-├── base_model.py                    # Abstract base ML model class
-├── logreg_model.py                  # Logistic Regression ML model
-├── backtest_trading_strategy.py     # Backtest engine for historical simulation
-├── model_old.py                     # Feature engineering, TDA labeling
-├── visualize.py                     # Visualization utility
-├── live_plotter.py                  # Live matplotlib price plotting
-├── correlation.py                   # Research: feature/signal correlation
-├── fetch_historical.py              # Fetches historical trades via CCXT
-├── historical.py                    # Fetches OHLCV data via CCXT
-├── pnl.py                           # Simple script for total PnL from signals
-└── .env                             # (Not included) Binance API credentials
 
-Main Application Workflow (app.py)
-1. Startup
-Loads API credentials from .env
+│   └── rest_factory.py
 
-Initializes:
+├── book_keeper/
 
-REST gateway for Binance
+│   └── main_book_keeper.py
 
-TradeExecutor (for order sending/cancelling)
+├── risk_manager/
 
-BookKeeper (PnL/position tracking)
+│   └── main_risk_manager.py
 
-RiskManager (for stop-loss, limits, checks)
+├── trading_engine/
 
-TradingStrategy (signal generation)
+│   └── main_trading_strategy.py
 
-DataStream (live websocket from Binance)
+│
 
-ExecManager (main orchestrator: connects all components)
+├── notebooks/
 
-2. Event-Driven Trading (Live Loop)
-DataStream streams market data. Each new tick triggers ExecManager.exec_strat.
+├── inputs/
 
-ExecManager handles:
+├── outputs/
 
-Updates BookKeeper with new prices and balances
+│
 
-Cancels any stale open orders
+├── model/
 
-Checks RiskManager for stop-loss, drawdown, or trading halt (liquidates if needed)
+│   ├── base_model.py
 
-Runs TradingStrategy to get next action (Buy/Sell/Hold + price)
+│   ├── logreg_model.py
 
-If trade is signaled, checks all risk rules before sending order via TradeExecutor
+│   └── model_old.py
 
-All order events are recorded and output to logs/CSV
+├── analysis/
 
-Order/portfolio changes are continuously saved for audit/tracking.
+│   ├── correlation.py
 
-3. Heartbeat
-Prints "application running" every 10 seconds to show liveness.
+│   ├── pnl.py
 
-⚡ Offline Utilities (Development/Analysis)
-Model Training & Feature Engineering
+│   └── visualize.py
 
-base_model.py, logreg_model.py, model_old.py
+│
 
-Backtesting
+├── fetch_historical.py
 
-backtest_trading_strategy.py: Simulate strategy performance on historical data
+├── historical.py
 
-Visualization
+├── backtest_trading_strategy.py
 
-visualize.py: Plot price and model features
+├── review_engine.py
 
-live_plotter.py: Live charting (Tkinter + Matplotlib)
+├── live_plotter.py
 
-PnL Analysis
+└── README.md
 
-pnl.py: Computes total profit/loss from labeled signal files
+```
 
-Historical Data Download
+---
 
-fetch_historical.py, historical.py: Download trades or OHLCV data for research
+## Main Modules
 
-🔌 How the Modules Communicate
-DataStream receives live ticks, calls ExecManager.exec_strat every update
+- **app.py**: Main application entry point, orchestrates system objects, data streaming, trading loop, and heartbeat.
 
-ExecManager:
+- **gateway/**: Handles real-time market data (websocket) and trade execution (REST API).
 
-Updates BookKeeper
+- **book_keeper/**: Stores and updates account balance, positions, and historical PnL.
 
-Calls RiskManager for safety checks
+- **risk_manager/**: Implements risk limits, order approval, stop-loss, and trading halt logic.
 
-Runs TradingStrategy for signal
+- **trading_engine/**: Core trading logic (signal generation, data aggregation, order signals).
 
-Places/cancels orders using TradeExecutor/RestGateway
+- **rest_connect/**: REST API connector and abstraction for exchange endpoints.
 
-RiskManager: Decides if trades are allowed, or if liquidation is needed
+- **model/**: Machine learning models for market prediction (e.g., logistic regression, signal labelling, feature engineering).
 
-BookKeeper: Tracks balances, PnL, positions, and saves to CSV
+- **analysis/**: Utilities for correlation, PnL calculation, visualization, and exploratory analysis.
 
-🛠️ Setup & Running
-Install dependencies
+- **fetch_historical.py / historical.py**: Download and preprocess historical data for model training or backtesting.
+
+- **backtest_trading_strategy.py**: Backtesting framework for evaluating trading strategy performance on historical data.
+
+- **review_engine.py**: Manages retraining, backtesting, and updating of the ML model.
+
+- **live_plotter.py**: (Optional) Real-time plotting of price data, peaks, troughs, and signal events.
+
+---
+
+## How the Components Communicate (app.py-centric)
+
+1. **app.py** loads API keys and sets up main components:
+
+   - `RestFactory` for REST API
+
+   - `TradeExecutor` for sending orders
+
+   - `BookKeeper` for state/history
+
+   - `RiskManager` for all risk controls
+
+   - `ExecManager` which brings them all together
+
+   - `DataStream` for websocket tick data
+
+2. **Data Flow:**
+
+   - DataStream receives live price ticks (via websocket) and calls `exec_manager.exec_strat(tick)`.
+
+   - `ExecManager` updates PnL/bookkeeping, cancels stale orders, checks risk (stop-loss, drawdown), and feeds price ticks to the trading model (via `TradingStrategy`).
+
+   - The ML model in `TradingStrategy` predicts buy/sell/hold. The output is risk-checked before a trade is sent.
+
+   - Orders are placed with `TradeExecutor`, managed via `rest_gateway` abstraction.
+
+   - BookKeeper updates history after trades for PnL and analytics.
+
+3. **Backtesting/Analysis:**
+
+   - Run `backtest_trading_strategy.py` and model scripts to train and validate strategies with historical data.
+
+4. **Visualization:**
+
+   - Use `visualize.py` and `live_plotter.py` for plotting and real-time monitoring.
+
+---
+
+## Usage
+
+1. **Install dependencies:**
+
+```bash
+
 pip install -r requirements.txt
 
-Set up your .env file with your Binance API credentials:
-API_KEY=your_binance_testnet_key
-API_SECRET=your_binance_testnet_secret
+```
 
-Run the bot:
+2. **Set up `.env` file** with your Binance testnet API keys:
+
+```env
+
+API_KEY=your_api_key
+
+API_SECRET=your_api_secret
+
+```
+
+3. **Run main trading loop (paper/live):**
+
+```bash
+
 python app.py
 
+```
+
+4. **Backtest a strategy:**
+
+```bash
+
+python review_engine.py
+
+```
+
+5. **Visualize results:**
+
+```bash
+
+python visualize.py
+
+```
+
+---
+
+## Notes
+
+- By default, all trading is on the Binance Futures testnet for safety.
+
+- Modular design: swap models, strategies, and risk logic as needed.
+
+- Logs are output both to the console and `app.log`.
+
+- Extend with your own strategies or risk models as needed.
+
+---
+
+## Credits
+
+- Written by Kendrick Winata, Quantitative Finance / Market Microstructure 2024
+
+- This is a research/educational project and **NOT** investment advice.
