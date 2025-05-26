@@ -199,21 +199,3 @@ python visualize.py
 ```
 
 ---
-
-## Notes
-
-- By default, all trading is on the Binance Futures testnet for safety.
-
-- Modular design: swap models, strategies, and risk logic as needed.
-
-- Logs are output both to the console and `app.log`.
-
-- Extend with your own strategies or risk models as needed.
-
----
-
-## Credits
-
-- Written by Kendrick Winata, Quantitative Finance / Market Microstructure 2024
-
-- This is a research/educational project and **NOT** investment advice.
