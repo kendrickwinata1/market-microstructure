@@ -1,3 +1,7 @@
-requests
-python-dotenv
-matplotlib
+matplotlib==3.8.2
+numpy==1.26.2
+persim==0.3.5
+ripser==0.6.8
+websocket-client==1.7.0
+binance==0.3
+python-binance==1.0.19

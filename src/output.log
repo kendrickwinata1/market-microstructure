@@ -1,0 +1,3204 @@
+2025-05-26 00:01:04,559 [MainThread  ] [INFO ]  API_KEY: 85598458174867dbc8a0019da63460949ab766358dbabd942feff1eea3de5d49
+2025-05-26 00:01:04,560 [MainThread  ] [INFO ]  API_SECRET: ea6da2f56cec7eb7bad8eb40be534149b2fc7b849a92e63818839ed21827188d
+2025-05-26 00:01:07,863 [MainThread  ] [INFO ]  Initializing connection
+2025-05-26 00:01:07,863 [MainThread  ] [INFO ]  reconnecting websocket
+2025-05-26 00:01:08,106 [MainThread  ] [INFO ]  starting event loop thread
+2025-05-26 00:01:08,108 [Binance     ] [INFO ]  Subscribing to user data events
+2025-05-26 00:01:08,220 [MainThread  ] [INFO ]  Initializing connection
+2025-05-26 00:01:08,221 [MainThread  ] [INFO ]  reconnecting websocket
+2025-05-26 00:01:08,405 [MainThread  ] [INFO ]  starting event loop thread
+2025-05-26 00:01:08,406 [Thread-1 (_r] [INFO ]  Subscribing to depth events
+2025-05-26 00:01:08,406 [Thread-1 (_r] [INFO ]  depth socket not connected, reconnecting
+2025-05-26 00:01:09,916 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:01:14,731 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:01:19,032 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:01:33,448 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+Launching execution environment...
+initializing REST gateway factory
+CHECK MY API_KEY:  85598458174867dbc8a0019da63460949ab766358dbabd942feff1eea3de5d49
+CHECK MY API_SECRET:  ea6da2f56cec7eb7bad8eb40be534149b2fc7b849a92e63818839ed21827188d
+################ REGISTERING CALLBACK ################
+Response: {'serverTime': 1748188869308}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 9, 202810), '106947.10')
+initializing..
+check last data:               Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+0  2025-05-26 00:01:09  ...                        NaN
+
+[1 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106947.1, '2025-05-26 00:01:09')
+Response: {'serverTime': 1748188869778}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188870373}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 10, 274796), '106947.10')
+initializing..
+check last data:               Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+0  2025-05-26 00:01:09  ...                        NaN
+1  2025-05-26 00:01:10  ...                        NaN
+
+[2 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106947.1, '2025-05-26 00:01:10')
+Response: {'serverTime': 1748188870769}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188872123}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 12, 24449), '106950.00')
+initializing..
+check last data:               Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+0  2025-05-26 00:01:09  ...                        NaN
+1  2025-05-26 00:01:10  ...                        NaN
+2  2025-05-26 00:01:11  ...                        NaN
+3  2025-05-26 00:01:12  ...                        NaN
+
+[4 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106950.0, '2025-05-26 00:01:12')
+Response: {'serverTime': 1748188872513}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188874220}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 14, 118707), '106950.00')
+initializing..
+check last data:               Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+1  2025-05-26 00:01:10  ...                        NaN
+2  2025-05-26 00:01:11  ...                        NaN
+3  2025-05-26 00:01:12  ...                        NaN
+4  2025-05-26 00:01:13  ...                        NaN
+5  2025-05-26 00:01:14  ...                        NaN
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106950.0, '2025-05-26 00:01:14')
+Response: {'serverTime': 1748188874611}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188875183}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 15, 84266), '106950.00')
+initializing..
+check last data:               Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+2  2025-05-26 00:01:11  ...                        NaN
+3  2025-05-26 00:01:12  ...                        NaN
+4  2025-05-26 00:01:13  ...                        NaN
+5  2025-05-26 00:01:14  ...                        NaN
+6  2025-05-26 00:01:15  ...                        NaN
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106950.0, '2025-05-26 00:01:15')
+Response: {'serverTime': 1748188875611}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188878489}
+Heartbeat: application running.
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 18, 386747), '106946.70')
+initializing..
+check last data:               Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+5  2025-05-26 00:01:14  ...                        NaN
+6  2025-05-26 00:01:15  ...                        NaN
+7  2025-05-26 00:01:16  ...                        NaN
+8  2025-05-26 00:01:17  ...                        NaN
+9  2025-05-26 00:01:18  ...                        NaN
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106946.7, '2025-05-26 00:01:18')
+Response: {'serverTime': 1748188878883}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188879498}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 19, 394083), '106946.70')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+6   2025-05-26 00:01:15  ...                        NaN
+7   2025-05-26 00:01:16  ...                        NaN
+8   2025-05-26 00:01:17  ...                        NaN
+9   2025-05-26 00:01:18  ...                        NaN
+10  2025-05-26 00:01:19  ...                        NaN
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106946.7, '2025-05-26 00:01:19')
+Response: {'serverTime': 1748188879896}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188880700}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 20, 598298), '106946.70')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+7   2025-05-26 00:01:16  ...                        NaN
+8   2025-05-26 00:01:17  ...                        NaN
+9   2025-05-26 00:01:18  ...                        NaN
+10  2025-05-26 00:01:19  ...                        NaN
+11  2025-05-26 00:01:20  ...                        NaN
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106946.7, '2025-05-26 00:01:21')
+Response: {'serverTime': 1748188881186}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188883847}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 23, 744558), '106946.70')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+10  2025-05-26 00:01:19  ...                        NaN
+11  2025-05-26 00:01:20  ...                        NaN
+12  2025-05-26 00:01:21  ...                        NaN
+13  2025-05-26 00:01:22  ...                        NaN
+14  2025-05-26 00:01:23  ...                        NaN
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106946.7, '2025-05-26 00:01:24')
+Response: {'serverTime': 1748188885036}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748188892865}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 32, 758456), '106946.70')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+19  2025-05-26 00:01:28  ...              -1.455192e-07
+20  2025-05-26 00:01:29  ...              -1.455192e-07
+21  2025-05-26 00:01:30  ...              -1.455192e-07
+22  2025-05-26 00:01:31  ...              -1.455192e-07
+23  2025-05-26 00:01:32  ...              -1.450000e+03
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106946.7, '2025-05-26 00:01:33')
+Response: {'serverTime': 1748188893269}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188893891}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 33, 795261), '106941.30')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+20  2025-05-26 00:01:29  ...              -1.455192e-07
+21  2025-05-26 00:01:30  ...              -1.455192e-07
+22  2025-05-26 00:01:31  ...              -1.455192e-07
+23  2025-05-26 00:01:32  ...              -1.450000e+03
+24  2025-05-26 00:01:33  ...              -2.700000e+03
+
+[5 rows x 29 columns]2025-05-26 00:01:35,959 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:01:38,822 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:01:39,061 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:01:40,162 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:01:46,582 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:01:52,755 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:01:55,188 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106941.3, '2025-05-26 00:01:34')
+Response: {'serverTime': 1748188894293}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188895409}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 35, 300786), '106941.30')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+22  2025-05-26 00:01:31  ...              -1.455192e-07
+23  2025-05-26 00:01:32  ...              -1.450000e+03
+24  2025-05-26 00:01:33  ...              -2.700000e+03
+25  2025-05-26 00:01:34  ...               0.000000e+00
+26  2025-05-26 00:01:35  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Hold', 106941.3, '2025-05-26 00:01:35')
+model output: ('Hold', 106941.3, '2025-05-26 00:01:35')
+Response: {'serverTime': 1748188895834}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188896417}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 36, 313314), '106938.90')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+23  2025-05-26 00:01:32  ...                    -1450.0
+24  2025-05-26 00:01:33  ...                    -2700.0
+25  2025-05-26 00:01:34  ...                        0.0
+26  2025-05-26 00:01:35  ...                        0.0
+27  2025-05-26 00:01:36  ...                    -1200.0
+
+[5 rows x 29 columns]
+action:  ('Buy', 106938.9, '2025-05-26 00:01:36')
+model output: ('Buy', 106938.9, '2025-05-26 00:01:36')
+Response: {'serverTime': 1748188896837}
+[risk mgr] AvailableBalance :13914.70960074
+buy trade check amt10436.032200555
+[risk mgr] AvailableBalance :13914.70960074
+[risk mgr] WalletBalance :13914.70960074
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188898183}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 38, 80046), '106938.90')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+25  2025-05-26 00:01:34  ...                        0.0
+26  2025-05-26 00:01:35  ...                        0.0
+27  2025-05-26 00:01:36  ...                    -1200.0
+28  2025-05-26 00:01:37  ...                        0.0
+29  2025-05-26 00:01:38  ...                     1650.0
+
+[5 rows x 29 columns]
+action:  ('Sell', 106938.9, '2025-05-26 00:01:38')
+model output: ('Sell', 106938.9, '2025-05-26 00:01:38')
+Heartbeat: application running.
+Response: {'serverTime': 1748188898595}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188899524}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 39, 423076), '106941.80')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+26  2025-05-26 00:01:35  ...                        0.0
+27  2025-05-26 00:01:36  ...                    -1200.0
+28  2025-05-26 00:01:37  ...                        0.0
+29  2025-05-26 00:01:38  ...                     1650.0
+30  2025-05-26 00:01:39  ...                     1450.0
+
+[5 rows x 29 columns]
+action:  ('Sell', 106941.8, '2025-05-26 00:01:39')
+model output: ('Sell', 106941.8, '2025-05-26 00:01:39')
+Response: {'serverTime': 1748188899938}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188906016}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 45, 908833), '106938.90')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+32  2025-05-26 00:01:41  ...              -2.910383e-07
+33  2025-05-26 00:01:42  ...               2.910383e-07
+34  2025-05-26 00:01:43  ...               0.000000e+00
+35  2025-05-26 00:01:44  ...               0.000000e+00
+36  2025-05-26 00:01:45  ...              -1.450000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106938.9, '2025-05-26 00:01:46')
+model output: ('Buy', 106938.9, '2025-05-26 00:01:46')
+Response: {'serverTime': 1748188906420}
+[risk mgr] AvailableBalance :13919.1638376
+buy trade check amt10439.3728782
+[risk mgr] AvailableBalance :13919.1638376
+[risk mgr] WalletBalance :13919.1638376
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188907035}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 46, 932343), '106933.20')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+33  2025-05-26 00:01:42  ...               2.910383e-07
+34  2025-05-26 00:01:43  ...               0.000000e+00
+35  2025-05-26 00:01:44  ...               0.000000e+00
+36  2025-05-26 00:01:45  ...              -1.450000e+03
+37  2025-05-26 00:01:46  ...              -2.850000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106933.2, '2025-05-26 00:01:47')
+model output: ('Buy', 106933.2, '2025-05-26 00:01:47')
+Response: {'serverTime': 1748188907520}
+[risk mgr] AvailableBalance :13920.97121847
+buy trade check amt10440.7284138525
+[risk mgr] AvailableBalance :13920.97121847
+[risk mgr] WalletBalance :13920.97121847
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748188912073}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 51, 969314), '106933.20')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+38  2025-05-26 00:01:47  ...               2.910383e-07
+39  2025-05-26 00:01:48  ...               2.910383e-07
+40  2025-05-26 00:01:49  ...              -2.910383e-07
+41  2025-05-26 00:01:50  ...               1.455192e-07
+42  2025-05-26 00:01:51  ...              -4.365575e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106933.2, '2025-05-26 00:01:52')
+model output: ('Sell', 106933.2, '2025-05-26 00:01:52')
+Response: {'serverTime': 1748188912503}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188914570}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 54, 469693), '106933.20')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+41  2025-05-26 00:01:50  ...               1.455192e-07
+42  2025-05-26 00:01:51  ...              -4.365575e-07
+43  2025-05-26 00:01:52  ...               2.910383e-07
+44  2025-05-26 00:01:53  ...               2.700000e+03
+45  2025-05-26 00:01:54  ...              -4.365575e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106933.2, '2025-05-26 00:01:54')
+model output: ('Hold', 106933.2, '2025-05-26 00:01:54')
+Response: {'serverTime': 1748188915006}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188915656}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 55, 554699), '106898.40')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+42  2025-05-26 00:01:51  ...              -4.365575e-07
+43  2025-05-26 00:01:52  ...               2.910383e-07
+44  2025-05-26 00:01:53  ...               2.700000e+03
+45  2025-05-26 00:01:54  ...              -4.365575e-07
+46  2025-05-26 00:01:55  ...              -1.740000e+04
+
+[5 rows x 29 columns]2025-05-26 00:02:00,204 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:02:01,322 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:02:07,656 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:02:12,719 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+
+action:  ('Buy', 106898.4, '2025-05-26 00:01:55')
+model output: ('Buy', 106898.4, '2025-05-26 00:01:55')
+Response: {'serverTime': 1748188916103}
+[risk mgr] AvailableBalance :13921.0255976
+buy trade check amt10440.7691982
+[risk mgr] AvailableBalance :13921.0255976
+[risk mgr] WalletBalance :13921.0255976
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188917753}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 57, 653238), '106898.40')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+44  2025-05-26 00:01:53  ...               2.700000e+03
+45  2025-05-26 00:01:54  ...              -4.365575e-07
+46  2025-05-26 00:01:55  ...              -1.740000e+04
+47  2025-05-26 00:01:56  ...               1.200000e+03
+48  2025-05-26 00:01:57  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106898.4, '2025-05-26 00:01:58')
+model output: ('Hold', 106898.4, '2025-05-26 00:01:58')
+Response: {'serverTime': 1748188918192}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748188919599}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 1, 59, 490479), '106898.40')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+46  2025-05-26 00:01:55  ...              -1.740000e+04
+47  2025-05-26 00:01:56  ...               1.200000e+03
+48  2025-05-26 00:01:57  ...               1.455192e-07
+49  2025-05-26 00:01:58  ...               0.000000e+00
+50  2025-05-26 00:01:59  ...              -1.450000e+03
+
+[5 rows x 29 columns]
+action:  ('Hold', 106898.4, '2025-05-26 00:01:59')
+model output: ('Hold', 106898.4, '2025-05-26 00:01:59')
+Response: {'serverTime': 1748188920036}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188920652}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 0, 556442), '106891.60')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+47  2025-05-26 00:01:56  ...               1.200000e+03
+48  2025-05-26 00:01:57  ...               1.455192e-07
+49  2025-05-26 00:01:58  ...               0.000000e+00
+50  2025-05-26 00:01:59  ...              -1.450000e+03
+51  2025-05-26 00:02:00  ...              -3.400000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106891.6, '2025-05-26 00:02:00')
+model output: ('Sell', 106891.6, '2025-05-26 00:02:00')
+Response: {'serverTime': 1748188921092}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188922498}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 2, 398050), '106891.60')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+49  2025-05-26 00:01:58  ...               0.000000e+00
+50  2025-05-26 00:01:59  ...              -1.450000e+03
+51  2025-05-26 00:02:00  ...              -3.400000e+03
+52  2025-05-26 00:02:01  ...               0.000000e+00
+53  2025-05-26 00:02:02  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106891.6, '2025-05-26 00:02:02')
+model output: ('Hold', 106891.6, '2025-05-26 00:02:02')
+Response: {'serverTime': 1748188922947}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188924479}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 4, 366237), '106891.60')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+51  2025-05-26 00:02:00  ...              -3.400000e+03
+52  2025-05-26 00:02:01  ...               0.000000e+00
+53  2025-05-26 00:02:02  ...               1.455192e-07
+54  2025-05-26 00:02:03  ...              -1.455192e-07
+55  2025-05-26 00:02:04  ...               2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106891.6, '2025-05-26 00:02:04')
+model output: ('Hold', 106891.6, '2025-05-26 00:02:04')
+Response: {'serverTime': 1748188924937}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188926970}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 6, 855804), '106891.60')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+53  2025-05-26 00:02:02  ...               1.455192e-07
+54  2025-05-26 00:02:03  ...              -1.455192e-07
+55  2025-05-26 00:02:04  ...               2.910383e-07
+56  2025-05-26 00:02:05  ...               1.450000e+03
+57  2025-05-26 00:02:06  ...               2.850000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106891.6, '2025-05-26 00:02:07')
+model output: ('Sell', 106891.6, '2025-05-26 00:02:07')
+Response: {'serverTime': 1748188927432}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Heartbeat: application running.
+Response: {'serverTime': 1748188932150}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 12, 38399), '106890.30')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+59  2025-05-26 00:02:08  ...              -4.365575e-07
+60  2025-05-26 00:02:09  ...               1.455192e-07
+61  2025-05-26 00:02:10  ...               0.000000e+00
+62  2025-05-26 00:02:11  ...               0.000000e+00
+63  2025-05-26 00:02:12  ...              -6.500000e+02
+
+[5 rows x 29 columns]
+action:  ('Buy', 106890.3, '2025-05-26 00:02:12')
+model output: ('Buy', 106890.3, '2025-05-26 00:02:12')
+Response: {'serverTime': 1748188932599}
+[risk mgr] AvailableBalance :13921.3699176
+buy trade check amt10441.027438199999
+[risk mgr] AvailableBalance :13921.3699176
+[risk mgr] WalletBalance :13921.3699176
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188933193}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 13, 83549), '106890.30')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+60  2025-05-26 00:02:09  ...               1.455192e-07
+61  2025-05-26 00:02:10  ...               0.000000e+00
+62  2025-05-26 00:02:11  ...               0.000000e+00
+63  2025-05-26 00:02:12  ...              -6.500000e+02
+64  2025-05-26 00:02:13  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106890.3, '2025-05-26 00:02:13')
+model output: ('Hold', 106890.3, '2025-05-26 00:02:13')
+Response: {'serverTime': 1748188933642}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188935671}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 15, 564093), '106890.30')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+62  2025-05-26 00:02:11  ...               0.000000e+00
+63  2025-05-26 00:02:12  ...              -6.500000e+02
+64  2025-05-26 00:02:13  ...               1.455192e-07
+65  2025-05-26 00:02:14  ...               0.000000e+00
+66  2025-05-26 00:02:15  ...               1.740000e+04
+
+[5 rows x 29 columns]
+action:  ('Sell', 106890.3, '2025-05-26 00:02:16')
+model output: ('Sell', 106890.3, '2025-05-26 00:02:16')
+Response: {'serverTime': 1748188936109}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******2025-05-26 00:02:16,333 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:02:16,622 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:02:19,732 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:02:20,896 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:02:25,339 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:02:25,635 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:02:28,131 [Thread-1 (_r] [ERROR]  encountered issue in depth processing
+Traceback (most recent call last):
+  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/src/gateway/data_stream.py", line 122, in _listen_market_forever
+    _callback(self.output)
+  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/src/app.py", line 121, in exec_strat
+    output = self.strategy.analyze_data()  # Get model signal
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/src/trading_engine/main_trading_strategy.py", line 98, in analyze_data
+    self.data["Date"] = pd.to_datetime(self.data["Timestamp"])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/core/tools/datetimes.py", line 1068, in to_datetime
+    values = convert_listlike(arg._values, format)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/core/tools/datetimes.py", line 438, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64ns(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/core/arrays/datetimes.py", line 2177, in objects_to_datetime64ns
+    result, tz_parsed = tslib.array_to_datetime(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/tslib.pyx", line 427, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslib.pyx", line 678, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslib.pyx", line 674, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslib.pyx", line 628, in pandas._libs.tslib.array_to_datetime
+  File "pandas/_libs/tslibs/conversion.pyx", line 391, in pandas._libs.tslibs.conversion.convert_datetime_to_tsobject
+  File "pandas/_libs/tslibs/np_datetime.pyx", line 212, in pandas._libs.tslibs.np_datetime.check_dts_bounds
+pandas._libs.tslibs.np_datetime.OutOfBoundsDatetime: Out of bounds nanosecond timestamp: 1-01-26 00:01:48 present at position 34
+2025-05-26 00:02:28,151 [Thread-1 (_r] [INFO ]  reconnecting websocket
+2025-05-26 00:02:28,350 [Thread-1 (_r] [INFO ]  depth socket not connected, reconnecting
+2025-05-26 00:02:30,046 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:02:30,344 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:02:33,162 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:02:33,445 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188937082}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 16, 973744), '106888.90')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+63  2025-05-26 00:02:12  ...              -6.500000e+02
+64  2025-05-26 00:02:13  ...               1.455192e-07
+65  2025-05-26 00:02:14  ...               0.000000e+00
+66  2025-05-26 00:02:15  ...               1.740000e+04
+67  2025-05-26 00:02:16  ...              -7.000000e+02
+
+[5 rows x 29 columns]
+action:  ('Buy', 106888.9, '2025-05-26 00:02:17')
+model output: ('Buy', 106888.9, '2025-05-26 00:02:17')
+Response: {'serverTime': 1748188937540}
+[risk mgr] AvailableBalance :13921.29823761
+buy trade check amt10440.973678207502
+[risk mgr] AvailableBalance :13921.29823761
+[risk mgr] WalletBalance :13921.29823761
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748188939098}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 18, 994815), '106888.90')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+65  2025-05-26 00:02:14  ...               0.000000e+00
+66  2025-05-26 00:02:15  ...               1.740000e+04
+67  2025-05-26 00:02:16  ...              -7.000000e+02
+68  2025-05-26 00:02:17  ...              -1.455192e-07
+69  2025-05-26 00:02:18  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Hold', 106888.9, '2025-05-26 00:02:19')
+model output: ('Hold', 106888.9, '2025-05-26 00:02:19')
+Response: {'serverTime': 1748188939570}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188940176}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 20, 75777), '106889.20')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+67  2025-05-26 00:02:16  ...              -7.000000e+02
+68  2025-05-26 00:02:17  ...              -1.455192e-07
+69  2025-05-26 00:02:18  ...               0.000000e+00
+70  2025-05-26 00:02:19  ...               1.455192e-07
+71  2025-05-26 00:02:20  ...               3.550000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106889.2, '2025-05-26 00:02:20')
+model output: ('Sell', 106889.2, '2025-05-26 00:02:20')
+Response: {'serverTime': 1748188940634}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188943274}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 23, 170443), '106889.20')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+70  2025-05-26 00:02:19  ...               1.455192e-07
+71  2025-05-26 00:02:20  ...               3.550000e+03
+72  2025-05-26 00:02:21  ...               0.000000e+00
+73  2025-05-26 00:02:22  ...              -2.910383e-07
+74  2025-05-26 00:02:23  ...               2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106889.2, '2025-05-26 00:02:25')
+model output: ('Sell', 106889.2, '2025-05-26 00:02:25')
+Response: {'serverTime': 1748188945120}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188946097}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 25, 992180), '106891.40')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+72  2025-05-26 00:02:21  ...               0.000000e+00
+73  2025-05-26 00:02:22  ...              -2.910383e-07
+74  2025-05-26 00:02:23  ...               2.910383e-07
+75  2025-05-26 00:02:24  ...               0.000000e+00
+76  2025-05-26 00:02:25  ...               1.100000e+03
+
+[5 rows x 29 columns]
+action:  ('Hold', 106891.4, '2025-05-26 00:02:26')
+model output: ('Hold', 106891.4, '2025-05-26 00:02:26')
+Response: {'serverTime': 1748188946551}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188947651}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 27, 541391), '106891.40')
+initializing..
+Heartbeat: application running.
+Response: {'serverTime': 1748188949349}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 29, 244772), '106898.30')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+76  2025-05-26 00:02:25  ...               1.100000e+03
+77  2025-05-26 00:02:26  ...               2.910383e-07
+78  2025-05-26 00:02:27  ...              -2.910383e-07
+79  2025-05-26 00:02:28  ...               0.000000e+00
+80  2025-05-26 00:02:29  ...               3.450000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106898.3, '2025-05-26 00:02:29')
+model output: ('Sell', 106898.3, '2025-05-26 00:02:29')
+Response: {'serverTime': 1748188949833}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188950788}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 30, 686653), '106898.30')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+77  2025-05-26 00:02:26  ...               2.910383e-07
+78  2025-05-26 00:02:27  ...              -2.910383e-07
+79  2025-05-26 00:02:28  ...               0.000000e+00
+80  2025-05-26 00:02:29  ...               3.450000e+03
+81  2025-05-26 00:02:30  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Buy', 106898.3, '2025-05-26 00:02:31')
+model output: ('Buy', 106898.3, '2025-05-26 00:02:31')
+Response: {'serverTime': 1748188951269}
+[risk mgr] AvailableBalance :13920.82653465
+buy trade check amt10440.6199009875
+[risk mgr] AvailableBalance :13920.82653465
+[risk mgr] WalletBalance :13920.82653465
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188952459}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 32, 352007), '106898.30')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+79  2025-05-26 00:02:28  ...               0.000000e+00
+80  2025-05-26 00:02:29  ...               3.450000e+03
+81  2025-05-26 00:02:30  ...               0.000000e+00
+82  2025-05-26 00:02:31  ...              -1.455192e-07
+83  2025-05-26 00:02:32  ...               6.500000e+02
+
+[5 rows x 29 columns]
+action:  ('Sell', 106898.3, '2025-05-26 00:02:32')
+model output: ('Sell', 106898.3, '2025-05-26 00:02:32')
+Response: {'serverTime': 1748188952931}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188953902}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 33, 801104), '106890.40')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+80  2025-05-26 00:02:29  ...               3.450000e+03
+81  2025-05-26 00:02:30  ...               0.000000e+00
+82  2025-05-26 00:02:31  ...              -1.455192e-07
+83  2025-05-26 00:02:32  ...               6.500000e+02
+84  2025-05-26 00:02:33  ...              -3.950000e+03
+
+[5 rows x 29 columns]2025-05-26 00:02:41,758 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:02:44,050 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:02:46,367 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:02:50,081 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+
+action:  ('Buy', 106890.4, '2025-05-26 00:02:34')
+model output: ('Buy', 106890.4, '2025-05-26 00:02:34')
+Response: {'serverTime': 1748188954368}
+[risk mgr] AvailableBalance :13920.8284776
+buy trade check amt10440.6213582
+[risk mgr] AvailableBalance :13920.8284776
+[risk mgr] WalletBalance :13920.8284776
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748188961004}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 40, 904054), '106890.40')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+87  2025-05-26 00:02:36  ...               7.000000e+02
+88  2025-05-26 00:02:37  ...              -1.455192e-07
+89  2025-05-26 00:02:38  ...               4.365575e-07
+90  2025-05-26 00:02:39  ...              -2.910383e-07
+91  2025-05-26 00:02:40  ...              -1.500000e+02
+
+[5 rows x 29 columns]
+action:  ('Buy', 106890.4, '2025-05-26 00:02:41')
+model output: ('Buy', 106890.4, '2025-05-26 00:02:41')
+Response: {'serverTime': 1748188961630}
+[risk mgr] AvailableBalance :13920.9724776
+buy trade check amt10440.7293582
+[risk mgr] AvailableBalance :13920.9724776
+[risk mgr] WalletBalance :13920.9724776
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188962203}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 42, 101804), '106890.40')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+89  2025-05-26 00:02:38  ...               4.365575e-07
+90  2025-05-26 00:02:39  ...              -2.910383e-07
+91  2025-05-26 00:02:40  ...              -1.500000e+02
+92  2025-05-26 00:02:41  ...               2.910383e-07
+93  2025-05-26 00:02:42  ...              -2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106890.4, '2025-05-26 00:02:42')
+model output: ('Hold', 106890.4, '2025-05-26 00:02:42')
+Response: {'serverTime': 1748188962664}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188963378}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 43, 271371), '106890.40')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+90  2025-05-26 00:02:39  ...              -2.910383e-07
+91  2025-05-26 00:02:40  ...              -1.500000e+02
+92  2025-05-26 00:02:41  ...               2.910383e-07
+93  2025-05-26 00:02:42  ...              -2.910383e-07
+94  2025-05-26 00:02:43  ...               2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106890.4, '2025-05-26 00:02:43')
+model output: ('Hold', 106890.4, '2025-05-26 00:02:43')
+Response: {'serverTime': 1748188963868}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188964524}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 44, 421587), '106890.40')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+91  2025-05-26 00:02:40  ...              -1.500000e+02
+92  2025-05-26 00:02:41  ...               2.910383e-07
+93  2025-05-26 00:02:42  ...              -2.910383e-07
+94  2025-05-26 00:02:43  ...               2.910383e-07
+95  2025-05-26 00:02:44  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Hold', 106890.4, '2025-05-26 00:02:44')
+model output: ('Hold', 106890.4, '2025-05-26 00:02:44')
+Response: {'serverTime': 1748188964996}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188965751}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 45, 642516), '106890.40')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+92  2025-05-26 00:02:41  ...               2.910383e-07
+93  2025-05-26 00:02:42  ...              -2.910383e-07
+94  2025-05-26 00:02:43  ...               2.910383e-07
+95  2025-05-26 00:02:44  ...               0.000000e+00
+96  2025-05-26 00:02:45  ...              -1.100000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106890.4, '2025-05-26 00:02:46')
+model output: ('Buy', 106890.4, '2025-05-26 00:02:46')
+Response: {'serverTime': 1748188966239}
+[risk mgr] AvailableBalance :13921.2924776
+buy trade check amt10440.9693582
+[risk mgr] AvailableBalance :13921.2924776
+[risk mgr] WalletBalance :13921.2924776
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188966839}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 46, 732034), '106889.50')
+initializing..
+check last data:                Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+93  2025-05-26 00:02:42  ...              -2.910383e-07
+94  2025-05-26 00:02:43  ...               2.910383e-07
+95  2025-05-26 00:02:44  ...               0.000000e+00
+96  2025-05-26 00:02:45  ...              -1.100000e+03
+97  2025-05-26 00:02:46  ...              -4.500000e+02
+
+[5 rows x 29 columns]
+action:  ('Buy', 106889.5, '2025-05-26 00:02:47')
+model output: ('Buy', 106889.5, '2025-05-26 00:02:47')
+Response: {'serverTime': 1748188967671}
+[risk mgr] AvailableBalance :13921.2924776
+buy trade check amt10440.9693582
+[risk mgr] AvailableBalance :13921.2924776
+[risk mgr] WalletBalance :13921.2924776
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748188969453}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 49, 348939), '106889.50')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+96   2025-05-26 00:02:45  ...              -1.100000e+03
+97   2025-05-26 00:02:46  ...              -4.500000e+02
+98   2025-05-26 00:02:47  ...              -1.455192e-07
+99   2025-05-26 00:02:48  ...               1.455192e-07
+100  2025-05-26 00:02:49  ...              -3.450000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106889.5, '2025-05-26 00:02:49')
+model output: ('Buy', 106889.5, '2025-05-26 00:02:49')
+Response: {'serverTime': 1748188969954}
+[risk mgr] AvailableBalance :13921.4467176
+buy trade check amt10441.085038199999
+[risk mgr] AvailableBalance :13921.4467176
+[risk mgr] WalletBalance :13921.4467176
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188970551}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 50, 441236), '106887.50')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+97   2025-05-26 00:02:46  ...              -4.500000e+02
+98   2025-05-26 00:02:47  ...              -1.455192e-07
+99   2025-05-26 00:02:48  ...               1.455192e-07
+100  2025-05-26 00:02:49  ...              -3.450000e+03
+101  2025-05-26 00:02:50  ...              -1.000000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106887.5, '2025-05-26 00:02:50')
+model output: ('Buy', 106887.5, '2025-05-26 00:02:50')
+Response: {'serverTime': 1748188971162}
+[risk mgr] AvailableBalance :13921.47892758
+buy trade check amt10441.109195685
+[risk mgr] AvailableBalance :13921.47892758
+[risk mgr] WalletBalance :13921.47892758
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188974064}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 53, 961654), '106887.50')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+100  2025-05-26 00:02:49  ...              -3.450000e+03
+101  2025-05-26 00:02:50  ...              -1.000000e+03
+102  2025-05-26 00:02:51  ...               0.000000e+00
+103  2025-05-26 00:02:52  ...              -1.455192e-07
+104  2025-05-26 00:02:53  ...               3.950000e+03
+
+[5 rows x 29 columns]2025-05-26 00:02:54,774 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:02:55,082 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:02:56,239 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:02:59,001 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:03:02,593 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:03:07,906 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:03:08,272 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:03:13,410 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+
+action:  ('Sell', 106887.5, '2025-05-26 00:02:54')
+model output: ('Sell', 106887.5, '2025-05-26 00:02:54')
+Response: {'serverTime': 1748188974546}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188975529}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 55, 428451), '106887.50')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+102  2025-05-26 00:02:51  ...               0.000000e+00
+103  2025-05-26 00:02:52  ...              -1.455192e-07
+104  2025-05-26 00:02:53  ...               3.950000e+03
+105  2025-05-26 00:02:54  ...               1.455192e-07
+106  2025-05-26 00:02:55  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Sell', 106887.5, '2025-05-26 00:02:55')
+model output: ('Sell', 106887.5, '2025-05-26 00:02:55')
+Response: {'serverTime': 1748188976011}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188978378}
+Heartbeat: application running.
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 58, 283855), '106887.50')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+105  2025-05-26 00:02:54  ...               1.455192e-07
+106  2025-05-26 00:02:55  ...               0.000000e+00
+107  2025-05-26 00:02:56  ...              -1.455192e-07
+108  2025-05-26 00:02:57  ...              -1.455192e-07
+109  2025-05-26 00:02:58  ...               2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106887.5, '2025-05-26 00:02:58')
+model output: ('Hold', 106887.5, '2025-05-26 00:02:58')
+Response: {'serverTime': 1748188978881}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188979452}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 2, 59, 337140), '106887.50')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+106  2025-05-26 00:02:55  ...               0.000000e+00
+107  2025-05-26 00:02:56  ...              -1.455192e-07
+108  2025-05-26 00:02:57  ...              -1.455192e-07
+109  2025-05-26 00:02:58  ...               2.910383e-07
+110  2025-05-26 00:02:59  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106887.5, '2025-05-26 00:02:59')
+model output: ('Hold', 106887.5, '2025-05-26 00:02:59')
+Response: {'serverTime': 1748188980031}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188981638}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 1, 536627), '106887.50')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+108  2025-05-26 00:02:57  ...              -1.455192e-07
+109  2025-05-26 00:02:58  ...               2.910383e-07
+110  2025-05-26 00:02:59  ...              -1.455192e-07
+111  2025-05-26 00:03:00  ...               1.455192e-07
+112  2025-05-26 00:03:01  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Hold', 106887.5, '2025-05-26 00:03:02')
+model output: ('Hold', 106887.5, '2025-05-26 00:03:02')
+Response: {'serverTime': 1748188982415}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188983057}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 2, 950243), '106871.40')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+109  2025-05-26 00:02:58  ...               2.910383e-07
+110  2025-05-26 00:02:59  ...              -1.455192e-07
+111  2025-05-26 00:03:00  ...               1.455192e-07
+112  2025-05-26 00:03:01  ...               0.000000e+00
+113  2025-05-26 00:03:02  ...              -8.050000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106871.4, '2025-05-26 00:03:03')
+model output: ('Buy', 106871.4, '2025-05-26 00:03:03')
+Response: {'serverTime': 1748188983531}
+[risk mgr] AvailableBalance :13924.5589743
+buy trade check amt10443.419230725
+[risk mgr] AvailableBalance :13924.5589743
+[risk mgr] WalletBalance :13924.5589743
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188987197}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 7, 98648), '106871.40')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+114  2025-05-26 00:03:03  ...               1.455192e-07
+115  2025-05-26 00:03:04  ...               0.000000e+00
+116  2025-05-26 00:03:05  ...               0.000000e+00
+117  2025-05-26 00:03:06  ...               4.500000e+02
+118  2025-05-26 00:03:07  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106871.4, '2025-05-26 00:03:07')
+model output: ('Sell', 106871.4, '2025-05-26 00:03:07')
+Response: {'serverTime': 1748188987697}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Heartbeat: application running.
+Response: {'serverTime': 1748188988726}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 8, 626371), '106865.70')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+115  2025-05-26 00:03:04  ...               0.000000e+00
+116  2025-05-26 00:03:05  ...               0.000000e+00
+117  2025-05-26 00:03:06  ...               4.500000e+02
+118  2025-05-26 00:03:07  ...               1.455192e-07
+119  2025-05-26 00:03:08  ...              -2.850000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106865.7, '2025-05-26 00:03:09')
+model output: ('Buy', 106865.7, '2025-05-26 00:03:09')
+Response: {'serverTime': 1748188989226}
+[risk mgr] AvailableBalance :13924.2467176
+buy trade check amt10443.1850382
+[risk mgr] AvailableBalance :13924.2467176
+[risk mgr] WalletBalance :13924.2467176
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188992594}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 12, 496468), '106865.70')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+119  2025-05-26 00:03:08  ...              -2.850000e+03
+120  2025-05-26 00:03:09  ...              -2.910383e-07
+121  2025-05-26 00:03:10  ...               1.000000e+03
+122  2025-05-26 00:03:11  ...              -1.455192e-07
+123  2025-05-26 00:03:12  ...               2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106865.7, '2025-05-26 00:03:13')
+model output: ('Hold', 106865.7, '2025-05-26 00:03:13')
+Response: {'serverTime': 1748188993236}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188993854}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 13, 759932), '106865.70')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+120  2025-05-26 00:03:09  ...              -2.910383e-07
+121  2025-05-26 00:03:10  ...               1.000000e+03
+122  2025-05-26 00:03:11  ...              -1.455192e-07
+123  2025-05-26 00:03:12  ...               2.910383e-07
+124  2025-05-26 00:03:13  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106865.7, '2025-05-26 00:03:14')2025-05-26 00:03:14,630 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:03:16,179 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:03:19,636 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:03:20,882 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:03:24,777 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:03:26,937 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:03:29,047 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:03:29,047 [Thread-1 (_r] [ERROR]  encountered issue in depth processing
+Traceback (most recent call last):
+  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/src/gateway/data_stream.py", line 122, in _listen_market_forever
+    _callback(self.output)
+  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/src/app.py", line 121, in exec_strat
+    output = self.strategy.analyze_data()  # Get model signal
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/src/trading_engine/main_trading_strategy.py", line 97, in analyze_data
+    self.data = pd.read_csv(self.file_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1753, in _make_engine
+    return mapping[engine](f, **self.options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 79, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/parsers.pyx", line 554, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+2025-05-26 00:03:29,062 [Thread-1 (_r] [INFO ]  reconnecting websocket
+2025-05-26 00:03:29,275 [Thread-1 (_r] [INFO ]  depth socket not connected, reconnecting
+2025-05-26 00:03:31,759 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:03:32,037 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:03:33,308 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+
+model output: ('Sell', 106865.7, '2025-05-26 00:03:14')
+Response: {'serverTime': 1748188994412}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748188995537}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 15, 434064), '106865.70')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+122  2025-05-26 00:03:11  ...              -1.455192e-07
+123  2025-05-26 00:03:12  ...               2.910383e-07
+124  2025-05-26 00:03:13  ...              -1.455192e-07
+125  2025-05-26 00:03:14  ...              -1.455192e-07
+126  2025-05-26 00:03:15  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106865.7, '2025-05-26 00:03:15')
+model output: ('Hold', 106865.7, '2025-05-26 00:03:15')
+Response: {'serverTime': 1748188996051}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748188996639}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 16, 530639), '106865.70')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+123  2025-05-26 00:03:12  ...               2.910383e-07
+124  2025-05-26 00:03:13  ...              -1.455192e-07
+125  2025-05-26 00:03:14  ...              -1.455192e-07
+126  2025-05-26 00:03:15  ...               1.455192e-07
+127  2025-05-26 00:03:16  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106865.7, '2025-05-26 00:03:17')
+model output: ('Hold', 106865.7, '2025-05-26 00:03:17')
+Response: {'serverTime': 1748188997188}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748188998946}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 18, 847963), '106865.70')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+125  2025-05-26 00:03:14  ...              -1.455192e-07
+126  2025-05-26 00:03:15  ...               1.455192e-07
+127  2025-05-26 00:03:16  ...              -1.455192e-07
+128  2025-05-26 00:03:17  ...               1.455192e-07
+129  2025-05-26 00:03:18  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106865.7, '2025-05-26 00:03:19')
+model output: ('Hold', 106865.7, '2025-05-26 00:03:19')
+Response: {'serverTime': 1748188999519}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189000062}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 19, 964857), '106865.90')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+126  2025-05-26 00:03:15  ...               1.455192e-07
+127  2025-05-26 00:03:16  ...              -1.455192e-07
+128  2025-05-26 00:03:17  ...               1.455192e-07
+129  2025-05-26 00:03:18  ...               1.455192e-07
+130  2025-05-26 00:03:19  ...               1.000000e+02
+
+[5 rows x 29 columns]
+action:  ('Sell', 106865.9, '2025-05-26 00:03:20')
+model output: ('Sell', 106865.9, '2025-05-26 00:03:20')
+Response: {'serverTime': 1748189000679}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189002215}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 22, 115512), '106865.90')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+129  2025-05-26 00:03:18  ...               1.455192e-07
+130  2025-05-26 00:03:19  ...               1.000000e+02
+131  2025-05-26 00:03:20  ...              -1.455192e-07
+132  2025-05-26 00:03:21  ...               1.455192e-07
+133  2025-05-26 00:03:22  ...               8.050000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106865.9, '2025-05-26 00:03:22')
+model output: ('Sell', 106865.9, '2025-05-26 00:03:22')
+Response: {'serverTime': 1748189002716}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189005994}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 25, 894839), '106865.90')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+132  2025-05-26 00:03:21  ...               1.455192e-07
+133  2025-05-26 00:03:22  ...               8.050000e+03
+134  2025-05-26 00:03:23  ...              -1.455192e-07
+135  2025-05-26 00:03:24  ...               1.455192e-07
+136  2025-05-26 00:03:25  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Sell', 106865.9, '2025-05-26 00:03:26')
+model output: ('Sell', 106865.9, '2025-05-26 00:03:26')
+Response: {'serverTime': 1748189006710}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Heartbeat: application running.
+Response: {'serverTime': 1748189008628}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 28, 531504), '106865.90')
+initializing..
+Response: {'serverTime': 1748189010775}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 30, 678648), '106870.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+137  2025-05-26 00:03:26  ...              -1.455192e-07
+138  2025-05-26 00:03:27  ...               1.455192e-07
+139  2025-05-26 00:03:28  ...               2.850000e+03
+140  2025-05-26 00:03:29  ...              -2.910383e-07
+141  2025-05-26 00:03:30  ...               2.050000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106870.0, '2025-05-26 00:03:31')
+model output: ('Sell', 106870.0, '2025-05-26 00:03:31')
+Response: {'serverTime': 1748189011412}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189012489}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 32, 393676), '106870.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+139  2025-05-26 00:03:28  ...               2.850000e+03
+140  2025-05-26 00:03:29  ...              -2.910383e-07
+141  2025-05-26 00:03:30  ...               2.050000e+03
+142  2025-05-26 00:03:31  ...              -1.455192e-07
+143  2025-05-26 00:03:32  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106870.0, '2025-05-26 00:03:33')
+model output: ('Sell', 106870.0, '2025-05-26 00:03:33')
+Response: {'serverTime': 1748189013102}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189016257}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 36, 146854), '106867.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+143  2025-05-26 00:03:32  ...               1.455192e-07
+144  2025-05-26 00:03:33  ...              -1.455192e-07
+145  2025-05-26 00:03:34  ...               1.455192e-07
+146  2025-05-26 00:03:35  ...              -1.455192e-07
+147  2025-05-26 00:03:36  ...              -1.100000e+03
+
+[5 rows x 29 columns]2025-05-26 00:03:37,024 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:03:41,552 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:03:42,757 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:03:47,315 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:03:47,564 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+
+action:  ('Buy', 106867.8, '2025-05-26 00:03:36')
+model output: ('Buy', 106867.8, '2025-05-26 00:03:36')
+Response: {'serverTime': 1748189016844}
+[risk mgr] AvailableBalance :13924.1472572
+buy trade check amt10443.1104429
+[risk mgr] AvailableBalance :13924.1472572
+[risk mgr] WalletBalance :13924.1472572
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189017488}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 37, 384642), '106867.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+144  2025-05-26 00:03:33  ...              -1.455192e-07
+145  2025-05-26 00:03:34  ...               1.455192e-07
+146  2025-05-26 00:03:35  ...              -1.455192e-07
+147  2025-05-26 00:03:36  ...              -1.100000e+03
+148  2025-05-26 00:03:37  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106867.8, '2025-05-26 00:03:37')
+model output: ('Hold', 106867.8, '2025-05-26 00:03:37')
+Response: {'serverTime': 1748189018050}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748189019627}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 39, 528647), '106867.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+146  2025-05-26 00:03:35  ...              -1.455192e-07
+147  2025-05-26 00:03:36  ...              -1.100000e+03
+148  2025-05-26 00:03:37  ...              -1.455192e-07
+149  2025-05-26 00:03:38  ...               2.910383e-07
+150  2025-05-26 00:03:39  ...              -1.000000e+02
+
+[5 rows x 29 columns]
+action:  ('Hold', 106867.8, '2025-05-26 00:03:40')
+model output: ('Hold', 106867.8, '2025-05-26 00:03:40')
+Response: {'serverTime': 1748189020159}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189020881}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 40, 786011), '106867.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+147  2025-05-26 00:03:36  ...              -1.100000e+03
+148  2025-05-26 00:03:37  ...              -1.455192e-07
+149  2025-05-26 00:03:38  ...               2.910383e-07
+150  2025-05-26 00:03:39  ...              -1.000000e+02
+151  2025-05-26 00:03:40  ...               4.365575e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106867.8, '2025-05-26 00:03:41')
+model output: ('Hold', 106867.8, '2025-05-26 00:03:41')
+Response: {'serverTime': 1748189021431}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189022013}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 41, 903700), '106867.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+148  2025-05-26 00:03:37  ...              -1.455192e-07
+149  2025-05-26 00:03:38  ...               2.910383e-07
+150  2025-05-26 00:03:39  ...              -1.000000e+02
+151  2025-05-26 00:03:40  ...               4.365575e-07
+152  2025-05-26 00:03:41  ...              -4.000000e+02
+
+[5 rows x 29 columns]
+action:  ('Sell', 106867.0, '2025-05-26 00:03:42')
+model output: ('Sell', 106867.0, '2025-05-26 00:03:42')
+Response: {'serverTime': 1748189022536}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189025295}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 45, 187641), '106867.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+152  2025-05-26 00:03:41  ...              -4.000000e+02
+153  2025-05-26 00:03:42  ...               0.000000e+00
+154  2025-05-26 00:03:43  ...               0.000000e+00
+155  2025-05-26 00:03:44  ...               1.455192e-07
+156  2025-05-26 00:03:45  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Hold', 106867.0, '2025-05-26 00:03:45')
+model output: ('Hold', 106867.0, '2025-05-26 00:03:45')
+Response: {'serverTime': 1748189025846}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189026532}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 46, 429516), '106867.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+153  2025-05-26 00:03:42  ...               0.000000e+00
+154  2025-05-26 00:03:43  ...               0.000000e+00
+155  2025-05-26 00:03:44  ...               1.455192e-07
+156  2025-05-26 00:03:45  ...               0.000000e+00
+157  2025-05-26 00:03:46  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Sell', 106867.0, '2025-05-26 00:03:46')
+model output: ('Sell', 106867.0, '2025-05-26 00:03:46')
+Response: {'serverTime': 1748189027083}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189028015}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 47, 912703), '106867.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+154  2025-05-26 00:03:43  ...               0.000000e+00
+155  2025-05-26 00:03:44  ...               1.455192e-07
+156  2025-05-26 00:03:45  ...               0.000000e+00
+157  2025-05-26 00:03:46  ...               0.000000e+00
+158  2025-05-26 00:03:47  ...              -2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106867.0, '2025-05-26 00:03:48')
+model output: ('Hold', 106867.0, '2025-05-26 00:03:48')
+Response: {'serverTime': 1748189028562}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748189029335}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 49, 226589), '106867.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+156  2025-05-26 00:03:45  ...               0.000000e+00
+157  2025-05-26 00:03:46  ...               0.000000e+00
+158  2025-05-26 00:03:47  ...              -2.910383e-07
+159  2025-05-26 00:03:48  ...               2.910383e-07
+160  2025-05-26 00:03:49  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Hold', 106867.0, '2025-05-26 00:03:49')
+model output: ('Hold', 106867.0, '2025-05-26 00:03:49')
+Response: {'serverTime': 1748189029904}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189031098}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 50, 995330), '106867.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+157  2025-05-26 00:03:46  ...               0.000000e+00
+158  2025-05-26 00:03:47  ...              -2.910383e-07
+159  2025-05-26 00:03:48  ...               2.910383e-07
+160  2025-05-26 00:03:49  ...               0.000000e+00
+161  2025-05-26 00:03:50  ...              -2.050000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106867.0, '2025-05-26 00:03:51')
+model output: ('Buy', 106867.0, '2025-05-26 00:03:51')
+Response: {'serverTime': 1748189031722}
+[risk mgr] AvailableBalance :13923.3865576
+buy trade check amt10442.5399182
+[risk mgr] AvailableBalance :13923.3865576
+[risk mgr] WalletBalance :13923.3865576
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.2025-05-26 00:03:51,871 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:03:53,074 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:03:56,274 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:03:57,870 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:03:59,322 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:01,063 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:01,303 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:02,509 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:05,082 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:05,382 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:06,692 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+
+Response: {'serverTime': 1748189032317}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 52, 214200), '106868.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+159  2025-05-26 00:03:48  ...               2.910383e-07
+160  2025-05-26 00:03:49  ...               0.000000e+00
+161  2025-05-26 00:03:50  ...              -2.050000e+03
+162  2025-05-26 00:03:51  ...               1.455192e-07
+163  2025-05-26 00:03:52  ...               5.500000e+02
+
+[5 rows x 29 columns]
+action:  ('Sell', 106868.1, '2025-05-26 00:03:52')
+model output: ('Sell', 106868.1, '2025-05-26 00:03:52')
+Response: {'serverTime': 1748189032861}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189035512}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 55, 402183), '106868.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+162  2025-05-26 00:03:51  ...               1.455192e-07
+163  2025-05-26 00:03:52  ...               5.500000e+02
+164  2025-05-26 00:03:53  ...               1.455192e-07
+165  2025-05-26 00:03:54  ...              -1.455192e-07
+166  2025-05-26 00:03:55  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106868.1, '2025-05-26 00:03:55')
+model output: ('Sell', 106868.1, '2025-05-26 00:03:55')
+Response: {'serverTime': 1748189036050}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189037148}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 57, 46300), '106868.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+164  2025-05-26 00:03:53  ...               1.455192e-07
+165  2025-05-26 00:03:54  ...              -1.455192e-07
+166  2025-05-26 00:03:55  ...              -1.455192e-07
+167  2025-05-26 00:03:56  ...               1.100000e+03
+168  2025-05-26 00:03:57  ...              -2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Buy', 106868.1, '2025-05-26 00:03:57')
+model output: ('Buy', 106868.1, '2025-05-26 00:03:57')
+Response: {'serverTime': 1748189037691}
+[risk mgr] AvailableBalance :13921.0479976
+buy trade check amt10440.7859982
+[risk mgr] AvailableBalance :13921.0479976
+[risk mgr] WalletBalance :13921.0479976
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189038534}
+Heartbeat: application running.
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 3, 58, 225913), '106868.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+165  2025-05-26 00:03:54  ...              -1.455192e-07
+166  2025-05-26 00:03:55  ...              -1.455192e-07
+167  2025-05-26 00:03:56  ...               1.100000e+03
+168  2025-05-26 00:03:57  ...              -2.910383e-07
+169  2025-05-26 00:03:58  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106868.1, '2025-05-26 00:03:59')
+model output: ('Sell', 106868.1, '2025-05-26 00:03:59')
+Response: {'serverTime': 1748189039110}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189040208}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 0, 106885), '106868.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+167  2025-05-26 00:03:56  ...               1.100000e+03
+168  2025-05-26 00:03:57  ...              -2.910383e-07
+169  2025-05-26 00:03:58  ...               1.455192e-07
+170  2025-05-26 00:03:59  ...               1.455192e-07
+171  2025-05-26 00:04:00  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Sell', 106868.1, '2025-05-26 00:04:00')
+model output: ('Sell', 106868.1, '2025-05-26 00:04:00')
+Response: {'serverTime': 1748189040848}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189041774}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 1, 667608), '106869.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+168  2025-05-26 00:03:57  ...              -2.910383e-07
+169  2025-05-26 00:03:58  ...               1.455192e-07
+170  2025-05-26 00:03:59  ...               1.455192e-07
+171  2025-05-26 00:04:00  ...               0.000000e+00
+172  2025-05-26 00:04:01  ...               8.500000e+02
+
+[5 rows x 29 columns]
+action:  ('Sell', 106869.0, '2025-05-26 00:04:02')
+model output: ('Sell', 106869.0, '2025-05-26 00:04:02')
+Response: {'serverTime': 1748189042299}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189044314}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 4, 205562), '106869.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+171  2025-05-26 00:04:00  ...               0.000000e+00
+172  2025-05-26 00:04:01  ...               8.500000e+02
+173  2025-05-26 00:04:02  ...               1.455192e-07
+174  2025-05-26 00:04:03  ...              -1.455192e-07
+175  2025-05-26 00:04:04  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106869.0, '2025-05-26 00:04:04')
+model output: ('Sell', 106869.0, '2025-05-26 00:04:04')
+Response: {'serverTime': 1748189044865}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189045923}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 5, 744468), '106869.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+172  2025-05-26 00:04:01  ...               8.500000e+02
+173  2025-05-26 00:04:02  ...               1.455192e-07
+174  2025-05-26 00:04:03  ...              -1.455192e-07
+175  2025-05-26 00:04:04  ...               1.455192e-07
+176  2025-05-26 00:04:05  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Sell', 106869.0, '2025-05-26 00:04:06')
+model output: ('Sell', 106869.0, '2025-05-26 00:04:06')
+Response: {'serverTime': 1748189046465}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189047688}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 7, 583600), '106869.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+174  2025-05-26 00:04:03  ...              -1.455192e-07
+175  2025-05-26 00:04:04  ...               1.455192e-07
+176  2025-05-26 00:04:05  ...               0.000000e+00
+177  2025-05-26 00:04:06  ...              -1.455192e-07
+178  2025-05-26 00:04:07  ...               1.455192e-07
+
+[5 rows x 29 columns]2025-05-26 00:04:08,465 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:08,773 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:09,988 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:12,759 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:13,027 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:14,283 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:16,688 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:16,931 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:18,189 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:21,424 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+
+action:  ('Sell', 106869.0, '2025-05-26 00:04:08')
+model output: ('Sell', 106869.0, '2025-05-26 00:04:08')
+Response: {'serverTime': 1748189048247}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Heartbeat: application running.
+Response: {'serverTime': 1748189049233}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 9, 134145), '106876.40')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+176  2025-05-26 00:04:05  ...               0.000000e+00
+177  2025-05-26 00:04:06  ...              -1.455192e-07
+178  2025-05-26 00:04:07  ...               1.455192e-07
+179  2025-05-26 00:04:08  ...              -1.455192e-07
+180  2025-05-26 00:04:09  ...               3.700000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106876.4, '2025-05-26 00:04:09')
+model output: ('Sell', 106876.4, '2025-05-26 00:04:09')
+Response: {'serverTime': 1748189049760}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189052005}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 11, 904970), '106876.40')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+178  2025-05-26 00:04:07  ...               1.455192e-07
+179  2025-05-26 00:04:08  ...              -1.455192e-07
+180  2025-05-26 00:04:09  ...               3.700000e+03
+181  2025-05-26 00:04:10  ...               0.000000e+00
+182  2025-05-26 00:04:11  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106876.4, '2025-05-26 00:04:12')
+model output: ('Sell', 106876.4, '2025-05-26 00:04:12')
+Response: {'serverTime': 1748189052551}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189053483}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 13, 381200), '106880.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+180  2025-05-26 00:04:09  ...               3.700000e+03
+181  2025-05-26 00:04:10  ...               0.000000e+00
+182  2025-05-26 00:04:11  ...              -1.455192e-07
+183  2025-05-26 00:04:12  ...              -5.500000e+02
+184  2025-05-26 00:04:13  ...               1.850000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106880.1, '2025-05-26 00:04:13')
+model output: ('Sell', 106880.1, '2025-05-26 00:04:13')
+Response: {'serverTime': 1748189054058}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189055891}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 15, 778188), '106880.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+182  2025-05-26 00:04:11  ...              -1.455192e-07
+183  2025-05-26 00:04:12  ...              -5.500000e+02
+184  2025-05-26 00:04:13  ...               1.850000e+03
+185  2025-05-26 00:04:14  ...              -1.455192e-07
+186  2025-05-26 00:04:15  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106880.1, '2025-05-26 00:04:16')
+model output: ('Sell', 106880.1, '2025-05-26 00:04:16')
+Response: {'serverTime': 1748189056470}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189057406}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 17, 295241), '106887.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+184  2025-05-26 00:04:13  ...               1.850000e+03
+185  2025-05-26 00:04:14  ...              -1.455192e-07
+186  2025-05-26 00:04:15  ...               1.455192e-07
+187  2025-05-26 00:04:16  ...              -1.455192e-07
+188  2025-05-26 00:04:17  ...               3.450000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106887.0, '2025-05-26 00:04:17')
+model output: ('Sell', 106887.0, '2025-05-26 00:04:17')
+Response: {'serverTime': 1748189057958}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Heartbeat: application running.
+Response: {'serverTime': 1748189059092}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 18, 996263), '106887.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+185  2025-05-26 00:04:14  ...              -1.455192e-07
+186  2025-05-26 00:04:15  ...               1.455192e-07
+187  2025-05-26 00:04:16  ...              -1.455192e-07
+188  2025-05-26 00:04:17  ...               3.450000e+03
+189  2025-05-26 00:04:18  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Buy', 106887.0, '2025-05-26 00:04:19')
+model output: ('Buy', 106887.0, '2025-05-26 00:04:19')
+Response: {'serverTime': 1748189059639}
+[risk mgr] AvailableBalance :13918.6959976
+buy trade check amt10439.0219982
+[risk mgr] AvailableBalance :13918.6959976
+[risk mgr] WalletBalance :13918.6959976
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189060654}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 20, 552491), '106887.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+187  2025-05-26 00:04:16  ...              -1.455192e-07
+188  2025-05-26 00:04:17  ...               3.450000e+03
+189  2025-05-26 00:04:18  ...               0.000000e+00
+190  2025-05-26 00:04:19  ...               0.000000e+00
+191  2025-05-26 00:04:20  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106887.0, '2025-05-26 00:04:21')
+model output: ('Sell', 106887.0, '2025-05-26 00:04:21')
+Response: {'serverTime': 1748189061208}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189062950}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 22, 843235), '106887.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+189  2025-05-26 00:04:18  ...               0.000000e+00
+190  2025-05-26 00:04:19  ...               0.000000e+00
+191  2025-05-26 00:04:20  ...              -1.455192e-07
+192  2025-05-26 00:04:21  ...              -4.500000e+02
+193  2025-05-26 00:04:22  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Buy', 106887.0, '2025-05-26 00:04:25')
+model output: ('Buy', 106887.0, '2025-05-26 00:04:25')
+Response: {'serverTime': 1748189065164}
+[risk mgr] AvailableBalance :13921.1420776
+buy trade check amt10440.8565582
+[risk mgr] AvailableBalance :13921.1420776
+[risk mgr] WalletBalance :13921.1420776
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.2025-05-26 00:04:25,330 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:28,335 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:29,627 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:31,383 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:33,932 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:34,240 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:35,543 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:38,151 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:39,469 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+
+Response: {'serverTime': 1748189065789}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 25, 681267), '106870.90')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+192  2025-05-26 00:04:21  ...              -4.500000e+02
+193  2025-05-26 00:04:22  ...               1.455192e-07
+194  2025-05-26 00:04:23  ...              -1.455192e-07
+195  2025-05-26 00:04:24  ...               0.000000e+00
+196  2025-05-26 00:04:25  ...              -8.050000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106870.9, '2025-05-26 00:04:26')
+model output: ('Buy', 106870.9, '2025-05-26 00:04:26')
+Response: {'serverTime': 1748189066366}
+[risk mgr] AvailableBalance :13921.1286376
+buy trade check amt10440.846478200001
+[risk mgr] AvailableBalance :13921.1286376
+[risk mgr] WalletBalance :13921.1286376
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189067592}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 27, 480893), '106870.90')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+194  2025-05-26 00:04:23  ...              -1.455192e-07
+195  2025-05-26 00:04:24  ...               0.000000e+00
+196  2025-05-26 00:04:25  ...              -8.050000e+03
+197  2025-05-26 00:04:26  ...               0.000000e+00
+198  2025-05-26 00:04:27  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106870.9, '2025-05-26 00:04:28')
+model output: ('Hold', 106870.9, '2025-05-26 00:04:28')
+Response: {'serverTime': 1748189068182}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748189068802}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 28, 698331), '106887.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+195  2025-05-26 00:04:24  ...               0.000000e+00
+196  2025-05-26 00:04:25  ...              -8.050000e+03
+197  2025-05-26 00:04:26  ...               0.000000e+00
+198  2025-05-26 00:04:27  ...               1.455192e-07
+199  2025-05-26 00:04:28  ...               8.050000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106887.0, '2025-05-26 00:04:29')
+model output: ('Sell', 106887.0, '2025-05-26 00:04:29')
+Response: {'serverTime': 1748189069381}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189070581}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 30, 475990), '106887.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+197  2025-05-26 00:04:26  ...               0.000000e+00
+198  2025-05-26 00:04:27  ...               1.455192e-07
+199  2025-05-26 00:04:28  ...               8.050000e+03
+200  2025-05-26 00:04:29  ...              -3.700000e+03
+201  2025-05-26 00:04:30  ...              -4.365575e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106887.0, '2025-05-26 00:04:31')
+model output: ('Sell', 106887.0, '2025-05-26 00:04:31')
+Response: {'serverTime': 1748189071153}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189073089}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 32, 986708), '106887.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+199  2025-05-26 00:04:28  ...               8.050000e+03
+200  2025-05-26 00:04:29  ...              -3.700000e+03
+201  2025-05-26 00:04:30  ...              -4.365575e-07
+202  2025-05-26 00:04:31  ...               4.365575e-07
+203  2025-05-26 00:04:32  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106887.0, '2025-05-26 00:04:33')
+model output: ('Sell', 106887.0, '2025-05-26 00:04:33')
+Response: {'serverTime': 1748189073700}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189074711}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 34, 598930), '106887.60')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+201  2025-05-26 00:04:30  ...              -4.365575e-07
+202  2025-05-26 00:04:31  ...               4.365575e-07
+203  2025-05-26 00:04:32  ...              -1.455192e-07
+204  2025-05-26 00:04:33  ...              -1.850000e+03
+205  2025-05-26 00:04:34  ...               3.000000e+02
+
+[5 rows x 29 columns]
+action:  ('Sell', 106887.6, '2025-05-26 00:04:35')
+model output: ('Sell', 106887.6, '2025-05-26 00:04:35')
+Response: {'serverTime': 1748189075271}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189077433}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 37, 328934), '106887.60')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+204  2025-05-26 00:04:33  ...                    -1850.0
+205  2025-05-26 00:04:34  ...                      300.0
+206  2025-05-26 00:04:35  ...                        0.0
+207  2025-05-26 00:04:36  ...                        0.0
+208  2025-05-26 00:04:37  ...                    -3450.0
+
+[5 rows x 29 columns]
+action:  ('Buy', 106887.6, '2025-05-26 00:04:37')
+model output: ('Buy', 106887.6, '2025-05-26 00:04:37')
+Response: {'serverTime': 1748189078028}
+[risk mgr] AvailableBalance :13918.6959976
+buy trade check amt10439.0219982
+[risk mgr] AvailableBalance :13918.6959976
+[risk mgr] WalletBalance :13918.6959976
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748189078627}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 38, 517434), '106887.60')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+205  2025-05-26 00:04:34  ...               3.000000e+02
+206  2025-05-26 00:04:35  ...               0.000000e+00
+207  2025-05-26 00:04:36  ...               0.000000e+00
+208  2025-05-26 00:04:37  ...              -3.450000e+03
+209  2025-05-26 00:04:38  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106887.6, '2025-05-26 00:04:39')
+model output: ('Sell', 106887.6, '2025-05-26 00:04:39')
+Response: {'serverTime': 1748189079232}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189080439}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 40, 324660), '106887.60')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+207  2025-05-26 00:04:36  ...               0.000000e+00
+208  2025-05-26 00:04:37  ...              -3.450000e+03
+209  2025-05-26 00:04:38  ...               1.455192e-07
+210  2025-05-26 00:04:39  ...              -4.365575e-07
+211  2025-05-26 00:04:40  ...               4.365575e-07
+
+[5 rows x 29 columns]2025-05-26 00:04:41,288 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:41,557 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:42,929 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:44,254 [Thread-1 (_r] [ERROR]  encountered issue in depth processing
+Traceback (most recent call last):
+  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/src/gateway/data_stream.py", line 122, in _listen_market_forever
+    _callback(self.output)
+  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/src/app.py", line 121, in exec_strat
+    output = self.strategy.analyze_data()  # Get model signal
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/src/trading_engine/main_trading_strategy.py", line 97, in analyze_data
+    self.data = pd.read_csv(self.file_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1753, in _make_engine
+    return mapping[engine](f, **self.options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 79, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/parsers.pyx", line 554, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+2025-05-26 00:04:44,256 [Thread-1 (_r] [INFO ]  reconnecting websocket
+2025-05-26 00:04:44,583 [Thread-1 (_r] [INFO ]  depth socket not connected, reconnecting
+2025-05-26 00:04:46,104 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:48,307 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:48,583 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:52,285 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:52,594 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:04:55,472 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+
+action:  ('Sell', 106887.6, '2025-05-26 00:04:40')
+model output: ('Sell', 106887.6, '2025-05-26 00:04:40')
+Response: {'serverTime': 1748189081051}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189082096}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 41, 982602), '106887.60')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+208  2025-05-26 00:04:37  ...              -3.450000e+03
+209  2025-05-26 00:04:38  ...               1.455192e-07
+210  2025-05-26 00:04:39  ...              -4.365575e-07
+211  2025-05-26 00:04:40  ...               4.365575e-07
+212  2025-05-26 00:04:41  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106887.6, '2025-05-26 00:04:42')
+model output: ('Sell', 106887.6, '2025-05-26 00:04:42')
+Response: {'serverTime': 1748189082721}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189083893}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 43, 788836), '106887.60')
+initializing..
+Response: {'serverTime': 1748189085285}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 45, 176899), '106887.60')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+212  2025-05-26 00:04:41  ...              -1.455192e-07
+213  2025-05-26 00:04:42  ...               1.455192e-07
+214  2025-05-26 00:04:43  ...              -1.455192e-07
+215  2025-05-26 00:04:44  ...              -1.455192e-07
+216  2025-05-26 00:04:45  ...               8.050000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106887.6, '2025-05-26 00:04:45')
+model output: ('Sell', 106887.6, '2025-05-26 00:04:45')
+Response: {'serverTime': 1748189085866}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189087468}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 47, 360428), '106890.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+214  2025-05-26 00:04:43  ...              -1.455192e-07
+215  2025-05-26 00:04:44  ...              -1.455192e-07
+216  2025-05-26 00:04:45  ...               8.050000e+03
+217  2025-05-26 00:04:46  ...               0.000000e+00
+218  2025-05-26 00:04:47  ...               1.200000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106890.0, '2025-05-26 00:04:47')
+model output: ('Sell', 106890.0, '2025-05-26 00:04:47')
+Response: {'serverTime': 1748189088068}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Heartbeat: application running.
+Response: {'serverTime': 1748189089045}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 48, 941281), '106890.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+215  2025-05-26 00:04:44  ...              -1.455192e-07
+216  2025-05-26 00:04:45  ...               8.050000e+03
+217  2025-05-26 00:04:46  ...               0.000000e+00
+218  2025-05-26 00:04:47  ...               1.200000e+03
+219  2025-05-26 00:04:48  ...              -8.050000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106890.0, '2025-05-26 00:04:49')
+model output: ('Buy', 106890.0, '2025-05-26 00:04:49')
+Response: {'serverTime': 1748189089649}
+[risk mgr] AvailableBalance :13917.74066926
+buy trade check amt10438.305501945
+[risk mgr] AvailableBalance :13917.74066926
+[risk mgr] WalletBalance :13917.74066926
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189091420}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 51, 310714), '106890.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+218  2025-05-26 00:04:47  ...               1.200000e+03
+219  2025-05-26 00:04:48  ...              -8.050000e+03
+220  2025-05-26 00:04:49  ...              -1.455192e-07
+221  2025-05-26 00:04:50  ...               1.455192e-07
+222  2025-05-26 00:04:51  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106890.0, '2025-05-26 00:04:51')
+model output: ('Sell', 106890.0, '2025-05-26 00:04:51')
+Response: {'serverTime': 1748189092046}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189093054}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 52, 950186), '106890.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+219  2025-05-26 00:04:48  ...              -8.050000e+03
+220  2025-05-26 00:04:49  ...              -1.455192e-07
+221  2025-05-26 00:04:50  ...               1.455192e-07
+222  2025-05-26 00:04:51  ...              -1.455192e-07
+223  2025-05-26 00:04:52  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Buy', 106890.0, '2025-05-26 00:04:53')
+model output: ('Buy', 106890.0, '2025-05-26 00:04:53')
+Response: {'serverTime': 1748189093660}
+[risk mgr] AvailableBalance :13916.50527761
+buy trade check amt10437.3789582075
+[risk mgr] AvailableBalance :13916.50527761
+[risk mgr] WalletBalance :13916.50527761
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189094607}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 54, 510732), '106890.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+221  2025-05-26 00:04:50  ...               1.455192e-07
+222  2025-05-26 00:04:51  ...              -1.455192e-07
+223  2025-05-26 00:04:52  ...               0.000000e+00
+224  2025-05-26 00:04:53  ...               1.455192e-07
+225  2025-05-26 00:04:54  ...              -3.000000e+02
+
+[5 rows x 29 columns]
+action:  ('Buy', 106890.0, '2025-05-26 00:04:55')
+model output: ('Buy', 106890.0, '2025-05-26 00:04:55')
+Response: {'serverTime': 1748189095314}
+[risk mgr] AvailableBalance :13915.6988776
+buy trade check amt10436.7741582
+[risk mgr] AvailableBalance :13915.6988776
+[risk mgr] WalletBalance :13915.6988776
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189095956}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 55, 851976), '106906.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+222  2025-05-26 00:04:51  ...              -1.455192e-07
+223  2025-05-26 00:04:52  ...               0.000000e+00
+224  2025-05-26 00:04:53  ...               1.455192e-07
+225  2025-05-26 00:04:54  ...              -3.000000e+02
+226  2025-05-26 00:04:55  ...               8.400000e+03
+
+[5 rows x 29 columns]
+action:  ('Sell', 106906.8, '2025-05-26 00:04:57')
+model output: ('Sell', 106906.8, '2025-05-26 00:04:57')
+Response: {'serverTime': 1748189097183}
+current_btc_inventory -0.128 vs ordersize -0.1282025-05-26 00:04:57,408 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:04:59,972 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:00,291 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:05:01,238 [Thread-1 (_r] [ERROR]  Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x124cf5b50>
+2025-05-26 00:05:01,238 [Thread-1 (_r] [ERROR]  Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x124286c10>
+2025-05-26 00:05:01,238 [Thread-1 (_r] [ERROR]  Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x124e14c90>
+2025-05-26 00:05:08,234 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:09,525 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:05:12,802 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:16,818 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:05:19,914 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Heartbeat: application running.
+Response: {'serverTime': 1748189099043}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 4, 58, 932891), '106906.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+225  2025-05-26 00:04:54  ...              -3.000000e+02
+226  2025-05-26 00:04:55  ...               8.400000e+03
+227  2025-05-26 00:04:56  ...              -1.455192e-07
+228  2025-05-26 00:04:57  ...              -1.455192e-07
+229  2025-05-26 00:04:58  ...               2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106906.8, '2025-05-26 00:04:59')
+model output: ('Sell', 106906.8, '2025-05-26 00:04:59')
+Response: {'serverTime': 1748189099718}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189100762}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 0, 653144), '106907.20')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+227  2025-05-26 00:04:56  ...              -1.455192e-07
+228  2025-05-26 00:04:57  ...              -1.455192e-07
+229  2025-05-26 00:04:58  ...               2.910383e-07
+230  2025-05-26 00:04:59  ...               1.455192e-07
+231  2025-05-26 00:05:00  ...               2.000000e+02
+
+[5 rows x 29 columns]
+action:  ('Buy', 106907.2, '2025-05-26 00:05:01')
+model output: ('Buy', 106907.2, '2025-05-26 00:05:01')
+Response: {'serverTime': 1748189102197}
+[risk mgr] AvailableBalance :13913.9247976
+buy trade check amt10435.4435982
+[risk mgr] AvailableBalance :13913.9247976
+[risk mgr] WalletBalance :13913.9247976
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189104236}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 3, 615201), '106907.20')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+230  2025-05-26 00:04:59  ...               1.455192e-07
+231  2025-05-26 00:05:00  ...               2.000000e+02
+232  2025-05-26 00:05:01  ...               1.455192e-07
+233  2025-05-26 00:05:02  ...               1.455192e-07
+234  2025-05-26 00:05:03  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106907.2, '2025-05-26 00:05:06')
+model output: ('Sell', 106907.2, '2025-05-26 00:05:06')
+Response: {'serverTime': 1748189106752}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Heartbeat: application running.
+Response: {'serverTime': 1748189110014}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 9, 893691), '106907.20')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+236  2025-05-26 00:05:05  ...              -2.910383e-07
+237  2025-05-26 00:05:06  ...               2.910383e-07
+238  2025-05-26 00:05:07  ...              -1.200000e+03
+239  2025-05-26 00:05:08  ...              -1.455192e-07
+240  2025-05-26 00:05:09  ...               2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106907.2, '2025-05-26 00:05:11')
+model output: ('Sell', 106907.2, '2025-05-26 00:05:11')
+Response: {'serverTime': 1748189112448}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189113966}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 13, 554121), '106907.20')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+240  2025-05-26 00:05:09  ...               2.910383e-07
+241  2025-05-26 00:05:10  ...              -1.455192e-07
+242  2025-05-26 00:05:11  ...              -1.455192e-07
+243  2025-05-26 00:05:12  ...               2.910383e-07
+244  2025-05-26 00:05:13  ...              -2.910383e-07
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106907.2, '2025-05-26 00:05:14')
+Response: {'serverTime': 1748189114728}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189115898}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 15, 786456), '106907.20')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+242  2025-05-26 00:05:11  ...              -1.455192e-07
+243  2025-05-26 00:05:12  ...               2.910383e-07
+244  2025-05-26 00:05:13  ...              -2.910383e-07
+245  2025-05-26 00:05:14  ...               2.910383e-07
+246  2025-05-26 00:05:15  ...              -8.400000e+03
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106907.2, '2025-05-26 00:05:16')
+Response: {'serverTime': 1748189116655}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189117316}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 17, 200248), '106911.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+244  2025-05-26 00:05:13  ...              -2.910383e-07
+245  2025-05-26 00:05:14  ...               2.910383e-07
+246  2025-05-26 00:05:15  ...              -8.400000e+03
+247  2025-05-26 00:05:16  ...               0.000000e+00
+248  2025-05-26 00:05:17  ...               1.950000e+03
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106911.1, '2025-05-26 00:05:17')
+Response: {'serverTime': 1748189118021}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748189118729}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 18, 617308), '106911.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+245  2025-05-26 00:05:14  ...               2.910383e-07
+246  2025-05-26 00:05:15  ...              -8.400000e+03
+247  2025-05-26 00:05:16  ...               0.000000e+00
+248  2025-05-26 00:05:17  ...               1.950000e+03
+249  2025-05-26 00:05:18  ...              -4.365575e-07
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106911.1, '2025-05-26 00:05:19')
+Response: {'serverTime': 1748189119778}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189120392}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 20, 275679), '106910.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+247  2025-05-26 00:05:16  ...               0.000000e+00
+248  2025-05-26 00:05:17  ...               1.950000e+03
+249  2025-05-26 00:05:18  ...              -4.365575e-07
+250  2025-05-26 00:05:19  ...               2.910383e-07
+251  2025-05-26 00:05:20  ...              -3.500000e+02
+
+[5 rows x 29 columns]
+action:  ('Buy', 106910.8, '2025-05-26 00:05:20')
+model output: ('Buy', 106910.8, '2025-05-26 00:05:20')
+Response: {'serverTime': 1748189121241}
+[risk mgr] AvailableBalance :13918.23621697
+buy trade check amt10438.6771627275012025-05-26 00:05:25,531 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:05:26,978 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:29,861 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:30,132 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:05:34,840 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:05:39,656 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:39,977 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+
+[risk mgr] AvailableBalance :13918.23621697
+[risk mgr] WalletBalance :13918.23621697
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189122609}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 22, 498348), '106910.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+249  2025-05-26 00:05:18  ...              -4.365575e-07
+250  2025-05-26 00:05:19  ...               2.910383e-07
+251  2025-05-26 00:05:20  ...              -3.500000e+02
+252  2025-05-26 00:05:21  ...               0.000000e+00
+253  2025-05-26 00:05:22  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Buy', 106910.8, '2025-05-26 00:05:25')
+model output: ('Buy', 106910.8, '2025-05-26 00:05:25')
+Response: {'serverTime': 1748189125356}
+[risk mgr] AvailableBalance :13918.2513961
+buy trade check amt10438.688547075
+[risk mgr] AvailableBalance :13918.2513961
+[risk mgr] WalletBalance :13918.2513961
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189126066}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 25, 922883), '106910.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+252  2025-05-26 00:05:21  ...               0.000000e+00
+253  2025-05-26 00:05:22  ...               1.455192e-07
+254  2025-05-26 00:05:23  ...               0.000000e+00
+255  2025-05-26 00:05:24  ...               0.000000e+00
+256  2025-05-26 00:05:25  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Sell', 106910.8, '2025-05-26 00:05:26')
+model output: ('Sell', 106910.8, '2025-05-26 00:05:26')
+Response: {'serverTime': 1748189126743}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Heartbeat: application running.
+Response: {'serverTime': 1748189128753}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 28, 590029), '106910.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+255  2025-05-26 00:05:24  ...               0.000000e+00
+256  2025-05-26 00:05:25  ...               0.000000e+00
+257  2025-05-26 00:05:26  ...              -2.910383e-07
+258  2025-05-26 00:05:27  ...               2.910383e-07
+259  2025-05-26 00:05:28  ...              -1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106910.8, '2025-05-26 00:05:29')
+model output: ('Sell', 106910.8, '2025-05-26 00:05:29')
+Response: {'serverTime': 1748189129635}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189130622}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 30, 516310), '106910.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+257  2025-05-26 00:05:26  ...              -2.910383e-07
+258  2025-05-26 00:05:27  ...               2.910383e-07
+259  2025-05-26 00:05:28  ...              -1.455192e-07
+260  2025-05-26 00:05:29  ...               1.455192e-07
+261  2025-05-26 00:05:30  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Hold', 106910.8, '2025-05-26 00:05:31')
+model output: ('Hold', 106910.8, '2025-05-26 00:05:31')
+Response: {'serverTime': 1748189131432}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189132883}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 32, 780455), '106910.80')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+259  2025-05-26 00:05:28  ...              -1.455192e-07
+260  2025-05-26 00:05:29  ...               1.455192e-07
+261  2025-05-26 00:05:30  ...               0.000000e+00
+262  2025-05-26 00:05:31  ...              -2.910383e-07
+263  2025-05-26 00:05:32  ...               2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106910.8, '2025-05-26 00:05:34')
+model output: ('Hold', 106910.8, '2025-05-26 00:05:34')
+Response: {'serverTime': 1748189134413}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189136060}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 35, 923762), '106911.00')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+262  2025-05-26 00:05:31  ...              -2.910383e-07
+263  2025-05-26 00:05:32  ...               2.910383e-07
+264  2025-05-26 00:05:33  ...               0.000000e+00
+265  2025-05-26 00:05:34  ...               0.000000e+00
+266  2025-05-26 00:05:35  ...               1.000000e+02
+
+[5 rows x 29 columns]
+NaN detected in last row of features, return Hold
+model output: ('Hold', 106911.0, '2025-05-26 00:05:36')
+Response: {'serverTime': 1748189137103}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Heartbeat: application running.
+Response: {'serverTime': 1748189138614}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 38, 515917), '106911.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+265  2025-05-26 00:05:34  ...                        0.0
+266  2025-05-26 00:05:35  ...                      100.0
+267  2025-05-26 00:05:36  ...                        0.0
+268  2025-05-26 00:05:37  ...                    -1950.0
+269  2025-05-26 00:05:38  ...                       50.0
+
+[5 rows x 29 columns]
+action:  ('Sell', 106911.1, '2025-05-26 00:05:39')
+model output: ('Sell', 106911.1, '2025-05-26 00:05:39')
+Response: {'serverTime': 1748189139422}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189140508}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 40, 406756), '106911.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+267  2025-05-26 00:05:36  ...                        0.0
+268  2025-05-26 00:05:37  ...                    -1950.0
+269  2025-05-26 00:05:38  ...                       50.0
+270  2025-05-26 00:05:39  ...                        0.0
+271  2025-05-26 00:05:40  ...                      150.0
+
+[5 rows x 29 columns]
+action:  ('Buy', 106911.1, '2025-05-26 00:05:41')
+model output: ('Buy', 106911.1, '2025-05-26 00:05:41')
+Response: {'serverTime': 1748189141675}
+[risk mgr] AvailableBalance :13917.28196352
+buy trade check amt10437.96147264
+[risk mgr] AvailableBalance :13917.28196352
+[risk mgr] WalletBalance :13917.28196352
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189142463}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 42, 338737), '106911.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+269  2025-05-26 00:05:38  ...               5.000000e+01
+270  2025-05-26 00:05:39  ...               0.000000e+00
+271  2025-05-26 00:05:40  ...               1.500000e+02
+272  2025-05-26 00:05:41  ...               2.910383e-07
+273  2025-05-26 00:05:42  ...              -2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106911.1, '2025-05-26 00:05:43')
+model output: ('Sell', 106911.1, '2025-05-26 00:05:43')2025-05-26 00:05:43,873 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:44,181 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:05:45,665 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:47,919 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:48,171 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:05:50,794 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:52,691 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:52,969 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:05:56,374 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:05:59,730 [Thread-1 (_r] [INFO ]  ORDER FAILED : Mandatory parameter 'quantity' was not sent, was empty/null, or malformed.
+2025-05-26 00:05:59,986 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+
+Response: {'serverTime': 1748189143647}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189144648}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 44, 542015), '106911.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+271  2025-05-26 00:05:40  ...               1.500000e+02
+272  2025-05-26 00:05:41  ...               2.910383e-07
+273  2025-05-26 00:05:42  ...              -2.910383e-07
+274  2025-05-26 00:05:43  ...               1.455192e-07
+275  2025-05-26 00:05:44  ...               1.455192e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106911.1, '2025-05-26 00:05:45')
+model output: ('Sell', 106911.1, '2025-05-26 00:05:45')
+Response: {'serverTime': 1748189145442}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189146989}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 46, 886378), '106911.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+273  2025-05-26 00:05:42  ...              -2.910383e-07
+274  2025-05-26 00:05:43  ...               1.455192e-07
+275  2025-05-26 00:05:44  ...               1.455192e-07
+276  2025-05-26 00:05:45  ...              -2.910383e-07
+277  2025-05-26 00:05:46  ...               2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106911.1, '2025-05-26 00:05:47')
+model output: ('Sell', 106911.1, '2025-05-26 00:05:47')
+Response: {'serverTime': 1748189147702}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Heartbeat: application running.
+Response: {'serverTime': 1748189148699}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 48, 598636), '106912.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+275  2025-05-26 00:05:44  ...               1.455192e-07
+276  2025-05-26 00:05:45  ...              -2.910383e-07
+277  2025-05-26 00:05:46  ...               2.910383e-07
+278  2025-05-26 00:05:47  ...              -1.455192e-07
+279  2025-05-26 00:05:48  ...               5.000000e+02
+
+[5 rows x 29 columns]
+action:  ('Sell', 106912.1, '2025-05-26 00:05:50')
+model output: ('Sell', 106912.1, '2025-05-26 00:05:50')
+Response: {'serverTime': 1748189150428}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189151698}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 51, 591338), '106912.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+278  2025-05-26 00:05:47  ...              -1.455192e-07
+279  2025-05-26 00:05:48  ...               5.000000e+02
+280  2025-05-26 00:05:49  ...               2.910383e-07
+281  2025-05-26 00:05:50  ...              -2.910383e-07
+282  2025-05-26 00:05:51  ...               2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Sell', 106912.1, '2025-05-26 00:05:52')
+model output: ('Sell', 106912.1, '2025-05-26 00:05:52')
+Response: {'serverTime': 1748189152474}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189153462}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 53, 354545), '106908.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+280  2025-05-26 00:05:49  ...               2.910383e-07
+281  2025-05-26 00:05:50  ...              -2.910383e-07
+282  2025-05-26 00:05:51  ...               2.910383e-07
+283  2025-05-26 00:05:52  ...              -2.910383e-07
+284  2025-05-26 00:05:53  ...              -2.000000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106908.1, '2025-05-26 00:05:54')
+model output: ('Buy', 106908.1, '2025-05-26 00:05:54')
+Response: {'serverTime': 1748189154175}
+[risk mgr] AvailableBalance :13917.4191976
+buy trade check amt10438.0643982
+[risk mgr] AvailableBalance :13917.4191976
+[risk mgr] WalletBalance :13917.4191976
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189155528}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 55, 418730), '106908.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+282  2025-05-26 00:05:51  ...               2.910383e-07
+283  2025-05-26 00:05:52  ...              -2.910383e-07
+284  2025-05-26 00:05:53  ...              -2.000000e+03
+285  2025-05-26 00:05:54  ...               1.455192e-07
+286  2025-05-26 00:05:55  ...              -1.000000e+02
+
+[5 rows x 29 columns]
+action:  ('Hold', 106908.1, '2025-05-26 00:05:56')
+model output: ('Hold', 106908.1, '2025-05-26 00:05:56')
+Response: {'serverTime': 1748189156206}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189156838}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 56, 739214), '106908.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+283  2025-05-26 00:05:52  ...              -2.910383e-07
+284  2025-05-26 00:05:53  ...              -2.000000e+03
+285  2025-05-26 00:05:54  ...               1.455192e-07
+286  2025-05-26 00:05:55  ...              -1.000000e+02
+287  2025-05-26 00:05:56  ...               2.910383e-07
+
+[5 rows x 29 columns]
+action:  ('Hold', 106908.1, '2025-05-26 00:05:57')
+model output: ('Hold', 106908.1, '2025-05-26 00:05:57')
+Response: {'serverTime': 1748189157521}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189158246}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 5, 58, 143347), '106908.10')
+initializing..
+Heartbeat: application running.
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+285  2025-05-26 00:05:54  ...               1.455192e-07
+286  2025-05-26 00:05:55  ...              -1.000000e+02
+287  2025-05-26 00:05:56  ...               2.910383e-07
+288  2025-05-26 00:05:57  ...               0.000000e+00
+289  2025-05-26 00:05:58  ...              -5.000000e+01
+
+[5 rows x 29 columns]
+action:  ('Sell', 106908.1, '2025-05-26 00:05:59')
+model output: ('Sell', 106908.1, '2025-05-26 00:05:59')
+Response: {'serverTime': 1748189159515}
+current_btc_inventory -0.128 vs ordersize -0.128
+Invalid last buy price
+********FAILED******
+++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -1102, 'msg': "Mandatory parameter 'quantity' was not sent, was empty/null, or malformed."}
+Response: {'serverTime': 1748189160467}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 6, 0, 371183), '106908.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+287  2025-05-26 00:05:56  ...               2.910383e-07
+288  2025-05-26 00:05:57  ...               0.000000e+00
+289  2025-05-26 00:05:58  ...              -5.000000e+01
+290  2025-05-26 00:05:59  ...               1.455192e-07
+291  2025-05-26 00:06:00  ...              -1.455192e-07
+
+[5 rows x 29 columns]2025-05-26 00:06:03,590 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 00:06:06,894 [Thread-1 (_r] [ERROR]  CANCEL read_loop
+2025-05-26 02:00:17,981 [Binance     ] [ERROR]  Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<TradeExecutor._listen_execution_forever() done, defined at /Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/src/gateway/main_gateway.py:229> exception=ConnectionClosedError(None, None, None)>
+Traceback (most recent call last):
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/websockets/legacy/protocol.py", line 968, in transfer_data
+    message = await self.read_message()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/websockets/legacy/protocol.py", line 1038, in read_message
+    frame = await self.read_data_frame(max_size=self.max_size)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/websockets/legacy/protocol.py", line 1113, in read_data_frame
+    frame = await self.read_frame(max_size)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/websockets/legacy/protocol.py", line 1170, in read_frame
+    frame = await Frame.read(
+            ^^^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/websockets/legacy/framing.py", line 69, in read
+    data = await reader(2)
+           ^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/asyncio/streams.py", line 750, in readexactly
+    await self._wait_for_data('readexactly')
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/asyncio/streams.py", line 543, in _wait_for_data
+    await self._waiter
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/asyncio/selector_events.py", line 974, in _read_ready__get_buffer
+    nbytes = self._sock.recv_into(buf)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/src/gateway/main_gateway.py", line 244, in _listen_execution_forever
+    message = await ws.recv()
+              ^^^^^^^^^^^^^^^
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/websockets/legacy/protocol.py", line 568, in recv
+    await self.ensure_open()
+  File "/Users/kendrickwinata/anaconda3/envs/py311-smu/lib/python3.11/site-packages/websockets/legacy/protocol.py", line 944, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedError: no close frame received or sent
+
+action:  ('Hold', 106908.1, '2025-05-26 00:06:01')
+model output: ('Hold', 106908.1, '2025-05-26 00:06:01')
+Response: {'serverTime': 1748189161406}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189162796}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 6, 2, 696277), '106908.10')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+289  2025-05-26 00:05:58  ...              -5.000000e+01
+290  2025-05-26 00:05:59  ...               1.455192e-07
+291  2025-05-26 00:06:00  ...              -1.455192e-07
+292  2025-05-26 00:06:01  ...               1.455192e-07
+293  2025-05-26 00:06:02  ...               0.000000e+00
+
+[5 rows x 29 columns]
+action:  ('Hold', 106908.1, '2025-05-26 00:06:03')
+model output: ('Hold', 106908.1, '2025-05-26 00:06:03')
+Response: {'serverTime': 1748189163475}
+Model signals HOLD.
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189164067}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 6, 3, 974256), '106904.30')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+290  2025-05-26 00:05:59  ...               1.455192e-07
+291  2025-05-26 00:06:00  ...              -1.455192e-07
+292  2025-05-26 00:06:01  ...               1.455192e-07
+293  2025-05-26 00:06:02  ...               0.000000e+00
+294  2025-05-26 00:06:03  ...              -1.900000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106904.3, '2025-05-26 00:06:04')
+model output: ('Buy', 106904.3, '2025-05-26 00:06:04')
+Response: {'serverTime': 1748189164749}
+[risk mgr] AvailableBalance :13919.07901813
+buy trade check amt10439.3092635975
+[risk mgr] AvailableBalance :13919.07901813
+[risk mgr] WalletBalance :13919.07901813
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189166026}
+Invalid last buy price
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 5, 26, 0, 6, 5, 919206), '106902.20')
+initializing..
+check last data:                 Timestamp  ...  Long_Moving_Avg_2nd_Deriv
+292  2025-05-26 00:06:01  ...               1.455192e-07
+293  2025-05-26 00:06:02  ...               0.000000e+00
+294  2025-05-26 00:06:03  ...              -1.900000e+03
+295  2025-05-26 00:06:04  ...              -1.455192e-07
+296  2025-05-26 00:06:05  ...              -1.050000e+03
+
+[5 rows x 29 columns]
+action:  ('Buy', 106902.2, '2025-05-26 00:06:06')
+model output: ('Buy', 106902.2, '2025-05-26 00:06:06')
+Response: {'serverTime': 1748189166752}
+[risk mgr] AvailableBalance :13919.12720932
+buy trade check amt10439.34540699
+[risk mgr] AvailableBalance :13919.12720932
+[risk mgr] WalletBalance :13919.12720932
+post trade ratio 0.24
+Order not approved by risk manager or order queue full.
+Response: {'serverTime': 1748189167363}
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
