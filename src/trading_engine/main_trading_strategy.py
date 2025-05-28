@@ -15,6 +15,7 @@ from sklearn.utils import resample
 import datetime
 import os
 import warnings
+import logging
 
 # Ignore pandas FutureWarnings for a cleaner log
 warnings.filterwarnings("ignore", category=FutureWarning, module="pandas")
@@ -40,71 +41,97 @@ class TradingStrategy:
     def collect_new_data(self):
         """
         Pulls new tick data from the queue and appends it to the raw_data DataFrame.
+        Each tick is expected to be a tuple: (timestamp, price)
         """
         new_rows = []
+        count = 0
+
         while not self.queue.empty():
-            data_point = self.queue.get()
-            if data_point[1] != "":
-                new_row = {"Timestamp": data_point[0], "Price": float(data_point[1])}
-                new_rows.append(new_row)
+            tick = self.queue.get()
+            logging.info(f"[TradingStrategy] New tick from queue: {tick}")
+
+            # Defensive: handle different tick formats
+            if isinstance(tick, dict):
+                ts, price = tick.get("Timestamp") or tick.get("datetime"), tick.get("Price") or tick.get("lastprice")
+            elif isinstance(tick, (tuple, list)):
+                ts, price = tick[0], tick[1]
             else:
-                print("Warning: Empty or invalid price in data stream.")
+                logging.warning(f"[TradingStrategy] Unexpected tick format: {tick}")
+                continue
+
+            if price != "" and price is not None:
+                try:
+                    price = float(price)
+                    new_rows.append({"Timestamp": ts, "Price": price})
+                    count += 1
+                except ValueError:
+                    logging.warning(f"[TradingStrategy] Invalid price value: {price}")
+            else:
+                logging.warning("[TradingStrategy] Empty or invalid price in data stream.")
 
         if new_rows:
             new_data = pd.DataFrame(new_rows)
             new_data["Timestamp"] = pd.to_datetime(new_data["Timestamp"])
-            if not self.raw_data.empty:
-                self.raw_data = pd.concat([self.raw_data, new_data], ignore_index=True)
-            else:
-                self.raw_data = new_data
+            self.raw_data = pd.concat([self.raw_data, new_data], ignore_index=True)
+            # Optional: set index for convenience
             if "Timestamp" not in self.raw_data.index.names:
                 self.raw_data.set_index("Timestamp", inplace=True, drop=False)
+
+        logging.info(f"[TradingStrategy] Collected {count} new ticks.")
+        logging.info(f"[TradingStrategy] Data buffer length: {len(self.raw_data)}")
+        logging.info(f"[TradingStrategy] Sample buffer:\n{self.raw_data.tail()}")
+
         return self.raw_data
 
-    def aggregate_data(self):
+
+    def aggregate_data(self, freq="1S", save_csv=False):
         """
-        Aggregates collected tick data into OHLC bars, resampled by second.
-        Only keeps the last 300 seconds of data.
+        Aggregates raw_data into OHLC based on the given frequency.
+        Keeps only the last 300 seconds of data for rolling analysis.
+        Optionally saves to CSV for debugging.
         """
         if self.raw_data.empty:
+            logging.warning("[TradingStrategy] Raw data is empty; cannot aggregate.")
             return
 
-        self.raw_data["Timestamp"] = pd.to_datetime(self.raw_data["Timestamp"])
-        if "Timestamp" not in self.raw_data.index.names:
-            self.raw_data.set_index("Timestamp", inplace=True)
-        self.raw_data.index = pd.to_datetime(self.raw_data.index)
+        # Convert timestamp and set index
+        df = self.raw_data.copy()
+        df["Timestamp"] = pd.to_datetime(df["Timestamp"])
+        df.set_index("Timestamp", inplace=True)
+        df = df[pd.to_numeric(df["Price"], errors="coerce").notnull()]
+        df["Price"] = df["Price"].astype(float)
 
-        # Keep only the last 300 seconds of data
+        # Keep only last 300 seconds of data
         cutoff_time = pd.Timestamp.now() - pd.Timedelta(seconds=300)
-        self.raw_data = self.raw_data[self.raw_data.index >= cutoff_time]
+        df = df[df.index >= cutoff_time]
 
-        try:
-            ohlc = self.raw_data["Price"].resample("S").ohlc()
-        except:
-            return
-
+        # Resample to OHLC
+        ohlc = df["Price"].resample(freq).ohlc()
+        ohlc.dropna(inplace=True)
         ohlc.columns = [col.capitalize() for col in ohlc.columns]
-        print("initializing..")
-        ohlc.to_csv("ohlc_seconds.csv")
+
+        # Save as self.data for the rest of the pipeline
+        self.data = ohlc.reset_index()
+        logging.info(f"[TradingStrategy] Aggregated data to {freq} OHLC; shape: {self.data.shape}")
+        logging.info(f"[TradingStrategy] Aggregated sample:\n{self.data.tail()}")
+
+        if save_csv:
+            self.data.to_csv("ohlc_seconds.csv", index=False)
+
 
     def analyze_data(self):
         """
-        Main feature engineering and inference pipeline:
-        - Loads OHLC data
-        - Calculates features
-        - Returns model action (Buy/Sell/Hold + price)
+        Analyze market data and return trade signal (Buy/Sell/Hold).
         """
         self.data = pd.read_csv(self.file_path)
         self.data["Date"] = pd.to_datetime(self.data["Timestamp"])
         self.data.ffill(inplace=True)
         self.data.bfill(inplace=True)
 
-        # Skip if OHLC data is incomplete
         if self.data[["Open", "High", "Low", "Close"]].isnull().any().any():
-            print("Incomplete data, skipping analysis.")
+            logging.warning("Incomplete data, skipping analysis.")
             return
 
-        # Feature engineering: indicators, oscillators, transforms, peaks, etc.
         self.calculate_daily_percentage_change()
         self.perform_fourier_transform_analysis()
         self.calculate_stochastic_oscillator()
@@ -114,7 +141,9 @@ class TradingStrategy:
         self.calculate_moving_averages_and_rsi()
         self.calculate_days_since_peaks_and_troughs()
         self.calculate_first_second_order_derivatives()
-
+        # self.estimate_hurst_exponent()
+        # self.detect_fourier_signals()
+        # self.preprocess_data()
         return self.predict()
 
     def calculate_daily_percentage_change(self):
@@ -280,6 +309,17 @@ class TradingStrategy:
             "KalmanFilterEst_1st_Deriv",
             "KalmanFilterEst_2nd_Deriv",
         ]
+
+        try:
+                test_data = self.data[feature_set]
+        except Exception as e:
+                logging.error(f"[TradingStrategy] Error extracting features: {e}")
+                return ("Hold", None, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
+        # Log shape and content of the features
+        logging.info(f"[TradingStrategy] Feature matrix shape: {test_data.shape}")
+        logging.info(f"[TradingStrategy] Feature matrix sample:\n{test_data.tail()}")        
+
         test_data = self.data[feature_set]
         print("check last data: ", self.data[-5:])
         test_data.to_csv("test_data.csv")

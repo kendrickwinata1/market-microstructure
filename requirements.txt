@@ -17,3 +17,4 @@ ripser==0.6.8
 python-dotenv==1.0.1
 PyWavelets==1.4.1
 giotto-tda==0.6.2
+schedule==1.2.1

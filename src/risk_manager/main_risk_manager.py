@@ -1,3 +1,5 @@
+import logging
+
 class RiskManager:
     """
     The RiskManager class monitors and controls risk exposure by:
@@ -61,24 +63,29 @@ class RiskManager:
 
     def get_last_buy_price(self):
         """
-        Find the most recent buy price by inspecting position size increases.
+        Find the most recent valid buy price by inspecting position increases.
 
         Returns:
-            float or None: Last buy price, or None if not found/invalid.
+            float or None: Last buy price if valid; otherwise None.
         """
-        last_buy_price = None
         historical_positions_df = self.book_keeper.return_historical_positions()
-        for i in range(1, len(historical_positions_df)):
-            # Detect if position increased, which indicates a buy
-            if (
-                historical_positions_df["PositionAmt"].iloc[i]
-                > historical_positions_df["PositionAmt"].iloc[i - 1]
-            ):
-                last_buy_price = historical_positions_df["entryPrice"].iloc[i]
-        if last_buy_price is None or last_buy_price <= 0:
-            print("Invalid last buy price")
+
+        if historical_positions_df.empty or "PositionAmt" not in historical_positions_df.columns:
+            logging.error("[RiskManager] Historical positions dataframe invalid or empty.")
             return None
-        return last_buy_price
+
+        buy_transactions = historical_positions_df[
+            historical_positions_df["PositionAmt"].diff() > 0
+        ]
+
+        if not buy_transactions.empty:
+            last_buy_price = buy_transactions["entryPrice"].iloc[-1]
+            if last_buy_price > 0:
+                return last_buy_price
+
+        logging.warning("[RiskManager] No valid buy transactions found.")
+        return None
+
 
     def get_current_btc_inventory(self):
         """
