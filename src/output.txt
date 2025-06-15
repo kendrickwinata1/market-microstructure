@@ -3,704 +3,1463 @@ initializing REST gateway factory
 CHECK MY API_KEY:  85598458174867dbc8a0019da63460949ab766358dbabd942feff1eea3de5d49
 CHECK MY API_SECRET:  ea6da2f56cec7eb7bad8eb40be534149b2fc7b849a92e63818839ed21827188d
 ################ REGISTERING CALLBACK ################
-Response: {'serverTime': 1748445417823}
-/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market-microstructure/src/book_keeper/main_book_keeper.py:133: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
-  self.historical_data = pd.concat(
+Response: {'serverTime': 1749818333240}
 Cannot trigger stop loss due to invalid last buy price
-Callback: (datetime.datetime(2025, 5, 28, 23, 16, 57, 630453), '107239.60')
-/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market-microstructure/src/trading_engine/main_trading_strategy.py:75: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
-  self.raw_data = pd.concat([self.raw_data, new_data], ignore_index=True)
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:16:58')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :13884.8779309
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467156763, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'UTGs2qsF9LFXWzSECMNLBz', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.095', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445418468}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445419323}
-STOPLOSS CHECK: stoploss_limit_value106199.506617237, latest_market_price107239.60,  last_buy_price107272.2289063
-Callback: (datetime.datetime(2025, 5, 28, 23, 16, 59, 117619), '107239.60')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:16:59')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :14389.83685609
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467156821, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'Lf4EZhgBexou73yImEZZCh', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.098', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445420108}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445421801}
-STOPLOSS CHECK: stoploss_limit_value106167.204, latest_market_price107239.60,  last_buy_price107239.6
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 1, 583963), '107239.60')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:02')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :14214.38366846
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467156947, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'W2zaxCRnPbUvAK6YjfVYkt', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.097', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445422478}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445423331}
-STOPLOSS CHECK: stoploss_limit_value106167.204, latest_market_price107239.60,  last_buy_price107239.6
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 3, 134124), '107239.60')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:03')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :13690.10850467
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157061, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'f7BA61YPwPP7BOD29FmdXO', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.093', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445423991}
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445425149}
-STOPLOSS CHECK: stoploss_limit_value106167.204, latest_market_price107239.60,  last_buy_price107239.6
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 4, 942448), '107239.60')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:05')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :13179.86227526
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157231, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '42FHqnpaYjBtDgjj2X5awJ', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.090', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445425815}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
+Callback: (datetime.datetime(2025, 6, 13, 20, 38, 53, 138215), '104920.10')
+Response: {'serverTime': 1749818334822}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 38, 54, 719613), '104920.10')
+Response: {'serverTime': 1749818337152}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 38, 57, 56237), '104920.10')
+Response: {'serverTime': 1749818338962}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 38, 58, 868683), '104920.10')
+Response: {'serverTime': 1749818340286}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 0, 188594), '104920.10')
 Heartbeat: application running.
-Response: {'serverTime': 1748445426727}
-STOPLOSS CHECK: stoploss_limit_value106167.204, latest_market_price107239.60,  last_buy_price107239.6
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 6, 519577), '107239.60')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:07')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :12688.8301789
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157341, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'D0RP5N90oSaPM47BmOlaI4', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.086', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445427411}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445428440}
-STOPLOSS CHECK: stoploss_limit_value106167.080652039, latest_market_price107239.60,  last_buy_price107239.4754061
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 8, 244589), '107239.60')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:08')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :12214.28483279
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157378, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '1JzJO5EnpWzKBHFomKuacM', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.083', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445429129}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445429932}
-STOPLOSS CHECK: stoploss_limit_value106167.100184838, latest_market_price107239.50,  last_buy_price107239.4951362
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 9, 731516), '107239.50')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:10')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :11761.17122096
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157490, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '0y4Qou9pGMfVUhIIDVbsLi', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.080', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445430556}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445431396}
-STOPLOSS CHECK: stoploss_limit_value106167.113833275, latest_market_price107239.50,  last_buy_price107239.5089225
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 11, 195947), '107239.50')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:11')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :11330.27944609
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157538, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'T9iUVczm3MWd59GJe1viP8', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.077', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445432011}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445432828}
-STOPLOSS CHECK: stoploss_limit_value106167.12388524, latest_market_price107233.00,  last_buy_price107239.519076
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 12, 631048), '107233.00')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:13')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :10913.85967646
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157573, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'ZEL35pBFs804QRMPnG962n', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.074', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445433442}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445434419}
-STOPLOSS CHECK: stoploss_limit_value106167.131577144, latest_market_price107239.60,  last_buy_price107239.5268456
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 14, 225838), '107239.60')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:14')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :10511.18415156
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157606, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'bR2jzDeOvw4sj7VOYf7zAt', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.072', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445435030}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
+Response: {'serverTime': 1749818342794}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 2, 490379), '104920.10')
+Response: {'serverTime': 1749818344372}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 4, 275756), '104920.10')
+Response: {'serverTime': 1749818346846}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 6, 623829), '104920.10')
+Response: {'serverTime': 1749818348547}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 8, 448538), '104920.10')
+Response: {'serverTime': 1749818350616}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 10, 270161), '104915.60')
+Response: {'serverTime': 1749818352224}
 Heartbeat: application running.
-Response: {'serverTime': 1748445435852}
-STOPLOSS CHECK: stoploss_limit_value106167.13795957499, latest_market_price107239.60,  last_buy_price107239.5332925
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 15, 659284), '107239.60')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:16')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :10119.32605452
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157631, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'WMzYB90VewTO9wlxMUQ9Ba', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.069', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445436493}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445437532}
-STOPLOSS CHECK: stoploss_limit_value106167.127012353, latest_market_price107239.60,  last_buy_price107239.5222347
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 17, 325270), '107239.60')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:17')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :9743.73767675
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157658, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'NFW810PgLVm5B8iXob5ZDU', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.066', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445438299}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445440037}
-STOPLOSS CHECK: stoploss_limit_value106167.13234974, latest_market_price107239.60,  last_buy_price107239.527626
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 19, 837796), '107239.60')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:20')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :9389.43339028
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157729, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'G1yrHKNIeREI73FIBHIhoA', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.064', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445440653}
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445442766}
-STOPLOSS CHECK: stoploss_limit_value106167.797902485, latest_market_price107225.40,  last_buy_price107240.1999015
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 22, 557339), '107225.40')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:25')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :9044.9496001
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467157879, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '2adCbeLrhpXKcwWrrUXMMz', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.062', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445445341}
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 12, 104496), '104915.60')
+Response: {'serverTime': 1749818354276}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 14, 182367), '104915.60')
+Response: {'serverTime': 1749818356133}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 15, 814887), '104915.60')
+Response: {'serverTime': 1749818358432}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 17, 564127), '104915.60')
+Response: {'serverTime': 1749818361210}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 21, 109226), '104915.60')
 Heartbeat: application running.
-Response: {'serverTime': 1748445446198}
-STOPLOSS CHECK: stoploss_limit_value106166.706520347, latest_market_price107225.40,  last_buy_price107239.0974953
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 25, 990856), '107225.40')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:26')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :8709.84216136
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467158018, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'APr7sJDjjDd9gB19PUOMfe', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.059', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445447034}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445448079}
-STOPLOSS CHECK: stoploss_limit_value106165.617561927, latest_market_price107217.90,  last_buy_price107237.9975373
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 27, 877762), '107217.90')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:28')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :8397.85010718
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467158145, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'u8yjgqRBX86GLrkraIRfY7', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.057', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445448754}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445449576}
-STOPLOSS CHECK: stoploss_limit_value106164.667726029, latest_market_price107217.90,  last_buy_price107237.0381071
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 29, 379654), '107217.90')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:30')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :8121.36425409
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467158289, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'An4wr9sghdejn18rrRjsLa', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.055', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445450642}
-Response: {'serverTime': 1748445451936}
-STOPLOSS CHECK: stoploss_limit_value106165.019183256, latest_market_price107217.90,  last_buy_price107237.3931144
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 31, 734971), '107217.90')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:32')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :7823.03968689
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467158338, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'ac004AjLdFheSA9itDCE62', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.053', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445452553}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445453450}
-STOPLOSS CHECK: stoploss_limit_value106165.329767145, latest_market_price107245.10,  last_buy_price107237.7068355
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 33, 256248), '107245.10')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:33')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :7536.51251583
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467158402, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'YZMhM490MwLfT69nWwhGml', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.051', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445454091}
-********FILLED******
-
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
+Response: {'serverTime': 1749818365260}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 24, 677145), '104915.60')
+Response: {'serverTime': 1749818368066}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 27, 495628), '104913.60')
+Response: {'serverTime': 1749818370250}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 30, 133026), '104913.60')
+Response: {'serverTime': 1749818372037}
 Heartbeat: application running.
-Response: {'serverTime': 1748445455993}
-STOPLOSS CHECK: stoploss_limit_value106165.60565836499, latest_market_price107245.10,  last_buy_price107237.9855135
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 35, 796078), '107245.10')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:36')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :7249.96692586
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467158476, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '68b9DDVmqiyfQQLkWYEqFk', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.049', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445456746}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445457691}
-STOPLOSS CHECK: stoploss_limit_value106165.85839071301, latest_market_price107241.90,  last_buy_price107238.2407987
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 37, 352261), '107241.90')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:38')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :6999.52409816
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467158651, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'X45sc6D5gbq6tw3Cxaj0i1', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.048', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445458398}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445459883}
-STOPLOSS CHECK: stoploss_limit_value106165.843944633, latest_market_price107241.90,  last_buy_price107238.2262067
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 39, 658250), '107241.90')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:40')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :6725.13289247
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467158780, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'xC0vqcKFAiI65GXYIYJjdO', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.046', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445460627}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Response: {'serverTime': 1748445461499}
-STOPLOSS CHECK: stoploss_limit_value106165.83090415501, latest_market_price107237.80,  last_buy_price107238.2130345
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 41, 312609), '107237.80')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:41')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :6476.27461709
-[Force Override] Risk manager approval forced to True for BUY.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467158904, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'jICJ8tgveJWNeNwO4d8RCE', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.044', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445462162}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 31, 931807), '104914.00')
+Response: {'serverTime': 1749818373921}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 33, 807790), '104914.00')
+Response: {'serverTime': 1749818375544}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 35, 433989), '104914.00')
+Response: {'serverTime': 1749818377202}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 37, 96600), '104914.00')
+Response: {'serverTime': 1749818379352}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 39, 250811), '104914.00')
+Response: {'serverTime': 1749818381214}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 40, 991233), '104914.00')
 Heartbeat: application running.
-Response: {'serverTime': 1748445466161}
-STOPLOSS CHECK: stoploss_limit_value106165.773964008, latest_market_price107237.80,  last_buy_price107238.1555192
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 45, 382580), '107237.80')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:48')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :6225.12506002
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467159108, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'nxidC70igKZwSWAZUrOnfc', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.042', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445468500}
-Response: {'serverTime': 1748445470028}
-STOPLOSS CHECK: stoploss_limit_value106165.691026956, latest_market_price107235.50,  last_buy_price107238.0717444
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 49, 606876), '107235.50')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:51')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :6009.05862194
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467159266, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'ornypkQEBlygBrNe8w9Yyj', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.041', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445471662}
-Response: {'serverTime': 1748445473549}
-STOPLOSS CHECK: stoploss_limit_value106165.668676221, latest_market_price107235.50,  last_buy_price107238.0491679
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 53, 122480), '107235.50')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:54')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :5792.48094736
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467159337, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'crI9R7nSLaB8RhO4SmVe9e', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.039', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445475174}
+Response: {'serverTime': 1749818382769}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 42, 670114), '104914.00')
+Response: {'serverTime': 1749818384405}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 44, 295098), '104896.00')
+Response: {'serverTime': 1749818385880}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 45, 783377), '104896.10')
+Response: {'serverTime': 1749818387426}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 47, 329500), '104896.10')
+Response: {'serverTime': 1749818388711}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 48, 579390), '104896.10')
+Response: {'serverTime': 1749818391057}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 50, 953700), '104896.10')
 Heartbeat: application running.
-Response: {'serverTime': 1748445476914}
-STOPLOSS CHECK: stoploss_limit_value106165.66288779001, latest_market_price107235.50,  last_buy_price107238.043321
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 56, 487991), '107235.50')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:17:58')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :5578.59045268
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467159444, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'LqwwE9ojiUTJ50MF6xV7OA', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.038', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445478569}
-Response: {'serverTime': 1748445480080}
-STOPLOSS CHECK: stoploss_limit_value106165.664142021, latest_market_price107237.80,  last_buy_price107238.0445879
-Callback: (datetime.datetime(2025, 5, 28, 23, 17, 59, 651469), '107237.80')
-check last data:                Timestamp      Open      High       Low     Close  ... KalmanFilterEst_2nd_Deriv  Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv
-56  2025-05-28 00:06:11  110163.9  110163.9  110163.9  110163.9  ...               1510.429239                       -54.0               -4.365575e-07                     -365.5               1.455192e-07
-57  2025-05-28 00:06:12  110163.9  110163.9  110163.9  110163.9  ...                576.932632                       -54.0                2.910383e-07                     -365.5              -2.910383e-07
-58  2025-05-28 00:06:13  110163.9  110163.9  110163.9  110163.9  ...                220.368656                         0.0                5.400000e+03                     -365.5               1.455192e-07
-59  2025-05-28 00:06:14  110163.9  110163.9  110163.9  110163.9  ...                 84.173337                         0.0                0.000000e+00                     -297.0               6.850000e+03
-60  2025-05-28 00:06:15  110163.9  110163.9  110163.9  110163.9  ...                 32.151354                         0.0                0.000000e+00                     -297.0              -1.455192e-07
-
-[5 rows x 29 columns]
-action:  ('Hold', 110163.9, '2025-05-28 23:18:01')
-[Force Override] HOLD signal forcibly overridden to BUY for testing
-[risk mgr] AvailableBalance :5375.32489364
-[Force Override] Risk manager approval forced to True for BUY.
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4467159575, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'vtfLdevy8Yh6L1XhhlrCtp', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.037', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1748445482676}
-Traceback (most recent call last):
-  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market-microstructure/src/app.py", line 249, in <module>
-    time.sleep(10)
-KeyboardInterrupt
+Response: {'serverTime': 1749818393401}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 53, 303538), '104896.00')
+Response: {'serverTime': 1749818395825}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 55, 725974), '104896.00')
+Response: {'serverTime': 1749818397442}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 57, 342866), '104896.00')
+Response: {'serverTime': 1749818399135}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 39, 59, 33638), '104896.10')
+Response: {'serverTime': 1749818400761}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 40, 0, 660727), '104896.10')
+Response: {'serverTime': 1749818401890}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 40, 1, 792364), '104896.10')
+Heartbeat: application running.
+Response: {'serverTime': 1749818403314}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 40, 3, 207095), '104896.10')
+Response: {'serverTime': 1749818404551}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 40, 4, 444928), '104895.60')
+Response: {'serverTime': 1749818406296}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 40, 6, 201522), '104897.80')
+Response: {'serverTime': 1749818408556}
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 40, 8, 456997), '104897.80')
+Response: {'serverTime': 1749818650289}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 44, 10, 174757), '104897.80')
+Response: {'serverTime': 1749818651627}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 44, 11, 516511), '104897.80')
+Response: {'serverTime': 1749818653074}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 44, 12, 963731), '104924.00')
+Heartbeat: application running.
+Response: {'serverTime': 1749818655830}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 44, 15, 679428), '104924.00')
+Response: {'serverTime': 1749818659190}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 44, 19, 38954), '104898.80')
+Response: {'serverTime': 1749818663977}
+Heartbeat: application running.
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 44, 23, 768883), '104885.20')
+Response: {'serverTime': 1749818667796}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 44, 27, 644024), '104885.20')
+Response: {'serverTime': 1749818670416}
+Cannot trigger stop loss due to invalid last buy price
+Callback: (datetime.datetime(2025, 6, 13, 20, 44, 30, 266473), '104885.20')
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.
+Heartbeat: application running.

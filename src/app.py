@@ -84,126 +84,258 @@ class ExecManager:
     def exec_strat(self, tick):
         """
         Main event handler for each market tick.
-        - Updates bookkeeping and cancels stale orders
-        - Checks risk triggers for liquidation
-        - Otherwise, calls the trading model, checks risk for order, and places order if approved
+        - Updates bookkeeping and cancels stale orders.
+        - Calls the trading model and conditionally overrides HOLD based on strong signals.
+        - Checks risk and executes trades.
         """
-        
-        last_price = tick["lastprice"]
+        logging.info("[ExecManager] Received new tick data.")
+
+        last_price = tick.get("lastprice")
         if not last_price:
-            logging.warning("[ExecManager] Received empty last price, skipping tick.")
+            logging.warning("[ExecManager] Empty last price received; skipping tick.")
             return
 
         server_response = self.rest_gateway.time()
         servertime = int(server_response.get("serverTime", 0))
         if not servertime:
-            logging.error("[ExecManager] Server time fetch failed.")
+            logging.error("[ExecManager] Failed to fetch server time; aborting tick processing.")
             return
 
         today = datetime.fromtimestamp(servertime / 1000).date()
+        logging.info(f"[ExecManager] Updating bookkeeper for date: {today}, price: {last_price}")
         self.book_keeper.update_bookkeeper(today, last_price, servertime)
 
         # Order management
         open_orders = self.rest_gateway.get_all_open_orders("BTCUSDT", servertime)
         order_queue_ok = len(open_orders) < MAX_OPEN_ORDER_COUNT
+        logging.info(f"[Order Management] Open orders: {len(open_orders)}; Queue OK: {order_queue_ok}")
 
-        # Risk checks
+        # Risk trigger check
         if self.risk_manager.trigger_stop_loss() or self.risk_manager.trigger_trading_halt():
-            logging.info("[ExecManager] Risk trigger activated. Attempting liquidation.")
+            logging.info("[Risk Manager] Stop-loss or trading halt triggered; initiating liquidation.")
             self.handle_liquidation(servertime)
             return
 
-        # Strategy analysis
+        # Model analysis
+        logging.info("[Strategy] Collecting new data and aggregating features.")
         self.update_queue(tick)
         self.strategy.collect_new_data()
         self.strategy.aggregate_data()
-        model_output = self.strategy.analyze_data()
 
+        model_output = self.strategy.analyze_data()
+        print(f"[Debug] Model output: {model_output}")
+
+        # Check if model output is valid
         if not model_output:
             self.model_none_count += 1
+            logging.warning(f"[Strategy] Model returned None ({self.model_none_count}/{MAX_MODEL_NONE_COUNT}).")
             if self.model_none_count >= MAX_MODEL_NONE_COUNT:
-                print("Model returned None too many times; cancelling all orders.")
+                logging.warning("[ExecManager] Model failure limit reached; cancelling all orders.")
                 self.rest_gateway.cancel_all_order("BTCUSDT", servertime)
-            print(f"MODEL NONE COUNT VALUE = {self.model_none_count}")
             return
+        else:
+            self.model_none_count = 0  # Reset on valid signal
 
         direction, limit_price = model_output[0].upper(), float(model_output[1])
+        logging.info(f"[Strategy] Initial model signal: {direction} at price: {limit_price}")
 
-        # --- Override HOLD based on momentum indicator ---
-        # if direction == "HOLD":
-        #     try:
-        #         data = self.strategy.data
-        #         last_deriv = data["Short_Moving_Avg_1st_Deriv"].iloc[-1]
-        #         if last_deriv > 10:
-        #             direction = "BUY"
-        #             print("[Override] HOLD -> BUY due to momentum")
-        #         elif last_deriv < -10:
-        #             direction = "SELL"
-        #             print("[Override] HOLD -> SELL due to momentum")
-        #     except Exception as e:
-        #         print("[Override Error] Cannot override HOLD:", e)
-        
+        # Handle HOLD signals with adaptive overrides
         if direction == "HOLD":
-            # Force override HOLD signal for testing
-            direction = "BUY"  # or "SELL" to test short-side logic
-            print("[Force Override] HOLD signal forcibly overridden to BUY for testing")
+            data = self.strategy.data
+            short_ma_deriv = data["Short_Moving_Avg_1st_Deriv"].iloc[-1]
+            kalman_deriv = data["KalmanFilterEst_1st_Deriv"].iloc[-1]
 
+            logging.debug(f"[Strategy Debug] Short MA Derivative: {short_ma_deriv}, Kalman Derivative: {kalman_deriv}")
 
-        # Prepare order details
+            if short_ma_deriv > 10 and kalman_deriv > 0:
+                direction = "BUY"
+                logging.info("[Strategy Override] HOLD overridden to BUY due to positive momentum.")
+            elif short_ma_deriv < -10 and kalman_deriv < 0:
+                direction = "SELL"
+                logging.info("[Strategy Override] HOLD overridden to SELL due to negative momentum.")
+            else:
+                logging.info("[Strategy] HOLD signal confirmed; insufficient momentum for override.")
+                return  # Exit without placing an order
+
+        # Determine order quantity and perform risk checks
         order_quantity = 0
         approval = False
 
         if direction == "BUY":
             dollar_amt = self.risk_manager.get_available_tradable_balance()
             order_quantity = round(dollar_amt / limit_price, 3)
-            # approval = (
-            #     self.risk_manager.check_available_balance(dollar_amt)
-            #     and self.risk_manager.check_buy_order_value(limit_price)
-            #     and self.risk_manager.check_buy_position()
-            # )
-            
-            # Force approval for testing
-            approval = True
-            print("[Force Override] Risk manager approval forced to True for BUY.")
+            approval = (
+                self.risk_manager.check_available_balance(dollar_amt)
+                and self.risk_manager.check_buy_order_value(limit_price)
+                and self.risk_manager.check_buy_position()
+            )
+            logging.info(f"[Risk Check] BUY approval: {approval}, Amount: {dollar_amt}, Quantity: {order_quantity}")
 
         elif direction == "SELL":
             pos_info = self.rest_gateway.get_position_info("BTCUSDT", servertime)
             order_quantity = float(pos_info[0]["positionAmt"]) if pos_info else 0
-            # approval = (
-            #     self.risk_manager.check_short_position(order_quantity)
-            #     and self.risk_manager.check_sell_order_value(limit_price)
-            # )
+            approval = (
+                order_quantity > 0
+                and self.risk_manager.check_short_position(order_quantity)
+                and self.risk_manager.check_sell_order_value(limit_price)
+            )
+            logging.info(f"[Risk Check] SELL approval: {approval}, Position quantity: {order_quantity}")
 
-            # Force approval for testing
-            approval = True
-            print("[Force Override] Risk manager approval forced to True for SELL.")
+        if not approval:
+            logging.warning("[Risk Check] Trade not approved by risk manager; skipping order placement.")
+            return
 
-        elif direction == "HOLD":
-            print("Model signals HOLD.")
-            return  # nothing else to do
+        if not order_queue_ok:
+            logging.warning("[Order Management] Order queue limit reached; cannot place new orders.")
+            return
 
-        # --- Final order placement if all checks pass ---
-        if approval and order_queue_ok and order_quantity > 0:
-            order_data = {
-                "symbol": "BTCUSDT",
-                "price": limit_price,
-                "side": direction,
-                "type": "LIMIT",
-                "quantity": order_quantity,
-                "timestamp": servertime - OFFSET,
-                "recvWindow": 60000,
-                "timeInForce": "GTC",
-            }
-            trade_result = self.trade_executor.execute_trade(order_data, "trade")
+        if order_quantity <= 0:
+            logging.error("[Order Placement] Calculated order quantity invalid; aborting order.")
+            return
 
-            if trade_result:
-                logging.info(f"[ExecManager] {direction} order placed successfully.")
-                self.book_keeper.update_bookkeeper(datetime.now(), limit_price, servertime) 
-                self.book_keeper.return_historical_data().to_csv("historical_data.csv")
-            else:
-                logging.error(f"[ExecManager] {direction} order placement failed.")
-        else:
-            print("Order not approved by risk manager or order queue full.")
+        # Construct and place order
+        order_data = {
+            "symbol": "BTCUSDT",
+            "price": limit_price,
+            "side": direction,
+            "type": "LIMIT",
+            "quantity": order_quantity,
+            "timestamp": servertime - OFFSET,
+            "recvWindow": 60000,
+            "timeInForce": "GTC",
+        }
+        logging.info(f"[Order Placement] Submitting {direction} order: {order_data}")
+        trade_result = self.trade_executor.execute_trade(order_data, "trade")
+
+        if trade_result:
+            logging.info(f"[ExecManager] {direction} order executed successfully at {limit_price}.")
+            self.book_keeper.update_bookkeeper(datetime.now(), limit_price, servertime)
+            self.book_keeper.return_historical
+
+
+    # def exec_strat(self, tick):
+    #     """
+    #     Main event handler for each market tick.
+    #     - Updates bookkeeping and cancels stale orders
+    #     - Checks risk triggers for liquidation
+    #     - Otherwise, calls the trading model, checks risk for order, and places order if approved
+    #     """
+        
+    #     last_price = tick["lastprice"]
+    #     if not last_price:
+    #         logging.warning("[ExecManager] Received empty last price, skipping tick.")
+    #         return
+
+    #     server_response = self.rest_gateway.time()
+    #     servertime = int(server_response.get("serverTime", 0))
+    #     if not servertime:
+    #         logging.error("[ExecManager] Server time fetch failed.")
+    #         return
+
+    #     today = datetime.fromtimestamp(servertime / 1000).date()
+    #     self.book_keeper.update_bookkeeper(today, last_price, servertime)
+
+    #     # Order management
+    #     open_orders = self.rest_gateway.get_all_open_orders("BTCUSDT", servertime)
+    #     order_queue_ok = len(open_orders) < MAX_OPEN_ORDER_COUNT
+
+    #     # Risk checks
+    #     if self.risk_manager.trigger_stop_loss() or self.risk_manager.trigger_trading_halt():
+    #         logging.info("[ExecManager] Risk trigger activated. Attempting liquidation.")
+    #         self.handle_liquidation(servertime)
+    #         return
+
+    #     # Strategy analysis
+    #     self.update_queue(tick)
+    #     self.strategy.collect_new_data()
+    #     self.strategy.aggregate_data()
+    #     model_output = self.strategy.analyze_data()
+
+    #     if not model_output:
+    #         self.model_none_count += 1
+    #         if self.model_none_count >= MAX_MODEL_NONE_COUNT:
+    #             print("Model returned None too many times; cancelling all orders.")
+    #             self.rest_gateway.cancel_all_order("BTCUSDT", servertime)
+    #         print(f"MODEL NONE COUNT VALUE = {self.model_none_count}")
+    #         return
+
+    #     direction, limit_price = model_output[0].upper(), float(model_output[1])
+
+    #     # --- Override HOLD based on momentum indicator ---
+    #     # if direction == "HOLD":
+    #     #     try:
+    #     #         data = self.strategy.data
+    #     #         last_deriv = data["Short_Moving_Avg_1st_Deriv"].iloc[-1]
+    #     #         if last_deriv > 10:
+    #     #             direction = "BUY"
+    #     #             print("[Override] HOLD -> BUY due to momentum")
+    #     #         elif last_deriv < -10:
+    #     #             direction = "SELL"
+    #     #             print("[Override] HOLD -> SELL due to momentum")
+    #     #     except Exception as e:
+    #     #         print("[Override Error] Cannot override HOLD:", e)
+        
+    #     if direction == "HOLD":
+    #         # Force override HOLD signal for testing
+    #         direction = "BUY"  # or "SELL" to test short-side logic
+    #         print("[Force Override] HOLD signal forcibly overridden to BUY for testing")
+
+
+    #     # Prepare order details
+    #     order_quantity = 0
+    #     approval = False
+
+    #     if direction == "BUY":
+    #         dollar_amt = self.risk_manager.get_available_tradable_balance()
+    #         order_quantity = round(dollar_amt / limit_price, 3)
+    #         # approval = (
+    #         #     self.risk_manager.check_available_balance(dollar_amt)
+    #         #     and self.risk_manager.check_buy_order_value(limit_price)
+    #         #     and self.risk_manager.check_buy_position()
+    #         # )
+            
+    #         # Force approval for testing
+    #         approval = True
+    #         print("[Force Override] Risk manager approval forced to True for BUY.")
+
+    #     elif direction == "SELL":
+    #         pos_info = self.rest_gateway.get_position_info("BTCUSDT", servertime)
+    #         order_quantity = float(pos_info[0]["positionAmt"]) if pos_info else 0
+    #         # approval = (
+    #         #     self.risk_manager.check_short_position(order_quantity)
+    #         #     and self.risk_manager.check_sell_order_value(limit_price)
+    #         # )
+
+    #         # Force approval for testing
+    #         approval = True
+    #         print("[Force Override] Risk manager approval forced to True for SELL.")
+
+    #     elif direction == "HOLD":
+    #         print("Model signals HOLD.")
+    #         return  # nothing else to do
+
+    #     # --- Final order placement if all checks pass ---
+    #     if approval and order_queue_ok and order_quantity > 0:
+    #         order_data = {
+    #             "symbol": "BTCUSDT",
+    #             "price": limit_price,
+    #             "side": direction,
+    #             "type": "LIMIT",
+    #             "quantity": order_quantity,
+    #             "timestamp": servertime - OFFSET,
+    #             "recvWindow": 60000,
+    #             "timeInForce": "GTC",
+    #         }
+    #         trade_result = self.trade_executor.execute_trade(order_data, "trade")
+
+    #         if trade_result:
+    #             logging.info(f"[ExecManager] {direction} order placed successfully.")
+    #             self.book_keeper.update_bookkeeper(datetime.now(), limit_price, servertime) 
+    #             self.book_keeper.return_historical_data().to_csv("historical_data.csv")
+    #         else:
+    #             logging.error(f"[ExecManager] {direction} order placement failed.")
+    #     else:
+    #         print("Order not approved by risk manager or order queue full.")
 
             
 def on_exec():

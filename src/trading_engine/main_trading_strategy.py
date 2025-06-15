@@ -133,17 +133,11 @@ class TradingStrategy:
             return
 
         self.calculate_daily_percentage_change()
-        self.perform_fourier_transform_analysis()
-        self.calculate_stochastic_oscillator()
-        self.calculate_slow_stochastic_oscillator()
-        self.construct_kalman_filter()
-        self.detect_rolling_peaks_and_troughs()
         self.calculate_moving_averages_and_rsi()
-        self.calculate_days_since_peaks_and_troughs()
+        self.calculate_stochastic_oscillator(k_window=5, d_window=3)
+        self.construct_kalman_filter()
         self.calculate_first_second_order_derivatives()
-        # self.estimate_hurst_exponent()
-        # self.detect_fourier_signals()
-        # self.preprocess_data()
+        self.detect_rolling_peaks_and_troughs(window_size=3)
         return self.predict()
 
     def calculate_daily_percentage_change(self):
@@ -174,16 +168,21 @@ class TradingStrategy:
             {"Frequency": significant_frequencies, "Amplitude": significant_amplitudes, "MinutesPerCycle": days_per_cycle}
         )
 
-    def calculate_stochastic_oscillator(self, k_window=14, d_window=3, slow_k_window=3):
-        """
-        Calculates the Stochastic Oscillator %K and %D for momentum/overbought/oversold detection.
-        """
+    def calculate_stochastic_oscillator(self, k_window=5, d_window=3):
         low_min = self.data["Low"].rolling(window=k_window).min()
         high_max = self.data["High"].rolling(window=k_window).max()
-        self.data["%K"] = 100 * (self.data["Close"] - low_min) / (high_max - low_min)
+        range_max_min = high_max - low_min
+
+        # Avoid division by zero by replacing zeros with NaN, then filling forward
+        range_max_min = range_max_min.replace(0, np.nan).ffill().bfill()
+
+        self.data["%K"] = 100 * (self.data["Close"] - low_min) / range_max_min
         self.data["%D"] = self.data["%K"].rolling(window=d_window).mean()
-        self.data["%K"].bfill(inplace=True)
-        self.data["%D"].bfill(inplace=True)
+
+        # Fill remaining NaNs (initial rows) with neutral value (50)
+        self.data["%K"].fillna(50, inplace=True)
+        self.data["%D"].fillna(50, inplace=True)
+
 
     def calculate_slow_stochastic_oscillator(self, d_window=3, slow_k_window=3):
         """
@@ -194,34 +193,26 @@ class TradingStrategy:
         self.data["Slow %K"].bfill(inplace=True)
         self.data["Slow %D"].bfill(inplace=True)
 
-    def detect_rolling_peaks_and_troughs(self, window_size=5):
+    def detect_rolling_peaks_and_troughs(self, window_size=3):
         """
-        Identifies local peaks and troughs in the closing price using a rolling window.
-        Labels each row as Buy/Sell/Hold accordingly.
+        More sensitive local peak/trough detection.
         """
-        self.data["isLocalPeak"] = False
-        self.data["isLocalTrough"] = False
-        for end_idx in range(window_size, len(self.data)):
-            start_idx = max(0, end_idx - window_size)
-            window_data = self.data["Close"][start_idx:end_idx]
-            peaks, _ = find_peaks(window_data)
-            peaks_global_indices = [start_idx + p for p in peaks]
-            self.data.loc[peaks_global_indices, "isLocalPeak"] = True
-            troughs, _ = find_peaks(-window_data)
-            troughs_global_indices = [start_idx + t for t in troughs]
-            self.data.loc[troughs_global_indices, "isLocalTrough"] = True
+        self.data["isLocalPeak"] = self.data["Close"] > self.data["Close"].rolling(window_size, center=True).max().shift(-1)
+        self.data["isLocalTrough"] = self.data["Close"] < self.data["Close"].rolling(window_size, center=True).min().shift(-1)
+
         self.data["Label"] = "Hold"
         self.data.loc[self.data["isLocalPeak"], "Label"] = "Sell"
         self.data.loc[self.data["isLocalTrough"], "Label"] = "Buy"
 
-    def calculate_rsi(self, window=14):
-        """Manually calculates Relative Strength Index (RSI) indicator."""
+
+    def calculate_rsi(self, window=5):
         delta = self.data["Close"].diff()
         gain = (delta.where(delta > 0, 0)).rolling(window=window).mean()
         loss = (-delta.where(delta < 0, 0)).rolling(window=window).mean()
-        rs = gain / loss
+        rs = gain / loss.replace(to_replace=0).ffill().bfill()
         rsi = 100 - (100 / (1 + rs))
-        return rsi
+        return rsi.ffill().bfill()
+
 
     def calculate_moving_averages_and_rsi(self):
         """
@@ -247,41 +238,47 @@ class TradingStrategy:
 
     def calculate_days_since_peaks_and_troughs(self):
         """
-        For each row, computes time since last detected peak/trough and price changes from those points.
+        For each row, computes time (in minutes) since last detected peak/trough 
+        and price changes from those reference points.
         """
-        self.data["MinutesSincePeak"] = 0
-        self.data["MinutesSinceTrough"] = 0
-        self.data["PriceChangeSincePeak"] = 0
-        self.data["PriceChangeSinceTrough"] = 0
+        self.data["MinutesSincePeak"] = 0.0
+        self.data["MinutesSinceTrough"] = 0.0
+        self.data["PriceChangeSincePeak"] = 0.0
+        self.data["PriceChangeSinceTrough"] = 0.0
 
-        checkpoint_date_bottom = None
-        checkpoint_date_top = None
-        checkpoint_price_bottom = None
-        checkpoint_price_top = None
-        price_change_since_bottom = 0
-        price_change_since_peak = 0
+        last_peak_time = None
+        last_trough_time = None
+        last_peak_price = None
+        last_trough_price = None
 
         for index, row in self.data.iterrows():
+            current_time = pd.to_datetime(row["Date"])
             current_price = row["Open"]
-            today_date = pd.to_datetime(row["Date"])
-            if row["Label"] == "Buy":
-                checkpoint_date_bottom = today_date
-                checkpoint_price_bottom = current_price
+
+            # Update peak/trough checkpoints
             if row["Label"] == "Sell":
-                checkpoint_date_top = today_date
-                checkpoint_price_top = current_price
-            days_since_bottom = (today_date - checkpoint_date_bottom).seconds if checkpoint_date_bottom else 0
-            days_since_peak = (today_date - checkpoint_date_top).seconds if checkpoint_date_top else 0
-            if checkpoint_price_bottom is not None:
-                price_change_since_bottom = current_price - checkpoint_price_bottom
-            if checkpoint_price_top is not None:
-                price_change_since_peak = current_price - checkpoint_price_top
-            self.data.at[index, "MinutesSincePeak"] = days_since_peak
-            self.data.at[index, "MinutesSinceTrough"] = days_since_bottom
-            self.data["PriceChangeSincePeak"] = self.data["PriceChangeSincePeak"].astype(float)
-            self.data["PriceChangeSinceTrough"] = self.data["PriceChangeSinceTrough"].astype(float)
-            self.data.at[index, "PriceChangeSincePeak"] = float(price_change_since_peak)
-            self.data.at[index, "PriceChangeSinceTrough"] = float(price_change_since_bottom)
+                last_peak_time = current_time
+                last_peak_price = current_price
+            elif row["Label"] == "Buy":
+                last_trough_time = current_time
+                last_trough_price = current_price
+
+            # Compute time since last peak/trough
+            minutes_since_peak = (current_time - last_peak_time).total_seconds() / 60.0 if last_peak_time else 0
+            minutes_since_trough = (current_time - last_trough_time).total_seconds() / 60.0 if last_trough_time else 0
+
+            # Compute price changes
+            price_change_peak = current_price - last_peak_price if last_peak_price is not None else 0.0
+            price_change_trough = current_price - last_trough_price if last_trough_price is not None else 0.0
+
+            # Set values
+            self.data.at[index, "MinutesSincePeak"] = minutes_since_peak
+            self.data.at[index, "MinutesSinceTrough"] = minutes_since_trough
+            self.data.at[index, "PriceChangeSincePeak"] = price_change_peak
+            self.data.at[index, "PriceChangeSinceTrough"] = price_change_trough
+
+        # Fill any remaining NaNs just in case
+        self.data.fillna(0, inplace=True)
 
     def calculate_first_second_order_derivatives(self):
         """
@@ -293,9 +290,9 @@ class TradingStrategy:
         self.data.bfill(inplace=True)
 
     def predict(self):
+    
         """
-        Applies the loaded model to the most recent feature vector to generate a trading action.
-        Returns: (label, price, timestamp)
+        Improved Predict method with better logging and exception handling.
         """
         feature_set = [
             "Short_Moving_Avg_1st_Deriv",
@@ -310,44 +307,25 @@ class TradingStrategy:
             "KalmanFilterEst_2nd_Deriv",
         ]
 
-        try:
-                test_data = self.data[feature_set]
-        except Exception as e:
-                logging.error(f"[TradingStrategy] Error extracting features: {e}")
-                return ("Hold", None, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+        last_row = self.data[feature_set].iloc[-1:]
 
-        # Log shape and content of the features
-        logging.info(f"[TradingStrategy] Feature matrix shape: {test_data.shape}")
-        logging.info(f"[TradingStrategy] Feature matrix sample:\n{test_data.tail()}")        
+        logging.info(f"[Predict] Last feature row for prediction:\n{last_row}")
 
-        test_data = self.data[feature_set]
-        print("check last data: ", self.data[-5:])
-        test_data.to_csv("test_data.csv")
-
-        # Only keep last row for prediction
-        last_row = test_data.tail(1)
-        # Check for NaN in the last row
-        if last_row.isnull().any(axis=1).iloc[0]:
-            print("NaN detected in last row of features, return Hold")
-            price = self.data["Open"][-1:].iloc[-1]
-            current_datetime = datetime.datetime.now()
-            formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-            return ("Hold", price, formatted_datetime)
+        if last_row.isnull().any().any():
+            logging.warning("[Predict] NaN values in features; returning HOLD signal.")
+            price = self.data["Close"].iloc[-1]
+            return ("Hold", price, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
         try:
-            output = self.model.predict(last_row)
-            price = self.data["Open"][-1:].iloc[-1]
-            current_datetime = datetime.datetime.now()
-            formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-            action = (output[0], price, formatted_datetime)
-            print("action: ", action)
-            return action
+            prediction = self.model.predict(last_row)[0]
+            logging.info(f"[Predict] Model Prediction: {prediction}")
+            price = self.data["Close"].iloc[-1]
+            return (prediction, price, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
         except Exception as e:
-            print("model err, just ignore and hold!", e)
-            price = self.data["Open"][-1:].iloc[-1]
-            current_datetime = datetime.datetime.now()
-            formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-            return ("Hold", price, formatted_datetime)
+            logging.error(f"[Predict] Model prediction error: {e}")
+            price = self.data["Close"].iloc[-1]
+            return ("Hold", price, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
 
     # --- Additional methods omitted for brevity, but should follow the same style ---
 
