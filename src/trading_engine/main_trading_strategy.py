@@ -16,6 +16,7 @@ import datetime
 import os
 import warnings
 import logging
+import random
 
 # Ignore pandas FutureWarnings for a cleaner log
 warnings.filterwarnings("ignore", category=FutureWarning, module="pandas")
@@ -292,62 +293,79 @@ class TradingStrategy:
             self.data[f"{feature}_2nd_Deriv"] = self.data[f"{feature}_1st_Deriv"].diff() * 100
         self.data.bfill(inplace=True)
 
+
+# FORCE RANDOM BUY
     def predict(self):
         """
-        Applies the loaded model to the most recent feature vector to generate a trading action.
-        Returns: (label, price, timestamp)
+        Testing override: Randomly return Buy, Sell, or Hold with a valid price and timestamp.
         """
-        feature_set = [
-            "Short_Moving_Avg_1st_Deriv",
-            "Short_Moving_Avg_2nd_Deriv",
-            "Long_Moving_Avg_1st_Deriv",
-            "Long_Moving_Avg_2nd_Deriv",
-            "MinutesSincePeak",
-            "MinutesSinceTrough",
-            "%K",
-            "%D",
-            "KalmanFilterEst_1st_Deriv",
-            "KalmanFilterEst_2nd_Deriv",
-        ]
-
+        direction = random.choice(['Buy', 'Sell', 'Hold'])
+        # Use the most recent price; fallback to a default if data is empty
         try:
-                test_data = self.data[feature_set]
-        except Exception as e:
-                logging.error(f"[TradingStrategy] Error extracting features: {e}")
-                return ("Hold", None, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+            price = float(self.data["Open"][-1:].iloc[-1])
+        except Exception:
+            price = 110000  # fallback to default
+        current_datetime = datetime.datetime.now()
+        formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[FORCE TEST] Random action: {direction}, price: {price}, time: {formatted_datetime}")
+        return (direction, price, formatted_datetime)
 
-        # Log shape and content of the features
-        logging.info(f"[TradingStrategy] Feature matrix shape: {test_data.shape}")
-        logging.info(f"[TradingStrategy] Feature matrix sample:\n{test_data.tail()}")        
+    # def predict(self):
+    #     """
+    #     Applies the loaded model to the most recent feature vector to generate a trading action.
+    #     Returns: (label, price, timestamp)
+    #     """
+    #     feature_set = [
+    #         "Short_Moving_Avg_1st_Deriv",
+    #         "Short_Moving_Avg_2nd_Deriv",
+    #         "Long_Moving_Avg_1st_Deriv",
+    #         "Long_Moving_Avg_2nd_Deriv",
+    #         "MinutesSincePeak",
+    #         "MinutesSinceTrough",
+    #         "%K",
+    #         "%D",
+    #         "KalmanFilterEst_1st_Deriv",
+    #         "KalmanFilterEst_2nd_Deriv",
+    #     ]
 
-        test_data = self.data[feature_set]
-        print("check last data: ", self.data[-5:])
-        test_data.to_csv("test_data.csv")
+    #     try:
+    #             test_data = self.data[feature_set]
+    #     except Exception as e:
+    #             logging.error(f"[TradingStrategy] Error extracting features: {e}")
+    #             return ("Hold", None, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
-        # Only keep last row for prediction
-        last_row = test_data.tail(1)
-        # Check for NaN in the last row
-        if last_row.isnull().any(axis=1).iloc[0]:
-            print("NaN detected in last row of features, return Hold")
-            price = self.data["Open"][-1:].iloc[-1]
-            current_datetime = datetime.datetime.now()
-            formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-            return ("Hold", price, formatted_datetime)
+    #     # Log shape and content of the features
+    #     logging.info(f"[TradingStrategy] Feature matrix shape: {test_data.shape}")
+    #     logging.info(f"[TradingStrategy] Feature matrix sample:\n{test_data.tail()}")        
 
-        try:
-            output = self.model.predict(last_row)
-            price = self.data["Open"][-1:].iloc[-1]
-            current_datetime = datetime.datetime.now()
-            formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-            action = (output[0], price, formatted_datetime)
-            print("action: ", action)
-            return action
-        except Exception as e:
-            print("model err, just ignore and hold!", e)
-            price = self.data["Open"][-1:].iloc[-1]
-            current_datetime = datetime.datetime.now()
-            formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-            return ("Hold", price, formatted_datetime)
+    #     test_data = self.data[feature_set]
+    #     print("check last data: ", self.data[-5:])
+    #     test_data.to_csv("test_data.csv")
+
+    #     # Only keep last row for prediction
+    #     last_row = test_data.tail(1)
+    #     # Check for NaN in the last row
+    #     if last_row.isnull().any(axis=1).iloc[0]:
+    #         print("NaN detected in last row of features, return Hold")
+    #         price = self.data["Open"][-1:].iloc[-1]
+    #         current_datetime = datetime.datetime.now()
+    #         formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+    #         return ("Hold", price, formatted_datetime)
+
+    #     try:
+    #         output = self.model.predict(last_row)
+    #         price = self.data["Open"][-1:].iloc[-1]
+    #         current_datetime = datetime.datetime.now()
+    #         formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+    #         action = (output[0], price, formatted_datetime)
+    #         print("action: ", action)
+    #         return action
+    #     except Exception as e:
+    #         print("model err, just ignore and hold!", e)
+    #         price = self.data["Open"][-1:].iloc[-1]
+    #         current_datetime = datetime.datetime.now()
+    #         formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+    #         return ("Hold", price, formatted_datetime)
 
     # --- Additional methods omitted for brevity, but should follow the same style ---
 
