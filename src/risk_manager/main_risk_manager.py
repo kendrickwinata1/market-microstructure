@@ -37,7 +37,7 @@ class RiskManager:
         current_portfolio_balance = float(historical_data_df["WalletBalance"].iloc[-1])
         print(f"[risk mgr] WalletBalance :{current_available_balance}")
 
-        minimum_cash_ratio = 0.25
+        minimum_cash_ratio = 0.05 # CHANGE FROM 0.25 TO 0.05
         post_trade_cash_ratio = (
             current_available_balance - trade
         ) / current_portfolio_balance
@@ -97,20 +97,16 @@ class RiskManager:
         return historical_positions_df["PositionAmt"].iloc[-1]
 
     def check_buy_position(self):
-        """
-        Only allow new buys if no existing position (flat or after previous sell).
-        Returns:
-            bool: True if buying is allowed, else False.
-        """
-        return float(self.get_current_btc_inventory()) == 0
+        # Loosen: allow buying if you are not over some max position
+        current_pos = float(self.get_current_btc_inventory())
+        MAX_POSITION_ALLOWED = 2.0   # Change as appropriate
+        return current_pos < MAX_POSITION_ALLOWED
+
 
     def check_sell_position(self):
-        """
-        Only allow selling if a long position exists.
-        Returns:
-            bool: True if selling is allowed, else False.
-        """
-        return float(self.get_current_btc_inventory()) > 0
+        current_pos = float(self.get_current_btc_inventory())
+        return current_pos > 0
+
 
     def trigger_stop_loss(self):
         """
