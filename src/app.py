@@ -7,6 +7,10 @@ import os
 import time
 import logging
 
+import tkinter as tk
+from trading_engine.main_trading_strategy import TradingStrategy
+from visualization.live_plotter import LivePlotter
+
 # Setup logging
 logging.basicConfig(
     level=logging.INFO,
@@ -647,15 +651,32 @@ class ExecManager:
         print(f"{CYAN}{'='*50}{RESET}\n")
 
 
-
 def on_exec():
     """
     Callback function for trade execution events (optional, can be used for logging or analytics).
     """
     print("Execution callback triggered.")
+    
+# TEST
+def trading_bot_main(strategy, exec_manager, data_stream):
+    """
+    The trading bot logic runs in a background thread.
+    """
+    data_stream.register_tick_callback(exec_manager.exec_strat)
+    data_stream.connect()
+    # Main bot heartbeat loop
+    while True:
+        time.sleep(10)
+        print("Heartbeat: application running.")
+        
+
 
 if __name__ == "__main__":
     # --- Load credentials from ..env and initialize main system objects ---
+    
+    shared_queue = Queue()
+    strategy = TradingStrategy(shared_queue)
+    
     load_dotenv(dotenv_path=".env")
     api_key = os.getenv("API_KEY")
     api_secret = os.getenv("API_SECRET")
@@ -680,18 +701,31 @@ if __name__ == "__main__":
 
     # Compose the main execution manager object that handles strategy and risk
     exec_manager = ExecManager(trade_executor, book_keeper, rest_gateway, risk_manager)
+   
+ #TRY
+    exec_manager.strategy = strategy
+    exec_manager.queue = shared_queue
 
     # --- Market data stream setup: every tick triggers trading logic in exec_manager ---
     data_stream = DataStream(symbol, api_key, api_secret)
     data_stream.register_tick_callback(exec_manager.exec_strat)
     data_stream.connect()
 
-    # --- Main application heartbeat to keep the process alive and provide basic monitoring ---
-    while True:
-        time.sleep(10)
-        print("Heartbeat: application running.")
 
+    # TRY
+    # 1. Start the trading bot in a **background thread**
+    bot_thread = Thread(target=trading_bot_main, args=(strategy, exec_manager, data_stream))
+    bot_thread.daemon = True
+    bot_thread.start()
 
+    # 2. Start the Tkinter GUI (main thread, for Mac compatibility)
+    root = tk.Tk()
+    plotter = LivePlotter(root, strategy, data_window=60)
+    root.mainloop()
 
+    # # --- Main application heartbeat to keep the process alive and provide basic monitoring ---
+    # while True:
+    #     time.sleep(10)
+    #     print("Heartbeat: application running.")
 
 
