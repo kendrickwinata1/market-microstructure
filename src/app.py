@@ -618,7 +618,7 @@ class ExecManager:
                         print(f"{GREEN}Placing {direction} LIMIT order for {order_quantity} BTCUSDT at {limit_price}{RESET}")
                         order_data = {
                             "symbol": "BTCUSDT",
-                            "price": limit_price,
+                            "price": float(last_price),
                             "side": direction,
                             "type": "LIMIT",
                             "quantity": order_quantity,

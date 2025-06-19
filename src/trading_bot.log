@@ -130296,3 +130296,612 @@ Timestamp
 44 2025-06-19 23:49:55  104258.9  104258.9  104258.9  104258.9
 45 2025-06-19 23:49:58  104258.9  104258.9  104258.9  104258.9
 2025-06-19 23:49:59,768 [ERROR] CANCEL read_loop
+2025-06-19 23:58:13,518 [INFO] API_KEY: 51fb4d95ffdcde08ad0ad2d29306b2a977fe46936529d4e40fdbe89cff33f4c5
+2025-06-19 23:58:13,519 [INFO] API_SECRET: 9bbde8457e093814063f5934880e69fba48d20a0ea032d259a5de6ac6cb67b54
+2025-06-19 23:58:15,864 [INFO] Initializing connection
+2025-06-19 23:58:15,864 [INFO] reconnecting websocket
+2025-06-19 23:58:16,100 [INFO] starting event loop thread
+2025-06-19 23:58:16,102 [INFO] Subscribing to user data events
+2025-06-19 23:58:16,505 [INFO] Initializing connection
+2025-06-19 23:58:16,506 [INFO] reconnecting websocket
+2025-06-19 23:58:16,705 [INFO] starting event loop thread
+2025-06-19 23:58:16,707 [INFO] Subscribing to depth events
+2025-06-19 23:58:16,707 [INFO] depth socket not connected, reconnecting
+2025-06-19 23:58:18,044 [WARNING] [RiskManager] No valid buy transactions found.
+2025-06-19 23:58:18,045 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 17, 355551), '104100.00')
+2025-06-19 23:58:18,083 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:18,083 [INFO] [TradingStrategy] Data buffer length: 1
+2025-06-19 23:58:18,119 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:17.355551 2025-06-19 23:58:17.355551  104100.0
+2025-06-19 23:58:18,163 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (1, 5)
+2025-06-19 23:58:18,178 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+0 2025-06-19 23:58:17  104100.0  104100.0  104100.0  104100.0
+2025-06-19 23:58:18,578 [INFO] Order events [contract=BTCUSDT, order_id=4564629920, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:20,970 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564629920, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104100.0, last_filled_qty=0.001, canceled_reason=None]
+2025-06-19 23:58:21,100 [WARNING] [RiskManager] No valid buy transactions found.
+2025-06-19 23:58:21,102 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 20, 618535), '104100.10')
+2025-06-19 23:58:21,104 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:21,104 [INFO] [TradingStrategy] Data buffer length: 2
+2025-06-19 23:58:21,110 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:17.355551 2025-06-19 23:58:17.355551  104100.0
+2025-06-19 23:58:20.618535 2025-06-19 23:58:20.618535  104100.1
+2025-06-19 23:58:21,118 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (2, 5)
+2025-06-19 23:58:21,129 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+0 2025-06-19 23:58:17  104100.0  104100.0  104100.0  104100.0
+1 2025-06-19 23:58:20  104100.1  104100.1  104100.1  104100.1
+2025-06-19 23:58:21,508 [INFO] Order events [contract=BTCUSDT, order_id=4564630168, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:21,514 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564630168, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104100.1, last_filled_qty=0.037, canceled_reason=None]
+2025-06-19 23:58:21,840 [ERROR] CANCEL read_loop
+2025-06-19 23:58:25,185 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564629920, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104100.0, last_filled_qty=0.019, canceled_reason=None]
+2025-06-19 23:58:25,206 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 22, 202790), '104100.10')
+2025-06-19 23:58:25,208 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:25,208 [INFO] [TradingStrategy] Data buffer length: 3
+2025-06-19 23:58:25,213 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:17.355551 2025-06-19 23:58:17.355551  104100.0
+2025-06-19 23:58:20.618535 2025-06-19 23:58:20.618535  104100.1
+2025-06-19 23:58:22.202790 2025-06-19 23:58:22.202790  104100.1
+2025-06-19 23:58:25,216 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (3, 5)
+2025-06-19 23:58:25,224 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+0 2025-06-19 23:58:17  104100.0  104100.0  104100.0  104100.0
+1 2025-06-19 23:58:20  104100.1  104100.1  104100.1  104100.1
+2 2025-06-19 23:58:22  104100.1  104100.1  104100.1  104100.1
+2025-06-19 23:58:26,999 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 26, 512072), '104097.50')
+2025-06-19 23:58:27,002 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:27,002 [INFO] [TradingStrategy] Data buffer length: 4
+2025-06-19 23:58:27,008 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:17.355551 2025-06-19 23:58:17.355551  104100.0
+2025-06-19 23:58:20.618535 2025-06-19 23:58:20.618535  104100.1
+2025-06-19 23:58:22.202790 2025-06-19 23:58:22.202790  104100.1
+2025-06-19 23:58:26.512072 2025-06-19 23:58:26.512072  104097.5
+2025-06-19 23:58:27,016 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (4, 5)
+2025-06-19 23:58:27,025 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+0 2025-06-19 23:58:17  104100.0  104100.0  104100.0  104100.0
+1 2025-06-19 23:58:20  104100.1  104100.1  104100.1  104100.1
+2 2025-06-19 23:58:22  104100.1  104100.1  104100.1  104100.1
+3 2025-06-19 23:58:26  104097.5  104097.5  104097.5  104097.5
+2025-06-19 23:58:27,544 [INFO] Order events [contract=BTCUSDT, order_id=4564630672, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:27,881 [ERROR] CANCEL read_loop
+2025-06-19 23:58:28,739 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 28, 261000), '104097.50')
+2025-06-19 23:58:28,741 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:28,741 [INFO] [TradingStrategy] Data buffer length: 5
+2025-06-19 23:58:28,752 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:17.355551 2025-06-19 23:58:17.355551  104100.0
+2025-06-19 23:58:20.618535 2025-06-19 23:58:20.618535  104100.1
+2025-06-19 23:58:22.202790 2025-06-19 23:58:22.202790  104100.1
+2025-06-19 23:58:26.512072 2025-06-19 23:58:26.512072  104097.5
+2025-06-19 23:58:28.261000 2025-06-19 23:58:28.261000  104097.5
+2025-06-19 23:58:28,757 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (5, 5)
+2025-06-19 23:58:28,768 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+0 2025-06-19 23:58:17  104100.0  104100.0  104100.0  104100.0
+1 2025-06-19 23:58:20  104100.1  104100.1  104100.1  104100.1
+2 2025-06-19 23:58:22  104100.1  104100.1  104100.1  104100.1
+3 2025-06-19 23:58:26  104097.5  104097.5  104097.5  104097.5
+4 2025-06-19 23:58:28  104097.5  104097.5  104097.5  104097.5
+2025-06-19 23:58:30,102 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564630672, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104097.5, last_filled_qty=0.065, canceled_reason=None]
+2025-06-19 23:58:30,107 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564630672, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104097.5, last_filled_qty=0.001, canceled_reason=None]
+2025-06-19 23:58:30,619 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 30, 102455), '104097.50')
+2025-06-19 23:58:30,621 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:30,622 [INFO] [TradingStrategy] Data buffer length: 6
+2025-06-19 23:58:30,654 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:20.618535 2025-06-19 23:58:20.618535  104100.1
+2025-06-19 23:58:22.202790 2025-06-19 23:58:22.202790  104100.1
+2025-06-19 23:58:26.512072 2025-06-19 23:58:26.512072  104097.5
+2025-06-19 23:58:28.261000 2025-06-19 23:58:28.261000  104097.5
+2025-06-19 23:58:30.102455 2025-06-19 23:58:30.102455  104097.5
+2025-06-19 23:58:30,659 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (6, 5)
+2025-06-19 23:58:30,670 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+1 2025-06-19 23:58:20  104100.1  104100.1  104100.1  104100.1
+2 2025-06-19 23:58:22  104100.1  104100.1  104100.1  104100.1
+3 2025-06-19 23:58:26  104097.5  104097.5  104097.5  104097.5
+4 2025-06-19 23:58:28  104097.5  104097.5  104097.5  104097.5
+5 2025-06-19 23:58:30  104097.5  104097.5  104097.5  104097.5
+2025-06-19 23:58:31,176 [ERROR] CANCEL read_loop
+2025-06-19 23:58:32,169 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564630672, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104097.5, last_filled_qty=0.001, canceled_reason=None]
+2025-06-19 23:58:32,335 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 31, 562008), '104097.50')
+2025-06-19 23:58:32,337 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:32,338 [INFO] [TradingStrategy] Data buffer length: 7
+2025-06-19 23:58:32,343 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:22.202790 2025-06-19 23:58:22.202790  104100.1
+2025-06-19 23:58:26.512072 2025-06-19 23:58:26.512072  104097.5
+2025-06-19 23:58:28.261000 2025-06-19 23:58:28.261000  104097.5
+2025-06-19 23:58:30.102455 2025-06-19 23:58:30.102455  104097.5
+2025-06-19 23:58:31.562008 2025-06-19 23:58:31.562008  104097.5
+2025-06-19 23:58:32,351 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (7, 5)
+2025-06-19 23:58:32,362 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+2 2025-06-19 23:58:22  104100.1  104100.1  104100.1  104100.1
+3 2025-06-19 23:58:26  104097.5  104097.5  104097.5  104097.5
+4 2025-06-19 23:58:28  104097.5  104097.5  104097.5  104097.5
+5 2025-06-19 23:58:30  104097.5  104097.5  104097.5  104097.5
+6 2025-06-19 23:58:31  104097.5  104097.5  104097.5  104097.5
+2025-06-19 23:58:33,164 [INFO] Order events [contract=BTCUSDT, order_id=4564630987, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:34,745 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 34, 258644), '104097.50')
+2025-06-19 23:58:34,748 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:34,748 [INFO] [TradingStrategy] Data buffer length: 8
+2025-06-19 23:58:34,755 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:26.512072 2025-06-19 23:58:26.512072  104097.5
+2025-06-19 23:58:28.261000 2025-06-19 23:58:28.261000  104097.5
+2025-06-19 23:58:30.102455 2025-06-19 23:58:30.102455  104097.5
+2025-06-19 23:58:31.562008 2025-06-19 23:58:31.562008  104097.5
+2025-06-19 23:58:34.258644 2025-06-19 23:58:34.258644  104097.5
+2025-06-19 23:58:34,761 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (8, 5)
+2025-06-19 23:58:34,770 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+3 2025-06-19 23:58:26  104097.5  104097.5  104097.5  104097.5
+4 2025-06-19 23:58:28  104097.5  104097.5  104097.5  104097.5
+5 2025-06-19 23:58:30  104097.5  104097.5  104097.5  104097.5
+6 2025-06-19 23:58:31  104097.5  104097.5  104097.5  104097.5
+7 2025-06-19 23:58:34  104097.5  104097.5  104097.5  104097.5
+2025-06-19 23:58:37,093 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 36, 456213), '104097.50')
+2025-06-19 23:58:37,096 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:37,097 [INFO] [TradingStrategy] Data buffer length: 9
+2025-06-19 23:58:37,102 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:28.261000 2025-06-19 23:58:28.261000  104097.5
+2025-06-19 23:58:30.102455 2025-06-19 23:58:30.102455  104097.5
+2025-06-19 23:58:31.562008 2025-06-19 23:58:31.562008  104097.5
+2025-06-19 23:58:34.258644 2025-06-19 23:58:34.258644  104097.5
+2025-06-19 23:58:36.456213 2025-06-19 23:58:36.456213  104097.5
+2025-06-19 23:58:37,112 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (9, 5)
+2025-06-19 23:58:37,118 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+4 2025-06-19 23:58:28  104097.5  104097.5  104097.5  104097.5
+5 2025-06-19 23:58:30  104097.5  104097.5  104097.5  104097.5
+6 2025-06-19 23:58:31  104097.5  104097.5  104097.5  104097.5
+7 2025-06-19 23:58:34  104097.5  104097.5  104097.5  104097.5
+8 2025-06-19 23:58:36  104097.5  104097.5  104097.5  104097.5
+2025-06-19 23:58:37,507 [INFO] Order events [contract=BTCUSDT, order_id=4564631159, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:37,512 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564631159, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104097.4, last_filled_qty=0.021, canceled_reason=None]
+2025-06-19 23:58:37,514 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564631159, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104097.5, last_filled_qty=0.018, canceled_reason=None]
+2025-06-19 23:58:37,796 [ERROR] CANCEL read_loop
+2025-06-19 23:58:38,650 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 38, 147198), '104095.10')
+2025-06-19 23:58:38,653 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:38,653 [INFO] [TradingStrategy] Data buffer length: 10
+2025-06-19 23:58:38,661 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:30.102455 2025-06-19 23:58:30.102455  104097.5
+2025-06-19 23:58:31.562008 2025-06-19 23:58:31.562008  104097.5
+2025-06-19 23:58:34.258644 2025-06-19 23:58:34.258644  104097.5
+2025-06-19 23:58:36.456213 2025-06-19 23:58:36.456213  104097.5
+2025-06-19 23:58:38.147198 2025-06-19 23:58:38.147198  104095.1
+2025-06-19 23:58:38,666 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (10, 5)
+2025-06-19 23:58:38,674 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+5 2025-06-19 23:58:30  104097.5  104097.5  104097.5  104097.5
+6 2025-06-19 23:58:31  104097.5  104097.5  104097.5  104097.5
+7 2025-06-19 23:58:34  104097.5  104097.5  104097.5  104097.5
+8 2025-06-19 23:58:36  104097.5  104097.5  104097.5  104097.5
+9 2025-06-19 23:58:38  104095.1  104095.1  104095.1  104095.1
+2025-06-19 23:58:39,045 [INFO] Order events [contract=BTCUSDT, order_id=4564631246, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:39,046 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564631246, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104075.0, last_filled_qty=0.037, canceled_reason=None]
+2025-06-19 23:58:40,283 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 39, 813540), '104095.10')
+2025-06-19 23:58:40,285 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:40,285 [INFO] [TradingStrategy] Data buffer length: 11
+2025-06-19 23:58:40,292 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:31.562008 2025-06-19 23:58:31.562008  104097.5
+2025-06-19 23:58:34.258644 2025-06-19 23:58:34.258644  104097.5
+2025-06-19 23:58:36.456213 2025-06-19 23:58:36.456213  104097.5
+2025-06-19 23:58:38.147198 2025-06-19 23:58:38.147198  104095.1
+2025-06-19 23:58:39.813540 2025-06-19 23:58:39.813540  104095.1
+2025-06-19 23:58:40,298 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (11, 5)
+2025-06-19 23:58:40,305 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+6  2025-06-19 23:58:31  104097.5  104097.5  104097.5  104097.5
+7  2025-06-19 23:58:34  104097.5  104097.5  104097.5  104097.5
+8  2025-06-19 23:58:36  104097.5  104097.5  104097.5  104097.5
+9  2025-06-19 23:58:38  104095.1  104095.1  104095.1  104095.1
+10 2025-06-19 23:58:39  104095.1  104095.1  104095.1  104095.1
+2025-06-19 23:58:41,861 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 41, 369993), '104095.10')
+2025-06-19 23:58:41,865 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:41,865 [INFO] [TradingStrategy] Data buffer length: 12
+2025-06-19 23:58:41,875 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:34.258644 2025-06-19 23:58:34.258644  104097.5
+2025-06-19 23:58:36.456213 2025-06-19 23:58:36.456213  104097.5
+2025-06-19 23:58:38.147198 2025-06-19 23:58:38.147198  104095.1
+2025-06-19 23:58:39.813540 2025-06-19 23:58:39.813540  104095.1
+2025-06-19 23:58:41.369993 2025-06-19 23:58:41.369993  104095.1
+2025-06-19 23:58:41,881 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (12, 5)
+2025-06-19 23:58:41,889 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+7  2025-06-19 23:58:34  104097.5  104097.5  104097.5  104097.5
+8  2025-06-19 23:58:36  104097.5  104097.5  104097.5  104097.5
+9  2025-06-19 23:58:38  104095.1  104095.1  104095.1  104095.1
+10 2025-06-19 23:58:39  104095.1  104095.1  104095.1  104095.1
+11 2025-06-19 23:58:41  104095.1  104095.1  104095.1  104095.1
+2025-06-19 23:58:42,431 [INFO] Order events [contract=BTCUSDT, order_id=4564631412, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:42,783 [ERROR] CANCEL read_loop
+2025-06-19 23:58:43,604 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 43, 123767), '104095.10')
+2025-06-19 23:58:43,606 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:43,606 [INFO] [TradingStrategy] Data buffer length: 13
+2025-06-19 23:58:43,618 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:36.456213 2025-06-19 23:58:36.456213  104097.5
+2025-06-19 23:58:38.147198 2025-06-19 23:58:38.147198  104095.1
+2025-06-19 23:58:39.813540 2025-06-19 23:58:39.813540  104095.1
+2025-06-19 23:58:41.369993 2025-06-19 23:58:41.369993  104095.1
+2025-06-19 23:58:43.123767 2025-06-19 23:58:43.123767  104095.1
+2025-06-19 23:58:43,623 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (13, 5)
+2025-06-19 23:58:43,642 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+8  2025-06-19 23:58:36  104097.5  104097.5  104097.5  104097.5
+9  2025-06-19 23:58:38  104095.1  104095.1  104095.1  104095.1
+10 2025-06-19 23:58:39  104095.1  104095.1  104095.1  104095.1
+11 2025-06-19 23:58:41  104095.1  104095.1  104095.1  104095.1
+12 2025-06-19 23:58:43  104095.1  104095.1  104095.1  104095.1
+2025-06-19 23:58:45,058 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 44, 569417), '104095.10')
+2025-06-19 23:58:45,060 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:45,061 [INFO] [TradingStrategy] Data buffer length: 14
+2025-06-19 23:58:45,067 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:38.147198 2025-06-19 23:58:38.147198  104095.1
+2025-06-19 23:58:39.813540 2025-06-19 23:58:39.813540  104095.1
+2025-06-19 23:58:41.369993 2025-06-19 23:58:41.369993  104095.1
+2025-06-19 23:58:43.123767 2025-06-19 23:58:43.123767  104095.1
+2025-06-19 23:58:44.569417 2025-06-19 23:58:44.569417  104095.1
+2025-06-19 23:58:45,075 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (14, 5)
+2025-06-19 23:58:45,082 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+9  2025-06-19 23:58:38  104095.1  104095.1  104095.1  104095.1
+10 2025-06-19 23:58:39  104095.1  104095.1  104095.1  104095.1
+11 2025-06-19 23:58:41  104095.1  104095.1  104095.1  104095.1
+12 2025-06-19 23:58:43  104095.1  104095.1  104095.1  104095.1
+13 2025-06-19 23:58:44  104095.1  104095.1  104095.1  104095.1
+2025-06-19 23:58:45,480 [ERROR] CANCEL read_loop
+2025-06-19 23:58:46,602 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 45, 847226), '104070.90')
+2025-06-19 23:58:46,605 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:46,605 [INFO] [TradingStrategy] Data buffer length: 15
+2025-06-19 23:58:46,613 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:39.813540 2025-06-19 23:58:39.813540  104095.1
+2025-06-19 23:58:41.369993 2025-06-19 23:58:41.369993  104095.1
+2025-06-19 23:58:43.123767 2025-06-19 23:58:43.123767  104095.1
+2025-06-19 23:58:44.569417 2025-06-19 23:58:44.569417  104095.1
+2025-06-19 23:58:45.847226 2025-06-19 23:58:45.847226  104070.9
+2025-06-19 23:58:46,617 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (15, 5)
+2025-06-19 23:58:46,625 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+10 2025-06-19 23:58:39  104095.1  104095.1  104095.1  104095.1
+11 2025-06-19 23:58:41  104095.1  104095.1  104095.1  104095.1
+12 2025-06-19 23:58:43  104095.1  104095.1  104095.1  104095.1
+13 2025-06-19 23:58:44  104095.1  104095.1  104095.1  104095.1
+14 2025-06-19 23:58:45  104070.9  104070.9  104070.9  104070.9
+2025-06-19 23:58:47,012 [INFO] Order events [contract=BTCUSDT, order_id=4564631810, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:47,016 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564631810, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104066.2, last_filled_qty=0.002, canceled_reason=None]
+2025-06-19 23:58:47,017 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564631810, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104067.8, last_filled_qty=0.002, canceled_reason=None]
+2025-06-19 23:58:47,033 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564631810, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104068.9, last_filled_qty=0.002, canceled_reason=None]
+2025-06-19 23:58:47,033 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564631810, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104069.1, last_filled_qty=0.005, canceled_reason=None]
+2025-06-19 23:58:47,034 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564631810, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104070.9, last_filled_qty=0.025, canceled_reason=None]
+2025-06-19 23:58:48,329 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 47, 790398), '104066.10')
+2025-06-19 23:58:48,330 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:48,330 [INFO] [TradingStrategy] Data buffer length: 16
+2025-06-19 23:58:48,338 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:41.369993 2025-06-19 23:58:41.369993  104095.1
+2025-06-19 23:58:43.123767 2025-06-19 23:58:43.123767  104095.1
+2025-06-19 23:58:44.569417 2025-06-19 23:58:44.569417  104095.1
+2025-06-19 23:58:45.847226 2025-06-19 23:58:45.847226  104070.9
+2025-06-19 23:58:47.790398 2025-06-19 23:58:47.790398  104066.1
+2025-06-19 23:58:48,343 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (16, 5)
+2025-06-19 23:58:48,352 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+11 2025-06-19 23:58:41  104095.1  104095.1  104095.1  104095.1
+12 2025-06-19 23:58:43  104095.1  104095.1  104095.1  104095.1
+13 2025-06-19 23:58:44  104095.1  104095.1  104095.1  104095.1
+14 2025-06-19 23:58:45  104070.9  104070.9  104070.9  104070.9
+15 2025-06-19 23:58:47  104066.1  104066.1  104066.1  104066.1
+2025-06-19 23:58:48,918 [INFO] Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:48,928 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.117, canceled_reason=None]
+2025-06-19 23:58:48,930 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.045, canceled_reason=None]
+2025-06-19 23:58:48,930 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.001, canceled_reason=None]
+2025-06-19 23:58:48,931 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.002, canceled_reason=None]
+2025-06-19 23:58:48,931 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.002, canceled_reason=None]
+2025-06-19 23:58:48,932 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.001, canceled_reason=None]
+2025-06-19 23:58:48,933 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.001, canceled_reason=None]
+2025-06-19 23:58:48,934 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.001, canceled_reason=None]
+2025-06-19 23:58:48,935 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.056, canceled_reason=None]
+2025-06-19 23:58:49,002 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.056, canceled_reason=None]
+2025-06-19 23:58:49,003 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.001, canceled_reason=None]
+2025-06-19 23:58:49,004 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.001, canceled_reason=None]
+2025-06-19 23:58:49,005 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.097, canceled_reason=None]
+2025-06-19 23:58:49,006 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632115, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=104066.1, last_filled_qty=0.002, canceled_reason=None]
+2025-06-19 23:58:49,275 [ERROR] CANCEL read_loop
+2025-06-19 23:58:50,103 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 49, 633683), '104066.10')
+2025-06-19 23:58:50,105 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:50,106 [INFO] [TradingStrategy] Data buffer length: 17
+2025-06-19 23:58:50,112 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:43.123767 2025-06-19 23:58:43.123767  104095.1
+2025-06-19 23:58:44.569417 2025-06-19 23:58:44.569417  104095.1
+2025-06-19 23:58:45.847226 2025-06-19 23:58:45.847226  104070.9
+2025-06-19 23:58:47.790398 2025-06-19 23:58:47.790398  104066.1
+2025-06-19 23:58:49.633683 2025-06-19 23:58:49.633683  104066.1
+2025-06-19 23:58:50,116 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (17, 5)
+2025-06-19 23:58:50,124 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+12 2025-06-19 23:58:43  104095.1  104095.1  104095.1  104095.1
+13 2025-06-19 23:58:44  104095.1  104095.1  104095.1  104095.1
+14 2025-06-19 23:58:45  104070.9  104070.9  104070.9  104070.9
+15 2025-06-19 23:58:47  104066.1  104066.1  104066.1  104066.1
+16 2025-06-19 23:58:49  104066.1  104066.1  104066.1  104066.1
+2025-06-19 23:58:50,497 [INFO] Order events [contract=BTCUSDT, order_id=4564632222, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:50,502 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4564632222, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=104065.4, last_filled_qty=0.03, canceled_reason=None]
+2025-06-19 23:58:50,507 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<TradeExecutor._listen_execution_forever() done, defined at /Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market-microstructure-87137a83145826db36dd62013d00afe409fa46c8/src/gateway/main_gateway.py:229> exception=KeyError('EXPIRED_IN_MATCH')>
+Traceback (most recent call last):
+  File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market-microstructure-87137a83145826db36dd62013d00afe409fa46c8/src/gateway/main_gateway.py", line 262, in _listen_execution_forever
+    OrderStatus[order_status],
+  File "/Users/kendrickwinata/anaconda3/envs/mm310/lib/python3.10/enum.py", line 440, in __getitem__
+    return cls._member_map_[name]
+KeyError: 'EXPIRED_IN_MATCH'
+2025-06-19 23:58:53,272 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 52, 800289), '104066.10')
+2025-06-19 23:58:53,277 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:53,278 [INFO] [TradingStrategy] Data buffer length: 18
+2025-06-19 23:58:53,285 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:44.569417 2025-06-19 23:58:44.569417  104095.1
+2025-06-19 23:58:45.847226 2025-06-19 23:58:45.847226  104070.9
+2025-06-19 23:58:47.790398 2025-06-19 23:58:47.790398  104066.1
+2025-06-19 23:58:49.633683 2025-06-19 23:58:49.633683  104066.1
+2025-06-19 23:58:52.800289 2025-06-19 23:58:52.800289  104066.1
+2025-06-19 23:58:53,292 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (18, 5)
+2025-06-19 23:58:53,300 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+13 2025-06-19 23:58:44  104095.1  104095.1  104095.1  104095.1
+14 2025-06-19 23:58:45  104070.9  104070.9  104070.9  104070.9
+15 2025-06-19 23:58:47  104066.1  104066.1  104066.1  104066.1
+16 2025-06-19 23:58:49  104066.1  104066.1  104066.1  104066.1
+17 2025-06-19 23:58:52  104066.1  104066.1  104066.1  104066.1
+2025-06-19 23:58:53,689 [INFO] Order events [contract=BTCUSDT, order_id=4564632629, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:54,035 [ERROR] CANCEL read_loop
+2025-06-19 23:58:55,008 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 54, 403216), '104066.10')
+2025-06-19 23:58:55,010 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:55,011 [INFO] [TradingStrategy] Data buffer length: 19
+2025-06-19 23:58:55,018 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:45.847226 2025-06-19 23:58:45.847226  104070.9
+2025-06-19 23:58:47.790398 2025-06-19 23:58:47.790398  104066.1
+2025-06-19 23:58:49.633683 2025-06-19 23:58:49.633683  104066.1
+2025-06-19 23:58:52.800289 2025-06-19 23:58:52.800289  104066.1
+2025-06-19 23:58:54.403216 2025-06-19 23:58:54.403216  104066.1
+2025-06-19 23:58:55,109 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (19, 5)
+2025-06-19 23:58:55,133 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+14 2025-06-19 23:58:45  104070.9  104070.9  104070.9  104070.9
+15 2025-06-19 23:58:47  104066.1  104066.1  104066.1  104066.1
+16 2025-06-19 23:58:49  104066.1  104066.1  104066.1  104066.1
+17 2025-06-19 23:58:52  104066.1  104066.1  104066.1  104066.1
+18 2025-06-19 23:58:54  104066.1  104066.1  104066.1  104066.1
+2025-06-19 23:58:56,524 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 56, 29134), '104066.10')
+2025-06-19 23:58:56,528 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:56,529 [INFO] [TradingStrategy] Data buffer length: 20
+2025-06-19 23:58:56,535 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:47.790398 2025-06-19 23:58:47.790398  104066.1
+2025-06-19 23:58:49.633683 2025-06-19 23:58:49.633683  104066.1
+2025-06-19 23:58:52.800289 2025-06-19 23:58:52.800289  104066.1
+2025-06-19 23:58:54.403216 2025-06-19 23:58:54.403216  104066.1
+2025-06-19 23:58:56.029134 2025-06-19 23:58:56.029134  104066.1
+2025-06-19 23:58:56,543 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (20, 5)
+2025-06-19 23:58:56,553 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+15 2025-06-19 23:58:47  104066.1  104066.1  104066.1  104066.1
+16 2025-06-19 23:58:49  104066.1  104066.1  104066.1  104066.1
+17 2025-06-19 23:58:52  104066.1  104066.1  104066.1  104066.1
+18 2025-06-19 23:58:54  104066.1  104066.1  104066.1  104066.1
+19 2025-06-19 23:58:56  104066.1  104066.1  104066.1  104066.1
+2025-06-19 23:58:56,920 [INFO] Order events [contract=BTCUSDT, order_id=4564633030, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:58:57,285 [ERROR] CANCEL read_loop
+2025-06-19 23:58:58,119 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 57, 643808), '104066.10')
+2025-06-19 23:58:58,123 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:58:58,124 [INFO] [TradingStrategy] Data buffer length: 21
+2025-06-19 23:58:58,130 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:49.633683 2025-06-19 23:58:49.633683  104066.1
+2025-06-19 23:58:52.800289 2025-06-19 23:58:52.800289  104066.1
+2025-06-19 23:58:54.403216 2025-06-19 23:58:54.403216  104066.1
+2025-06-19 23:58:56.029134 2025-06-19 23:58:56.029134  104066.1
+2025-06-19 23:58:57.643808 2025-06-19 23:58:57.643808  104066.1
+2025-06-19 23:58:58,135 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (21, 5)
+2025-06-19 23:58:58,144 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+16 2025-06-19 23:58:49  104066.1  104066.1  104066.1  104066.1
+17 2025-06-19 23:58:52  104066.1  104066.1  104066.1  104066.1
+18 2025-06-19 23:58:54  104066.1  104066.1  104066.1  104066.1
+19 2025-06-19 23:58:56  104066.1  104066.1  104066.1  104066.1
+20 2025-06-19 23:58:57  104066.1  104066.1  104066.1  104066.1
+2025-06-19 23:58:58,529 [INFO] Order events [contract=BTCUSDT, order_id=4564633142, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:59:00,085 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 58, 59, 617031), '104057.20')
+2025-06-19 23:59:00,088 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:59:00,089 [INFO] [TradingStrategy] Data buffer length: 22
+2025-06-19 23:59:00,095 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:52.800289 2025-06-19 23:58:52.800289  104066.1
+2025-06-19 23:58:54.403216 2025-06-19 23:58:54.403216  104066.1
+2025-06-19 23:58:56.029134 2025-06-19 23:58:56.029134  104066.1
+2025-06-19 23:58:57.643808 2025-06-19 23:58:57.643808  104066.1
+2025-06-19 23:58:59.617031 2025-06-19 23:58:59.617031  104057.2
+2025-06-19 23:59:00,099 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (22, 5)
+2025-06-19 23:59:00,108 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+17 2025-06-19 23:58:52  104066.1  104066.1  104066.1  104066.1
+18 2025-06-19 23:58:54  104066.1  104066.1  104066.1  104066.1
+19 2025-06-19 23:58:56  104066.1  104066.1  104066.1  104066.1
+20 2025-06-19 23:58:57  104066.1  104066.1  104066.1  104066.1
+21 2025-06-19 23:58:59  104057.2  104057.2  104057.2  104057.2
+2025-06-19 23:59:00,443 [ERROR] CANCEL read_loop
+2025-06-19 23:59:01,332 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 59, 0, 805703), '104057.20')
+2025-06-19 23:59:01,340 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:59:01,340 [INFO] [TradingStrategy] Data buffer length: 23
+2025-06-19 23:59:01,350 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:54.403216 2025-06-19 23:58:54.403216  104066.1
+2025-06-19 23:58:56.029134 2025-06-19 23:58:56.029134  104066.1
+2025-06-19 23:58:57.643808 2025-06-19 23:58:57.643808  104066.1
+2025-06-19 23:58:59.617031 2025-06-19 23:58:59.617031  104057.2
+2025-06-19 23:59:00.805703 2025-06-19 23:59:00.805703  104057.2
+2025-06-19 23:59:01,359 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (23, 5)
+2025-06-19 23:59:01,366 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+18 2025-06-19 23:58:54  104066.1  104066.1  104066.1  104066.1
+19 2025-06-19 23:58:56  104066.1  104066.1  104066.1  104066.1
+20 2025-06-19 23:58:57  104066.1  104066.1  104066.1  104066.1
+21 2025-06-19 23:58:59  104057.2  104057.2  104057.2  104057.2
+22 2025-06-19 23:59:00  104057.2  104057.2  104057.2  104057.2
+2025-06-19 23:59:01,921 [INFO] Order events [contract=BTCUSDT, order_id=4564633594, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:59:03,862 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 59, 3, 374584), '104057.20')
+2025-06-19 23:59:03,864 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:59:03,864 [INFO] [TradingStrategy] Data buffer length: 24
+2025-06-19 23:59:03,870 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:56.029134 2025-06-19 23:58:56.029134  104066.1
+2025-06-19 23:58:57.643808 2025-06-19 23:58:57.643808  104066.1
+2025-06-19 23:58:59.617031 2025-06-19 23:58:59.617031  104057.2
+2025-06-19 23:59:00.805703 2025-06-19 23:59:00.805703  104057.2
+2025-06-19 23:59:03.374584 2025-06-19 23:59:03.374584  104057.2
+2025-06-19 23:59:03,877 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (24, 5)
+2025-06-19 23:59:03,886 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+19 2025-06-19 23:58:56  104066.1  104066.1  104066.1  104066.1
+20 2025-06-19 23:58:57  104066.1  104066.1  104066.1  104066.1
+21 2025-06-19 23:58:59  104057.2  104057.2  104057.2  104057.2
+22 2025-06-19 23:59:00  104057.2  104057.2  104057.2  104057.2
+23 2025-06-19 23:59:03  104057.2  104057.2  104057.2  104057.2
+2025-06-19 23:59:04,400 [ERROR] CANCEL read_loop
+2025-06-19 23:59:05,246 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 59, 4, 767075), '104051.40')
+2025-06-19 23:59:05,249 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:59:05,250 [INFO] [TradingStrategy] Data buffer length: 25
+2025-06-19 23:59:05,259 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:57.643808 2025-06-19 23:58:57.643808  104066.1
+2025-06-19 23:58:59.617031 2025-06-19 23:58:59.617031  104057.2
+2025-06-19 23:59:00.805703 2025-06-19 23:59:00.805703  104057.2
+2025-06-19 23:59:03.374584 2025-06-19 23:59:03.374584  104057.2
+2025-06-19 23:59:04.767075 2025-06-19 23:59:04.767075  104051.4
+2025-06-19 23:59:05,265 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (25, 5)
+2025-06-19 23:59:05,273 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+20 2025-06-19 23:58:57  104066.1  104066.1  104066.1  104066.1
+21 2025-06-19 23:58:59  104057.2  104057.2  104057.2  104057.2
+22 2025-06-19 23:59:00  104057.2  104057.2  104057.2  104057.2
+23 2025-06-19 23:59:03  104057.2  104057.2  104057.2  104057.2
+24 2025-06-19 23:59:04  104051.4  104051.4  104051.4  104051.4
+2025-06-19 23:59:08,062 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 59, 7, 495616), '104051.40')
+2025-06-19 23:59:08,065 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:59:08,065 [INFO] [TradingStrategy] Data buffer length: 26
+2025-06-19 23:59:08,077 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:58:59.617031 2025-06-19 23:58:59.617031  104057.2
+2025-06-19 23:59:00.805703 2025-06-19 23:59:00.805703  104057.2
+2025-06-19 23:59:03.374584 2025-06-19 23:59:03.374584  104057.2
+2025-06-19 23:59:04.767075 2025-06-19 23:59:04.767075  104051.4
+2025-06-19 23:59:07.495616 2025-06-19 23:59:07.495616  104051.4
+2025-06-19 23:59:08,081 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (26, 5)
+2025-06-19 23:59:08,090 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+21 2025-06-19 23:58:59  104057.2  104057.2  104057.2  104057.2
+22 2025-06-19 23:59:00  104057.2  104057.2  104057.2  104057.2
+23 2025-06-19 23:59:03  104057.2  104057.2  104057.2  104057.2
+24 2025-06-19 23:59:04  104051.4  104051.4  104051.4  104051.4
+25 2025-06-19 23:59:07  104051.4  104051.4  104051.4  104051.4
+2025-06-19 23:59:08,508 [ERROR] CANCEL read_loop
+2025-06-19 23:59:09,603 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 59, 9, 117248), '104051.40')
+2025-06-19 23:59:09,605 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:59:09,605 [INFO] [TradingStrategy] Data buffer length: 27
+2025-06-19 23:59:09,610 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:59:00.805703 2025-06-19 23:59:00.805703  104057.2
+2025-06-19 23:59:03.374584 2025-06-19 23:59:03.374584  104057.2
+2025-06-19 23:59:04.767075 2025-06-19 23:59:04.767075  104051.4
+2025-06-19 23:59:07.495616 2025-06-19 23:59:07.495616  104051.4
+2025-06-19 23:59:09.117248 2025-06-19 23:59:09.117248  104051.4
+2025-06-19 23:59:09,615 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (27, 5)
+2025-06-19 23:59:09,626 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+22 2025-06-19 23:59:00  104057.2  104057.2  104057.2  104057.2
+23 2025-06-19 23:59:03  104057.2  104057.2  104057.2  104057.2
+24 2025-06-19 23:59:04  104051.4  104051.4  104051.4  104051.4
+25 2025-06-19 23:59:07  104051.4  104051.4  104051.4  104051.4
+26 2025-06-19 23:59:09  104051.4  104051.4  104051.4  104051.4
+2025-06-19 23:59:12,061 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 59, 11, 572861), '104051.40')
+2025-06-19 23:59:12,062 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:59:12,063 [INFO] [TradingStrategy] Data buffer length: 28
+2025-06-19 23:59:12,067 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:59:03.374584 2025-06-19 23:59:03.374584  104057.2
+2025-06-19 23:59:04.767075 2025-06-19 23:59:04.767075  104051.4
+2025-06-19 23:59:07.495616 2025-06-19 23:59:07.495616  104051.4
+2025-06-19 23:59:09.117248 2025-06-19 23:59:09.117248  104051.4
+2025-06-19 23:59:11.572861 2025-06-19 23:59:11.572861  104051.4
+2025-06-19 23:59:12,074 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (28, 5)
+2025-06-19 23:59:12,080 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+23 2025-06-19 23:59:03  104057.2  104057.2  104057.2  104057.2
+24 2025-06-19 23:59:04  104051.4  104051.4  104051.4  104051.4
+25 2025-06-19 23:59:07  104051.4  104051.4  104051.4  104051.4
+26 2025-06-19 23:59:09  104051.4  104051.4  104051.4  104051.4
+27 2025-06-19 23:59:11  104051.4  104051.4  104051.4  104051.4
+2025-06-19 23:59:12,472 [INFO] Order events [contract=BTCUSDT, order_id=4564634534, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0, canceled_reason=None]
+2025-06-19 23:59:12,769 [ERROR] CANCEL read_loop
+2025-06-19 23:59:13,620 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 19, 23, 59, 13, 145014), '104051.40')
+2025-06-19 23:59:13,623 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-19 23:59:13,623 [INFO] [TradingStrategy] Data buffer length: 29
+2025-06-19 23:59:13,629 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-19 23:59:04.767075 2025-06-19 23:59:04.767075  104051.4
+2025-06-19 23:59:07.495616 2025-06-19 23:59:07.495616  104051.4
+2025-06-19 23:59:09.117248 2025-06-19 23:59:09.117248  104051.4
+2025-06-19 23:59:11.572861 2025-06-19 23:59:11.572861  104051.4
+2025-06-19 23:59:13.145014 2025-06-19 23:59:13.145014  104051.4
+2025-06-19 23:59:13,635 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (29, 5)
+2025-06-19 23:59:13,644 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+24 2025-06-19 23:59:04  104051.4  104051.4  104051.4  104051.4
+25 2025-06-19 23:59:07  104051.4  104051.4  104051.4  104051.4
+26 2025-06-19 23:59:09  104051.4  104051.4  104051.4  104051.4
+27 2025-06-19 23:59:11  104051.4  104051.4  104051.4  104051.4
+28 2025-06-19 23:59:13  104051.4  104051.4  104051.4  104051.4

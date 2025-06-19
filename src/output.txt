@@ -5,1014 +5,181 @@ CHECK MY API_SECRET:  9bbde8457e093814063f5934880e69fba48d20a0ea032d259a5de6ac6c
 ################ REGISTERING CALLBACK ################
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:27 | Last price: [0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:28 | Last price: 104240.90[0m
-Response: {'serverTime': 1750348108211}
-[96mUpdating bookkeeper for date 2025-06-19, price 104240.90...[0m
+[93mTick received at 2025-06-19 23:58:17 | Last price: 104100.00[0m
+Response: {'serverTime': 1750348697583}
+[96mUpdating bookkeeper for date 2025-06-19, price 104100.00...[0m
 /Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market-microstructure-87137a83145826db36dd62013d00afe409fa46c8/src/book_keeper/main_book_keeper.py:133: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
   self.historical_data = pd.concat(
 [96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564505406, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'VlhA6iPJ1DlVlT5CWhjHsM', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.717', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750347284604, 'updateTime': 1750347284604}]
-CANCELLING ORDERS
+[96mOpen orders:[0m [None]
 Cannot trigger stop loss due to invalid last buy price
-****************** EXECUTING CALLBACK ******************
 [96mRisk check:[0m stop_loss: False, trading_halt: False
-Execution callback triggered.
 [96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 28, 55980), '104240.90')
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 17, 355551), '104100.00')
 /Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market-microstructure-87137a83145826db36dd62013d00afe409fa46c8/src/trading_engine/main_trading_strategy.py:76: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
   self.raw_data = pd.concat([self.raw_data, new_data], ignore_index=True)
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:48:28
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:48:28')
+[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:58:18
+[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:58:18')
 [92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348108996}
-[risk mgr] AvailableBalance :10165.04885515
-buy trade check amt7623.7866413625
-[risk mgr] AvailableBalance :10165.04885515
-[risk mgr] WalletBalance :10165.04885515
-post trade ratio 0.18
+Response: {'serverTime': 1750348698438}
+[risk mgr] AvailableBalance :5678.35132928
+buy trade check amt4258.76349696
+[risk mgr] AvailableBalance :5678.35132928
+[risk mgr] WalletBalance :5678.35132928
+post trade ratio 0.1
 [92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.069, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.069 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564573632, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'JmwkatLbJklpqvgny3sICX', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.069', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348109149}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
+[96mBUY --> ORDER QUANTITY 0.039, approved? True and order queue True[0m
+[92mPlacing BUY LIMIT order for 0.039 BTCUSDT at 110163.9[0m
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564629920, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'H7723ieUzrMuZSpXoUga00', 'price': '104100.00', 'avgPrice': '0.00', 'origQty': '0.039', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348698580}
 [96mOrder placement result:[0m True
-********FILLED******
 ****************** EXECUTING CALLBACK ******************
 Execution callback triggered.
 [96mCheck historical positions (last 3):
        Timestamp   Symbol     entryPrice PositionAmt
-0  1750348108211  BTCUSDT  104701.669736       0.717
-1  1750348108996  BTCUSDT  104661.229263       0.786[0m
+0  1750348697583  BTCUSDT  104465.135056       1.529
+1  1750348698438  BTCUSDT  104465.135056       1.529[0m
 [96m==================================================[0m
 
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:31 | Last price: 104240.90[0m
-Response: {'serverTime': 1750348111216}
-[96mUpdating bookkeeper for date 2025-06-19, price 104240.90...[0m
+[93mTick received at 2025-06-19 23:58:20 | Last price: 104100.10[0m
+Response: {'serverTime': 1750348700776}
+[96mUpdating bookkeeper for date 2025-06-19, price 104100.10...[0m
 [96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103614.616970271, latest_market_price104240.90,  last_buy_price104661.2292629
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+[96mOpen orders:[0m [{'orderId': 4564629920, 'symbol': 'BTCUSDT', 'status': 'PARTIALLY_FILLED', 'clientOrderId': 'H7723ieUzrMuZSpXoUga00', 'price': '104100', 'avgPrice': '104100', 'origQty': '0.039', 'executedQty': '0.001', 'cumQuote': '104.10000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348698580, 'updateTime': 1750348700973}]
+Cannot trigger stop loss due to invalid last buy price
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 31, 70062), '104240.90')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:48:31
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:48:31')
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 20, 618535), '104100.10')
+[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:58:21
+[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:58:21')
 [92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348111801}
-[risk mgr] AvailableBalance :9804.37354783
-buy trade check amt7353.2801608725
-[risk mgr] AvailableBalance :9804.37354783
-[risk mgr] WalletBalance :9804.37354783
-post trade ratio 0.17
+Response: {'serverTime': 1750348701362}
+[risk mgr] AvailableBalance :5455.27703856
+buy trade check amt4091.45777892
+[risk mgr] AvailableBalance :5455.27703856
+[risk mgr] WalletBalance :5455.27703856
+post trade ratio 0.1
 [92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.067, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.067 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564574102, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'o2ju006L156jtmhp8lhKln', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.067', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348111950}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.[96mOrder placement result:[0m True
+[96mBUY --> ORDER QUANTITY 0.037, approved? True and order queue True[0m
+[92mPlacing BUY LIMIT order for 0.037 BTCUSDT at 110163.9[0m
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564630168, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '8hriSdLeHM9njGgHxrBmNY', 'price': '104100.10', 'avgPrice': '0.00', 'origQty': '0.037', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348701510}
+[96mOrder placement result:[0m True****************** EXECUTING CALLBACK ******************
 
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mCheck historical positions (last 3):
-       Timestamp   Symbol     entryPrice PositionAmt
-1  1750348108996  BTCUSDT  104661.229263       0.786
-2  1750348111216  BTCUSDT  104661.229263       0.786
-3  1750348111801  BTCUSDT  104628.221806       0.853[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:32 | Last price: 104240.90[0m
-Response: {'serverTime': 1750348112778}
-[96mUpdating bookkeeper for date 2025-06-19, price 104240.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103581.93958803901, latest_market_price104240.90,  last_buy_price104628.2218061
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 32, 631132), '104240.90')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:48:33
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:48:33')
-[92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348113334}
-[risk mgr] AvailableBalance :9452.06248803
-buy trade check amt7089.0468660225
-[risk mgr] AvailableBalance :9452.06248803
-[risk mgr] WalletBalance :9452.06248803
-post trade ratio 0.17
-[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.064, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.064 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564574196, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'g3xohG00pcxRcAXpVzmK7b', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.064', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348113489}
-[96mOrder placement result:[0m True
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
 Execution callback triggered.
 ********FILLED******
 ****************** EXECUTING CALLBACK ******************
 Execution callback triggered.
 [96mCheck historical positions (last 3):
        Timestamp   Symbol     entryPrice PositionAmt
-3  1750348111801  BTCUSDT  104628.221806       0.853
-4  1750348112778  BTCUSDT  104628.221806       0.853
-5  1750348113334  BTCUSDT  104601.196511       0.917[0m
+1  1750348698438  BTCUSDT  104465.135056       1.529
+2  1750348700776  BTCUSDT  104465.135056       1.529
+3  1750348701362  BTCUSDT  104456.282834       1.567[0m
 [96m==================================================[0m
 
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:34 | Last price: 104240.90[0m
-Response: {'serverTime': 1750348114464}
-[96mUpdating bookkeeper for date 2025-06-19, price 104240.90...[0m
+[93mTick received at 2025-06-19 23:58:22 | Last price: 104100.10[0m
+Response: {'serverTime': 1750348702357}
+[96mUpdating bookkeeper for date 2025-06-19, price 104100.10...[0m
 [96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103555.18454589, latest_market_price104240.90,  last_buy_price104601.196511
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 34, 319203), '104240.90')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:48:34
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:48:34')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348115053}
-current_btc_inventory 0.917 vs ordersize 0.917
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 0.917, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 0.917 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564574301, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'o6aJ3IY6KgFUrU3kUYKTx6', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.917', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348115346}
-[96mOrder placement result:[0m True
+[96mOpen orders:[0m [{'orderId': 4564629920, 'symbol': 'BTCUSDT', 'status': 'PARTIALLY_FILLED', 'clientOrderId': 'H7723ieUzrMuZSpXoUga00', 'price': '104100', 'avgPrice': '104100', 'origQty': '0.039', 'executedQty': '0.001', 'cumQuote': '104.10000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348698580, 'updateTime': 1750348700973}]
+CANCELLING ORDERS
+********FILLED******
 ****************** EXECUTING CALLBACK ******************
 Execution callback triggered.
-[96mCheck historical positions (last 3):
-       Timestamp   Symbol     entryPrice PositionAmt
-5  1750348113334  BTCUSDT  104601.196511       0.917
-6  1750348114464  BTCUSDT  104601.196511       0.917
-7  1750348115053  BTCUSDT  104601.196511       0.917[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:36 | Last price: 104241.00[0m
-Response: {'serverTime': 1750348116176}
-[96mUpdating bookkeeper for date 2025-06-19, price 104241.00...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564574301, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'o6aJ3IY6KgFUrU3kUYKTx6', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.917', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348115346, 'updateTime': 1750348115346}]
-STOPLOSS CHECK: stoploss_limit_value103555.18454589, latest_market_price104241.00,  last_buy_price104601.196511
+STOPLOSS CHECK: stoploss_limit_value103411.720005363, latest_market_price104100.10,  last_buy_price104456.2828337
 [96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 36, 13339), '104241.00')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:48:36
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:48:36')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348116746}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
+[96mLIQUIDATE CHECK : False OR False[0m****************** EXECUTING CALLBACK ******************
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 22, 202790), '104100.10')
+Execution callback triggered.
+
+[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:58:25
+[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:58:25')
+[92mSignal: SELL | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348705439}
+current_btc_inventory 1.567 vs ordersize 1.586
+No short position allowed
+[91mshort_pos_check: False, sell_price_check: True, sell_position_check: True[0m
+[96mSELL --> ORDER QUANTITY 1.586, approved? False and order queue True[0m
 [93mSORRY CANT TRADE[0m
 [96m==================================================[0m
 
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:58:26 | Last price: 104097.50[0m
+Response: {'serverTime': 1750348706659}
+[96mUpdating bookkeeper for date 2025-06-19, price 104097.50...[0m
+[96mChecking open orders...[0m
 Heartbeat: application running.
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:37 | Last price: 104241.00[0m
-Response: {'serverTime': 1750348117578}
-[96mUpdating bookkeeper for date 2025-06-19, price 104241.00...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564574301, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'o6aJ3IY6KgFUrU3kUYKTx6', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.917', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348115346, 'updateTime': 1750348115346}]
-STOPLOSS CHECK: stoploss_limit_value103555.18454589, latest_market_price104241.00,  last_buy_price104601.196511
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 37, 437640), '104241.00')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:48:38
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:48:38')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348118154}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:38 | Last price: 104241.00[0m
-Response: {'serverTime': 1750348118992}
-[96mUpdating bookkeeper for date 2025-06-19, price 104241.00...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564574301, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'o6aJ3IY6KgFUrU3kUYKTx6', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.917', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348115346, 'updateTime': 1750348115346}]
-CANCELLING ORDERS
-STOPLOSS CHECK: stoploss_limit_value103555.18454589, latest_market_price104241.00,  last_buy_price104601.196511
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 38, 701233), '104241.00')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:48:39
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:48:39')
-[92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348119710}
-[risk mgr] AvailableBalance :9115.46159007
-buy trade check amt6836.596192552499
-[risk mgr] AvailableBalance :9115.46159007
-[risk mgr] WalletBalance :9115.46159007
-post trade ratio 0.16
-[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.062, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.062 BTCUSDT at 110163.9[0m
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564574542, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'FKBclwM0xZVhKhqJYRSh0U', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.062', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348119889}
-********FILLED******
-[96mOrder placement result:[0m True
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-9   1750348117578  BTCUSDT  104601.196511       0.917
-10  1750348118992  BTCUSDT  104601.196511       0.917
-11  1750348119710  BTCUSDT  104578.530236       0.979[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:41 | Last price: 104241.00[0m
-Response: {'serverTime': 1750348121249}
-[96mUpdating bookkeeper for date 2025-06-19, price 104241.00...[0m
-[96mChecking open orders...[0m
 [96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103532.744933145, latest_market_price104241.00,  last_buy_price104578.5302355
+STOPLOSS CHECK: stoploss_limit_value103407.494482017, latest_market_price104097.50,  last_buy_price104452.0146283
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 41, 100669), '104241.00')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:48:41
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:48:41')
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 26, 512072), '104097.50')
+[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:58:27
+[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:58:27')
 [92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348121980}
-current_btc_inventory 0.979 vs ordersize 0.979
+Response: {'serverTime': 1750348707242}
+current_btc_inventory 1.586 vs ordersize 1.586
 [91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 0.979, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 0.979 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564574673, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '8SWz80rphnPxabdIPyv9qo', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.979', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348122294}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-11  1750348119710  BTCUSDT  104578.530236       0.979
-12  1750348121249  BTCUSDT  104578.530236       0.979
-13  1750348121980  BTCUSDT  104578.530236       0.979[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:42 | Last price: 104243.50[0m
-Response: {'serverTime': 1750348123106}
-[96mUpdating bookkeeper for date 2025-06-19, price 104243.50...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564574673, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '8SWz80rphnPxabdIPyv9qo', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.979', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348122294, 'updateTime': 1750348122294}]
-STOPLOSS CHECK: stoploss_limit_value103532.744933145, latest_market_price104243.50,  last_buy_price104578.5302355
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 42, 960999), '104243.50')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:48:43
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:48:43')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348123665}
-current_btc_inventory 0.979 vs ordersize 0.979
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 0.979, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 0.979 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564574887, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '5sJ8XU2gO1HvNuamq8CDPL', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.979', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348123989}
-[96mOrder placement result:[0m True
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-13  1750348121980  BTCUSDT  104578.530236       0.979
-14  1750348123106  BTCUSDT  104578.530236       0.979
-15  1750348123665  BTCUSDT  104578.530236       0.979[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:45 | Last price: 104243.10[0m
-Response: {'serverTime': 1750348125192}
-[96mUpdating bookkeeper for date 2025-06-19, price 104243.10...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564574673, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '8SWz80rphnPxabdIPyv9qo', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.979', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348122294, 'updateTime': 1750348122294}, {'orderId': 4564574887, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '5sJ8XU2gO1HvNuamq8CDPL', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.979', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348123989, 'updateTime': 1750348123989}]
-STOPLOSS CHECK: stoploss_limit_value103532.744933145, latest_market_price104243.10,  last_buy_price104578.5302355
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 45, 43079), '104243.10')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:48:45
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:48:45')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348125779}
-current_btc_inventory 0.979 vs ordersize 0.979
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 0.979, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 0.979 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564575012, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'uhyTOf4e5ClzN19SfNN6tr', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.979', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348126111}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-15  1750348123665  BTCUSDT  104578.530236       0.979
-16  1750348125192  BTCUSDT  104578.530236       0.979
-17  1750348125779  BTCUSDT  104578.530236       0.979[0m
-[96m==================================================[0m
-
-Heartbeat: application running.
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:47 | Last price: 104243.10[0m
-Response: {'serverTime': 1750348127316}
-[96mUpdating bookkeeper for date 2025-06-19, price 104243.10...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564574673, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '8SWz80rphnPxabdIPyv9qo', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.979', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348122294, 'updateTime': 1750348122294}, {'orderId': 4564575012, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'uhyTOf4e5ClzN19SfNN6tr', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.979', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348126111, 'updateTime': 1750348126111}, {'orderId': 4564574887, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '5sJ8XU2gO1HvNuamq8CDPL', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.979', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348123989, 'updateTime': 1750348123989}]
-CANCELLING ORDERS
-CANCELLING ORDERS
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-STOPLOSS CHECK: stoploss_limit_value103532.744933145, latest_market_price104243.10,  last_buy_price104578.5302355
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 47, 167585), '104243.10')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:48:48
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:48:48')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348128204}
-current_btc_inventory 0.979 vs ordersize 0.979
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 0.979, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 0.979 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564575120, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'SvMRso6E0XVx6eyiS2hgbs', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.979', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348128511}
-[96mOrder placement result:[0m True
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-17  1750348125779  BTCUSDT  104578.530236       0.979
-18  1750348127316  BTCUSDT  104578.530236       0.979
-19  1750348128204  BTCUSDT  104578.530236       0.979[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:50 | Last price: 104256.70[0m
-Response: {'serverTime': 1750348130360}
-[96mUpdating bookkeeper for date 2025-06-19, price 104256.70...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564575120, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'SvMRso6E0XVx6eyiS2hgbs', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.979', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348128511, 'updateTime': 1750348128511}, {'orderId': 4564575012, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'uhyTOf4e5ClzN19SfNN6tr', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.979', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348126111, 'updateTime': 1750348126111}]
-CANCELLING ORDERS
-STOPLOSS CHECK: stoploss_limit_value103532.744933145, latest_market_price104256.70,  last_buy_price104578.5302355
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-****************** EXECUTING CALLBACK ******************Callback: (datetime.datetime(2025, 6, 19, 23, 48, 50, 208233), '104256.70')
-Execution callback triggered.
-
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:48:50
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:48:50')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348131091}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:51 | Last price: 104256.70[0m
-Response: {'serverTime': 1750348131735}
-[96mUpdating bookkeeper for date 2025-06-19, price 104256.70...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564575120, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'SvMRso6E0XVx6eyiS2hgbs', 'price': '110163.90', 'avgPrice': '0', 'origQty': '0.979', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348128511, 'updateTime': 1750348128511}]
-CANCELLING ORDERS
-STOPLOSS CHECK: stoploss_limit_value103532.744933145, latest_market_price104256.70,  last_buy_price104578.5302355
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 51, 594611), '104256.70')
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:48:52
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:48:52')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348132458}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:54 | Last price: 104256.60[0m
-Response: {'serverTime': 1750348134255}
-[96mUpdating bookkeeper for date 2025-06-19, price 104256.60...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103532.744933145, latest_market_price104256.60,  last_buy_price104578.5302355
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 54, 102152), '104256.60')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:48:54
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:48:54')
-[92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348134846}
-[risk mgr] AvailableBalance :8804.62346843
-buy trade check amt6603.4676013225
-[risk mgr] AvailableBalance :8804.62346843
-[risk mgr] WalletBalance :8804.62346843
-post trade ratio 0.15
-[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.06, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.06 BTCUSDT at 110163.9[0m
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564575359, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'fauBi95MnJy9lD7R65oXNS', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.060', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348135005}
-[96mOrder placement result:[0m True
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-21  1750348131735  BTCUSDT  104578.530236       0.979
-22  1750348134255  BTCUSDT  104578.530236       0.979
-23  1750348134846  BTCUSDT  104559.939462       1.039[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:55 | Last price: 104256.60[0m
-Response: {'serverTime': 1750348135826}
-[96mUpdating bookkeeper for date 2025-06-19, price 104256.60...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103514.340066984, latest_market_price104256.60,  last_buy_price104559.9394616
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 55, 685879), '104256.60')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:48:56
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:48:56')
-[92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348136396}
-[risk mgr] AvailableBalance :8494.84216665
-buy trade check amt6371.1316249875
-[risk mgr] AvailableBalance :8494.84216665
-[risk mgr] WalletBalance :8494.84216665
-post trade ratio 0.15
-[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.058, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.058 BTCUSDT at 110163.9[0m
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564575635, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'qQPPePICTFSNdR1eweGB6T', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.058', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348136545}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mOrder placement result:[0m True
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-23  1750348134846  BTCUSDT  104559.939462       1.039
-24  1750348135826  BTCUSDT  104559.939462       1.039
-25  1750348136396  BTCUSDT  104544.218688       1.097[0m
-[96m==================================================[0m
-
-Heartbeat: application running.
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:57 | Last price: 104256.60[0m
-Response: {'serverTime': 1750348137569}
-[96mUpdating bookkeeper for date 2025-06-19, price 104256.60...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103498.776500922, latest_market_price104256.60,  last_buy_price104544.2186878
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 57, 410700), '104256.60')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:48:57
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:48:57')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348138123}
-current_btc_inventory 1.097 vs ordersize 1.097
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 1.097, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 1.097 BTCUSDT at 110163.9[0m
-****************** EXECUTING CALLBACK ******************++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564575945, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'jhkMFgzQ22d7WGEPifxsxY', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '1.097', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348138426}
-Execution callback triggered.
-
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-25  1750348136396  BTCUSDT  104544.218688       1.097
-26  1750348137569  BTCUSDT  104544.218688       1.097
-27  1750348138123  BTCUSDT  104544.218688       1.097[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:48:59 | Last price: 104263.50[0m
-Response: {'serverTime': 1750348139281}
-[96mUpdating bookkeeper for date 2025-06-19, price 104263.50...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564575945, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'jhkMFgzQ22d7WGEPifxsxY', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.097', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348138426, 'updateTime': 1750348138426}]
-STOPLOSS CHECK: stoploss_limit_value103498.776500922, latest_market_price104263.50,  last_buy_price104544.2186878
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 48, 59, 128986), '104263.50')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:48:59
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:48:59')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348139864}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:00 | Last price: 104263.50[0m
-Response: {'serverTime': 1750348140713}
-[96mUpdating bookkeeper for date 2025-06-19, price 104263.50...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564575945, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'jhkMFgzQ22d7WGEPifxsxY', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.097', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348138426, 'updateTime': 1750348138426}]
-STOPLOSS CHECK: stoploss_limit_value103498.776500922, latest_market_price104263.50,  last_buy_price104544.2186878
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 0, 554381), '104263.50')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:49:01
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:49:01')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348141286}
-current_btc_inventory 1.097 vs ordersize 1.097
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 1.097, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 1.097 BTCUSDT at 110163.9[0m
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564576349, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'ilLGtF2zU445io6vvXYICf', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '1.097', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348141636}
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-28  1750348139281  BTCUSDT  104544.218688       1.097
-29  1750348140713  BTCUSDT  104544.218688       1.097
-30  1750348141286  BTCUSDT  104544.218688       1.097[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:02 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348142443}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564575945, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'jhkMFgzQ22d7WGEPifxsxY', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.097', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348138426, 'updateTime': 1750348138426}, {'orderId': 4564576349, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'ilLGtF2zU445io6vvXYICf', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.097', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348141636, 'updateTime': 1750348141636}]
-CANCELLING ORDERS
-STOPLOSS CHECK: stoploss_limit_value103498.776500922, latest_market_price104266.90,  last_buy_price104544.2186878
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 2, 300763), '104266.90')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:49:03
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:49:03')
-[92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348143163}
-[risk mgr] AvailableBalance :7546.38420524
-buy trade check amt5659.78815393
-[risk mgr] AvailableBalance :7546.38420524
-[risk mgr] WalletBalance :7546.38420524
-post trade ratio 0.13
-[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.051, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.051 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564576440, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'QYREVkWotnsZGlZxFJoIfS', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.051', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348143324}
-****************** EXECUTING CALLBACK ******************[96mOrder placement result:[0m True
-Execution callback triggered.
-
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-30  1750348141286  BTCUSDT  104544.218688       1.097
-31  1750348142443  BTCUSDT  104544.218688       1.097
-32  1750348143163  BTCUSDT  104531.898781       1.148[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:04 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348144906}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564576349, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'ilLGtF2zU445io6vvXYICf', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.097', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348141636, 'updateTime': 1750348141636}]
-CANCELLING ORDERS
-STOPLOSS CHECK: stoploss_limit_value103486.57979309099, latest_market_price104266.90,  last_buy_price104531.8987809
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-****************** EXECUTING CALLBACK ******************
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 4, 753272), '104266.90')
-Execution callback triggered.
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:05
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:05')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348145792}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:06 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348146465}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103486.57979309099, latest_market_price104266.90,  last_buy_price104531.8987809
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 6, 325267), '104266.90')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:06
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:06')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348147022}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-Heartbeat: application running.
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:08 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348148318}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103486.57979309099, latest_market_price104266.90,  last_buy_price104531.8987809
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 8, 180181), '104266.90')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:49:08
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:49:08')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348148905}
-current_btc_inventory 1.148 vs ordersize 1.148
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 1.148, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 1.148 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564576828, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '3KrfcmU2qU5UtBqBiscR6N', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '1.148', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348149214}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-34  1750348146465  BTCUSDT  104531.898781       1.148
-35  1750348148318  BTCUSDT  104531.898781       1.148
-36  1750348148905  BTCUSDT  104531.898781       1.148[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:09 | Last price: 104264.70[0m
-Response: {'serverTime': 1750348149989}
-[96mUpdating bookkeeper for date 2025-06-19, price 104264.70...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564576828, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '3KrfcmU2qU5UtBqBiscR6N', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.148', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348149214, 'updateTime': 1750348149214}]
-STOPLOSS CHECK: stoploss_limit_value103486.57979309099, latest_market_price104264.70,  last_buy_price104531.8987809
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 9, 842803), '104264.70')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:10
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:10')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348150600}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:12 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348153141}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564576828, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '3KrfcmU2qU5UtBqBiscR6N', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.148', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348149214, 'updateTime': 1750348149214}]
-CANCELLING ORDERS
-STOPLOSS CHECK: stoploss_limit_value103486.57979309099, latest_market_price104266.90,  last_buy_price104531.8987809
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-****************** EXECUTING CALLBACK ******************
-[96mLIQUIDATE CHECK : False OR False[0m
-Execution callback triggered.
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 12, 992556), '104266.90')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:49:13
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:49:13')
-[92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348153870}
-[risk mgr] AvailableBalance :7925.82409398
-buy trade check amt5944.368070484999
-[risk mgr] AvailableBalance :7925.82409398
-[risk mgr] WalletBalance :7925.82409398
-post trade ratio 0.14
-[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.054, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.054 BTCUSDT at 110163.9[0m
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564577165, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'hooO7eF1KeFtxwjFnWPxhH', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.054', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348154011}Execution callback triggered.
-
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-37  1750348149989  BTCUSDT  104531.898781       1.148
-38  1750348153141  BTCUSDT  104531.898781       1.148
-39  1750348153870  BTCUSDT  104519.993678       1.202[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:14 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348154896}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103474.793740824, latest_market_price104266.90,  last_buy_price104519.9936776
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 14, 738908), '104266.90')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:15
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:15')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348155477}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-Heartbeat: application running.
-[93mTick received at 2025-06-19 23:49:17 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348157477}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103474.793740824, latest_market_price104266.90,  last_buy_price104519.9936776
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 16, 907733), '104266.90')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:18
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:18')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348158640}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:19 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348159650}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103474.793740824, latest_market_price104266.90,  last_buy_price104519.9936776
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 19, 509845), '104266.90')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:20
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:20')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348160237}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:20 | Last price: 104265.10[0m
-Response: {'serverTime': 1750348160926}
-[96mUpdating bookkeeper for date 2025-06-19, price 104265.10...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103474.793740824, latest_market_price104265.10,  last_buy_price104519.9936776
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 20, 784248), '104265.10')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:49:21
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:49:21')
-[92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348161483}
-[risk mgr] AvailableBalance :7642.10328339
-buy trade check amt5731.5774625425
-[risk mgr] AvailableBalance :7642.10328339
-[risk mgr] WalletBalance :7642.10328339
-post trade ratio 0.13
-[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.052, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.052 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564577656, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'gcdv1hrY7yr0pnRpEwkQK6', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.052', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348161626}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mOrder placement result:[0m True
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-42  1750348159650  BTCUSDT  104519.993678       1.202
-43  1750348160926  BTCUSDT  104519.993678       1.202
-44  1750348161483  BTCUSDT  104509.498565       1.254[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:23 | Last price: 104265.10[0m
-Response: {'serverTime': 1750348163254}
-[96mUpdating bookkeeper for date 2025-06-19, price 104265.10...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103464.40357935001, latest_market_price104265.10,  last_buy_price104509.498565
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 23, 113408), '104265.10')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:49:25
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:49:25')
-[92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348165392}
-[risk mgr] AvailableBalance :7368.6679313
-buy trade check amt5526.500948475001
-[risk mgr] AvailableBalance :7368.6679313
-[risk mgr] WalletBalance :7368.6679313
-post trade ratio 0.13
-[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.05, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.05 BTCUSDT at 110163.9[0m
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564577974, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'rYeCUMTKslviSLpnNFQyPz', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.050', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348165539}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-44  1750348161483  BTCUSDT  104509.498565       1.254
-45  1750348163254  BTCUSDT  104509.498565       1.254
-46  1750348165392  BTCUSDT  104500.196473       1.304[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:26 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348166550}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103455.194508072, latest_market_price104266.90,  last_buy_price104500.1964728
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 26, 406579), '104266.90')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:27
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:27')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348167176}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-Heartbeat: application running.
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:28 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348168268}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103455.194508072, latest_market_price104266.90,  last_buy_price104500.1964728
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 28, 118610), '104266.90')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:49:28
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:49:28')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348168942}
-current_btc_inventory 1.304 vs ordersize 1.304
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 1.304, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 1.304 BTCUSDT at 110163.9[0m
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564579034, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'kRvZbFRogt0JkThOWhgiBa', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '1.304', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348169323}
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-47  1750348166550  BTCUSDT  104500.196473       1.304
-48  1750348168268  BTCUSDT  104500.196473       1.304
-49  1750348168942  BTCUSDT  104500.196473       1.304[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:30 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348170174}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564579034, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'kRvZbFRogt0JkThOWhgiBa', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.304', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348169323, 'updateTime': 1750348169323}]
-STOPLOSS CHECK: stoploss_limit_value103455.194508072, latest_market_price104266.90,  last_buy_price104500.1964728
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 30, 21293), '104266.90')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:49:30
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:49:30')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348170763}
-current_btc_inventory 1.304 vs ordersize 1.304
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 1.304, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 1.304 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564579149, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'a9YGdJDkPdNhM7eK2mOs68', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '1.304', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348171060}
+[96mSELL --> ORDER QUANTITY 1.586, approved? True and order queue True[0m
+[92mPlacing SELL LIMIT order for 1.586 BTCUSDT at 110163.9[0m
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564630672, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'NToFtORqo0gslKOBks2Ty6', 'price': '104097.50', 'avgPrice': '0.00', 'origQty': '1.586', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348707548}
 ****************** EXECUTING CALLBACK ******************[96mOrder placement result:[0m True
 Execution callback triggered.
 
 [96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-49  1750348168942  BTCUSDT  104500.196473       1.304
-50  1750348170174  BTCUSDT  104500.196473       1.304
-51  1750348170763  BTCUSDT  104500.196473       1.304[0m
+       Timestamp   Symbol     entryPrice PositionAmt
+4  1750348702357  BTCUSDT  104456.282834       1.567
+5  1750348706659  BTCUSDT  104452.014628       1.586
+6  1750348707242  BTCUSDT  104452.014628       1.586[0m
 [96m==================================================[0m
 
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:32 | Last price: 104265.40[0m
-Response: {'serverTime': 1750348172651}
-[96mUpdating bookkeeper for date 2025-06-19, price 104265.40...[0m
+[93mTick received at 2025-06-19 23:58:28 | Last price: 104097.50[0m
+Response: {'serverTime': 1750348708423}
+[96mUpdating bookkeeper for date 2025-06-19, price 104097.50...[0m
 [96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564579034, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'kRvZbFRogt0JkThOWhgiBa', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.304', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348169323, 'updateTime': 1750348169323}, {'orderId': 4564579149, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'a9YGdJDkPdNhM7eK2mOs68', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.304', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348171060, 'updateTime': 1750348171060}]
-CANCELLING ORDERS
-STOPLOSS CHECK: stoploss_limit_value103455.194508072, latest_market_price104265.40,  last_buy_price104500.1964728
+[96mOpen orders:[0m [{'orderId': 4564630672, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'NToFtORqo0gslKOBks2Ty6', 'price': '104097.50', 'avgPrice': '0', 'origQty': '1.586', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348707548, 'updateTime': 1750348707548}]
+STOPLOSS CHECK: stoploss_limit_value103407.494482017, latest_market_price104097.50,  last_buy_price104452.0146283
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mLIQUIDATE CHECK : False OR False[0m
-****************** EXECUTING CALLBACK ******************Callback: (datetime.datetime(2025, 6, 19, 23, 49, 32, 504625), '104265.40')
-Execution callback triggered.
-
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:33
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:33')
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 28, 261000), '104097.50')
+[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:58:28
+[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:58:28')
 [92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348173482}
+Response: {'serverTime': 1750348708988}
 [93mMODEL SIGNALS HOLD[0m
 [96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
 [93mSORRY CANT TRADE[0m
 [96m==================================================[0m
 
+********FILLED******
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:35 | Last price: 104265.40[0m
-Response: {'serverTime': 1750348175218}
-[96mUpdating bookkeeper for date 2025-06-19, price 104265.40...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564579149, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'a9YGdJDkPdNhM7eK2mOs68', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.304', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348171060, 'updateTime': 1750348171060}]
-CANCELLING ORDERS
-STOPLOSS CHECK: stoploss_limit_value103455.194508072, latest_market_price104265.40,  last_buy_price104500.1964728
+[93mTick received at 2025-06-19 23:58:30 | Last price: 104097.50[0m
 ****************** EXECUTING CALLBACK ******************
 Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+Response: {'serverTime': 1750348710265}
+[96mUpdating bookkeeper for date 2025-06-19, price 104097.50...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [{'orderId': 4564630672, 'symbol': 'BTCUSDT', 'status': 'PARTIALLY_FILLED', 'clientOrderId': 'NToFtORqo0gslKOBks2Ty6', 'price': '104097.50', 'avgPrice': '104097.50000', 'origQty': '1.586', 'executedQty': '0.066', 'cumQuote': '6870.43500', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348707548, 'updateTime': 1750348710109}]
+STOPLOSS CHECK: stoploss_limit_value103407.494482017, latest_market_price104097.50,  last_buy_price104452.0146283
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 35, 62304), '104265.40')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:35
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:35')
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 30, 102455), '104097.50')
+[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:58:30
+[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:58:30')
 [92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348175938}
+Response: {'serverTime': 1750348710949}
 [93mMODEL SIGNALS HOLD[0m
 [96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
 [93mSORRY CANT TRADE[0m
@@ -1020,213 +187,440 @@ Response: {'serverTime': 1750348175938}
 
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:36 | Last price: 104265.40[0m
-Response: {'serverTime': 1750348176723}
-[96mUpdating bookkeeper for date 2025-06-19, price 104265.40...[0m
+[93mTick received at 2025-06-19 23:58:31 | Last price: 104097.50[0m
+Response: {'serverTime': 1750348711727}
+[96mUpdating bookkeeper for date 2025-06-19, price 104097.50...[0m
 [96mChecking open orders...[0m
-[96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103455.194508072, latest_market_price104265.40,  last_buy_price104500.1964728
+[96mOpen orders:[0m [{'orderId': 4564630672, 'symbol': 'BTCUSDT', 'status': 'PARTIALLY_FILLED', 'clientOrderId': 'NToFtORqo0gslKOBks2Ty6', 'price': '104097.50', 'avgPrice': '104097.50000', 'origQty': '1.586', 'executedQty': '0.066', 'cumQuote': '6870.43500', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348707548, 'updateTime': 1750348710109}]
+CANCELLING ORDERS
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+STOPLOSS CHECK: stoploss_limit_value103407.494482017, latest_market_price104097.50,  last_buy_price104452.0146283
+[96mRisk check:[0m stop_loss: False, trading_halt: False****************** EXECUTING CALLBACK ******************
+[96mLIQUIDATE CHECK : False OR False[0m
+
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 31, 562008), '104097.50')
+Execution callback triggered.
+[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:58:32
+[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:58:32')
+[92mSignal: SELL | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348712823}
+current_btc_inventory 1.52 vs ordersize 1.519
+[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
+[96mSELL --> ORDER QUANTITY 1.519, approved? True and order queue True[0m
+[92mPlacing SELL LIMIT order for 1.519 BTCUSDT at 110163.9[0m
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564630987, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'JUkgGVvBuJmN716Rb4mugF', 'price': '104097.50', 'avgPrice': '0.00', 'origQty': '1.519', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348713164}
+****************** EXECUTING CALLBACK ******************
+[96mOrder placement result:[0m TrueExecution callback triggered.
+
+[96mCheck historical positions (last 3):
+        Timestamp   Symbol     entryPrice PositionAmt
+8   1750348710265  BTCUSDT  104452.014628        1.52
+9   1750348711727  BTCUSDT  104452.014628        1.52
+10  1750348712823  BTCUSDT  104452.014628       1.519[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:58:34 | Last price: 104097.50[0m
+Response: {'serverTime': 1750348714417}
+[96mUpdating bookkeeper for date 2025-06-19, price 104097.50...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [{'orderId': 4564630987, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'JUkgGVvBuJmN716Rb4mugF', 'price': '104097.50', 'avgPrice': '0', 'origQty': '1.519', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348713164, 'updateTime': 1750348713164}]
+STOPLOSS CHECK: stoploss_limit_value103407.494482017, latest_market_price104097.50,  last_buy_price104452.0146283
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 36, 574933), '104265.40')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:49:37
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:49:37')
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 34, 258644), '104097.50')
+[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:58:34
+[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:58:34')
+[92mSignal: HOLD | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348714983}
+[93mMODEL SIGNALS HOLD[0m
+[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
+[93mSORRY CANT TRADE[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:58:36 | Last price: 104097.50[0m
+Response: {'serverTime': 1750348716611}
+[96mUpdating bookkeeper for date 2025-06-19, price 104097.50...[0m
+[96mChecking open orders...[0m
+Heartbeat: application running.
+[96mOpen orders:[0m [{'orderId': 4564630987, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'JUkgGVvBuJmN716Rb4mugF', 'price': '104097.50', 'avgPrice': '0', 'origQty': '1.519', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348713164, 'updateTime': 1750348713164}]
+CANCELLING ORDERS
+STOPLOSS CHECK: stoploss_limit_value103407.494482017, latest_market_price104097.50,  last_buy_price104452.0146283
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 36, 456213), '104097.50')
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:58:37
+[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:58:37')
 [92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348177274}
-[risk mgr] AvailableBalance :7076.51935275
-buy trade check amt5307.389514562499
-[risk mgr] AvailableBalance :7076.51935275
-[risk mgr] WalletBalance :7076.51935275
-post trade ratio 0.12
+Response: {'serverTime': 1750348717353}
+[risk mgr] AvailableBalance :5692.4352114
+buy trade check amt4269.32640855
+[risk mgr] AvailableBalance :5692.4352114
+[risk mgr] WalletBalance :5692.4352114
+post trade ratio 0.1
+[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
+[96mBUY --> ORDER QUANTITY 0.039, approved? True and order queue True[0m
+[92mPlacing BUY LIMIT order for 0.039 BTCUSDT at 110163.9[0m
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564631159, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'RSeds0VypH9zPIenfWbTFp', 'price': '104097.50', 'avgPrice': '0.00', 'origQty': '0.039', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348717509}
+[96mOrder placement result:[0m True
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+[96mCheck historical positions (last 3):
+        Timestamp   Symbol     entryPrice PositionAmt
+11  1750348714417  BTCUSDT  104452.014628       1.519
+12  1750348716611  BTCUSDT  104452.014628       1.519
+13  1750348717353  BTCUSDT  104443.139038       1.558[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:58:38 | Last price: 104095.10[0m
+Response: {'serverTime': 1750348718308}
+[96mUpdating bookkeeper for date 2025-06-19, price 104095.10...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [None]
+STOPLOSS CHECK: stoploss_limit_value103398.707647125, latest_market_price104095.10,  last_buy_price104443.1390375
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 38, 147198), '104095.10')
+[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:58:38
+[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:58:38')
+[92mSignal: BUY | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348718896}
+[risk mgr] AvailableBalance :5486.8532122
+buy trade check amt4115.13990915
+[risk mgr] AvailableBalance :5486.8532122
+[risk mgr] WalletBalance :5486.8532122
+post trade ratio 0.1
+[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
+[96mBUY --> ORDER QUANTITY 0.037, approved? True and order queue True[0m
+[92mPlacing BUY LIMIT order for 0.037 BTCUSDT at 110163.9[0m
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564631246, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '1ldeYVg7C0tPFsmntdFACZ', 'price': '104095.10', 'avgPrice': '0.00', 'origQty': '0.037', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348719045}
+********FILLED******
+[96mOrder placement result:[0m True
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+[96mCheck historical positions (last 3):
+        Timestamp   Symbol     entryPrice PositionAmt
+13  1750348717353  BTCUSDT  104443.139038       1.558
+14  1750348718308  BTCUSDT  104443.139038       1.558
+15  1750348718896  BTCUSDT  104434.599135       1.595[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:58:39 | Last price: 104095.10[0m
+Response: {'serverTime': 1750348719965}
+[96mUpdating bookkeeper for date 2025-06-19, price 104095.10...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [None]
+STOPLOSS CHECK: stoploss_limit_value103390.253143749, latest_market_price104095.10,  last_buy_price104434.5991351
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 39, 813540), '104095.10')
+[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:58:40
+[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:58:40')
+[92mSignal: HOLD | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348720528}
+[93mMODEL SIGNALS HOLD[0m
+[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
+[93mSORRY CANT TRADE[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:58:41 | Last price: 104095.10[0m
+Response: {'serverTime': 1750348721536}
+[96mUpdating bookkeeper for date 2025-06-19, price 104095.10...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [None]
+STOPLOSS CHECK: stoploss_limit_value103390.253143749, latest_market_price104095.10,  last_buy_price104434.5991351
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 41, 369993), '104095.10')
+[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:58:41
+[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:58:41')
+[92mSignal: SELL | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348722112}
+current_btc_inventory 1.595 vs ordersize 1.595
+[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
+[96mSELL --> ORDER QUANTITY 1.595, approved? True and order queue True[0m
+[92mPlacing SELL LIMIT order for 1.595 BTCUSDT at 110163.9[0m
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564631412, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'IHjAUKOoWMkU1FssOuUsI6', 'price': '104095.10', 'avgPrice': '0.00', 'origQty': '1.595', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348722435}****************** EXECUTING CALLBACK ******************
+
+Execution callback triggered.
+[96mOrder placement result:[0m True
+[96mCheck historical positions (last 3):
+        Timestamp   Symbol     entryPrice PositionAmt
+16  1750348719965  BTCUSDT  104434.599135       1.595
+17  1750348721536  BTCUSDT  104434.599135       1.595
+18  1750348722112  BTCUSDT  104434.599135       1.595[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:58:43 | Last price: 104095.10[0m
+Response: {'serverTime': 1750348723279}
+[96mUpdating bookkeeper for date 2025-06-19, price 104095.10...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [{'orderId': 4564631412, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'IHjAUKOoWMkU1FssOuUsI6', 'price': '104095.10', 'avgPrice': '0', 'origQty': '1.595', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348722435, 'updateTime': 1750348722435}]
+STOPLOSS CHECK: stoploss_limit_value103390.253143749, latest_market_price104095.10,  last_buy_price104434.5991351
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 43, 123767), '104095.10')
+[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:58:43
+[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:58:43')
+[92mSignal: HOLD | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348723875}
+[93mMODEL SIGNALS HOLD[0m
+[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
+[93mSORRY CANT TRADE[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:58:44 | Last price: 104095.10[0m
+Response: {'serverTime': 1750348724724}
+[96mUpdating bookkeeper for date 2025-06-19, price 104095.10...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [{'orderId': 4564631412, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'IHjAUKOoWMkU1FssOuUsI6', 'price': '104095.10', 'avgPrice': '0', 'origQty': '1.595', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348722435, 'updateTime': 1750348722435}]
+STOPLOSS CHECK: stoploss_limit_value103390.253143749, latest_market_price104095.10,  last_buy_price104434.5991351
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 44, 569417), '104095.10')
+[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:58:45
+[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:58:45')
+[92mSignal: HOLD | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348725307}
+[93mMODEL SIGNALS HOLD[0m
+[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
+[93mSORRY CANT TRADE[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:58:45 | Last price: 104070.90[0m
+Response: {'serverTime': 1750348725995}
+[96mUpdating bookkeeper for date 2025-06-19, price 104070.90...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [{'orderId': 4564631412, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'IHjAUKOoWMkU1FssOuUsI6', 'price': '104095.10', 'avgPrice': '0', 'origQty': '1.595', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348722435, 'updateTime': 1750348722435}]
+CANCELLING ORDERS
+STOPLOSS CHECK: stoploss_limit_value103390.253143749, latest_market_price104070.90,  last_buy_price104434.5991351
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 45, 847226), '104070.90')
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:58:46
+[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:58:46')
+[92mSignal: BUY | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348726863}
+[risk mgr] AvailableBalance :5281.61333133
+buy trade check amt3961.2099984975
+[risk mgr] AvailableBalance :5281.61333133
+[risk mgr] WalletBalance :5281.61333133
+post trade ratio 0.09
+[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
+[96mBUY --> ORDER QUANTITY 0.036, approved? True and order queue True[0m
+[92mPlacing BUY LIMIT order for 0.036 BTCUSDT at 110163.9[0m
+Heartbeat: application running.
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564631810, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'Z4U5WWAmGMtEZLep9Y2vNB', 'price': '104070.90', 'avgPrice': '0.00', 'origQty': '0.036', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348727013}
+[96mOrder placement result:[0m True
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+[96mCheck historical positions (last 3):
+        Timestamp   Symbol     entryPrice PositionAmt
+20  1750348724724  BTCUSDT  104434.599135       1.595
+21  1750348725995  BTCUSDT  104434.599135       1.595
+22  1750348726863  BTCUSDT  104426.553906       1.631[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:58:47 | Last price: 104066.10[0m
+Response: {'serverTime': 1750348727943}
+[96mUpdating bookkeeper for date 2025-06-19, price 104066.10...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [None]
+STOPLOSS CHECK: stoploss_limit_value103382.28836684099, latest_market_price104066.10,  last_buy_price104426.5539059
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 47, 790398), '104066.10')
+[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:58:48
+[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:58:48')
+[92mSignal: SELL | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348728607}
+current_btc_inventory 1.631 vs ordersize 1.631
+[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
+[96mSELL --> ORDER QUANTITY 1.631, approved? True and order queue True[0m
+[92mPlacing SELL LIMIT order for 1.631 BTCUSDT at 110163.9[0m
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564632115, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '8As8gXmessTbtJKAgPY2m5', 'price': '104066.10', 'avgPrice': '0.00', 'origQty': '1.631', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348728910}
+[96mOrder placement result:[0m True
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+********FILLED******
+****************** EXECUTING CALLBACK ******************
+Execution callback triggered.
+[96mCheck historical positions (last 3):
+        Timestamp   Symbol     entryPrice PositionAmt
+22  1750348726863  BTCUSDT  104426.553906       1.631
+23  1750348727943  BTCUSDT  104426.553906       1.631
+24  1750348728607  BTCUSDT  104426.553906       1.248[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:58:49 | Last price: 104066.10[0m
+Response: {'serverTime': 1750348729791}
+[96mUpdating bookkeeper for date 2025-06-19, price 104066.10...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [{'orderId': 4564632115, 'symbol': 'BTCUSDT', 'status': 'PARTIALLY_FILLED', 'clientOrderId': '8As8gXmessTbtJKAgPY2m5', 'price': '104066.10', 'avgPrice': '104066.10000', 'origQty': '1.631', 'executedQty': '0.383', 'cumQuote': '39857.31630', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348728910, 'updateTime': 1750348728910}]
+STOPLOSS CHECK: stoploss_limit_value103382.28836684099, latest_market_price104066.10,  last_buy_price104426.5539059
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 49, 633683), '104066.10')
+[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:58:50
+[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:58:50')
+[92mSignal: BUY | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348730345}
+[risk mgr] AvailableBalance :7070.50240912
+buy trade check amt5302.87680684
+[risk mgr] AvailableBalance :7070.50240912
+[risk mgr] WalletBalance :7070.50240912
+post trade ratio 0.13
 [92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
 [96mBUY --> ORDER QUANTITY 0.048, approved? True and order queue True[0m
 [92mPlacing BUY LIMIT order for 0.048 BTCUSDT at 110163.9[0m
-Heartbeat: application running.
-****************** EXECUTING CALLBACK ******************
+****************** EXECUTING CALLBACK ******************++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564632222, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'efCRKm3GonJtFOfouMhYV2', 'price': '104066.10', 'avgPrice': '0.00', 'origQty': '0.048', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348730498}
+
 Execution callback triggered.
-********FILLED******
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564579441, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'UQzEtCao1NqZVv4Y4N3T6Z', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.048', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348177431}
-[96mOrder placement result:[0m True
+********FILLED******[96mOrder placement result:[0m True
+
 ****************** EXECUTING CALLBACK ******************
 Execution callback triggered.
 [96mCheck historical positions (last 3):
         Timestamp   Symbol     entryPrice PositionAmt
-53  1750348175218  BTCUSDT  104500.196473       1.304
-54  1750348176723  BTCUSDT  104500.196473       1.304
-55  1750348177274  BTCUSDT  104491.913758       1.352[0m
+24  1750348728607  BTCUSDT  104426.553906       1.248
+25  1750348729791  BTCUSDT  104426.553906       1.248
+26  1750348730345  BTCUSDT  104418.076115       1.278[0m
 [96m==================================================[0m
 
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:39 | Last price: 104265.40[0m
-Response: {'serverTime': 1750348179276}
-[96mUpdating bookkeeper for date 2025-06-19, price 104265.40...[0m
+[93mTick received at 2025-06-19 23:58:52 | Last price: 104066.10[0m
+Response: {'serverTime': 1750348732955}
+[96mUpdating bookkeeper for date 2025-06-19, price 104066.10...[0m
 [96mChecking open orders...[0m
 [96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103446.99462022199, latest_market_price104265.40,  last_buy_price104491.9137578
+STOPLOSS CHECK: stoploss_limit_value103369.055682024, latest_market_price104066.10,  last_buy_price104413.1875576
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 39, 127956), '104265.40')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:49:39
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:49:39')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348179847}
-current_btc_inventory 1.352 vs ordersize 1.352
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 1.352, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 1.352 BTCUSDT at 110163.9[0m
-****************** EXECUTING CALLBACK ******************
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564579980, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'Ag7YI4Blyi67aOQnErqudg', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '1.352', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348180138}Execution callback triggered.
-
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-55  1750348177274  BTCUSDT  104491.913758       1.352
-56  1750348179276  BTCUSDT  104491.913758       1.352
-57  1750348179847  BTCUSDT  104491.913758       1.352[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:40 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348181001}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564579980, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'Ag7YI4Blyi67aOQnErqudg', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.352', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348180138, 'updateTime': 1750348180138}]
-STOPLOSS CHECK: stoploss_limit_value103446.99462022199, latest_market_price104266.90,  last_buy_price104491.9137578
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 40, 857200), '104266.90')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:49:41
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:49:41')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348181575}
-current_btc_inventory 1.352 vs ordersize 1.352
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 1.352, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 1.352 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564580111, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'IA5mRAqmw0zuhKdem1F81Z', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '1.352', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348181896}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-57  1750348179847  BTCUSDT  104491.913758       1.352
-58  1750348181001  BTCUSDT  104491.913758       1.352
-59  1750348181575  BTCUSDT  104491.913758       1.352[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:42 | Last price: 104266.90[0m
-Response: {'serverTime': 1750348182834}
-[96mUpdating bookkeeper for date 2025-06-19, price 104266.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564579980, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'Ag7YI4Blyi67aOQnErqudg', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.352', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348180138, 'updateTime': 1750348180138}, {'orderId': 4564580111, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'IA5mRAqmw0zuhKdem1F81Z', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.352', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348181896, 'updateTime': 1750348181896}]
-STOPLOSS CHECK: stoploss_limit_value103446.99462022199, latest_market_price104266.90,  last_buy_price104491.9137578
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 42, 688169), '104266.90')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:49:43
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:49:43')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348183411}
-current_btc_inventory 1.352 vs ordersize 1.352
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 1.352, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 1.352 BTCUSDT at 110163.9[0m
-********FAILED******
-++++++++++++ATTEMPT TRADE++++++++++++++ {'code': -2019, 'msg': 'Margin is insufficient.'}
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-59  1750348181575  BTCUSDT  104491.913758       1.352
-60  1750348182834  BTCUSDT  104491.913758       1.352
-61  1750348183411  BTCUSDT  104491.913758       1.352[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:44 | Last price: 104267.00[0m
-Response: {'serverTime': 1750348184569}
-[96mUpdating bookkeeper for date 2025-06-19, price 104267.00...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564579980, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'Ag7YI4Blyi67aOQnErqudg', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.352', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348180138, 'updateTime': 1750348180138}, {'orderId': 4564580111, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'IA5mRAqmw0zuhKdem1F81Z', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.352', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348181896, 'updateTime': 1750348181896}]
-CANCELLING ORDERS
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-STOPLOSS CHECK: stoploss_limit_value103446.99462022199, latest_market_price104267.00,  last_buy_price104491.9137578
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 44, 432006), '104267.00')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:45
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:45')
-[92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348185277}
-[93mMODEL SIGNALS HOLD[0m
-[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
-[93mSORRY CANT TRADE[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:46 | Last price: 104267.00[0m
-Response: {'serverTime': 1750348186476}
-[96mUpdating bookkeeper for date 2025-06-19, price 104267.00...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564580111, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'IA5mRAqmw0zuhKdem1F81Z', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.352', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348181896, 'updateTime': 1750348181896}]
-CANCELLING ORDERS
-STOPLOSS CHECK: stoploss_limit_value103446.99462022199, latest_market_price104267.00,  last_buy_price104491.9137578
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-****************** EXECUTING CALLBACK ******************
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 46, 321488), '104267.00')
-Execution callback triggered.
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:49:47
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:49:47')
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 52, 800289), '104066.10')
+[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:58:53
+[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:58:53')
 [92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348187208}
-[risk mgr] AvailableBalance :6844.77007476
-buy trade check amt5133.57755607
-[risk mgr] AvailableBalance :6844.77007476
-[risk mgr] WalletBalance :6844.77007476
+Response: {'serverTime': 1750348733528}
+[risk mgr] AvailableBalance :6807.09656175
+buy trade check amt5105.3224213124995
+[risk mgr] AvailableBalance :6807.09656175
+[risk mgr] WalletBalance :6807.09656175
 post trade ratio 0.12
 [92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.047, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.047 BTCUSDT at 110163.9[0m
-Heartbeat: application running.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564580393, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'WylrMzwYJusPE6J4wGA5Th', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.047', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348187355}
+[96mBUY --> ORDER QUANTITY 0.046, approved? True and order queue True[0m
+[92mPlacing BUY LIMIT order for 0.046 BTCUSDT at 110163.9[0m
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564632629, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '4PM0G8NFHD94gqRGDzyWNV', 'price': '104066.10', 'avgPrice': '0.00', 'origQty': '0.046', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348733693}
 [96mOrder placement result:[0m True
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
 [96mCheck historical positions (last 3):
         Timestamp   Symbol     entryPrice PositionAmt
-62  1750348184569  BTCUSDT  104491.913758       1.352
-63  1750348186476  BTCUSDT  104491.913758       1.352
-64  1750348187208  BTCUSDT  104484.314153       1.399[0m
+26  1750348730345  BTCUSDT  104418.076115       1.278
+27  1750348732955  BTCUSDT  104413.187558       1.296
+28  1750348733528  BTCUSDT  104406.104138       1.323[0m
 [96m==================================================[0m
 
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:48 | Last price: 104264.90[0m
-Response: {'serverTime': 1750348188225}
-[96mUpdating bookkeeper for date 2025-06-19, price 104264.90...[0m
+[93mTick received at 2025-06-19 23:58:54 | Last price: 104066.10[0m
+Response: {'serverTime': 1750348734596}
+[96mUpdating bookkeeper for date 2025-06-19, price 104066.10...[0m
 [96mChecking open orders...[0m
 [96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103439.471011866, latest_market_price104264.90,  last_buy_price104484.3141534
+STOPLOSS CHECK: stoploss_limit_value103357.277464914, latest_market_price104066.10,  last_buy_price104401.2903686
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 48, 55624), '104264.90')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:48
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:48')
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 54, 403216), '104066.10')
+[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:58:55
+[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:58:55')
 [92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348188850}
+Response: {'serverTime': 1750348735424}
 [93mMODEL SIGNALS HOLD[0m
 [96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
 [93mSORRY CANT TRADE[0m
@@ -1234,169 +628,271 @@ Response: {'serverTime': 1750348188850}
 
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:49 | Last price: 104264.90[0m
-Response: {'serverTime': 1750348189779}
-[96mUpdating bookkeeper for date 2025-06-19, price 104264.90...[0m
+[93mTick received at 2025-06-19 23:58:56 | Last price: 104066.10[0m
+Response: {'serverTime': 1750348736180}
+[96mUpdating bookkeeper for date 2025-06-19, price 104066.10...[0m
 [96mChecking open orders...[0m
 [96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103439.471011866, latest_market_price104264.90,  last_buy_price104484.3141534
+STOPLOSS CHECK: stoploss_limit_value103357.277464914, latest_market_price104066.10,  last_buy_price104401.2903686
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 49, 636174), '104264.90')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:49:50
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:49:50')
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 56, 29134), '104066.10')
+[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:58:56
+[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:58:56')
 [92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348190348}
-[risk mgr] AvailableBalance :6596.54504987
-buy trade check amt4947.4087874025
-[risk mgr] AvailableBalance :6596.54504987
-[risk mgr] WalletBalance :6596.54504987
+Response: {'serverTime': 1750348736770}
+[risk mgr] AvailableBalance :6564.07205886
+buy trade check amt4923.054044144999
+[risk mgr] AvailableBalance :6564.07205886
+[risk mgr] WalletBalance :6564.07205886
 post trade ratio 0.12
 [92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
 [96mBUY --> ORDER QUANTITY 0.045, approved? True and order queue True[0m
 [92mPlacing BUY LIMIT order for 0.045 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564580625, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '9KHkw7xmRcZxz1o13Nursv', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.045', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348190510}
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
+Heartbeat: application running.
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564633030, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '2l0CPgv9iivHh3MTbPpy8N', 'price': '104066.10', 'avgPrice': '0.00', 'origQty': '0.045', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348736923}
 [96mOrder placement result:[0m True
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
 [96mCheck historical positions (last 3):
         Timestamp   Symbol     entryPrice PositionAmt
-65  1750348188225  BTCUSDT  104484.314153       1.399
-66  1750348189779  BTCUSDT  104484.314153       1.399
-67  1750348190348  BTCUSDT  104477.289474       1.444[0m
+29  1750348734596  BTCUSDT  104401.290369       1.342
+30  1750348736180  BTCUSDT  104401.290369       1.342
+31  1750348736770  BTCUSDT  104390.293421       1.387[0m
 [96m==================================================[0m
 
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:51 | Last price: 104258.90[0m
-Response: {'serverTime': 1750348191381}
-[96mUpdating bookkeeper for date 2025-06-19, price 104258.90...[0m
+[93mTick received at 2025-06-19 23:58:57 | Last price: 104066.10[0m
+Response: {'serverTime': 1750348737795}
+[96mUpdating bookkeeper for date 2025-06-19, price 104066.10...[0m
 [96mChecking open orders...[0m
 [96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103432.516579359, latest_market_price104258.90,  last_buy_price104477.2894741
+STOPLOSS CHECK: stoploss_limit_value103346.39048659199, latest_market_price104066.10,  last_buy_price104390.2934208
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 51, 237246), '104258.90')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:49:51
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:49:51')
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 57, 643808), '104066.10')
+[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:58:58
+[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:58:58')
 [92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348191964}
-[risk mgr] AvailableBalance :6360.07909176
-buy trade check amt4770.05931882
-[risk mgr] AvailableBalance :6360.07909176
-[risk mgr] WalletBalance :6360.07909176
+Response: {'serverTime': 1750348738368}
+[risk mgr] AvailableBalance :6323.53376788
+buy trade check amt4742.65032591
+[risk mgr] AvailableBalance :6323.53376788
+[risk mgr] WalletBalance :6323.53376788
 post trade ratio 0.11
 [92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
 [96mBUY --> ORDER QUANTITY 0.043, approved? True and order queue True[0m
 [92mPlacing BUY LIMIT order for 0.043 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564580686, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'iNcBQDeuxN9EsTF4cbkgv2', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.043', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348192127}
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564633142, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'hyxVFKP17pJSXEllrEUQOJ', 'price': '104066.10', 'avgPrice': '0.00', 'origQty': '0.043', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348738525}
 [96mOrder placement result:[0m True
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
 [96mCheck historical positions (last 3):
         Timestamp   Symbol     entryPrice PositionAmt
-67  1750348190348  BTCUSDT  104477.289474       1.444
-68  1750348191381  BTCUSDT  104477.289474       1.444
-69  1750348191964  BTCUSDT  104470.974244       1.487[0m
+31  1750348736770  BTCUSDT  104390.293421       1.387
+32  1750348737795  BTCUSDT  104390.293421       1.387
+33  1750348738368  BTCUSDT  104390.293421       1.387[0m
 [96m==================================================[0m
 
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:52 | Last price: 104258.90[0m
-Response: {'serverTime': 1750348193065}
-[96mUpdating bookkeeper for date 2025-06-19, price 104258.90...[0m
+[93mTick received at 2025-06-19 23:58:59 | Last price: 104057.20[0m
+Response: {'serverTime': 1750348739768}
+[96mUpdating bookkeeper for date 2025-06-19, price 104057.20...[0m
 [96mChecking open orders...[0m
 [96mOpen orders:[0m [None]
-STOPLOSS CHECK: stoploss_limit_value103426.26450136199, latest_market_price104258.90,  last_buy_price104470.9742438
+STOPLOSS CHECK: stoploss_limit_value103336.739497827, latest_market_price104057.20,  last_buy_price104380.5449473
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 52, 922827), '104258.90')
-[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:49:53
-[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:49:53')
-[92mSignal: SELL | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348193636}
-current_btc_inventory 1.487 vs ordersize 1.487
-[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
-[96mSELL --> ORDER QUANTITY 1.487, approved? True and order queue True[0m
-[92mPlacing SELL LIMIT order for 1.487 BTCUSDT at 110163.9[0m
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564580798, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'Rg7I8Ic6iqJ34tg6gzWF4T', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '1.487', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348194071}
-[96mOrder placement result:[0m True
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-69  1750348191964  BTCUSDT  104470.974244       1.487
-70  1750348193065  BTCUSDT  104470.974244       1.487
-71  1750348193636  BTCUSDT  104470.974244       1.487[0m
-[96m==================================================[0m
-
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:55 | Last price: 104258.90[0m
-Response: {'serverTime': 1750348195162}
-[96mUpdating bookkeeper for date 2025-06-19, price 104258.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564580798, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'Rg7I8Ic6iqJ34tg6gzWF4T', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.487', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348194071, 'updateTime': 1750348194071}]
-STOPLOSS CHECK: stoploss_limit_value103426.26450136199, latest_market_price104258.90,  last_buy_price104470.9742438
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 55, 26489), '104258.90')
-[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:49:55
-[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:49:55')
-[92mSignal: BUY | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348195731}
-[risk mgr] AvailableBalance :6133.21121271
-buy trade check amt4599.9084095325
-[risk mgr] AvailableBalance :6133.21121271
-[risk mgr] WalletBalance :6133.21121271
-post trade ratio 0.11
-[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
-[96mBUY --> ORDER QUANTITY 0.042, approved? True and order queue True[0m
-[92mPlacing BUY LIMIT order for 0.042 BTCUSDT at 110163.9[0m
-++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564581012, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '59OR1J0dOuBFLD2M8woqkq', 'price': '110163.90', 'avgPrice': '0.00', 'origQty': '0.042', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348195887}
-[96mOrder placement result:[0m True
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-********FILLED******
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-[96mCheck historical positions (last 3):
-        Timestamp   Symbol     entryPrice PositionAmt
-71  1750348193636  BTCUSDT  104470.974244       1.487
-72  1750348195162  BTCUSDT  104470.974244       1.487
-73  1750348195731  BTCUSDT  104465.135056       1.529[0m
-[96m==================================================[0m
-
-Heartbeat: application running.
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-19 23:49:58 | Last price: 104258.90[0m
-Response: {'serverTime': 1750348198872}
-[96mUpdating bookkeeper for date 2025-06-19, price 104258.90...[0m
-[96mChecking open orders...[0m
-[96mOpen orders:[0m [{'orderId': 4564580798, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'Rg7I8Ic6iqJ34tg6gzWF4T', 'price': '110163.90', 'avgPrice': '0', 'origQty': '1.487', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348194071, 'updateTime': 1750348194071}]
-CANCELLING ORDERS
-****************** EXECUTING CALLBACK ******************
-Execution callback triggered.
-STOPLOSS CHECK: stoploss_limit_value103420.483705341, latest_market_price104258.90,  last_buy_price104465.1350559
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mLIQUIDATE CHECK : False OR False[0m
-Callback: (datetime.datetime(2025, 6, 19, 23, 49, 58, 509204), '104258.90')
-[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:49:59
-[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:49:59')
+Callback: (datetime.datetime(2025, 6, 19, 23, 58, 59, 617031), '104057.20')
+[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:59:00
+[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:59:00')
 [92mSignal: HOLD | Limit price: 110163.9[0m
-Response: {'serverTime': 1750348199588}
+Response: {'serverTime': 1750348740338}
 [93mMODEL SIGNALS HOLD[0m
 [96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
 [93mSORRY CANT TRADE[0m
 [96m==================================================[0m
 
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:59:00 | Last price: 104057.20[0m
+Response: {'serverTime': 1750348740979}
+[96mUpdating bookkeeper for date 2025-06-19, price 104057.20...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [None]
+STOPLOSS CHECK: stoploss_limit_value103336.739497827, latest_market_price104057.20,  last_buy_price104380.5449473
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 59, 0, 805703), '104057.20')
+[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:59:01
+[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:59:01')
+[92mSignal: SELL | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348741591}
+current_btc_inventory 1.43 vs ordersize 1.43
+[91mshort_pos_check: True, sell_price_check: True, sell_position_check: True[0m
+[96mSELL --> ORDER QUANTITY 1.43, approved? True and order queue True[0m
+[92mPlacing SELL LIMIT order for 1.43 BTCUSDT at 110163.9[0m
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564633594, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'YZfRzP31ypfqF518iwT4hv', 'price': '104057.20', 'avgPrice': '0.00', 'origQty': '1.430', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348741908}
+[96mOrder placement result:[0m True
+[96mCheck historical positions (last 3):
+        Timestamp   Symbol     entryPrice PositionAmt
+34  1750348739768  BTCUSDT  104380.544947        1.43
+35  1750348740979  BTCUSDT  104380.544947        1.43
+36  1750348741591  BTCUSDT            0.0         0.0[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:59:03 | Last price: 104057.20[0m
+Response: {'serverTime': 1750348743532}
+[96mUpdating bookkeeper for date 2025-06-19, price 104057.20...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [None]
+STOPLOSS CHECK: stoploss_limit_value103336.739497827, latest_market_price104057.20,  last_buy_price104380.5449473
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 59, 3, 374584), '104057.20')
+[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:59:03
+[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:59:03')
+[92mSignal: SELL | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348744140}
+current_btc_inventory 0.0 vs ordersize 0.0
+All is Zero, nothing to do
+[91mshort_pos_check: None, sell_price_check: True, sell_position_check: False[0m
+[96mSELL --> ORDER QUANTITY 0.0, approved? None and order queue True[0m
+[93mSORRY CANT TRADE[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:59:04 | Last price: 104051.40[0m
+Response: {'serverTime': 1750348744925}
+[96mUpdating bookkeeper for date 2025-06-19, price 104051.40...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [None]
+STOPLOSS CHECK: stoploss_limit_value103336.739497827, latest_market_price104051.40,  last_buy_price104380.5449473
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 59, 4, 767075), '104051.40')
+[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:59:05
+[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:59:05')
+[92mSignal: SELL | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348745508}
+current_btc_inventory 0.0 vs ordersize 0.0
+All is Zero, nothing to do
+[91mshort_pos_check: None, sell_price_check: True, sell_position_check: False[0m
+[96mSELL --> ORDER QUANTITY 0.0, approved? None and order queue True[0m
+[93mSORRY CANT TRADE[0m
+[96m==================================================[0m
+
+Heartbeat: application running.
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:59:07 | Last price: 104051.40[0m
+Response: {'serverTime': 1750348747645}
+[96mUpdating bookkeeper for date 2025-06-19, price 104051.40...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [None]
+STOPLOSS CHECK: stoploss_limit_value103336.739497827, latest_market_price104051.40,  last_buy_price104380.5449473
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 59, 7, 495616), '104051.40')
+[FORCE TEST] Random action: Hold, price: 110163.9, time: 2025-06-19 23:59:08
+[96mModel output:[0m ('Hold', 110163.9, '2025-06-19 23:59:08')
+[92mSignal: HOLD | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348748322}
+[93mMODEL SIGNALS HOLD[0m
+[96mHOLD --> ORDER QUANTITY 0, approved? 0 and order queue True[0m
+[93mSORRY CANT TRADE[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:59:09 | Last price: 104051.40[0m
+Response: {'serverTime': 1750348749285}
+[96mUpdating bookkeeper for date 2025-06-19, price 104051.40...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [None]
+STOPLOSS CHECK: stoploss_limit_value103336.739497827, latest_market_price104051.40,  last_buy_price104380.5449473
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 59, 9, 117248), '104051.40')
+[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:59:09
+[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:59:09')
+[92mSignal: SELL | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348749853}
+current_btc_inventory 0.0 vs ordersize 0.0
+All is Zero, nothing to do
+[91mshort_pos_check: None, sell_price_check: True, sell_position_check: False[0m
+[96mSELL --> ORDER QUANTITY 0.0, approved? None and order queue True[0m
+[93mSORRY CANT TRADE[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:59:11 | Last price: 104051.40[0m
+Response: {'serverTime': 1750348751722}
+[96mUpdating bookkeeper for date 2025-06-19, price 104051.40...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [None]
+STOPLOSS CHECK: stoploss_limit_value103336.739497827, latest_market_price104051.40,  last_buy_price104380.5449473
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 59, 11, 572861), '104051.40')
+[FORCE TEST] Random action: Buy, price: 110163.9, time: 2025-06-19 23:59:12
+[96mModel output:[0m ('Buy', 110163.9, '2025-06-19 23:59:12')
+[92mSignal: BUY | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348752317}
+[risk mgr] AvailableBalance :13488.78746455
+buy trade check amt10116.5905984125
+[risk mgr] AvailableBalance :13488.78746455
+[risk mgr] WalletBalance :13488.78746455
+post trade ratio 0.25
+[92mbuy_balance_check: True, buy_price_check: True, buy_position_check: True[0m
+[96mBUY --> ORDER QUANTITY 0.092, approved? True and order queue True[0m
+[92mPlacing BUY LIMIT order for 0.092 BTCUSDT at 110163.9[0m
+++++++++++++ATTEMPT TRADE++++++++++++++ {'orderId': 4564634534, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'oBYtzTB3LeqQJAhpaUIebm', 'price': '104051.40', 'avgPrice': '0.00', 'origQty': '0.092', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750348752473}
+[96mOrder placement result:[0m True
+[96mCheck historical positions (last 3):
+        Timestamp   Symbol entryPrice PositionAmt
+40  1750348749285  BTCUSDT        0.0         0.0
+41  1750348751722  BTCUSDT        0.0         0.0
+42  1750348752317  BTCUSDT        0.0         0.0[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:59:13 | Last price: 104051.40[0m
+Response: {'serverTime': 1750348753299}
+[96mUpdating bookkeeper for date 2025-06-19, price 104051.40...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [{'orderId': 4564634534, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'oBYtzTB3LeqQJAhpaUIebm', 'price': '104051.40', 'avgPrice': '0', 'origQty': '0.092', 'executedQty': '0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348752473, 'updateTime': 1750348752473}]
+STOPLOSS CHECK: stoploss_limit_value103336.739497827, latest_market_price104051.40,  last_buy_price104380.5449473
+[96mRisk check:[0m stop_loss: False, trading_halt: False
+[96mLIQUIDATE CHECK : False OR False[0m
+Callback: (datetime.datetime(2025, 6, 19, 23, 59, 13, 145014), '104051.40')
+[FORCE TEST] Random action: Sell, price: 110163.9, time: 2025-06-19 23:59:13
+[96mModel output:[0m ('Sell', 110163.9, '2025-06-19 23:59:13')
+[92mSignal: SELL | Limit price: 110163.9[0m
+Response: {'serverTime': 1750348753867}
+current_btc_inventory 0.0 vs ordersize 0.001
+No short position allowed
+[91mshort_pos_check: False, sell_price_check: True, sell_position_check: False[0m
+[96mSELL --> ORDER QUANTITY 0.001, approved? False and order queue True[0m
+[93mSORRY CANT TRADE[0m
+[96m==================================================[0m
+
+
+[96m================== NEW TICK ==================[0m
+[93mTick received at 2025-06-19 23:59:14 | Last price: 104051.40[0m
+Response: {'serverTime': 1750348755014}
+[96mUpdating bookkeeper for date 2025-06-19, price 104051.40...[0m
+[96mChecking open orders...[0m
+[96mOpen orders:[0m [{'orderId': 4564634534, 'symbol': 'BTCUSDT', 'status': 'PARTIALLY_FILLED', 'clientOrderId': 'oBYtzTB3LeqQJAhpaUIebm', 'price': '104051.40', 'avgPrice': '104051.40000', 'origQty': '0.092', 'executedQty': '0.001', 'cumQuote': '104.05140', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1750348752473, 'updateTime': 1750348753728}]
+STOPLOSS CHECK: stoploss_limit_value103010.886, latest_market_price104051.40,  last_buy_price104051.4
+[96mRisk check:[0m stop_loss: False, trading_halt: True
+[96mLIQUIDATE CHECK : True OR False[0m
+[91mLIQUIDATION TRIGGERED! Attempting to close all positions...[0m
+[93mCancel all orders response: {'code': 200, 'msg': 'The operation of cancel all open order is done.'}[0m
+[91mExecuting liquidation: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.002, 'timestamp': 1750348740014, 'recvWindow': 60000}[0m
 Traceback (most recent call last):
   File "/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market-microstructure-87137a83145826db36dd62013d00afe409fa46c8/src/app.py", line 691, in <module>
     time.sleep(10)
