@@ -21,6 +21,11 @@ import random
 # Ignore pandas FutureWarnings for a cleaner log
 warnings.filterwarnings("ignore", category=FutureWarning, module="pandas")
 
+from collections import deque
+
+# Constants (you can adjust)
+BUFFER_SIZE = 30   # e.g., use last 30 ticks for OHLC/indicators
+
 class TradingStrategy:
     """
     This class implements your trading signal logic:
@@ -49,6 +54,7 @@ class TradingStrategy:
 
         while not self.queue.empty():
             tick = self.queue.get()
+            print(f"[DEBUG][TICK RECEIVED] {tick}")  # NEW DEBUG
             logging.info(f"[TradingStrategy] New tick from queue: {tick}")
 
             # Defensive: handle different tick formats
@@ -57,6 +63,7 @@ class TradingStrategy:
             elif isinstance(tick, (tuple, list)):
                 ts, price = tick[0], tick[1]
             else:
+                print(f"[DEBUG][TICK ERROR] Unexpected tick format: {tick}")  # NEW DEBUG
                 logging.warning(f"[TradingStrategy] Unexpected tick format: {tick}")
                 continue
 
@@ -66,8 +73,10 @@ class TradingStrategy:
                     new_rows.append({"Timestamp": ts, "Price": price})
                     count += 1
                 except ValueError:
+                    print(f"[DEBUG][TICK ERROR] Invalid price value: {price}")  # NEW DEBUG
                     logging.warning(f"[TradingStrategy] Invalid price value: {price}")
             else:
+                print("[DEBUG][TICK ERROR] Empty or invalid price in data stream.")  # NEW DEBUG
                 logging.warning("[TradingStrategy] Empty or invalid price in data stream.")
 
         if new_rows:
@@ -77,7 +86,9 @@ class TradingStrategy:
             # Optional: set index for convenience
             if "Timestamp" not in self.raw_data.index.names:
                 self.raw_data.set_index("Timestamp", inplace=True, drop=False)
+            print(f"[DEBUG][NEW TICKS] Collected last 3 ticks:\n{self.raw_data.tail(3)}")  # NEW DEBUG
 
+        print(f"[DEBUG][NEW TICKS] {count} new ticks collected. Data buffer length: {len(self.raw_data)}")  # NEW DEBUG
         logging.info(f"[TradingStrategy] Collected {count} new ticks.")
         logging.info(f"[TradingStrategy] Data buffer length: {len(self.raw_data)}")
         logging.info(f"[TradingStrategy] Sample buffer:\n{self.raw_data.tail()}")
@@ -92,6 +103,7 @@ class TradingStrategy:
         Optionally saves to CSV for debugging.
         """
         if self.raw_data.empty:
+            print("[DEBUG][AGGREGATE] Raw data is empty; cannot aggregate.")  # NEW DEBUG
             logging.warning("[TradingStrategy] Raw data is empty; cannot aggregate.")
             return
 
@@ -113,6 +125,8 @@ class TradingStrategy:
 
         # Save as self.data for the rest of the pipeline
         self.data = ohlc.reset_index()
+        print(f"[DEBUG][AGGREGATE] Aggregated OHLC shape: {self.data.shape}")  # NEW DEBUG
+        print(f"[DEBUG][AGGREGATE] Last 3 rows:\n{self.data.tail(3)}")  # NEW DEBUG
         logging.info(f"[TradingStrategy] Aggregated data to {freq} OHLC; shape: {self.data.shape}")
         logging.info(f"[TradingStrategy] Aggregated sample:\n{self.data.tail()}")
 
@@ -124,12 +138,14 @@ class TradingStrategy:
         """
         Analyze market data and return trade signal (Buy/Sell/Hold).
         """
+        print("[DEBUG][ANALYZE] Running feature engineering...")  # NEW DEBUG
         self.data = pd.read_csv(self.file_path)
         self.data["Date"] = pd.to_datetime(self.data["Timestamp"])
         self.data.ffill(inplace=True)
         self.data.bfill(inplace=True)
 
         if self.data[["Open", "High", "Low", "Close"]].isnull().any().any():
+            print("[DEBUG][ANALYZE] Incomplete OHLC data detected, skipping analysis.")  # NEW DEBUG
             logging.warning("Incomplete data, skipping analysis.")
             return
 
@@ -142,10 +158,8 @@ class TradingStrategy:
         self.calculate_moving_averages_and_rsi()
         self.calculate_days_since_peaks_and_troughs()
         self.calculate_first_second_order_derivatives()
-        # self.estimate_hurst_exponent()
-        # self.detect_fourier_signals()
-        # self.preprocess_data()
         return self.predict()
+
 
     def calculate_daily_percentage_change(self):
         """Computes daily % change from OHLC data."""
@@ -185,6 +199,8 @@ class TradingStrategy:
         self.data["%D"] = self.data["%K"].rolling(window=d_window).mean()
         self.data["%K"].bfill(inplace=True)
         self.data["%D"].bfill(inplace=True)
+        print(f"[DEBUG][STOCH] %K last 2: {self.data['%K'].tail(2).values}, %D last 2: {self.data['%D'].tail(2).values}")  # NEW DEBUG
+
 
     def calculate_slow_stochastic_oscillator(self, d_window=3, slow_k_window=3):
         """
@@ -234,6 +250,7 @@ class TradingStrategy:
         self.data["Short_Moving_Avg"] = self.data["Close"].rolling(window=short_window).mean()
         self.data["Long_Moving_Avg"] = self.data["Close"].rolling(window=long_window).mean()
         self.data["RSI"] = self.calculate_rsi(window=rsi_period)
+        print(f"[DEBUG][MA+RSI] Short_MA: {self.data['Short_Moving_Avg'].tail(2).values}, Long_MA: {self.data['Long_Moving_Avg'].tail(2).values}, RSI: {self.data['RSI'].tail(2).values}")  # NEW DEBUG
 
     def construct_kalman_filter(self):
         """
@@ -245,6 +262,8 @@ class TradingStrategy:
         kalman_estimates = pd.Series(state_means.flatten(), index=self.data.index)
         kalman_estimates = pd.DataFrame({"KalmanFilterEst": kalman_estimates})
         self.data = self.data.join(kalman_estimates)
+        print(f"[DEBUG][KALMAN] Kalman estimates last 2: {self.data['KalmanFilterEst'].tail(2).values}")  # NEW DEBUG
+
 
     def calculate_days_since_peaks_and_troughs(self):
         """
@@ -252,15 +271,15 @@ class TradingStrategy:
         """
         self.data["MinutesSincePeak"] = 0
         self.data["MinutesSinceTrough"] = 0
-        self.data["PriceChangeSincePeak"] = 0
-        self.data["PriceChangeSinceTrough"] = 0
+        # self.data["PriceChangeSincePeak"] = 0
+        # self.data["PriceChangeSinceTrough"] = 0
 
         checkpoint_date_bottom = None
         checkpoint_date_top = None
         checkpoint_price_bottom = None
         checkpoint_price_top = None
-        price_change_since_bottom = 0
-        price_change_since_peak = 0
+        # price_change_since_bottom = 0
+        # price_change_since_peak = 0
 
         for index, row in self.data.iterrows():
             current_price = row["Open"]
@@ -273,42 +292,187 @@ class TradingStrategy:
                 checkpoint_price_top = current_price
             days_since_bottom = (today_date - checkpoint_date_bottom).seconds if checkpoint_date_bottom else 0
             days_since_peak = (today_date - checkpoint_date_top).seconds if checkpoint_date_top else 0
-            if checkpoint_price_bottom is not None:
-                price_change_since_bottom = current_price - checkpoint_price_bottom
-            if checkpoint_price_top is not None:
-                price_change_since_peak = current_price - checkpoint_price_top
+            # if checkpoint_price_bottom is not None:
+            #     price_change_since_bottom = current_price - checkpoint_price_bottom
+            # if checkpoint_price_top is not None:
+            #     price_change_since_peak = current_price - checkpoint_price_top
             self.data.at[index, "MinutesSincePeak"] = days_since_peak
             self.data.at[index, "MinutesSinceTrough"] = days_since_bottom
-            self.data["PriceChangeSincePeak"] = self.data["PriceChangeSincePeak"].astype(float)
-            self.data["PriceChangeSinceTrough"] = self.data["PriceChangeSinceTrough"].astype(float)
-            self.data.at[index, "PriceChangeSincePeak"] = float(price_change_since_peak)
-            self.data.at[index, "PriceChangeSinceTrough"] = float(price_change_since_bottom)
+            # self.data["PriceChangeSincePeak"] = self.data["PriceChangeSincePeak"].astype(float)
+            # self.data["PriceChangeSinceTrough"] = self.data["PriceChangeSinceTrough"].astype(float)
+            # self.data.at[index, "PriceChangeSincePeak"] = float(price_change_since_peak)
+            # self.data.at[index, "PriceChangeSinceTrough"] = float(price_change_since_bottom)
 
+    # def calculate_first_second_order_derivatives(self):
+    #     """
+    #     Calculates first and second derivatives (velocity/acceleration) of key features.
+    #     """
+    #     for feature in ["KalmanFilterEst", "Short_Moving_Avg", "Long_Moving_Avg"]:
+    #         self.data[f"{feature}_1st_Deriv"] = self.data[feature].diff() * 100
+    #         self.data[f"{feature}_2nd_Deriv"] = self.data[f"{feature}_1st_Deriv"].diff() * 100
+    #     self.data.bfill(inplace=True)
+    #     print(f"[DEBUG][DERIV] Last 2 rows of derivatives:\n{self.data.tail(2)[[f'{feature}_1st_Deriv' for feature in ['KalmanFilterEst','Short_Moving_Avg','Long_Moving_Avg']] + [f'{feature}_2nd_Deriv' for feature in ['KalmanFilterEst','Short_Moving_Avg','Long_Moving_Avg']]]}")  # NEW DEBUG
+    
     def calculate_first_second_order_derivatives(self):
         """
         Calculates first and second derivatives (velocity/acceleration) of key features.
         """
-        for feature in ["KalmanFilterEst", "Short_Moving_Avg", "Long_Moving_Avg"]:
-            self.data[f"{feature}_1st_Deriv"] = self.data[feature].diff() * 100
-            self.data[f"{feature}_2nd_Deriv"] = self.data[f"{feature}_1st_Deriv"].diff() * 100
+        # Only calculate for columns that exist!
+        for feature in ["Short_Moving_Avg", "Long_Moving_Avg"]:  # <-- Removed KalmanFilterEst
+            if feature in self.data.columns:
+                self.data[f"{feature}_1st_Deriv"] = self.data[feature].diff() * 100
+                self.data[f"{feature}_2nd_Deriv"] = self.data[f"{feature}_1st_Deriv"].diff() * 100
         self.data.bfill(inplace=True)
+        print(f"[DEBUG][DERIV] Last 2 rows of derivatives:\n{self.data.tail(2)[[f'{feature}_1st_Deriv' for feature in ['Short_Moving_Avg','Long_Moving_Avg']] + [f'{feature}_2nd_Deriv' for feature in ['Short_Moving_Avg','Long_Moving_Avg']]]}")  # NEW DEBUG
 
 
-# FORCE RANDOM BUY
     def predict(self):
         """
-        Testing override: Randomly return Buy, Sell, or Hold with a valid price and timestamp.
+        Rule-based, lenient trading signal using engineered features.
+        Returns: (label, price, timestamp)
         """
-        direction = random.choice(['Buy', 'Sell', 'Hold'])
-        # Use the most recent price; fallback to a default if data is empty
-        try:
-            price = float(self.data["Open"][-1:].iloc[-1])
-        except Exception:
-            price = 110000  # fallback to default
+        price = self.data["Open"].iloc[-1]
         current_datetime = datetime.datetime.now()
         formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-        print(f"[FORCE TEST] Random action: {direction}, price: {price}, time: {formatted_datetime}")
-        return (direction, price, formatted_datetime)
+        # Get latest values
+        row = self.data.iloc[-1]
+
+        # Set lenient thresholds (feel free to tune these!)
+        MOMENTUM_THRESHOLD = 0.001  # percent change per period
+        STOCH_OVERBOUGHT = 70
+        STOCH_OVERSOLD = 30
+        TIME_THRESHOLD = 5  # minutes since peak/trough for extra leniency
+
+        # 1. Fast/slow MA momentum
+        if row["Short_Moving_Avg_1st_Deriv"] > MOMENTUM_THRESHOLD:
+            return ("Buy", price, formatted_datetime)
+        if row["Short_Moving_Avg_1st_Deriv"] < -MOMENTUM_THRESHOLD:
+            return ("Sell", price, formatted_datetime)
+        if row["Long_Moving_Avg_1st_Deriv"] > MOMENTUM_THRESHOLD:
+            return ("Buy", price, formatted_datetime)
+        if row["Long_Moving_Avg_1st_Deriv"] < -MOMENTUM_THRESHOLD:
+            return ("Sell", price, formatted_datetime)
+
+        # 2. Stochastic oscillator
+        if row["%K"] > STOCH_OVERBOUGHT and row["%D"] > STOCH_OVERBOUGHT:
+            return ("Sell", price, formatted_datetime)
+        if row["%K"] < STOCH_OVERSOLD and row["%D"] < STOCH_OVERSOLD:
+            return ("Buy", price, formatted_datetime)
+
+        # # 3. Kalman momentum
+        # if row["KalmanFilterEst_1st_Deriv"] > MOMENTUM_THRESHOLD:
+        #     return ("Buy", price, formatted_datetime)
+        # if row["KalmanFilterEst_1st_Deriv"] < -MOMENTUM_THRESHOLD:
+        #     return ("Sell", price, formatted_datetime)
+
+        # 4. Lenient: Time since peak/trough
+        if row["MinutesSinceTrough"] > TIME_THRESHOLD and row["Short_Moving_Avg_1st_Deriv"] > 0:
+            return ("Buy", price, formatted_datetime)
+        if row["MinutesSincePeak"] > TIME_THRESHOLD and row["Short_Moving_Avg_1st_Deriv"] < 0:
+            return ("Sell", price, formatted_datetime)
+
+         # 5. Even MORE lenient fallback (for debug, random Buy if flat)
+        import random
+        if random.random() < 0.15:  # 15% chance to buy if nothing else
+            return ("Buy", price, formatted_datetime)
+
+        # 5. Default: Hold
+        return ("Hold", price, formatted_datetime)
+
+
+
+    # def predict(self):
+    #     import datetime
+    #     import pandas as pd
+
+    #     row = self.data.iloc[-1]
+
+    #     # Debug: Print all indicator values in this row
+    #     print("\n========== PREDICT DEBUG ==========")
+    #     print("Current Data Row:")
+    #     for col in ['Short_Moving_Avg', 'Long_Moving_Avg', '%K', '%D', 'RSI', 'Open', 'Close']:
+    #         print(f"  {col}: {row.get(col, None)}")
+    #     print("===================================")
+
+    #     K = row.get('%K', float('nan'))
+    #     D = row.get('%D', float('nan'))
+    #     rsi = row.get('RSI', float('nan'))
+    #     short_ma = row.get('Short_Moving_Avg', float('nan'))
+    #     long_ma = row.get('Long_Moving_Avg', float('nan'))
+
+    #     # Previous values (for MA cross logic)
+    #     if len(self.data) > 1:
+    #         prev_short_ma = self.data['Short_Moving_Avg'].iloc[-2]
+    #         prev_long_ma = self.data['Long_Moving_Avg'].iloc[-2]
+    #     else:
+    #         prev_short_ma = short_ma
+    #         prev_long_ma = long_ma
+
+    #     print(f"Prev Short MA: {prev_short_ma} | Prev Long MA: {prev_long_ma}")
+    #     print(f"Current Short MA: {short_ma} | Current Long MA: {long_ma}")
+
+    #     signal = "Hold"
+
+    #     # --- MA CROSS ---
+    #     if pd.notnull(short_ma) and pd.notnull(long_ma) and pd.notnull(prev_short_ma) and pd.notnull(prev_long_ma):
+    #         if prev_short_ma < prev_long_ma and short_ma > long_ma:
+    #             print("[DEBUG] Golden cross detected → Buy")
+    #             signal = "Buy"
+    #         elif prev_short_ma > prev_long_ma and short_ma < long_ma:
+    #             print("[DEBUG] Death cross detected → Sell")
+    #             signal = "Sell"
+    #         else:
+    #             print("[DEBUG] No MA cross signal")
+    #     else:
+    #         print("[DEBUG] MA values are NaN, skipping MA cross logic.")
+
+    #     # --- RSI ---
+    #     if signal == "Hold" and pd.notnull(rsi):
+    #         print(f"[DEBUG] RSI check: {rsi}")
+    #         if rsi < 30:
+    #             print("[DEBUG] RSI < 30 → Buy")
+    #             signal = "Buy"
+    #         elif rsi > 70:
+    #             print("[DEBUG] RSI > 70 → Sell")
+    #             signal = "Sell"
+    #         else:
+    #             print("[DEBUG] RSI neutral, no signal.")
+
+    #     # --- Stochastic Oscillator ---
+    #     if signal == "Hold" and pd.notnull(K) and pd.notnull(D):
+    #         print(f"[DEBUG] Stochastic check: %K={K}, %D={D}")
+    #         if K < 20 and D < 20:
+    #             print("[DEBUG] Stoch < 20 → Buy")
+    #             signal = "Buy"
+    #         elif K > 80 and D > 80:
+    #             print("[DEBUG] Stoch > 80 → Sell")
+    #             signal = "Sell"
+    #         else:
+    #             print("[DEBUG] Stochastic neutral, no signal.")
+
+    #     # --- Final Signal Print ---
+    #     price = row["Close"] if "Close" in row else row["Open"]
+    #     now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    #     print(f"[RULE-BASED SIGNAL]: {signal} | Price: {price}\n")
+    #     return (signal, price, now_str)
+
+
+
+# # FORCE RANDOM BUY
+#     def predict(self):
+#         """
+#         Testing override: Randomly return Buy, Sell, or Hold with a valid price and timestamp.
+#         """
+#         direction = random.choice(['Buy', 'Sell', 'Hold'])
+#         # Use the most recent price; fallback to a default if data is empty
+#         try:
+#             price = float(self.data["Open"][-1:].iloc[-1])
+#         except Exception:
+#             price = 110000  # fallback to default
+#         current_datetime = datetime.datetime.now()
+#         formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+#         print(f"[FORCE TEST] Random action: {direction}, price: {price}, time: {formatted_datetime}")
+#         return (direction, price, formatted_datetime)
 
     # def predict(self):
     #     """
@@ -366,6 +530,118 @@ class TradingStrategy:
     #         current_datetime = datetime.datetime.now()
     #         formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
     #         return ("Hold", price, formatted_datetime)
+    
+    # def predict(self):
+    #     """
+    #     Rule-based trading logic using multiple technical indicators.
+    #     Returns: (label, price, timestamp)
+    #     """
+    #     # Use the most recent data row
+    #     row = self.data.iloc[-1]
+
+    #     # --- Indicator thresholds ---
+    #     # Stochastic Oscillator
+    #     K = row['%K']
+    #     D = row['%D']
+    #     # RSI
+    #     rsi = row['RSI']
+    #     # Moving averages
+    #     short_ma = row['Short_Moving_Avg']
+    #     long_ma = row['Long_Moving_Avg']
+
+    #     # --- Basic rules (priority order) ---
+    #     # 1. Moving Average Cross (golden/death cross)
+    #     # Only check if both are not NaN
+    #     if pd.notnull(short_ma) and pd.notnull(long_ma):
+    #         prev_short_ma = self.data['Short_Moving_Avg'].iloc[-2] if len(self.data) > 1 else short_ma
+    #         prev_long_ma = self.data['Long_Moving_Avg'].iloc[-2] if len(self.data) > 1 else long_ma
+    #         if prev_short_ma < prev_long_ma and short_ma > long_ma:
+    #             signal = "Buy"
+    #         elif prev_short_ma > prev_long_ma and short_ma < long_ma:
+    #             signal = "Sell"
+    #         else:
+    #             signal = "Hold"
+    #     else:
+    #         signal = "Hold"
+
+    #     # 2. RSI (if no MA cross detected)
+    #     if signal == "Hold" and pd.notnull(rsi):
+    #         if rsi < 30:
+    #             signal = "Buy"
+    #         elif rsi > 70:
+    #             signal = "Sell"
+
+    #     # 3. Stochastic Oscillator (if no MA or RSI signal)
+    #     if signal == "Hold" and pd.notnull(K) and pd.notnull(D):
+    #         if K < 20 and D < 20:
+    #             signal = "Buy"
+    #         elif K > 80 and D > 80:
+    #             signal = "Sell"
+
+    #     # (Optional) 4. Peaks/troughs logic
+    #     # if row.get('isLocalPeak', False):
+    #     #     signal = "Sell"
+    #     # elif row.get('isLocalTrough', False):
+    #     #     signal = "Buy"
+
+    #     # Output latest price (Open, or Close)
+    #     price = row["Open"]
+    #     current_datetime = datetime.datetime.now()
+    #     formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+
+    #     print(f"[RULE-BASED SIGNAL] {signal} | RSI={rsi:.1f} | %K={K:.1f}, %D={D:.1f} | ShortMA={short_ma:.2f} | LongMA={long_ma:.2f} | Price={price:.2f}")
+    #     return (signal, price, formatted_datetime)
+        
+    # def predict(self):
+    #     """
+    #     Rule-based strategy using moving average crossover and RSI.
+    #     - Buys only on a bullish crossover event (short MA crosses above long MA).
+    #     - Sells if in position and a bearish crossover or overbought RSI.
+    #     """
+    #     # Defensive for short datasets
+    #     if len(self.data) < 3:
+    #         return ("Hold", None, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
+    #     # Defensive columns creation
+    #     for col in ["Short_Moving_Avg", "Long_Moving_Avg", "RSI"]:
+    #         if col not in self.data.columns:
+    #             self.data[col] = np.nan
+    #     self.data[["Short_Moving_Avg", "Long_Moving_Avg", "RSI"]] = \
+    #         self.data[["Short_Moving_Avg", "Long_Moving_Avg", "RSI"]].fillna(method="ffill").fillna(method="bfill")
+
+    #     # Current and previous values
+    #     short_ma = self.data["Short_Moving_Avg"].iloc[-1]
+    #     long_ma = self.data["Long_Moving_Avg"].iloc[-1]
+    #     prev_short_ma = self.data["Short_Moving_Avg"].iloc[-2]
+    #     prev_long_ma = self.data["Long_Moving_Avg"].iloc[-2]
+    #     rsi = self.data["RSI"].iloc[-1]
+    #     price = self.data["Open"].iloc[-1]
+    #     current_datetime = self.data["Timestamp"].iloc[-1] \
+    #         if "Timestamp" in self.data.columns else datetime.datetime.now()
+    #     formatted_datetime = pd.to_datetime(current_datetime).strftime("%Y-%m-%d %H:%M:%S")
+
+    #     # Bullish cross: short crosses ABOVE long
+    #     bullish_cross = (prev_short_ma < prev_long_ma) and (short_ma > long_ma)
+    #     # Bearish cross: short crosses BELOW long
+    #     bearish_cross = (prev_short_ma > prev_long_ma) and (short_ma < long_ma)
+    #     # RSI conditions (customize as needed)
+    #     oversold = rsi < 35
+    #     overbought = rsi > 70
+
+    #     # --- Stateless Decision Logic ---
+    #     # BUY signal: bullish cross or oversold
+    #     if bullish_cross or oversold:
+    #         print(f"[RULE-BASED SIGNAL] Buy | RSI={rsi:.1f} | Cross={bullish_cross} | Price={price}")
+    #         return ("Buy", price, formatted_datetime)
+    #     # SELL signal: bearish cross or overbought
+    #     elif bearish_cross or overbought:
+    #         print(f"[RULE-BASED SIGNAL] Sell | RSI={rsi:.1f} | Cross={bearish_cross} | Price={price}")
+    #         return ("Sell", price, formatted_datetime)
+    #     # Otherwise, Hold
+    #     else:
+    #         return ("Hold", price, formatted_datetime)
+
+
 
     # --- Additional methods omitted for brevity, but should follow the same style ---
 

@@ -1,0 +1,6 @@
+2025-06-21 10:54:15 - Margin is insufficient.
+2025-06-21 10:54:22 - Order events [contract=BTCUSDT, order_id=4575743980, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=103443.8, last_filled_qty=0.004, canceled_reason=None]
+2025-06-21 10:54:23 - Order events [contract=BTCUSDT, order_id=4575743980, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=103443.8, last_filled_qty=0.002, canceled_reason=None]
+2025-06-21 10:54:24 - Margin is insufficient.
+2025-06-21 10:54:25 - Order events [contract=BTCUSDT, order_id=4575743980, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=103443.8, last_filled_qty=0.002, canceled_reason=None]
+2025-06-21 10:54:27 - Order events [contract=BTCUSDT, order_id=4575744523, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=103443.8, last_filled_qty=1.619, canceled_reason=None]

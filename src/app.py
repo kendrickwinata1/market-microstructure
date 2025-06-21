@@ -577,6 +577,7 @@ class ExecManager:
                 self.strategy.collect_new_data()
                 self.strategy.aggregate_data()
                 model_output = self.strategy.analyze_data()
+                # model_output = self.strategy.analyze_data(self.current_position)
                 print(f"{CYAN}Model output:{RESET} {model_output}")
 
                 order_quantity = 0
@@ -619,10 +620,21 @@ class ExecManager:
                     print(f"{CYAN}{direction} --> ORDER QUANTITY {order_quantity}, approved? {approval} and order queue {order_queue_ok}{RESET}")
 
                     if approval and order_queue_ok and order_quantity > 0:
+                        
+                        # Decide limit price to use
+                        # Optionally, for SELL use just below market, for BUY just above
+                        if direction == "SELL":
+                            my_limit_price = float(last_price) * 0.999
+                        elif direction == "BUY":
+                            my_limit_price = float(last_price) * 1.001
+                        else:
+                            my_limit_price = float(last_price)
+                            
+
                         print(f"{GREEN}Placing {direction} LIMIT order for {order_quantity} BTCUSDT at {limit_price}{RESET}")
                         order_data = {
                             "symbol": "BTCUSDT",
-                            "price": float(last_price),
+                            "price": my_limit_price,
                             "side": direction,
                             "type": "LIMIT",
                             "quantity": order_quantity,
