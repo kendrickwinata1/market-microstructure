@@ -261,7 +261,14 @@ class TradingStrategy:
         state_means, _ = kf.filter(close_prices.values)
         kalman_estimates = pd.Series(state_means.flatten(), index=self.data.index)
         kalman_estimates = pd.DataFrame({"KalmanFilterEst": kalman_estimates})
+        
+        
+        # --- FIX: drop KalmanFilterEst if it exists to avoid join error ---
+        if 'KalmanFilterEst' in self.data.columns:
+            self.data = self.data.drop(columns=['KalmanFilterEst'])
+
         self.data = self.data.join(kalman_estimates)
+
         print(f"[DEBUG][KALMAN] Kalman estimates last 2: {self.data['KalmanFilterEst'].tail(2).values}")  # NEW DEBUG
 
 
@@ -269,6 +276,12 @@ class TradingStrategy:
         """
         For each row, computes time since last detected peak/trough and price changes from those points.
         """
+
+        # Guard: if 'Label' not in columns, skip function OR fill default
+        if 'Label' not in self.data.columns:
+            print("[WARN] No 'Label' column found. Skipping peak/trough calculation.")
+            return        
+
         self.data["MinutesSincePeak"] = 0
         self.data["MinutesSinceTrough"] = 0
         # self.data["PriceChangeSincePeak"] = 0
@@ -323,7 +336,17 @@ class TradingStrategy:
                 self.data[f"{feature}_1st_Deriv"] = self.data[feature].diff() * 100
                 self.data[f"{feature}_2nd_Deriv"] = self.data[f"{feature}_1st_Deriv"].diff() * 100
         self.data.bfill(inplace=True)
-        print(f"[DEBUG][DERIV] Last 2 rows of derivatives:\n{self.data.tail(2)[[f'{feature}_1st_Deriv' for feature in ['Short_Moving_Avg','Long_Moving_Avg']] + [f'{feature}_2nd_Deriv' for feature in ['Short_Moving_Avg','Long_Moving_Avg']]]}")  # NEW DEBUG
+
+        # Defensive print for derivatives
+        deriv_cols = [
+            'Short_Moving_Avg_1st_Deriv', 'Long_Moving_Avg_1st_Deriv',
+            'Short_Moving_Avg_2nd_Deriv', 'Long_Moving_Avg_2nd_Deriv'
+        ]
+        missing = [col for col in deriv_cols if col not in self.data.columns]
+        if missing:
+            print(f"[DEBUG][DERIV] Skipping print: missing columns {missing}")
+        else:
+            print(f"[DEBUG][DERIV] Last 2 rows of derivatives:\n{self.data.tail(2)[deriv_cols]}")
 
 
     def predict(self):
@@ -331,7 +354,9 @@ class TradingStrategy:
         Rule-based, lenient trading signal using engineered features.
         Returns: (label, price, timestamp)
         """
-        price = self.data["Open"].iloc[-1]
+        # price = self.data["Open"].iloc[-1]
+        price = self.data["Close"].iloc[-1]
+
         current_datetime = datetime.datetime.now()
         formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
         # Get latest values

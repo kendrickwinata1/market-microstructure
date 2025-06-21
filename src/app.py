@@ -92,6 +92,15 @@ class ExecManager:
         print(f"Callback: {output}")
         self.queue.put(output)
 
+    def get_current_long_position_amount(self):
+        servertime = int(self.rest_gateway.time().get("serverTime", 0))
+        pos_info = self.rest_gateway.get_position_info("BTCUSDT", servertime)
+        if pos_info:
+            amt = float(pos_info[0]["positionAmt"])
+            return amt if amt > 0 else 0
+        return 0
+
+
     # def exec_strat(self, tick):
     #     """
     #     Main event handler for each market tick.
@@ -575,7 +584,7 @@ class ExecManager:
             else:
                 self.update_queue(tick)
                 self.strategy.collect_new_data()
-                self.strategy.aggregate_data()
+                self.strategy.aggregate_data(save_csv=True)
                 model_output = self.strategy.analyze_data()
                 # model_output = self.strategy.analyze_data(self.current_position)
                 print(f"{CYAN}Model output:{RESET} {model_output}")
@@ -585,13 +594,36 @@ class ExecManager:
 
                 if model_output is not None:
                     direction = model_output[0].upper()
-                    limit_price = float(model_output[1])
+                    # limit_price = float(model_output[1])
+                    limit_price = None
+                    
+                    model_limit_price = float(model_output[1])
+                    last_price = float(last_price)   # Ensure it's float
                     print(f"{GREEN}Signal: {direction} | Limit price: {limit_price}{RESET}")
 
+                    # Sanity cap: force limit price within 0.1% of current price
+                    max_slippage = last_price * 0.001  # 0.1%
+                    
                     response = self.rest_gateway.time()
                     servertime = int(response.get("serverTime", 0))
 
+                    MAX_BUY_LIMIT = 10  # Add this near your global configs
+
                     if direction == "BUY":
+                        open_long_amt = self.get_current_long_position_amount()
+                        if open_long_amt >= MAX_BUY_LIMIT:
+                            print("Max open BUY positions reached; skip buying.")
+                            return
+                        elif open_long_amt > 0:
+                            print("Have open buys, must sell first before new buy.")
+                            return
+                        
+
+                        limit_price = min(model_limit_price, last_price + max_slippage)
+                        # === ITEM 4: Add warning here
+                        if abs(model_limit_price - last_price) > max_slippage:
+                               print(f"{YELLOW}WARNING: Model BUY price {model_limit_price} is too far from market price {last_price}. Capping to {limit_price}{RESET}")                        
+
                         dollar_amt_buy = self.risk_manager.get_available_tradable_balance()
                         order_quantity = round(dollar_amt_buy / limit_price, 3)
                         buy_balance_check = self.risk_manager.check_available_balance(dollar_amt_buy)
@@ -601,21 +633,36 @@ class ExecManager:
                         approval = buy_balance_check and buy_price_check and buy_position_check
 
                     elif direction == "SELL":
+                        
+                        limit_price = max(model_limit_price, last_price - max_slippage)
+                        # === ITEM 4: Add warning here
+                        if abs(model_limit_price - last_price) > max_slippage:
+                            print(f"{YELLOW}WARNING: Model SELL price {model_limit_price} is too far from market price {last_price}. Capping to {limit_price}{RESET}")
+                            
                         current_position_resp = self.rest_gateway.get_position_info("BTCUSDT", servertime)
                         order_quantity = float(current_position_resp[0]["positionAmt"]) if current_position_resp else 0
-                        short_pos_check = self.risk_manager.check_short_position(order_quantity)
-                        sell_price_check = self.risk_manager.check_sell_order_value(limit_price)
-                        sell_position_check = self.risk_manager.check_sell_position()
-                        print(f"{RED}short_pos_check: {short_pos_check}, sell_price_check: {sell_price_check}, sell_position_check: {sell_position_check}{RESET}")
-                        approval = short_pos_check and sell_price_check and sell_position_check
+                        
+                        if order_quantity <= 0:
+                            print("No long position to sell. Skipping sell order.")
+                            approval = False
+                        else:
+                            short_pos_check = self.risk_manager.check_short_position(order_quantity)
+                            sell_price_check = self.risk_manager.check_sell_order_value(limit_price)
+                            sell_position_check = self.risk_manager.check_sell_position()
+                            print(f"{RED}short_pos_check: {short_pos_check}, sell_price_check: {sell_price_check}, sell_position_check: {sell_position_check}{RESET}")
+                            approval = short_pos_check and sell_price_check and sell_position_check
 
                     elif direction == "HOLD":
+                        limit_price = last_price
                         approval = 0
                         print(f"{YELLOW}MODEL SIGNALS HOLD{RESET}")
 
                     else:
-                        approval = 0
                         print(f"{RED}Invalid direction: {direction}{RESET}")
+                        limit_price = last_price   # Or skip further trading logic
+
+
+                    print(f"Sanity-checked limit price: {limit_price} (model: {model_limit_price}, market: {last_price})")
 
                     print(f"{CYAN}{direction} --> ORDER QUANTITY {order_quantity}, approved? {approval} and order queue {order_queue_ok}{RESET}")
 
@@ -634,7 +681,7 @@ class ExecManager:
                         print(f"{GREEN}Placing {direction} LIMIT order for {order_quantity} BTCUSDT at {limit_price}{RESET}")
                         order_data = {
                             "symbol": "BTCUSDT",
-                            "price": my_limit_price,
+                            "price": limit_price,
                             "side": direction,
                             "type": "LIMIT",
                             "quantity": order_quantity,
