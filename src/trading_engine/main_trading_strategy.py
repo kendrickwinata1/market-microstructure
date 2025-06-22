@@ -356,24 +356,37 @@ class TradingStrategy:
             "KalmanFilterEst_2nd_Deriv",
         ]
 
-        last_row = self.data[feature_set].iloc[-1:]
+        test_data = self.data[feature_set]
+        logging.info(f"[Predict] Last 5 rows of feature data for prediction:\n{test_data.tail()}")
 
-        logging.info(f"[Predict] Last feature row for prediction:\n{last_row}")
+        # Optional: save last 5 feature rows for inspection/debug
+        try:
+            test_data.tail(5).to_csv("test_data.csv")
+        except Exception as e:
+            logging.warning(f"[Predict] Failed to save test_data.csv: {e}")
 
+        # NaN check for just the last row
+        last_row = test_data.iloc[[-1]]
         if last_row.isnull().any().any():
-            logging.warning("[Predict] NaN values in features; returning HOLD signal.")
-            price = self.data["Close"].iloc[-1]
-            return ("Hold", price, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+            logging.warning("[Predict] NaN in last-row features, returning HOLD.")
+            price = self.data["Close"].iloc[-1] if "Close" in self.data else None
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            return ("Hold", price, timestamp)
 
         try:
-            prediction = self.model.predict(last_row)[0]
-            logging.info(f"[Predict] Model Prediction: {prediction}")
-            price = self.data["Close"].iloc[-1]
-            return (prediction, price, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+            # Predict on all rows, but only use last prediction for action
+            predictions = self.model.predict(test_data)
+            action_label = predictions[-1]
+            # You can choose "Open" or "Close" as your action price
+            price = self.data["Close"].iloc[-1] if "Close" in self.data else self.data["Open"].iloc[-1]
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            logging.info(f"[Predict] Prediction: {action_label}, Price: {price}, Time: {timestamp}")
+            return (action_label, price, timestamp)
         except Exception as e:
             logging.error(f"[Predict] Model prediction error: {e}")
-            price = self.data["Close"].iloc[-1]
-            return ("Hold", price, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+            price = self.data["Close"].iloc[-1] if "Close" in self.data else None
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            return ("Hold", price, timestamp)
 
 
     # --- Additional methods omitted for brevity, but should follow the same style ---

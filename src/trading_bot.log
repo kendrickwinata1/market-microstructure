@@ -159954,3 +159954,2000 @@ Timestamp
 2025-06-22 13:11:34,239 [INFO] Order events [contract=BTCUSDT, order_id=4584554586, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
 2025-06-22 13:11:34,244 [INFO] [ExecManager] BUY order executed successfully at 102695.0.
 2025-06-22 13:11:34,246 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584554586, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102695.1, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:31:07,019 [INFO] API_KEY: 51fb4d95ffdcde08ad0ad2d29306b2a977fe46936529d4e40fdbe89cff33f4c5
+2025-06-22 13:31:07,020 [INFO] API_SECRET: 9bbde8457e093814063f5934880e69fba48d20a0ea032d259a5de6ac6cb67b54
+2025-06-22 13:31:10,287 [INFO] Initializing connection
+2025-06-22 13:31:10,287 [INFO] reconnecting websocket
+2025-06-22 13:31:10,912 [INFO] starting event loop thread
+2025-06-22 13:31:10,913 [INFO] Subscribing to user data events
+2025-06-22 13:31:11,069 [INFO] Initializing connection
+2025-06-22 13:31:11,070 [INFO] reconnecting websocket
+2025-06-22 13:31:11,295 [INFO] starting event loop thread
+2025-06-22 13:31:11,295 [INFO] Subscribing to depth events
+2025-06-22 13:31:11,296 [INFO] depth socket not connected, reconnecting
+2025-06-22 13:31:12,486 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:12,487 [WARNING] [ExecManager] Empty last price received; skipping tick.
+2025-06-22 13:31:12,665 [ERROR] CANCEL read_loop
+2025-06-22 13:31:13,092 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:13,250 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102765.10
+2025-06-22 13:31:13,677 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:13,678 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:13,679 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:13,679 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 13, 92407), '102765.10')
+2025-06-22 13:31:13,698 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:13,698 [INFO] [TradingStrategy] Data buffer length: 1
+2025-06-22 13:31:13,710 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:13.092407 2025-06-22 13:31:13.092407  102765.1
+2025-06-22 13:31:13,728 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (1, 5)
+2025-06-22 13:31:13,735 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+0 2025-06-22 13:31:13  102765.1  102765.1  102765.1  102765.1
+2025-06-22 13:31:13,779 [WARNING] [Predict] Not enough valid data (1 rows) for reliable prediction; returning HOLD signal.
+2025-06-22 13:31:13,779 [INFO] [Strategy] Model output: ('Hold', 102765.1, '2025-06-22 13:31:13')
+2025-06-22 13:31:13,780 [INFO] [Strategy] Initial model signal: HOLD at price: 102765.1
+2025-06-22 13:31:13,780 [INFO] [Strategy] HOLD signal confirmed; insufficient momentum for override.
+2025-06-22 13:31:15,445 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:15,723 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102765.10
+2025-06-22 13:31:16,372 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:16,374 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:16,374 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:16,376 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 15, 445790), '102765.10')
+2025-06-22 13:31:16,380 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:16,380 [INFO] [TradingStrategy] Data buffer length: 2
+2025-06-22 13:31:16,489 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:13.092407 2025-06-22 13:31:13.092407  102765.1
+2025-06-22 13:31:15.445790 2025-06-22 13:31:15.445790  102765.1
+2025-06-22 13:31:16,540 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (2, 5)
+2025-06-22 13:31:16,552 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+0 2025-06-22 13:31:13  102765.1  102765.1  102765.1  102765.1
+1 2025-06-22 13:31:15  102765.1  102765.1  102765.1  102765.1
+2025-06-22 13:31:16,813 [WARNING] [Predict] Not enough valid data (2 rows) for reliable prediction; returning HOLD signal.
+2025-06-22 13:31:16,813 [INFO] [Strategy] Model output: ('Hold', 102765.1, '2025-06-22 13:31:16')
+2025-06-22 13:31:16,813 [INFO] [Strategy] Initial model signal: HOLD at price: 102765.1
+2025-06-22 13:31:16,814 [INFO] [Strategy] HOLD signal confirmed; insufficient momentum for override.
+2025-06-22 13:31:16,984 [ERROR] CANCEL read_loop
+2025-06-22 13:31:17,393 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:17,609 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102765.10
+2025-06-22 13:31:17,927 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:17,928 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:17,929 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:17,929 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 17, 393718), '102765.10')
+2025-06-22 13:31:17,931 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:17,931 [INFO] [TradingStrategy] Data buffer length: 3
+2025-06-22 13:31:17,938 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:13.092407 2025-06-22 13:31:13.092407  102765.1
+2025-06-22 13:31:15.445790 2025-06-22 13:31:15.445790  102765.1
+2025-06-22 13:31:17.393718 2025-06-22 13:31:17.393718  102765.1
+2025-06-22 13:31:17,944 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (3, 5)
+2025-06-22 13:31:17,952 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+0 2025-06-22 13:31:13  102765.1  102765.1  102765.1  102765.1
+1 2025-06-22 13:31:15  102765.1  102765.1  102765.1  102765.1
+2 2025-06-22 13:31:17  102765.1  102765.1  102765.1  102765.1
+2025-06-22 13:31:17,977 [WARNING] [Predict] Not enough valid data (3 rows) for reliable prediction; returning HOLD signal.
+2025-06-22 13:31:17,978 [INFO] [Strategy] Model output: ('Hold', 102765.1, '2025-06-22 13:31:17')
+2025-06-22 13:31:17,978 [INFO] [Strategy] Initial model signal: HOLD at price: 102765.1
+2025-06-22 13:31:17,979 [INFO] [Strategy] HOLD signal confirmed; insufficient momentum for override.
+2025-06-22 13:31:19,317 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:19,470 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102765.10
+2025-06-22 13:31:19,778 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:19,779 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:19,779 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:19,780 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 19, 317303), '102765.10')
+2025-06-22 13:31:19,782 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:19,783 [INFO] [TradingStrategy] Data buffer length: 4
+2025-06-22 13:31:19,790 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:13.092407 2025-06-22 13:31:13.092407  102765.1
+2025-06-22 13:31:15.445790 2025-06-22 13:31:15.445790  102765.1
+2025-06-22 13:31:17.393718 2025-06-22 13:31:17.393718  102765.1
+2025-06-22 13:31:19.317303 2025-06-22 13:31:19.317303  102765.1
+2025-06-22 13:31:19,796 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (4, 5)
+2025-06-22 13:31:19,803 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+0 2025-06-22 13:31:13  102765.1  102765.1  102765.1  102765.1
+1 2025-06-22 13:31:15  102765.1  102765.1  102765.1  102765.1
+2 2025-06-22 13:31:17  102765.1  102765.1  102765.1  102765.1
+3 2025-06-22 13:31:19  102765.1  102765.1  102765.1  102765.1
+2025-06-22 13:31:19,827 [WARNING] [Predict] Not enough valid data (4 rows) for reliable prediction; returning HOLD signal.
+2025-06-22 13:31:19,827 [INFO] [Strategy] Model output: ('Hold', 102765.1, '2025-06-22 13:31:19')
+2025-06-22 13:31:19,827 [INFO] [Strategy] Initial model signal: HOLD at price: 102765.1
+2025-06-22 13:31:19,827 [INFO] [Strategy] HOLD signal confirmed; insufficient momentum for override.
+2025-06-22 13:31:19,961 [ERROR] CANCEL read_loop
+2025-06-22 13:31:20,333 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:20,486 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102765.10
+2025-06-22 13:31:20,796 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:20,797 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:20,798 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:20,798 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 20, 333834), '102765.10')
+2025-06-22 13:31:20,800 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:20,801 [INFO] [TradingStrategy] Data buffer length: 5
+2025-06-22 13:31:20,808 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:13.092407 2025-06-22 13:31:13.092407  102765.1
+2025-06-22 13:31:15.445790 2025-06-22 13:31:15.445790  102765.1
+2025-06-22 13:31:17.393718 2025-06-22 13:31:17.393718  102765.1
+2025-06-22 13:31:19.317303 2025-06-22 13:31:19.317303  102765.1
+2025-06-22 13:31:20.333834 2025-06-22 13:31:20.333834  102765.1
+2025-06-22 13:31:20,814 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (5, 5)
+2025-06-22 13:31:20,823 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+0 2025-06-22 13:31:13  102765.1  102765.1  102765.1  102765.1
+1 2025-06-22 13:31:15  102765.1  102765.1  102765.1  102765.1
+2 2025-06-22 13:31:17  102765.1  102765.1  102765.1  102765.1
+3 2025-06-22 13:31:19  102765.1  102765.1  102765.1  102765.1
+4 2025-06-22 13:31:20  102765.1  102765.1  102765.1  102765.1
+2025-06-22 13:31:20,863 [INFO] [Predict] Last 5 rows of feature data for prediction:
+   Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...    %K    %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+0                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               3.082953e+06              -1.818152e+08
+1                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               3.082953e+06              -1.818152e+08
+2                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               1.264801e+06              -1.818152e+08
+3                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               4.882505e+05              -7.765508e+07
+4                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               1.867839e+05              -3.014666e+07
+
+[5 rows x 10 columns]
+2025-06-22 13:31:20,868 [INFO] [Predict] Prediction: Sell, Price: 102765.1, Time: 2025-06-22 13:31:20
+2025-06-22 13:31:20,868 [INFO] [Strategy] Model output: ('Sell', 102765.1, '2025-06-22 13:31:20')
+2025-06-22 13:31:20,869 [INFO] [Strategy] Initial model signal: SELL at price: 102765.1
+2025-06-22 13:31:21,015 [INFO] [Position Check] Current position size: 0.0
+2025-06-22 13:31:21,016 [INFO] [Risk Check] OPEN_SHORT approval: True, Amount: 8741.15, Quantity: 0.085
+2025-06-22 13:31:21,016 [INFO] [Order Placement] Submitting SELL order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570265516, 'recvWindow': 60000}
+2025-06-22 13:31:21,170 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584662255, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102765.0, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:31:21,170 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584662255, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102764.8, last_filled_qty=0.083, canceled_reason=None]
+2025-06-22 13:31:21,177 [INFO] Order events [contract=BTCUSDT, order_id=4584662255, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:31:21,179 [INFO] [ExecManager] SELL order executed successfully at 102765.1.
+2025-06-22 13:31:21,524 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:31:21,527 [INFO]       Wallet Balance: $11,651.37
+2025-06-22 13:31:21,528 [INFO]     Unrealized P&L: $-1.42
+2025-06-22 13:31:21,528 [INFO]       Realized P&L: $-3.42
+2025-06-22 13:31:21,528 [INFO]       Sharpe Ratio: -0.4312
+2025-06-22 13:31:21,528 [INFO]    Maximum Drawdown: -0.03%
+2025-06-22 13:31:21,530 [INFO] --------------------------
+2025-06-22 13:31:22,767 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:22,920 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102765.10
+2025-06-22 13:31:24,916 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:24,919 [INFO] STOPLOSS (SHORT) CHECK: Price > 103792.452752959 (Entry: 102764.8047059)
+2025-06-22 13:31:24,920 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:24,920 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:24,920 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 22, 767552), '102765.10')
+2025-06-22 13:31:24,924 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:24,924 [INFO] [TradingStrategy] Data buffer length: 6
+2025-06-22 13:31:24,930 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:15.445790 2025-06-22 13:31:15.445790  102765.1
+2025-06-22 13:31:17.393718 2025-06-22 13:31:17.393718  102765.1
+2025-06-22 13:31:19.317303 2025-06-22 13:31:19.317303  102765.1
+2025-06-22 13:31:20.333834 2025-06-22 13:31:20.333834  102765.1
+2025-06-22 13:31:22.767552 2025-06-22 13:31:22.767552  102765.1
+2025-06-22 13:31:24,935 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (6, 5)
+2025-06-22 13:31:24,943 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+1 2025-06-22 13:31:15  102765.1  102765.1  102765.1  102765.1
+2 2025-06-22 13:31:17  102765.1  102765.1  102765.1  102765.1
+3 2025-06-22 13:31:19  102765.1  102765.1  102765.1  102765.1
+4 2025-06-22 13:31:20  102765.1  102765.1  102765.1  102765.1
+5 2025-06-22 13:31:22  102765.1  102765.1  102765.1  102765.1
+2025-06-22 13:31:24,978 [INFO] [Predict] Last 5 rows of feature data for prediction:
+   Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...    %K    %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+1                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               3.082953e+06              -1.818152e+08
+2                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               1.264801e+06              -1.818152e+08
+3                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               4.882505e+05              -7.765508e+07
+4                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               1.867839e+05              -3.014666e+07
+5                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               7.136121e+04              -1.154227e+07
+
+[5 rows x 10 columns]
+2025-06-22 13:31:24,982 [INFO] [Predict] Prediction: Sell, Price: 102765.1, Time: 2025-06-22 13:31:24
+2025-06-22 13:31:24,982 [INFO] [Strategy] Model output: ('Sell', 102765.1, '2025-06-22 13:31:24')
+2025-06-22 13:31:24,982 [INFO] [Strategy] Initial model signal: SELL at price: 102765.1
+2025-06-22 13:31:25,121 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:25,121 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:31:26,329 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:26,474 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102765.10
+2025-06-22 13:31:27,081 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:27,082 [INFO] STOPLOSS (SHORT) CHECK: Price > 103792.452752959 (Entry: 102764.8047059)
+2025-06-22 13:31:27,083 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:27,083 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:27,083 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 26, 328979), '102765.10')
+2025-06-22 13:31:27,085 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:27,086 [INFO] [TradingStrategy] Data buffer length: 7
+2025-06-22 13:31:27,108 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:17.393718 2025-06-22 13:31:17.393718  102765.1
+2025-06-22 13:31:19.317303 2025-06-22 13:31:19.317303  102765.1
+2025-06-22 13:31:20.333834 2025-06-22 13:31:20.333834  102765.1
+2025-06-22 13:31:22.767552 2025-06-22 13:31:22.767552  102765.1
+2025-06-22 13:31:26.328979 2025-06-22 13:31:26.328979  102765.1
+2025-06-22 13:31:27,114 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (7, 5)
+2025-06-22 13:31:27,127 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+2 2025-06-22 13:31:17  102765.1  102765.1  102765.1  102765.1
+3 2025-06-22 13:31:19  102765.1  102765.1  102765.1  102765.1
+4 2025-06-22 13:31:20  102765.1  102765.1  102765.1  102765.1
+5 2025-06-22 13:31:22  102765.1  102765.1  102765.1  102765.1
+6 2025-06-22 13:31:26  102765.1  102765.1  102765.1  102765.1
+2025-06-22 13:31:27,239 [INFO] [Predict] Last 5 rows of feature data for prediction:
+   Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...    %K    %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+2                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               1.264801e+06              -1.818152e+08
+3                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               4.882505e+05              -7.765508e+07
+4                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               1.867839e+05              -3.014666e+07
+5                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               7.136121e+04              -1.154227e+07
+6                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               2.725846e+04              -4.410276e+06
+
+[5 rows x 10 columns]
+2025-06-22 13:31:27,243 [INFO] [Predict] Prediction: Sell, Price: 102765.1, Time: 2025-06-22 13:31:27
+2025-06-22 13:31:27,243 [INFO] [Strategy] Model output: ('Sell', 102765.1, '2025-06-22 13:31:27')
+2025-06-22 13:31:27,244 [INFO] [Strategy] Initial model signal: SELL at price: 102765.1
+2025-06-22 13:31:27,412 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:27,413 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:31:29,646 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:29,862 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102765.10
+2025-06-22 13:31:30,276 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:30,279 [INFO] STOPLOSS (SHORT) CHECK: Price > 103792.452752959 (Entry: 102764.8047059)
+2025-06-22 13:31:30,281 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:30,281 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:30,281 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 29, 646037), '102765.10')
+2025-06-22 13:31:30,283 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:30,283 [INFO] [TradingStrategy] Data buffer length: 8
+2025-06-22 13:31:30,289 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:19.317303 2025-06-22 13:31:19.317303  102765.1
+2025-06-22 13:31:20.333834 2025-06-22 13:31:20.333834  102765.1
+2025-06-22 13:31:22.767552 2025-06-22 13:31:22.767552  102765.1
+2025-06-22 13:31:26.328979 2025-06-22 13:31:26.328979  102765.1
+2025-06-22 13:31:29.646037 2025-06-22 13:31:29.646037  102765.1
+2025-06-22 13:31:30,305 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (8, 5)
+2025-06-22 13:31:30,314 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+3 2025-06-22 13:31:19  102765.1  102765.1  102765.1  102765.1
+4 2025-06-22 13:31:20  102765.1  102765.1  102765.1  102765.1
+5 2025-06-22 13:31:22  102765.1  102765.1  102765.1  102765.1
+6 2025-06-22 13:31:26  102765.1  102765.1  102765.1  102765.1
+7 2025-06-22 13:31:29  102765.1  102765.1  102765.1  102765.1
+2025-06-22 13:31:30,372 [INFO] [Predict] Last 5 rows of feature data for prediction:
+   Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...    %K    %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+3                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0              488250.475113              -7.765508e+07
+4                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0              186783.889623              -3.014666e+07
+5                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               71361.211361              -1.154227e+07
+6                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               27258.455428              -4.410276e+06
+7                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               10411.853547              -1.684660e+06
+
+[5 rows x 10 columns]
+2025-06-22 13:31:30,377 [INFO] [Predict] Prediction: Sell, Price: 102765.1, Time: 2025-06-22 13:31:30
+2025-06-22 13:31:30,378 [INFO] [Strategy] Model output: ('Sell', 102765.1, '2025-06-22 13:31:30')
+2025-06-22 13:31:30,379 [INFO] [Strategy] Initial model signal: SELL at price: 102765.1
+2025-06-22 13:31:30,547 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:30,548 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:31:30,698 [ERROR] CANCEL read_loop
+2025-06-22 13:31:31,228 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:31,378 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102765.10
+2025-06-22 13:31:31,541 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:31:31,563 [INFO]       Wallet Balance: $11,651.20
+2025-06-22 13:31:31,564 [INFO]     Unrealized P&L: $-1.42
+2025-06-22 13:31:31,565 [INFO]       Realized P&L: $-3.59
+2025-06-22 13:31:31,565 [INFO]       Sharpe Ratio: -0.3407
+2025-06-22 13:31:31,565 [INFO]    Maximum Drawdown: -0.03%
+2025-06-22 13:31:31,565 [INFO] --------------------------
+2025-06-22 13:31:31,714 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:31,715 [INFO] STOPLOSS (SHORT) CHECK: Price > 103792.452752959 (Entry: 102764.8047059)
+2025-06-22 13:31:31,715 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:31,715 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:31,715 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 31, 228720), '102765.10')
+2025-06-22 13:31:31,717 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:31,717 [INFO] [TradingStrategy] Data buffer length: 9
+2025-06-22 13:31:31,721 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:20.333834 2025-06-22 13:31:20.333834  102765.1
+2025-06-22 13:31:22.767552 2025-06-22 13:31:22.767552  102765.1
+2025-06-22 13:31:26.328979 2025-06-22 13:31:26.328979  102765.1
+2025-06-22 13:31:29.646037 2025-06-22 13:31:29.646037  102765.1
+2025-06-22 13:31:31.228720 2025-06-22 13:31:31.228720  102765.1
+2025-06-22 13:31:31,725 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (9, 5)
+2025-06-22 13:31:31,739 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+4 2025-06-22 13:31:20  102765.1  102765.1  102765.1  102765.1
+5 2025-06-22 13:31:22  102765.1  102765.1  102765.1  102765.1
+6 2025-06-22 13:31:26  102765.1  102765.1  102765.1  102765.1
+7 2025-06-22 13:31:29  102765.1  102765.1  102765.1  102765.1
+8 2025-06-22 13:31:31  102765.1  102765.1  102765.1  102765.1
+2025-06-22 13:31:31,863 [INFO] [Predict] Last 5 rows of feature data for prediction:
+   Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...    %K    %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+4                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0              186783.889623              -3.014666e+07
+5                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               71361.211361              -1.154227e+07
+6                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               27258.455428              -4.410276e+06
+7                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0               10411.853547              -1.684660e+06
+8                         0.0                         0.0                        0.0                        0.0  ...  50.0  50.0                3976.976959              -6.434877e+05
+
+[5 rows x 10 columns]
+2025-06-22 13:31:31,867 [INFO] [Predict] Prediction: Sell, Price: 102765.1, Time: 2025-06-22 13:31:31
+2025-06-22 13:31:31,867 [INFO] [Strategy] Model output: ('Sell', 102765.1, '2025-06-22 13:31:31')
+2025-06-22 13:31:31,867 [INFO] [Strategy] Initial model signal: SELL at price: 102765.1
+2025-06-22 13:31:32,033 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:32,034 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:31:32,650 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:32,803 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102770.00
+2025-06-22 13:31:33,100 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:33,101 [INFO] STOPLOSS (SHORT) CHECK: Price > 103792.452752959 (Entry: 102764.8047059)
+2025-06-22 13:31:33,102 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:33,103 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:33,103 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 32, 650278), '102770.00')
+2025-06-22 13:31:33,105 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:33,105 [INFO] [TradingStrategy] Data buffer length: 10
+2025-06-22 13:31:33,112 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:22.767552 2025-06-22 13:31:22.767552  102765.1
+2025-06-22 13:31:26.328979 2025-06-22 13:31:26.328979  102765.1
+2025-06-22 13:31:29.646037 2025-06-22 13:31:29.646037  102765.1
+2025-06-22 13:31:31.228720 2025-06-22 13:31:31.228720  102765.1
+2025-06-22 13:31:32.650278 2025-06-22 13:31:32.650278  102770.0
+2025-06-22 13:31:33,117 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (10, 5)
+2025-06-22 13:31:33,127 [INFO] [TradingStrategy] Aggregated sample:
+            Timestamp      Open      High       Low     Close
+5 2025-06-22 13:31:22  102765.1  102765.1  102765.1  102765.1
+6 2025-06-22 13:31:26  102765.1  102765.1  102765.1  102765.1
+7 2025-06-22 13:31:29  102765.1  102765.1  102765.1  102765.1
+8 2025-06-22 13:31:31  102765.1  102765.1  102765.1  102765.1
+9 2025-06-22 13:31:32  102770.0  102770.0  102770.0  102770.0
+2025-06-22 13:31:33,194 [INFO] [Predict] Last 5 rows of feature data for prediction:
+   Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+5                         0.0                         0.0                        0.0                        0.0  ...    0.0  50.000000               71361.211361              -1.154227e+07
+6                         0.0                         0.0                        0.0                        0.0  ...    0.0   0.000000               27258.455428              -4.410276e+06
+7                         0.0                         0.0                        0.0                        0.0  ...    0.0   0.000000               10411.853547              -1.684660e+06
+8                         0.0                         0.0                        0.0                        0.0  ...    0.0   0.000000                3976.976959              -6.434877e+05
+9                        98.0                      9800.0                        0.0                        0.0  ...  100.0  33.333333                1821.906834              -2.155070e+05
+
+[5 rows x 10 columns]
+2025-06-22 13:31:33,199 [INFO] [Predict] Prediction: Sell, Price: 102770.0, Time: 2025-06-22 13:31:33
+2025-06-22 13:31:33,201 [INFO] [Strategy] Model output: ('Sell', 102770.0, '2025-06-22 13:31:33')
+2025-06-22 13:31:33,203 [INFO] [Strategy] Initial model signal: SELL at price: 102770.0
+2025-06-22 13:31:33,362 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:33,362 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:31:33,547 [ERROR] CANCEL read_loop
+2025-06-22 13:31:33,899 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:34,040 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102770.00
+2025-06-22 13:31:34,361 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:34,364 [INFO] STOPLOSS (SHORT) CHECK: Price > 103792.452752959 (Entry: 102764.8047059)
+2025-06-22 13:31:34,365 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:34,365 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:34,365 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 33, 899095), '102770.00')
+2025-06-22 13:31:34,371 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:34,371 [INFO] [TradingStrategy] Data buffer length: 11
+2025-06-22 13:31:34,377 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:26.328979 2025-06-22 13:31:26.328979  102765.1
+2025-06-22 13:31:29.646037 2025-06-22 13:31:29.646037  102765.1
+2025-06-22 13:31:31.228720 2025-06-22 13:31:31.228720  102765.1
+2025-06-22 13:31:32.650278 2025-06-22 13:31:32.650278  102770.0
+2025-06-22 13:31:33.899095 2025-06-22 13:31:33.899095  102770.0
+2025-06-22 13:31:34,381 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (11, 5)
+2025-06-22 13:31:34,389 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+6  2025-06-22 13:31:26  102765.1  102765.1  102765.1  102765.1
+7  2025-06-22 13:31:29  102765.1  102765.1  102765.1  102765.1
+8  2025-06-22 13:31:31  102765.1  102765.1  102765.1  102765.1
+9  2025-06-22 13:31:32  102770.0  102770.0  102770.0  102770.0
+10 2025-06-22 13:31:33  102770.0  102770.0  102770.0  102770.0
+2025-06-22 13:31:34,429 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+6                          0.0                0.000000e+00                        0.0                        0.0  ...    0.0   0.000000               27258.455428              -4.410276e+06
+7                          0.0                0.000000e+00                        0.0                        0.0  ...    0.0   0.000000               10411.853547              -1.684660e+06
+8                          0.0                0.000000e+00                        0.0                        0.0  ...    0.0   0.000000                3976.976959              -6.434877e+05
+9                         98.0                9.800000e+03                        0.0                        0.0  ...  100.0  33.333333                1821.906834              -2.155070e+05
+10                        98.0                1.455192e-07                        0.0                        0.0  ...  100.0  66.666667                 695.906497              -1.126000e+05
+
+[5 rows x 10 columns]
+2025-06-22 13:31:34,432 [INFO] [Predict] Prediction: Sell, Price: 102770.0, Time: 2025-06-22 13:31:34
+2025-06-22 13:31:34,432 [INFO] [Strategy] Model output: ('Sell', 102770.0, '2025-06-22 13:31:34')
+2025-06-22 13:31:34,432 [INFO] [Strategy] Initial model signal: SELL at price: 102770.0
+2025-06-22 13:31:34,578 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:34,578 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:31:35,145 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:35,288 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102770.00
+2025-06-22 13:31:35,602 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:35,603 [INFO] STOPLOSS (SHORT) CHECK: Price > 103792.452752959 (Entry: 102764.8047059)
+2025-06-22 13:31:35,604 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:35,604 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:35,604 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 35, 145625), '102770.00')
+2025-06-22 13:31:35,606 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:35,606 [INFO] [TradingStrategy] Data buffer length: 12
+2025-06-22 13:31:35,611 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:29.646037 2025-06-22 13:31:29.646037  102765.1
+2025-06-22 13:31:31.228720 2025-06-22 13:31:31.228720  102765.1
+2025-06-22 13:31:32.650278 2025-06-22 13:31:32.650278  102770.0
+2025-06-22 13:31:33.899095 2025-06-22 13:31:33.899095  102770.0
+2025-06-22 13:31:35.145625 2025-06-22 13:31:35.145625  102770.0
+2025-06-22 13:31:35,615 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (12, 5)
+2025-06-22 13:31:35,621 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+7  2025-06-22 13:31:29  102765.1  102765.1  102765.1  102765.1
+8  2025-06-22 13:31:31  102765.1  102765.1  102765.1  102765.1
+9  2025-06-22 13:31:32  102770.0  102770.0  102770.0  102770.0
+10 2025-06-22 13:31:33  102770.0  102770.0  102770.0  102770.0
+11 2025-06-22 13:31:35  102770.0  102770.0  102770.0  102770.0
+2025-06-22 13:31:35,662 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+7                          0.0                0.000000e+00                        0.0                        0.0  ...    0.0    0.000000               10411.853547              -1.684660e+06
+8                          0.0                0.000000e+00                        0.0                        0.0  ...    0.0    0.000000                3976.976959              -6.434877e+05
+9                         98.0                9.800000e+03                        0.0                        0.0  ...  100.0   33.333333                1821.906834              -2.155070e+05
+10                        98.0                1.455192e-07                        0.0                        0.0  ...  100.0   66.666667                 695.906497              -1.126000e+05
+11                        98.0               -1.455192e-07                        0.0                        0.0  ...  100.0  100.000000                 265.812629              -4.300939e+04
+
+[5 rows x 10 columns]
+2025-06-22 13:31:35,665 [INFO] [Predict] Prediction: Sell, Price: 102770.0, Time: 2025-06-22 13:31:35
+2025-06-22 13:31:35,666 [INFO] [Strategy] Model output: ('Sell', 102770.0, '2025-06-22 13:31:35')
+2025-06-22 13:31:35,666 [INFO] [Strategy] Initial model signal: SELL at price: 102770.0
+2025-06-22 13:31:35,815 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:35,815 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:31:35,992 [ERROR] CANCEL read_loop
+2025-06-22 13:31:36,730 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:36,992 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102774.90
+2025-06-22 13:31:37,306 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:37,308 [INFO] STOPLOSS (SHORT) CHECK: Price > 103792.452752959 (Entry: 102764.8047059)
+2025-06-22 13:31:37,309 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:37,309 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:37,310 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 36, 730375), '102774.90')
+2025-06-22 13:31:37,312 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:37,312 [INFO] [TradingStrategy] Data buffer length: 13
+2025-06-22 13:31:37,317 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:31.228720 2025-06-22 13:31:31.228720  102765.1
+2025-06-22 13:31:32.650278 2025-06-22 13:31:32.650278  102770.0
+2025-06-22 13:31:33.899095 2025-06-22 13:31:33.899095  102770.0
+2025-06-22 13:31:35.145625 2025-06-22 13:31:35.145625  102770.0
+2025-06-22 13:31:36.730375 2025-06-22 13:31:36.730375  102774.9
+2025-06-22 13:31:37,322 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (13, 5)
+2025-06-22 13:31:37,330 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+8  2025-06-22 13:31:31  102765.1  102765.1  102765.1  102765.1
+9  2025-06-22 13:31:32  102770.0  102770.0  102770.0  102770.0
+10 2025-06-22 13:31:33  102770.0  102770.0  102770.0  102770.0
+11 2025-06-22 13:31:35  102770.0  102770.0  102770.0  102770.0
+12 2025-06-22 13:31:36  102774.9  102774.9  102774.9  102774.9
+2025-06-22 13:31:37,379 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+8                          0.0                0.000000e+00                        0.0                        0.0  ...    0.0    0.000000                3976.976959             -643487.658856
+9                         98.0                9.800000e+03                        0.0                        0.0  ...  100.0   33.333333                1821.906834             -215507.012476
+10                        98.0                1.455192e-07                        0.0                        0.0  ...  100.0   66.666667                 695.906497             -112600.033724
+11                        98.0               -1.455192e-07                        0.0                        0.0  ...  100.0  100.000000                 265.812629              -43009.386729
+12                       196.0                9.800000e+03                        0.0                        0.0  ...  100.0  100.000000                 404.368044               13855.541498
+
+[5 rows x 10 columns]
+2025-06-22 13:31:37,383 [INFO] [Predict] Prediction: Sell, Price: 102774.9, Time: 2025-06-22 13:31:37
+2025-06-22 13:31:37,383 [INFO] [Strategy] Model output: ('Sell', 102774.9, '2025-06-22 13:31:37')
+2025-06-22 13:31:37,383 [INFO] [Strategy] Initial model signal: SELL at price: 102774.9
+2025-06-22 13:31:37,522 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:37,522 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:31:37,681 [ERROR] CANCEL read_loop
+2025-06-22 13:31:38,038 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:38,189 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102774.90
+2025-06-22 13:31:38,503 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:38,506 [INFO] STOPLOSS (SHORT) CHECK: Price > 103792.452752959 (Entry: 102764.8047059)
+2025-06-22 13:31:38,508 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:38,509 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:38,510 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 38, 38516), '102774.90')
+2025-06-22 13:31:38,514 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:38,514 [INFO] [TradingStrategy] Data buffer length: 14
+2025-06-22 13:31:38,524 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:32.650278 2025-06-22 13:31:32.650278  102770.0
+2025-06-22 13:31:33.899095 2025-06-22 13:31:33.899095  102770.0
+2025-06-22 13:31:35.145625 2025-06-22 13:31:35.145625  102770.0
+2025-06-22 13:31:36.730375 2025-06-22 13:31:36.730375  102774.9
+2025-06-22 13:31:38.038516 2025-06-22 13:31:38.038516  102774.9
+2025-06-22 13:31:38,530 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (14, 5)
+2025-06-22 13:31:38,561 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+9  2025-06-22 13:31:32  102770.0  102770.0  102770.0  102770.0
+10 2025-06-22 13:31:33  102770.0  102770.0  102770.0  102770.0
+11 2025-06-22 13:31:35  102770.0  102770.0  102770.0  102770.0
+12 2025-06-22 13:31:36  102774.9  102774.9  102774.9  102774.9
+13 2025-06-22 13:31:38  102774.9  102774.9  102774.9  102774.9
+2025-06-22 13:31:38,653 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+9                         98.0                9.800000e+03                        0.0                        0.0  ...  100.0   33.333333                1821.906834             -215507.012476
+10                        98.0                1.455192e-07                        0.0                        0.0  ...  100.0   66.666667                 695.906497             -112600.033724
+11                        98.0               -1.455192e-07                        0.0                        0.0  ...  100.0  100.000000                 265.812629              -43009.386729
+12                       196.0                9.800000e+03                        0.0                        0.0  ...  100.0  100.000000                 404.368044               13855.541498
+13                       196.0                1.455192e-07                        0.0                        0.0  ...  100.0  100.000000                 154.454849              -24991.319531
+
+[5 rows x 10 columns]
+2025-06-22 13:31:38,659 [INFO] [Predict] Prediction: Sell, Price: 102774.9, Time: 2025-06-22 13:31:38
+2025-06-22 13:31:38,659 [INFO] [Strategy] Model output: ('Sell', 102774.9, '2025-06-22 13:31:38')
+2025-06-22 13:31:38,659 [INFO] [Strategy] Initial model signal: SELL at price: 102774.9
+2025-06-22 13:31:38,814 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:38,814 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:31:39,502 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:39,652 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102774.90
+2025-06-22 13:31:39,973 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:39,974 [INFO] STOPLOSS (SHORT) CHECK: Price > 103792.452752959 (Entry: 102764.8047059)
+2025-06-22 13:31:39,975 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:39,975 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:39,975 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 39, 502175), '102774.90')
+2025-06-22 13:31:39,976 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:39,976 [INFO] [TradingStrategy] Data buffer length: 15
+2025-06-22 13:31:39,981 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:33.899095 2025-06-22 13:31:33.899095  102770.0
+2025-06-22 13:31:35.145625 2025-06-22 13:31:35.145625  102770.0
+2025-06-22 13:31:36.730375 2025-06-22 13:31:36.730375  102774.9
+2025-06-22 13:31:38.038516 2025-06-22 13:31:38.038516  102774.9
+2025-06-22 13:31:39.502175 2025-06-22 13:31:39.502175  102774.9
+2025-06-22 13:31:39,987 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (15, 5)
+2025-06-22 13:31:39,993 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+10 2025-06-22 13:31:33  102770.0  102770.0  102770.0  102770.0
+11 2025-06-22 13:31:35  102770.0  102770.0  102770.0  102770.0
+12 2025-06-22 13:31:36  102774.9  102774.9  102774.9  102774.9
+13 2025-06-22 13:31:38  102774.9  102774.9  102774.9  102774.9
+14 2025-06-22 13:31:39  102774.9  102774.9  102774.9  102774.9
+2025-06-22 13:31:40,040 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+10                        98.0                1.455192e-07                        0.0                        0.0  ...  100.0   66.666667                 695.906497             -112600.033724
+11                        98.0               -1.455192e-07                        0.0                        0.0  ...  100.0  100.000000                 265.812629              -43009.386729
+12                       196.0                9.800000e+03                        0.0                        0.0  ...  100.0  100.000000                 404.368044               13855.541498
+13                       196.0                1.455192e-07                        0.0                        0.0  ...  100.0  100.000000                 154.454849              -24991.319531
+14                        98.0               -9.800000e+03                        0.0                        0.0  ...  100.0  100.000000                  58.996503               -9545.834638
+
+[5 rows x 10 columns]
+2025-06-22 13:31:40,043 [INFO] [Predict] Prediction: Buy, Price: 102774.9, Time: 2025-06-22 13:31:40
+2025-06-22 13:31:40,043 [INFO] [Strategy] Model output: ('Buy', 102774.9, '2025-06-22 13:31:40')
+2025-06-22 13:31:40,043 [INFO] [Strategy] Initial model signal: BUY at price: 102774.9
+2025-06-22 13:31:40,207 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:40,208 [INFO] [Risk Check] CLOSE_SHORT approval: True, Quantity: 0.085
+2025-06-22 13:31:40,209 [INFO] [Order Placement] Submitting BUY order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570284681, 'recvWindow': 60000}
+2025-06-22 13:31:40,384 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102781.6, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:31:40,399 [INFO] Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:31:40,407 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102781.6, last_filled_qty=0.001, canceled_reason=None]
+2025-06-22 13:31:40,407 [INFO] [ExecManager] BUY order executed successfully at 102774.9.
+2025-06-22 13:31:40,409 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102781.6, last_filled_qty=0.001, canceled_reason=None]
+2025-06-22 13:31:40,413 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102781.6, last_filled_qty=0.001, canceled_reason=None]
+2025-06-22 13:31:40,414 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102781.6, last_filled_qty=0.055, canceled_reason=None]
+2025-06-22 13:31:40,414 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102781.6, last_filled_qty=0.001, canceled_reason=None]
+2025-06-22 13:31:40,415 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102781.6, last_filled_qty=0.001, canceled_reason=None]
+2025-06-22 13:31:40,415 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102781.6, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:31:40,416 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102781.6, last_filled_qty=0.012, canceled_reason=None]
+2025-06-22 13:31:40,493 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102781.6, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:31:40,505 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102782.0, last_filled_qty=0.004, canceled_reason=None]
+2025-06-22 13:31:40,506 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102782.2, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:31:40,507 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663312, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102782.6, last_filled_qty=0.001, canceled_reason=None]
+2025-06-22 13:31:41,570 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:31:41,578 [INFO]       Wallet Balance: $11,646.25
+2025-06-22 13:31:41,580 [INFO]     Unrealized P&L: $0.00
+2025-06-22 13:31:41,580 [INFO]       Realized P&L: $-8.54
+2025-06-22 13:31:41,580 [INFO]       Sharpe Ratio: -0.3645
+2025-06-22 13:31:41,581 [INFO]    Maximum Drawdown: -0.07%
+2025-06-22 13:31:41,582 [INFO] --------------------------
+2025-06-22 13:31:41,777 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:41,921 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102782.60
+2025-06-22 13:31:42,253 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:42,254 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:42,254 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:42,254 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 41, 777536), '102782.60')
+2025-06-22 13:31:42,255 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:42,255 [INFO] [TradingStrategy] Data buffer length: 16
+2025-06-22 13:31:42,259 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:35.145625 2025-06-22 13:31:35.145625  102770.0
+2025-06-22 13:31:36.730375 2025-06-22 13:31:36.730375  102774.9
+2025-06-22 13:31:38.038516 2025-06-22 13:31:38.038516  102774.9
+2025-06-22 13:31:39.502175 2025-06-22 13:31:39.502175  102774.9
+2025-06-22 13:31:41.777536 2025-06-22 13:31:41.777536  102782.6
+2025-06-22 13:31:42,263 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (16, 5)
+2025-06-22 13:31:42,270 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+11 2025-06-22 13:31:35  102770.0  102770.0  102770.0  102770.0
+12 2025-06-22 13:31:36  102774.9  102774.9  102774.9  102774.9
+13 2025-06-22 13:31:38  102774.9  102774.9  102774.9  102774.9
+14 2025-06-22 13:31:39  102774.9  102774.9  102774.9  102774.9
+15 2025-06-22 13:31:41  102782.6  102782.6  102782.6  102782.6
+2025-06-22 13:31:42,315 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K     %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+11                        98.0               -1.455192e-07                        0.0                        0.0  ...  100.0  100.0                 265.812629              -43009.386729
+12                       196.0                9.800000e+03                        0.0                        0.0  ...  100.0  100.0                 404.368044               13855.541498
+13                       196.0                1.455192e-07                        0.0                        0.0  ...  100.0  100.0                 154.454849              -24991.319531
+14                        98.0               -9.800000e+03                        0.0                        0.0  ...  100.0  100.0                  58.996503               -9545.834638
+15                       252.0                1.540000e+04                        0.0                        0.0  ...  100.0  100.0                 498.420830               43942.432753
+
+[5 rows x 10 columns]
+2025-06-22 13:31:42,320 [INFO] [Predict] Prediction: Sell, Price: 102782.6, Time: 2025-06-22 13:31:42
+2025-06-22 13:31:42,320 [INFO] [Strategy] Model output: ('Sell', 102782.6, '2025-06-22 13:31:42')
+2025-06-22 13:31:42,320 [INFO] [Strategy] Initial model signal: SELL at price: 102782.6
+2025-06-22 13:31:42,464 [INFO] [Position Check] Current position size: 0.0
+2025-06-22 13:31:42,465 [INFO] [Risk Check] OPEN_SHORT approval: True, Amount: 8734.69, Quantity: 0.085
+2025-06-22 13:31:42,465 [INFO] [Order Placement] Submitting SELL order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570286951, 'recvWindow': 60000}
+2025-06-22 13:31:42,628 [INFO] Order events [contract=BTCUSDT, order_id=4584663691, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:31:42,631 [INFO] [ExecManager] SELL order executed successfully at 102782.6.
+2025-06-22 13:31:42,633 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663691, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102784.6, last_filled_qty=0.048, canceled_reason=None]
+2025-06-22 13:31:42,635 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663691, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102784.6, last_filled_qty=0.037, canceled_reason=None]
+2025-06-22 13:31:42,990 [ERROR] CANCEL read_loop
+2025-06-22 13:31:43,336 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:43,527 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102782.60
+2025-06-22 13:31:43,956 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:43,957 [INFO] STOPLOSS (SHORT) CHECK: Price > 103812.44600000001 (Entry: 102784.6)
+2025-06-22 13:31:43,958 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:43,958 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:43,958 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 43, 336894), '102782.60')
+2025-06-22 13:31:43,959 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:43,959 [INFO] [TradingStrategy] Data buffer length: 17
+2025-06-22 13:31:43,964 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:36.730375 2025-06-22 13:31:36.730375  102774.9
+2025-06-22 13:31:38.038516 2025-06-22 13:31:38.038516  102774.9
+2025-06-22 13:31:39.502175 2025-06-22 13:31:39.502175  102774.9
+2025-06-22 13:31:41.777536 2025-06-22 13:31:41.777536  102782.6
+2025-06-22 13:31:43.336894 2025-06-22 13:31:43.336894  102782.6
+2025-06-22 13:31:43,968 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (17, 5)
+2025-06-22 13:31:43,974 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+12 2025-06-22 13:31:36  102774.9  102774.9  102774.9  102774.9
+13 2025-06-22 13:31:38  102774.9  102774.9  102774.9  102774.9
+14 2025-06-22 13:31:39  102774.9  102774.9  102774.9  102774.9
+15 2025-06-22 13:31:41  102782.6  102782.6  102782.6  102782.6
+16 2025-06-22 13:31:43  102782.6  102782.6  102782.6  102782.6
+2025-06-22 13:31:44,037 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K     %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+12                       196.0                9.800000e+03                        0.0                        0.0  ...  100.0  100.0                 404.368044               13855.541498
+13                       196.0                1.455192e-07                        0.0                        0.0  ...  100.0  100.0                 154.454849              -24991.319531
+14                        98.0               -9.800000e+03                        0.0                        0.0  ...  100.0  100.0                  58.996503               -9545.834638
+15                       252.0                1.540000e+04                        0.0                        0.0  ...  100.0  100.0                 498.420830               43942.432753
+16                       252.0                1.455192e-07                        0.0                        0.0  ...  100.0  100.0                 190.379816              -30804.101370
+
+[5 rows x 10 columns]
+2025-06-22 13:31:44,041 [INFO] [Predict] Prediction: Sell, Price: 102782.6, Time: 2025-06-22 13:31:44
+2025-06-22 13:31:44,041 [INFO] [Strategy] Model output: ('Sell', 102782.6, '2025-06-22 13:31:44')
+2025-06-22 13:31:44,041 [INFO] [Strategy] Initial model signal: SELL at price: 102782.6
+2025-06-22 13:31:44,200 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:44,200 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:31:45,706 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:45,856 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102784.90
+2025-06-22 13:31:46,163 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:46,165 [INFO] STOPLOSS (SHORT) CHECK: Price > 103812.44600000001 (Entry: 102784.6)
+2025-06-22 13:31:46,165 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:46,165 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:46,165 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 45, 706281), '102784.90')
+2025-06-22 13:31:46,167 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:46,167 [INFO] [TradingStrategy] Data buffer length: 18
+2025-06-22 13:31:46,173 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:38.038516 2025-06-22 13:31:38.038516  102774.9
+2025-06-22 13:31:39.502175 2025-06-22 13:31:39.502175  102774.9
+2025-06-22 13:31:41.777536 2025-06-22 13:31:41.777536  102782.6
+2025-06-22 13:31:43.336894 2025-06-22 13:31:43.336894  102782.6
+2025-06-22 13:31:45.706281 2025-06-22 13:31:45.706281  102784.9
+2025-06-22 13:31:46,177 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (18, 5)
+2025-06-22 13:31:46,185 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+13 2025-06-22 13:31:38  102774.9  102774.9  102774.9  102774.9
+14 2025-06-22 13:31:39  102774.9  102774.9  102774.9  102774.9
+15 2025-06-22 13:31:41  102782.6  102782.6  102782.6  102782.6
+16 2025-06-22 13:31:43  102782.6  102782.6  102782.6  102782.6
+17 2025-06-22 13:31:45  102784.9  102784.9  102784.9  102784.9
+2025-06-22 13:31:46,229 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K     %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+13                       196.0                1.455192e-07                        0.0                        0.0  ...  100.0  100.0                 154.454849              -24991.319531
+14                        98.0               -9.800000e+03                        0.0                        0.0  ...  100.0  100.0                  58.996503               -9545.834638
+15                       252.0                1.540000e+04                        0.0                        0.0  ...  100.0  100.0                 498.420830               43942.432753
+16                       252.0                1.455192e-07                        0.0                        0.0  ...  100.0  100.0                 190.379816              -30804.101370
+17                       200.0               -5.200000e+03                        0.0                        0.0  ...  100.0  100.0                 214.866437                2448.662011
+
+[5 rows x 10 columns]
+2025-06-22 13:31:46,233 [INFO] [Predict] Prediction: Buy, Price: 102784.9, Time: 2025-06-22 13:31:46
+2025-06-22 13:31:46,233 [INFO] [Strategy] Model output: ('Buy', 102784.9, '2025-06-22 13:31:46')
+2025-06-22 13:31:46,233 [INFO] [Strategy] Initial model signal: BUY at price: 102784.9
+2025-06-22 13:31:46,380 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:46,383 [INFO] [Risk Check] CLOSE_SHORT approval: True, Quantity: 0.085
+2025-06-22 13:31:46,383 [INFO] [Order Placement] Submitting BUY order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570290886, 'recvWindow': 60000}
+2025-06-22 13:31:46,530 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663950, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102784.9, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:31:46,532 [INFO] Order events [contract=BTCUSDT, order_id=4584663950, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:31:46,539 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663950, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102785.2, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:31:46,540 [INFO] [ExecManager] BUY order executed successfully at 102784.9.
+2025-06-22 13:31:46,543 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663950, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102785.7, last_filled_qty=0.03, canceled_reason=None]
+2025-06-22 13:31:46,545 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584663950, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102785.9, last_filled_qty=0.051, canceled_reason=None]
+2025-06-22 13:31:46,893 [ERROR] CANCEL read_loop
+2025-06-22 13:31:47,254 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:47,407 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102784.90
+2025-06-22 13:31:47,729 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:47,730 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:47,730 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:47,730 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 47, 254970), '102784.90')
+2025-06-22 13:31:47,732 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:47,732 [INFO] [TradingStrategy] Data buffer length: 19
+2025-06-22 13:31:47,737 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:39.502175 2025-06-22 13:31:39.502175  102774.9
+2025-06-22 13:31:41.777536 2025-06-22 13:31:41.777536  102782.6
+2025-06-22 13:31:43.336894 2025-06-22 13:31:43.336894  102782.6
+2025-06-22 13:31:45.706281 2025-06-22 13:31:45.706281  102784.9
+2025-06-22 13:31:47.254970 2025-06-22 13:31:47.254970  102784.9
+2025-06-22 13:31:47,743 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (19, 5)
+2025-06-22 13:31:47,773 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+14 2025-06-22 13:31:39  102774.9  102774.9  102774.9  102774.9
+15 2025-06-22 13:31:41  102782.6  102782.6  102782.6  102782.6
+16 2025-06-22 13:31:43  102782.6  102782.6  102782.6  102782.6
+17 2025-06-22 13:31:45  102784.9  102784.9  102784.9  102784.9
+18 2025-06-22 13:31:47  102784.9  102784.9  102784.9  102784.9
+2025-06-22 13:31:47,842 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K     %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+14                        98.0               -9.800000e+03                        0.0                        0.0  ...  100.0  100.0                  58.996503               -9545.834638
+15                       252.0                1.540000e+04                        0.0                        0.0  ...  100.0  100.0                 498.420830               43942.432753
+16                       252.0                1.455192e-07                        0.0                        0.0  ...  100.0  100.0                 190.379816              -30804.101370
+17                       200.0               -5.200000e+03                        0.0                        0.0  ...  100.0  100.0                 214.866437                2448.662011
+18                       200.0               -2.910383e-07                        0.0                        0.0  ...  100.0  100.0                  82.071676              -13279.476080
+
+[5 rows x 10 columns]
+2025-06-22 13:31:47,865 [INFO] [Predict] Prediction: Sell, Price: 102784.9, Time: 2025-06-22 13:31:47
+2025-06-22 13:31:47,866 [INFO] [Strategy] Model output: ('Sell', 102784.9, '2025-06-22 13:31:47')
+2025-06-22 13:31:47,867 [INFO] [Strategy] Initial model signal: SELL at price: 102784.9
+2025-06-22 13:31:48,037 [INFO] [Position Check] Current position size: 0.0
+2025-06-22 13:31:48,037 [INFO] [Risk Check] OPEN_SHORT approval: True, Amount: 8729.42, Quantity: 0.085
+2025-06-22 13:31:48,037 [INFO] [Order Placement] Submitting SELL order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570292436, 'recvWindow': 60000}
+2025-06-22 13:31:48,217 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584664039, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102782.1, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:31:48,221 [INFO] Order events [contract=BTCUSDT, order_id=4584664039, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:31:48,225 [INFO] [ExecManager] SELL order executed successfully at 102784.9.
+2025-06-22 13:31:51,589 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:31:51,596 [INFO]       Wallet Balance: $11,635.74
+2025-06-22 13:31:51,596 [INFO]     Unrealized P&L: $-0.44
+2025-06-22 13:31:51,596 [INFO]       Realized P&L: $-19.05
+2025-06-22 13:31:51,597 [INFO]       Sharpe Ratio: -0.5089
+2025-06-22 13:31:51,597 [INFO]    Maximum Drawdown: -0.16%
+2025-06-22 13:31:51,597 [INFO] --------------------------
+2025-06-22 13:31:51,918 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:52,063 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102784.90
+2025-06-22 13:31:52,366 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:52,367 [INFO] STOPLOSS (SHORT) CHECK: Price > 103809.921 (Entry: 102782.1)
+2025-06-22 13:31:52,368 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:52,368 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:52,368 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 51, 918131), '102784.90')
+2025-06-22 13:31:52,370 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:52,370 [INFO] [TradingStrategy] Data buffer length: 20
+2025-06-22 13:31:52,378 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:41.777536 2025-06-22 13:31:41.777536  102782.6
+2025-06-22 13:31:43.336894 2025-06-22 13:31:43.336894  102782.6
+2025-06-22 13:31:45.706281 2025-06-22 13:31:45.706281  102784.9
+2025-06-22 13:31:47.254970 2025-06-22 13:31:47.254970  102784.9
+2025-06-22 13:31:51.918131 2025-06-22 13:31:51.918131  102784.9
+2025-06-22 13:31:52,382 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (20, 5)
+2025-06-22 13:31:52,390 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+15 2025-06-22 13:31:41  102782.6  102782.6  102782.6  102782.6
+16 2025-06-22 13:31:43  102782.6  102782.6  102782.6  102782.6
+17 2025-06-22 13:31:45  102784.9  102784.9  102784.9  102784.9
+18 2025-06-22 13:31:47  102784.9  102784.9  102784.9  102784.9
+19 2025-06-22 13:31:51  102784.9  102784.9  102784.9  102784.9
+2025-06-22 13:31:52,433 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K     %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+15                       252.0                1.540000e+04                        0.0                        0.0  ...  100.0  100.0                 498.420830               43942.432753
+16                       252.0                1.455192e-07                        0.0                        0.0  ...  100.0  100.0                 190.379816              -30804.101370
+17                       200.0               -5.200000e+03                        0.0                        0.0  ...  100.0  100.0                 214.866437                2448.662011
+18                       200.0               -2.910383e-07                        0.0                        0.0  ...  100.0  100.0                  82.071676              -13279.476080
+19                       200.0                2.910383e-07                        0.0                        0.0  ...  100.0  100.0                  31.348591               -5072.308510
+
+[5 rows x 10 columns]
+2025-06-22 13:31:52,437 [INFO] [Predict] Prediction: Sell, Price: 102784.9, Time: 2025-06-22 13:31:52
+2025-06-22 13:31:52,438 [INFO] [Strategy] Model output: ('Sell', 102784.9, '2025-06-22 13:31:52')
+2025-06-22 13:31:52,438 [INFO] [Strategy] Initial model signal: SELL at price: 102784.9
+2025-06-22 13:31:52,608 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:52,608 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:31:56,811 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:31:56,983 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102784.90
+2025-06-22 13:31:57,379 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:31:57,380 [INFO] STOPLOSS (SHORT) CHECK: Price > 103809.921 (Entry: 102782.1)
+2025-06-22 13:31:57,381 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:31:57,381 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:31:57,381 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 31, 56, 811855), '102784.90')
+2025-06-22 13:31:57,383 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:31:57,383 [INFO] [TradingStrategy] Data buffer length: 21
+2025-06-22 13:31:57,391 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:43.336894 2025-06-22 13:31:43.336894  102782.6
+2025-06-22 13:31:45.706281 2025-06-22 13:31:45.706281  102784.9
+2025-06-22 13:31:47.254970 2025-06-22 13:31:47.254970  102784.9
+2025-06-22 13:31:51.918131 2025-06-22 13:31:51.918131  102784.9
+2025-06-22 13:31:56.811855 2025-06-22 13:31:56.811855  102784.9
+2025-06-22 13:31:57,417 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (21, 5)
+2025-06-22 13:31:57,427 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+16 2025-06-22 13:31:43  102782.6  102782.6  102782.6  102782.6
+17 2025-06-22 13:31:45  102784.9  102784.9  102784.9  102784.9
+18 2025-06-22 13:31:47  102784.9  102784.9  102784.9  102784.9
+19 2025-06-22 13:31:51  102784.9  102784.9  102784.9  102784.9
+20 2025-06-22 13:31:56  102784.9  102784.9  102784.9  102784.9
+2025-06-22 13:31:57,483 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K     %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+16                       252.0                1.455192e-07                       99.0                        0.0  ...  100.0  100.0                 190.379816              -30804.101370
+17                       200.0               -5.200000e+03                       99.0                        0.0  ...  100.0  100.0                 214.866437                2448.662011
+18                       200.0               -2.910383e-07                       99.0                        0.0  ...  100.0  100.0                  82.071676              -13279.476080
+19                       200.0                2.910383e-07                       99.0                        0.0  ...  100.0  100.0                  31.348591               -5072.308510
+20                        46.0               -1.540000e+04                       99.0                        0.0  ...  100.0  100.0                  11.974096               -1937.449449
+
+[5 rows x 10 columns]
+2025-06-22 13:31:57,487 [INFO] [Predict] Prediction: Buy, Price: 102784.9, Time: 2025-06-22 13:31:57
+2025-06-22 13:31:57,487 [INFO] [Strategy] Model output: ('Buy', 102784.9, '2025-06-22 13:31:57')
+2025-06-22 13:31:57,487 [INFO] [Strategy] Initial model signal: BUY at price: 102784.9
+2025-06-22 13:31:57,643 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:31:57,644 [INFO] [Risk Check] CLOSE_SHORT approval: True, Quantity: 0.085
+2025-06-22 13:31:57,644 [INFO] [Order Placement] Submitting BUY order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570302009, 'recvWindow': 60000}
+2025-06-22 13:31:57,780 [INFO] Order events [contract=BTCUSDT, order_id=4584664807, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:31:57,781 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584664807, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102782.3, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:31:57,785 [INFO] [ExecManager] BUY order executed successfully at 102784.9.
+2025-06-22 13:31:57,788 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584664807, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102783.0, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:31:57,790 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584664807, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102784.0, last_filled_qty=0.081, canceled_reason=None]
+2025-06-22 13:32:00,068 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:00,229 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102782.10
+2025-06-22 13:32:00,613 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:00,614 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:00,614 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:00,614 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 0, 68750), '102782.10')
+2025-06-22 13:32:00,616 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:00,616 [INFO] [TradingStrategy] Data buffer length: 22
+2025-06-22 13:32:00,620 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:45.706281 2025-06-22 13:31:45.706281  102784.9
+2025-06-22 13:31:47.254970 2025-06-22 13:31:47.254970  102784.9
+2025-06-22 13:31:51.918131 2025-06-22 13:31:51.918131  102784.9
+2025-06-22 13:31:56.811855 2025-06-22 13:31:56.811855  102784.9
+2025-06-22 13:32:00.068750 2025-06-22 13:32:00.068750  102782.1
+2025-06-22 13:32:00,625 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (22, 5)
+2025-06-22 13:32:00,634 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+17 2025-06-22 13:31:45  102784.9  102784.9  102784.9  102784.9
+18 2025-06-22 13:31:47  102784.9  102784.9  102784.9  102784.9
+19 2025-06-22 13:31:51  102784.9  102784.9  102784.9  102784.9
+20 2025-06-22 13:31:56  102784.9  102784.9  102784.9  102784.9
+21 2025-06-22 13:32:00  102782.1  102782.1  102782.1  102782.1
+2025-06-22 13:32:00,684 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+17                       200.0               -5.200000e+03                       99.0                    -1400.0  ...  100.0  100.000000                 214.866437                2448.662011
+18                       200.0               -2.910383e-07                       99.0                    -1400.0  ...  100.0  100.000000                  82.071676              -13279.476080
+19                       200.0                2.910383e-07                       99.0                    -1400.0  ...  100.0  100.000000                  31.348591               -5072.308510
+20                        46.0               -1.540000e+04                       99.0                    -1400.0  ...  100.0  100.000000                  11.974096               -1937.449449
+21                       -10.0               -5.600000e+03                       85.0                    -1400.0  ...    0.0   66.666667                -168.475819              -18044.991523
+
+[5 rows x 10 columns]
+2025-06-22 13:32:00,687 [INFO] [Predict] Prediction: Buy, Price: 102782.1, Time: 2025-06-22 13:32:00
+2025-06-22 13:32:00,687 [INFO] [Strategy] Model output: ('Buy', 102782.1, '2025-06-22 13:32:00')
+2025-06-22 13:32:00,687 [INFO] [Strategy] Initial model signal: BUY at price: 102782.1
+2025-06-22 13:32:00,839 [INFO] [Position Check] Current position size: 0.0
+2025-06-22 13:32:00,840 [INFO] [Risk Check] OPEN_LONG approval: True, Amount: 8723.82, Quantity: 0.085
+2025-06-22 13:32:00,840 [INFO] [Order Placement] Submitting BUY order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570305258, 'recvWindow': 60000}
+2025-06-22 13:32:00,987 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584665395, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102784.0, last_filled_qty=0.064, canceled_reason=None]
+2025-06-22 13:32:00,988 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584665395, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102784.7, last_filled_qty=0.009, canceled_reason=None]
+2025-06-22 13:32:00,989 [INFO] Order events [contract=BTCUSDT, order_id=4584665395, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:00,991 [INFO] [ExecManager] BUY order executed successfully at 102782.1.
+2025-06-22 13:32:00,994 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584665395, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102786.6, last_filled_qty=0.012, canceled_reason=None]
+2025-06-22 13:32:01,601 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:32:01,603 [INFO]       Wallet Balance: $11,628.52
+2025-06-22 13:32:01,603 [INFO]     Unrealized P&L: $-1.31
+2025-06-22 13:32:01,603 [INFO]       Realized P&L: $-26.28
+2025-06-22 13:32:01,603 [INFO]       Sharpe Ratio: -0.5692
+2025-06-22 13:32:01,603 [INFO]    Maximum Drawdown: -0.23%
+2025-06-22 13:32:01,604 [INFO] --------------------------
+2025-06-22 13:32:02,049 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:02,205 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102782.10
+2025-06-22 13:32:02,552 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:02,554 [INFO] STOPLOSS (LONG) CHECK: Price < 101756.59676473499 (Entry: 102784.4411765)
+2025-06-22 13:32:02,555 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:02,556 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:02,556 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 2, 49894), '102782.10')
+2025-06-22 13:32:02,561 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:02,561 [INFO] [TradingStrategy] Data buffer length: 23
+2025-06-22 13:32:02,566 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:47.254970 2025-06-22 13:31:47.254970  102784.9
+2025-06-22 13:31:51.918131 2025-06-22 13:31:51.918131  102784.9
+2025-06-22 13:31:56.811855 2025-06-22 13:31:56.811855  102784.9
+2025-06-22 13:32:00.068750 2025-06-22 13:32:00.068750  102782.1
+2025-06-22 13:32:02.049894 2025-06-22 13:32:02.049894  102782.1
+2025-06-22 13:32:02,572 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (23, 5)
+2025-06-22 13:32:02,582 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+18 2025-06-22 13:31:47  102784.9  102784.9  102784.9  102784.9
+19 2025-06-22 13:31:51  102784.9  102784.9  102784.9  102784.9
+20 2025-06-22 13:31:56  102784.9  102784.9  102784.9  102784.9
+21 2025-06-22 13:32:00  102782.1  102782.1  102782.1  102782.1
+22 2025-06-22 13:32:02  102782.1  102782.1  102782.1  102782.1
+2025-06-22 13:32:02,633 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+18                       200.0               -2.910383e-07                       99.0              -1.400000e+03  ...  100.0  100.000000                  82.071676              -13279.476080
+19                       200.0                2.910383e-07                       99.0              -1.400000e+03  ...  100.0  100.000000                  31.348591               -5072.308510
+20                        46.0               -1.540000e+04                       99.0              -1.400000e+03  ...  100.0  100.000000                  11.974096               -1937.449449
+21                       -10.0               -5.600000e+03                       85.0              -1.400000e+03  ...    0.0   66.666667                -168.475819              -18044.991523
+22                       -56.0               -4.600000e+03                       85.0              -2.910383e-07  ...    0.0   33.333333                 -64.352037               10412.378250
+
+[5 rows x 10 columns]
+2025-06-22 13:32:02,636 [INFO] [Predict] Prediction: Buy, Price: 102782.1, Time: 2025-06-22 13:32:02
+2025-06-22 13:32:02,637 [INFO] [Strategy] Model output: ('Buy', 102782.1, '2025-06-22 13:32:02')
+2025-06-22 13:32:02,637 [INFO] [Strategy] Initial model signal: BUY at price: 102782.1
+2025-06-22 13:32:02,787 [INFO] [Position Check] Current position size: 0.085
+2025-06-22 13:32:02,787 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:32:05,702 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:05,850 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102782.10
+2025-06-22 13:32:06,234 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:06,235 [INFO] STOPLOSS (LONG) CHECK: Price < 101756.59676473499 (Entry: 102784.4411765)
+2025-06-22 13:32:06,235 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:06,235 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:06,236 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 5, 702741), '102782.10')
+2025-06-22 13:32:06,237 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:06,237 [INFO] [TradingStrategy] Data buffer length: 24
+2025-06-22 13:32:06,338 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:51.918131 2025-06-22 13:31:51.918131  102784.9
+2025-06-22 13:31:56.811855 2025-06-22 13:31:56.811855  102784.9
+2025-06-22 13:32:00.068750 2025-06-22 13:32:00.068750  102782.1
+2025-06-22 13:32:02.049894 2025-06-22 13:32:02.049894  102782.1
+2025-06-22 13:32:05.702741 2025-06-22 13:32:05.702741  102782.1
+2025-06-22 13:32:06,369 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (24, 5)
+2025-06-22 13:32:06,381 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+19 2025-06-22 13:31:51  102784.9  102784.9  102784.9  102784.9
+20 2025-06-22 13:31:56  102784.9  102784.9  102784.9  102784.9
+21 2025-06-22 13:32:00  102782.1  102782.1  102782.1  102782.1
+22 2025-06-22 13:32:02  102782.1  102782.1  102782.1  102782.1
+23 2025-06-22 13:32:05  102782.1  102782.1  102782.1  102782.1
+2025-06-22 13:32:06,438 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+19                       200.0                2.910383e-07                       99.0              -1.400000e+03  ...  100.0  100.000000                  31.348591               -5072.308510
+20                        46.0               -1.540000e+04                       99.0              -1.400000e+03  ...  100.0  100.000000                  11.974096               -1937.449449
+21                       -10.0               -5.600000e+03                       85.0              -1.400000e+03  ...    0.0   66.666667                -168.475819              -18044.991523
+22                       -56.0               -4.600000e+03                       85.0              -2.910383e-07  ...    0.0   33.333333                 -64.352037               10412.378250
+23                       -56.0                0.000000e+00                       85.0               1.455192e-07  ...    0.0    0.000000                 -24.580291                3977.174588
+
+[5 rows x 10 columns]
+2025-06-22 13:32:06,443 [INFO] [Predict] Prediction: Hold, Price: 102782.1, Time: 2025-06-22 13:32:06
+2025-06-22 13:32:06,444 [INFO] [Strategy] Model output: ('Hold', 102782.1, '2025-06-22 13:32:06')
+2025-06-22 13:32:06,444 [INFO] [Strategy] Initial model signal: HOLD at price: 102782.1
+2025-06-22 13:32:06,445 [INFO] [Strategy Override] HOLD overridden to SELL due to negative momentum.
+2025-06-22 13:32:06,623 [INFO] [Position Check] Current position size: 0.085
+2025-06-22 13:32:06,624 [INFO] [Risk Check] CLOSE_LONG approval: True, Position quantity: 0.085
+2025-06-22 13:32:06,624 [INFO] [Order Placement] Submitting SELL order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570310882, 'recvWindow': 60000}
+2025-06-22 13:32:06,779 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584665897, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102781.6, last_filled_qty=0.041, canceled_reason=None]
+2025-06-22 13:32:06,780 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584665897, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102781.5, last_filled_qty=0.006, canceled_reason=None]
+2025-06-22 13:32:06,780 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584665897, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102781.5, last_filled_qty=0.038, canceled_reason=None]
+2025-06-22 13:32:06,784 [INFO] Order events [contract=BTCUSDT, order_id=4584665897, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:06,789 [INFO] [ExecManager] SELL order executed successfully at 102782.1.
+2025-06-22 13:32:09,974 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:10,136 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102782.10
+2025-06-22 13:32:10,492 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:10,493 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:10,493 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:10,493 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 9, 974336), '102782.10')
+2025-06-22 13:32:10,495 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:10,495 [INFO] [TradingStrategy] Data buffer length: 25
+2025-06-22 13:32:10,504 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:31:56.811855 2025-06-22 13:31:56.811855  102784.9
+2025-06-22 13:32:00.068750 2025-06-22 13:32:00.068750  102782.1
+2025-06-22 13:32:02.049894 2025-06-22 13:32:02.049894  102782.1
+2025-06-22 13:32:05.702741 2025-06-22 13:32:05.702741  102782.1
+2025-06-22 13:32:09.974336 2025-06-22 13:32:09.974336  102782.1
+2025-06-22 13:32:10,513 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (25, 5)
+2025-06-22 13:32:10,532 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+20 2025-06-22 13:31:56  102784.9  102784.9  102784.9  102784.9
+21 2025-06-22 13:32:00  102782.1  102782.1  102782.1  102782.1
+22 2025-06-22 13:32:02  102782.1  102782.1  102782.1  102782.1
+23 2025-06-22 13:32:05  102782.1  102782.1  102782.1  102782.1
+24 2025-06-22 13:32:09  102782.1  102782.1  102782.1  102782.1
+2025-06-22 13:32:10,651 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+20                        46.0                    -15400.0                       99.0              -1.400000e+03  ...  100.0  100.000000                  11.974096               -1937.449449
+21                       -10.0                     -5600.0                       85.0              -1.400000e+03  ...    0.0   66.666667                -168.475819              -18044.991523
+22                       -56.0                     -4600.0                       85.0              -2.910383e-07  ...    0.0   33.333333                 -64.352037               10412.378250
+23                       -56.0                         0.0                       85.0               1.455192e-07  ...    0.0    0.000000                 -24.580291                3977.174588
+24                       -56.0                         0.0                       85.0               0.000000e+00  ...    0.0    0.000000                  -9.388836                1519.145513
+
+[5 rows x 10 columns]
+2025-06-22 13:32:10,656 [INFO] [Predict] Prediction: Hold, Price: 102782.1, Time: 2025-06-22 13:32:10
+2025-06-22 13:32:10,656 [INFO] [Strategy] Model output: ('Hold', 102782.1, '2025-06-22 13:32:10')
+2025-06-22 13:32:10,656 [INFO] [Strategy] Initial model signal: HOLD at price: 102782.1
+2025-06-22 13:32:10,658 [INFO] [Strategy Override] HOLD overridden to SELL due to negative momentum.
+2025-06-22 13:32:10,809 [INFO] [Position Check] Current position size: 0.0
+2025-06-22 13:32:10,810 [INFO] [Risk Check] OPEN_SHORT approval: True, Amount: 8718.62, Quantity: 0.085
+2025-06-22 13:32:10,810 [INFO] [Order Placement] Submitting SELL order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570315169, 'recvWindow': 60000}
+2025-06-22 13:32:10,954 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584666391, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102781.5, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:10,957 [INFO] Order events [contract=BTCUSDT, order_id=4584666391, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:10,961 [INFO] [ExecManager] SELL order executed successfully at 102782.1.
+2025-06-22 13:32:11,607 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:32:11,617 [INFO]       Wallet Balance: $11,621.33
+2025-06-22 13:32:11,617 [INFO]     Unrealized P&L: $2.14
+2025-06-22 13:32:11,617 [INFO]       Realized P&L: $-33.47
+2025-06-22 13:32:11,618 [INFO]       Sharpe Ratio: -0.6034
+2025-06-22 13:32:11,618 [INFO]    Maximum Drawdown: -0.29%
+2025-06-22 13:32:11,619 [INFO] --------------------------
+2025-06-22 13:32:13,081 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:13,343 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102782.10
+2025-06-22 13:32:13,687 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:13,689 [INFO] STOPLOSS (SHORT) CHECK: Price > 103809.315 (Entry: 102781.5)
+2025-06-22 13:32:13,689 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:13,690 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:13,690 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 13, 81466), '102782.10')
+2025-06-22 13:32:13,691 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:13,691 [INFO] [TradingStrategy] Data buffer length: 26
+2025-06-22 13:32:13,697 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:00.068750 2025-06-22 13:32:00.068750  102782.1
+2025-06-22 13:32:02.049894 2025-06-22 13:32:02.049894  102782.1
+2025-06-22 13:32:05.702741 2025-06-22 13:32:05.702741  102782.1
+2025-06-22 13:32:09.974336 2025-06-22 13:32:09.974336  102782.1
+2025-06-22 13:32:13.081466 2025-06-22 13:32:13.081466  102782.1
+2025-06-22 13:32:13,701 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (26, 5)
+2025-06-22 13:32:13,708 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+21 2025-06-22 13:32:00  102782.1  102782.1  102782.1  102782.1
+22 2025-06-22 13:32:02  102782.1  102782.1  102782.1  102782.1
+23 2025-06-22 13:32:05  102782.1  102782.1  102782.1  102782.1
+24 2025-06-22 13:32:09  102782.1  102782.1  102782.1  102782.1
+25 2025-06-22 13:32:13  102782.1  102782.1  102782.1  102782.1
+2025-06-22 13:32:13,787 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...   %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+21                       -10.0                     -5600.0                       85.0              -1.400000e+03  ...  0.0  66.666667                -168.475819              -18044.991523
+22                       -56.0                     -4600.0                       85.0              -2.910383e-07  ...  0.0  33.333333                 -64.352037               10412.378250
+23                       -56.0                         0.0                       85.0               1.455192e-07  ...  0.0   0.000000                 -24.580291                3977.174588
+24                       -56.0                         0.0                       85.0               0.000000e+00  ...  0.0   0.000000                  -9.388836                1519.145513
+25                       -56.0                         0.0                       85.0              -1.455192e-07  ...  0.0   0.000000                  -3.586216                 580.261952
+
+[5 rows x 10 columns]
+2025-06-22 13:32:13,792 [INFO] [Predict] Prediction: Hold, Price: 102782.1, Time: 2025-06-22 13:32:13
+2025-06-22 13:32:13,792 [INFO] [Strategy] Model output: ('Hold', 102782.1, '2025-06-22 13:32:13')
+2025-06-22 13:32:13,792 [INFO] [Strategy] Initial model signal: HOLD at price: 102782.1
+2025-06-22 13:32:13,793 [INFO] [Strategy Override] HOLD overridden to SELL due to negative momentum.
+2025-06-22 13:32:14,060 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:14,060 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:32:15,523 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:15,730 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102782.10
+2025-06-22 13:32:16,156 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:16,157 [INFO] STOPLOSS (SHORT) CHECK: Price > 103809.315 (Entry: 102781.5)
+2025-06-22 13:32:16,157 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:16,158 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:16,158 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 15, 523006), '102782.10')
+2025-06-22 13:32:16,159 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:16,159 [INFO] [TradingStrategy] Data buffer length: 27
+2025-06-22 13:32:16,165 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:02.049894 2025-06-22 13:32:02.049894  102782.1
+2025-06-22 13:32:05.702741 2025-06-22 13:32:05.702741  102782.1
+2025-06-22 13:32:09.974336 2025-06-22 13:32:09.974336  102782.1
+2025-06-22 13:32:13.081466 2025-06-22 13:32:13.081466  102782.1
+2025-06-22 13:32:15.523006 2025-06-22 13:32:15.523006  102782.1
+2025-06-22 13:32:16,169 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (27, 5)
+2025-06-22 13:32:16,176 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+22 2025-06-22 13:32:02  102782.1  102782.1  102782.1  102782.1
+23 2025-06-22 13:32:05  102782.1  102782.1  102782.1  102782.1
+24 2025-06-22 13:32:09  102782.1  102782.1  102782.1  102782.1
+25 2025-06-22 13:32:13  102782.1  102782.1  102782.1  102782.1
+26 2025-06-22 13:32:15  102782.1  102782.1  102782.1  102782.1
+2025-06-22 13:32:16,219 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...   %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+22                       -56.0                     -4600.0                       85.0              -2.910383e-07  ...  0.0  33.333333                 -64.352037               10412.378250
+23                       -56.0                         0.0                       85.0               1.455192e-07  ...  0.0   0.000000                 -24.580291                3977.174588
+24                       -56.0                         0.0                       85.0               0.000000e+00  ...  0.0   0.000000                  -9.388836                1519.145513
+25                       -56.0                         0.0                       85.0              -1.455192e-07  ...  0.0   0.000000                  -3.586216                 580.261952
+26                         0.0                      5600.0                       85.0               1.455192e-07  ...  0.0   0.000000                  -1.369813                 221.640343
+
+[5 rows x 10 columns]
+2025-06-22 13:32:16,222 [INFO] [Predict] Prediction: Sell, Price: 102782.1, Time: 2025-06-22 13:32:16
+2025-06-22 13:32:16,222 [INFO] [Strategy] Model output: ('Sell', 102782.1, '2025-06-22 13:32:16')
+2025-06-22 13:32:16,222 [INFO] [Strategy] Initial model signal: SELL at price: 102782.1
+2025-06-22 13:32:16,380 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:16,380 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:32:17,729 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:17,890 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102782.10
+2025-06-22 13:32:18,467 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:18,468 [INFO] STOPLOSS (SHORT) CHECK: Price > 103809.315 (Entry: 102781.5)
+2025-06-22 13:32:18,469 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:18,469 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:18,470 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 17, 729483), '102782.10')
+2025-06-22 13:32:18,472 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:18,472 [INFO] [TradingStrategy] Data buffer length: 28
+2025-06-22 13:32:18,481 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:05.702741 2025-06-22 13:32:05.702741  102782.1
+2025-06-22 13:32:09.974336 2025-06-22 13:32:09.974336  102782.1
+2025-06-22 13:32:13.081466 2025-06-22 13:32:13.081466  102782.1
+2025-06-22 13:32:15.523006 2025-06-22 13:32:15.523006  102782.1
+2025-06-22 13:32:17.729483 2025-06-22 13:32:17.729483  102782.1
+2025-06-22 13:32:18,486 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (28, 5)
+2025-06-22 13:32:18,494 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+23 2025-06-22 13:32:05  102782.1  102782.1  102782.1  102782.1
+24 2025-06-22 13:32:09  102782.1  102782.1  102782.1  102782.1
+25 2025-06-22 13:32:13  102782.1  102782.1  102782.1  102782.1
+26 2025-06-22 13:32:15  102782.1  102782.1  102782.1  102782.1
+27 2025-06-22 13:32:17  102782.1  102782.1  102782.1  102782.1
+2025-06-22 13:32:18,556 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...   %K   %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+23                       -56.0                         0.0                       85.0               1.455192e-07  ...  0.0  0.0                 -24.580291                3977.174588
+24                       -56.0                         0.0                       85.0               0.000000e+00  ...  0.0  0.0                  -9.388836                1519.145513
+25                       -56.0                         0.0                       85.0              -1.455192e-07  ...  0.0  0.0                  -3.586216                 580.261952
+26                         0.0                      5600.0                       85.0               1.455192e-07  ...  0.0  0.0                  -1.369813                 221.640343
+27                         0.0                         0.0                       85.0              -1.455192e-07  ...  0.0  0.0                  -0.523222                  84.659078
+
+[5 rows x 10 columns]
+2025-06-22 13:32:18,561 [INFO] [Predict] Prediction: Hold, Price: 102782.1, Time: 2025-06-22 13:32:18
+2025-06-22 13:32:18,567 [INFO] [Strategy] Model output: ('Hold', 102782.1, '2025-06-22 13:32:18')
+2025-06-22 13:32:18,569 [INFO] [Strategy] Initial model signal: HOLD at price: 102782.1
+2025-06-22 13:32:18,569 [INFO] [Strategy] HOLD signal confirmed; insufficient momentum for override.
+2025-06-22 13:32:18,680 [ERROR] CANCEL read_loop
+2025-06-22 13:32:19,192 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:19,461 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102773.90
+2025-06-22 13:32:19,971 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:19,973 [INFO] STOPLOSS (SHORT) CHECK: Price > 103809.315 (Entry: 102781.5)
+2025-06-22 13:32:19,974 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:19,974 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:19,974 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 19, 192640), '102773.90')
+2025-06-22 13:32:19,977 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:19,977 [INFO] [TradingStrategy] Data buffer length: 29
+2025-06-22 13:32:19,984 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:09.974336 2025-06-22 13:32:09.974336  102782.1
+2025-06-22 13:32:13.081466 2025-06-22 13:32:13.081466  102782.1
+2025-06-22 13:32:15.523006 2025-06-22 13:32:15.523006  102782.1
+2025-06-22 13:32:17.729483 2025-06-22 13:32:17.729483  102782.1
+2025-06-22 13:32:19.192640 2025-06-22 13:32:19.192640  102773.9
+2025-06-22 13:32:19,988 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (29, 5)
+2025-06-22 13:32:19,996 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+24 2025-06-22 13:32:09  102782.1  102782.1  102782.1  102782.1
+25 2025-06-22 13:32:13  102782.1  102782.1  102782.1  102782.1
+26 2025-06-22 13:32:15  102782.1  102782.1  102782.1  102782.1
+27 2025-06-22 13:32:17  102782.1  102782.1  102782.1  102782.1
+28 2025-06-22 13:32:19  102773.9  102773.9  102773.9  102773.9
+2025-06-22 13:32:20,051 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...   %K   %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+24                       -56.0                         0.0                       85.0               0.000000e+00  ...  0.0  0.0                  -9.388836                1519.145513
+25                       -56.0                         0.0                       85.0              -1.455192e-07  ...  0.0  0.0                  -3.586216                 580.261952
+26                         0.0                      5600.0                       85.0               1.455192e-07  ...  0.0  0.0                  -1.369813                 221.640343
+27                         0.0                         0.0                       85.0              -1.455192e-07  ...  0.0  0.0                  -0.523222                  84.659078
+28                      -164.0                    -16400.0                       44.0              -4.100000e+03  ...  0.0  0.0                -506.987724              -50646.450187
+
+[5 rows x 10 columns]
+2025-06-22 13:32:20,055 [INFO] [Predict] Prediction: Buy, Price: 102773.9, Time: 2025-06-22 13:32:20
+2025-06-22 13:32:20,055 [INFO] [Strategy] Model output: ('Buy', 102773.9, '2025-06-22 13:32:20')
+2025-06-22 13:32:20,055 [INFO] [Strategy] Initial model signal: BUY at price: 102773.9
+2025-06-22 13:32:20,349 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:20,350 [INFO] [Risk Check] CLOSE_SHORT approval: True, Quantity: 0.085
+2025-06-22 13:32:20,350 [INFO] [Order Placement] Submitting BUY order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570324489, 'recvWindow': 60000}
+2025-06-22 13:32:20,504 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584667245, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102784.4, last_filled_qty=0.001, canceled_reason=None]
+2025-06-22 13:32:20,505 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584667245, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102784.4, last_filled_qty=0.001, canceled_reason=None]
+2025-06-22 13:32:20,507 [INFO] Order events [contract=BTCUSDT, order_id=4584667245, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:20,511 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584667245, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102784.5, last_filled_qty=0.083, canceled_reason=None]
+2025-06-22 13:32:20,511 [INFO] [ExecManager] BUY order executed successfully at 102773.9.
+2025-06-22 13:32:21,622 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:32:21,625 [INFO]       Wallet Balance: $11,617.68
+2025-06-22 13:32:21,625 [INFO]     Unrealized P&L: $0.00
+2025-06-22 13:32:21,625 [INFO]       Realized P&L: $-37.11
+2025-06-22 13:32:21,625 [INFO]       Sharpe Ratio: -0.5877
+2025-06-22 13:32:21,625 [INFO]    Maximum Drawdown: -0.32%
+2025-06-22 13:32:21,626 [INFO] --------------------------
+2025-06-22 13:32:22,010 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:22,264 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102773.90
+2025-06-22 13:32:25,030 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:25,032 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:25,032 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:25,032 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 22, 10507), '102773.90')
+2025-06-22 13:32:25,034 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:25,034 [INFO] [TradingStrategy] Data buffer length: 30
+2025-06-22 13:32:25,041 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:13.081466 2025-06-22 13:32:13.081466  102782.1
+2025-06-22 13:32:15.523006 2025-06-22 13:32:15.523006  102782.1
+2025-06-22 13:32:17.729483 2025-06-22 13:32:17.729483  102782.1
+2025-06-22 13:32:19.192640 2025-06-22 13:32:19.192640  102773.9
+2025-06-22 13:32:22.010507 2025-06-22 13:32:22.010507  102773.9
+2025-06-22 13:32:25,045 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (30, 5)
+2025-06-22 13:32:25,053 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+25 2025-06-22 13:32:13  102782.1  102782.1  102782.1  102782.1
+26 2025-06-22 13:32:15  102782.1  102782.1  102782.1  102782.1
+27 2025-06-22 13:32:17  102782.1  102782.1  102782.1  102782.1
+28 2025-06-22 13:32:19  102773.9  102773.9  102773.9  102773.9
+29 2025-06-22 13:32:22  102773.9  102773.9  102773.9  102773.9
+2025-06-22 13:32:25,099 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...   %K   %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+25                       -56.0                0.000000e+00                       85.0              -1.455192e-07  ...  0.0  0.0                  -3.586216                 580.261952
+26                         0.0                5.600000e+03                       85.0               1.455192e-07  ...  0.0  0.0                  -1.369813                 221.640343
+27                         0.0                0.000000e+00                       85.0              -1.455192e-07  ...  0.0  0.0                  -0.523222                  84.659078
+28                      -164.0               -1.640000e+04                       44.0              -4.100000e+03  ...  0.0  0.0                -506.987724              -50646.450187
+29                      -164.0               -1.455192e-07                       19.5              -2.450000e+03  ...  0.0  0.0                -193.652079               31333.564516
+
+[5 rows x 10 columns]
+2025-06-22 13:32:25,102 [INFO] [Predict] Prediction: Hold, Price: 102773.9, Time: 2025-06-22 13:32:25
+2025-06-22 13:32:25,102 [INFO] [Strategy] Model output: ('Hold', 102773.9, '2025-06-22 13:32:25')
+2025-06-22 13:32:25,102 [INFO] [Strategy] Initial model signal: HOLD at price: 102773.9
+2025-06-22 13:32:25,103 [INFO] [Strategy Override] HOLD overridden to SELL due to negative momentum.
+2025-06-22 13:32:25,255 [INFO] [Position Check] Current position size: 0.0
+2025-06-22 13:32:25,257 [INFO] [Risk Check] OPEN_SHORT approval: True, Amount: 8713.01, Quantity: 0.085
+2025-06-22 13:32:25,257 [INFO] [Order Placement] Submitting SELL order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570327192, 'recvWindow': 60000}
+2025-06-22 13:32:25,486 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584667631, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102776.1, last_filled_qty=0.001, canceled_reason=None]
+2025-06-22 13:32:25,490 [INFO] Order events [contract=BTCUSDT, order_id=4584667631, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:25,495 [INFO] [ExecManager] SELL order executed successfully at 102773.9.
+2025-06-22 13:32:25,496 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584667631, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102762.8, last_filled_qty=0.034, canceled_reason=None]
+2025-06-22 13:32:25,499 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584667631, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102761.7, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:32:25,501 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584667631, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102760.6, last_filled_qty=0.048, canceled_reason=None]
+2025-06-22 13:32:25,785 [ERROR] CANCEL read_loop
+2025-06-22 13:32:26,206 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:26,451 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102784.40
+2025-06-22 13:32:26,878 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:26,940 [INFO] STOPLOSS (SHORT) CHECK: Price > 103789.305117653 (Entry: 102761.6882353)
+2025-06-22 13:32:26,942 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:26,942 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:26,942 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 26, 206372), '102784.40')
+2025-06-22 13:32:26,946 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:26,946 [INFO] [TradingStrategy] Data buffer length: 31
+2025-06-22 13:32:26,968 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:15.523006 2025-06-22 13:32:15.523006  102782.1
+2025-06-22 13:32:17.729483 2025-06-22 13:32:17.729483  102782.1
+2025-06-22 13:32:19.192640 2025-06-22 13:32:19.192640  102773.9
+2025-06-22 13:32:22.010507 2025-06-22 13:32:22.010507  102773.9
+2025-06-22 13:32:26.206372 2025-06-22 13:32:26.206372  102784.4
+2025-06-22 13:32:26,984 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (31, 5)
+2025-06-22 13:32:27,139 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+26 2025-06-22 13:32:15  102782.1  102782.1  102782.1  102782.1
+27 2025-06-22 13:32:17  102782.1  102782.1  102782.1  102782.1
+28 2025-06-22 13:32:19  102773.9  102773.9  102773.9  102773.9
+29 2025-06-22 13:32:22  102773.9  102773.9  102773.9  102773.9
+30 2025-06-22 13:32:26  102784.4  102784.4  102784.4  102784.4
+2025-06-22 13:32:27,384 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+26                         0.0                5.600000e+03                       85.0               1.455192e-07  ...    0.0   0.000000                  -1.369813                 221.640343
+27                         0.0                0.000000e+00                       85.0              -1.455192e-07  ...    0.0   0.000000                  -0.523222                  84.659078
+28                      -164.0               -1.640000e+04                       44.0              -4.100000e+03  ...    0.0   0.000000                -506.987724              -50646.450187
+29                      -164.0               -1.455192e-07                       19.5              -2.450000e+03  ...    0.0   0.000000                -193.652079               31333.564516
+30                        46.0                2.100000e+04                       72.0               5.250000e+03  ...  100.0  33.333333                 574.967176               76861.925475
+
+[5 rows x 10 columns]
+2025-06-22 13:32:27,392 [INFO] [Predict] Prediction: Hold, Price: 102784.4, Time: 2025-06-22 13:32:27
+2025-06-22 13:32:27,392 [INFO] [Strategy] Model output: ('Hold', 102784.4, '2025-06-22 13:32:27')
+2025-06-22 13:32:27,392 [INFO] [Strategy] Initial model signal: HOLD at price: 102784.4
+2025-06-22 13:32:27,393 [INFO] [Strategy Override] HOLD overridden to BUY due to positive momentum.
+2025-06-22 13:32:27,834 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:27,836 [INFO] [Risk Check] CLOSE_SHORT approval: True, Quantity: 0.085
+2025-06-22 13:32:27,836 [INFO] [Order Placement] Submitting BUY order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570331395, 'recvWindow': 60000}
+2025-06-22 13:32:28,025 [INFO] Order events [contract=BTCUSDT, order_id=4584668081, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:28,027 [INFO] [ExecManager] BUY order executed successfully at 102784.4.
+2025-06-22 13:32:28,028 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584668081, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102762.5, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:29,594 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:29,780 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102784.40
+2025-06-22 13:32:30,264 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:30,265 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:30,266 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:30,266 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 29, 593976), '102784.40')
+2025-06-22 13:32:30,268 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:30,268 [INFO] [TradingStrategy] Data buffer length: 32
+2025-06-22 13:32:30,273 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:17.729483 2025-06-22 13:32:17.729483  102782.1
+2025-06-22 13:32:19.192640 2025-06-22 13:32:19.192640  102773.9
+2025-06-22 13:32:22.010507 2025-06-22 13:32:22.010507  102773.9
+2025-06-22 13:32:26.206372 2025-06-22 13:32:26.206372  102784.4
+2025-06-22 13:32:29.593976 2025-06-22 13:32:29.593976  102784.4
+2025-06-22 13:32:30,360 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (32, 5)
+2025-06-22 13:32:30,371 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+27 2025-06-22 13:32:17  102782.1  102782.1  102782.1  102782.1
+28 2025-06-22 13:32:19  102773.9  102773.9  102773.9  102773.9
+29 2025-06-22 13:32:22  102773.9  102773.9  102773.9  102773.9
+30 2025-06-22 13:32:26  102784.4  102784.4  102784.4  102784.4
+31 2025-06-22 13:32:29  102784.4  102784.4  102784.4  102784.4
+2025-06-22 13:32:30,447 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+27                         0.0                0.000000e+00                       85.0              -1.455192e-07  ...    0.0   0.000000                  -0.523222                  84.659078
+28                      -164.0               -1.640000e+04                       44.0              -4.100000e+03  ...    0.0   0.000000                -506.987724              -50646.450187
+29                      -164.0               -1.455192e-07                       19.5              -2.450000e+03  ...    0.0   0.000000                -193.652079               31333.564516
+30                        46.0                2.100000e+04                       72.0               5.250000e+03  ...  100.0  33.333333                 574.967176               76861.925475
+31                        46.0               -1.455192e-07                       72.0               1.455192e-07  ...  100.0  66.666667                 219.617919              -35534.925728
+
+[5 rows x 10 columns]
+2025-06-22 13:32:30,451 [INFO] [Predict] Prediction: Sell, Price: 102784.4, Time: 2025-06-22 13:32:30
+2025-06-22 13:32:30,451 [INFO] [Strategy] Model output: ('Sell', 102784.4, '2025-06-22 13:32:30')
+2025-06-22 13:32:30,451 [INFO] [Strategy] Initial model signal: SELL at price: 102784.4
+2025-06-22 13:32:30,729 [INFO] [Position Check] Current position size: 0.0
+2025-06-22 13:32:30,730 [INFO] [Risk Check] OPEN_SHORT approval: True, Amount: 8707.58, Quantity: 0.085
+2025-06-22 13:32:30,730 [INFO] [Order Placement] Submitting SELL order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570334806, 'recvWindow': 60000}
+2025-06-22 13:32:30,887 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584668245, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102759.9, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:30,892 [INFO] Order events [contract=BTCUSDT, order_id=4584668245, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:30,897 [INFO] [ExecManager] SELL order executed successfully at 102784.4.
+2025-06-22 13:32:31,626 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:32:31,629 [INFO]       Wallet Balance: $11,606.86
+2025-06-22 13:32:31,629 [INFO]     Unrealized P&L: $0.75
+2025-06-22 13:32:31,629 [INFO]       Realized P&L: $-47.93
+2025-06-22 13:32:31,629 [INFO]       Sharpe Ratio: -0.6422
+2025-06-22 13:32:31,629 [INFO]    Maximum Drawdown: -0.41%
+2025-06-22 13:32:31,630 [INFO] --------------------------
+2025-06-22 13:32:38,784 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:38,938 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102759.90
+2025-06-22 13:32:39,288 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:39,289 [INFO] STOPLOSS (SHORT) CHECK: Price > 103787.499 (Entry: 102759.9)
+2025-06-22 13:32:39,290 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:39,290 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:39,290 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 38, 784321), '102759.90')
+2025-06-22 13:32:39,292 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:39,292 [INFO] [TradingStrategy] Data buffer length: 33
+2025-06-22 13:32:39,296 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:19.192640 2025-06-22 13:32:19.192640  102773.9
+2025-06-22 13:32:22.010507 2025-06-22 13:32:22.010507  102773.9
+2025-06-22 13:32:26.206372 2025-06-22 13:32:26.206372  102784.4
+2025-06-22 13:32:29.593976 2025-06-22 13:32:29.593976  102784.4
+2025-06-22 13:32:38.784321 2025-06-22 13:32:38.784321  102759.9
+2025-06-22 13:32:39,303 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (33, 5)
+2025-06-22 13:32:39,314 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+28 2025-06-22 13:32:19  102773.9  102773.9  102773.9  102773.9
+29 2025-06-22 13:32:22  102773.9  102773.9  102773.9  102773.9
+30 2025-06-22 13:32:26  102784.4  102784.4  102784.4  102784.4
+31 2025-06-22 13:32:29  102784.4  102784.4  102784.4  102784.4
+32 2025-06-22 13:32:38  102759.9  102759.9  102759.9  102759.9
+2025-06-22 13:32:39,383 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+28                      -164.0               -1.640000e+04                       44.0              -4.100000e+03  ...    0.0   0.000000                -506.987724              -50646.450187
+29                      -164.0               -1.455192e-07                       19.5              -2.450000e+03  ...    0.0   0.000000                -193.652079               31333.564516
+30                        46.0                2.100000e+04                       72.0               5.250000e+03  ...  100.0  33.333333                 574.967176               76861.925475
+31                        46.0               -1.455192e-07                       72.0               1.455192e-07  ...  100.0  66.666667                 219.617919              -35534.925728
+32                      -444.0               -4.900000e+04                      -75.0              -1.470000e+04  ...    0.0  66.666667               -1430.296692             -164991.461084
+
+[5 rows x 10 columns]
+2025-06-22 13:32:39,388 [INFO] [Predict] Prediction: Buy, Price: 102759.9, Time: 2025-06-22 13:32:39
+2025-06-22 13:32:39,388 [INFO] [Strategy] Model output: ('Buy', 102759.9, '2025-06-22 13:32:39')
+2025-06-22 13:32:39,388 [INFO] [Strategy] Initial model signal: BUY at price: 102759.9
+2025-06-22 13:32:39,538 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:39,539 [INFO] [Risk Check] CLOSE_SHORT approval: True, Quantity: 0.085
+2025-06-22 13:32:39,540 [INFO] [Order Placement] Submitting BUY order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570343969, 'recvWindow': 60000}
+2025-06-22 13:32:39,698 [INFO] Order events [contract=BTCUSDT, order_id=4584668971, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:39,702 [INFO] [ExecManager] BUY order executed successfully at 102759.9.
+2025-06-22 13:32:39,708 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584668971, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102762.5, last_filled_qty=0.06, canceled_reason=None]
+2025-06-22 13:32:39,711 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584668971, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102764.7, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:32:39,711 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584668971, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102764.9, last_filled_qty=0.003, canceled_reason=None]
+2025-06-22 13:32:39,712 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584668971, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102767.0, last_filled_qty=0.006, canceled_reason=None]
+2025-06-22 13:32:39,712 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584668971, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102767.8, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:32:39,713 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584668971, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102771.6, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:32:39,713 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584668971, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102772.3, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:32:39,714 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584668971, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102776.8, last_filled_qty=0.001, canceled_reason=None]
+2025-06-22 13:32:39,714 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584668971, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102779.6, last_filled_qty=0.007, canceled_reason=None]
+2025-06-22 13:32:40,062 [ERROR] CANCEL read_loop
+2025-06-22 13:32:40,431 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:40,594 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102759.90
+2025-06-22 13:32:40,913 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:40,914 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:40,914 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:40,915 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 40, 431760), '102759.90')
+2025-06-22 13:32:40,916 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:40,917 [INFO] [TradingStrategy] Data buffer length: 34
+2025-06-22 13:32:40,923 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:22.010507 2025-06-22 13:32:22.010507  102773.9
+2025-06-22 13:32:26.206372 2025-06-22 13:32:26.206372  102784.4
+2025-06-22 13:32:29.593976 2025-06-22 13:32:29.593976  102784.4
+2025-06-22 13:32:38.784321 2025-06-22 13:32:38.784321  102759.9
+2025-06-22 13:32:40.431760 2025-06-22 13:32:40.431760  102759.9
+2025-06-22 13:32:40,927 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (34, 5)
+2025-06-22 13:32:40,935 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+29 2025-06-22 13:32:22  102773.9  102773.9  102773.9  102773.9
+30 2025-06-22 13:32:26  102784.4  102784.4  102784.4  102784.4
+31 2025-06-22 13:32:29  102784.4  102784.4  102784.4  102784.4
+32 2025-06-22 13:32:38  102759.9  102759.9  102759.9  102759.9
+33 2025-06-22 13:32:40  102759.9  102759.9  102759.9  102759.9
+2025-06-22 13:32:40,994 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+29                      -164.0               -1.455192e-07                       19.5              -2.450000e+03  ...    0.0   0.000000                -193.652079               31333.564516
+30                        46.0                2.100000e+04                       72.0               5.250000e+03  ...  100.0  33.333333                 574.967176               76861.925475
+31                        46.0               -1.455192e-07                       72.0               1.455192e-07  ...  100.0  66.666667                 219.617919              -35534.925728
+32                      -444.0               -4.900000e+04                      -75.0              -1.470000e+04  ...    0.0  66.666667               -1430.296692             -164991.461084
+33                      -280.0                1.640000e+04                      -75.0              -1.455192e-07  ...    0.0  33.333333                -546.324722               88397.196963
+
+[5 rows x 10 columns]
+2025-06-22 13:32:40,998 [INFO] [Predict] Prediction: Hold, Price: 102759.9, Time: 2025-06-22 13:32:40
+2025-06-22 13:32:40,999 [INFO] [Strategy] Model output: ('Hold', 102759.9, '2025-06-22 13:32:40')
+2025-06-22 13:32:40,999 [INFO] [Strategy] Initial model signal: HOLD at price: 102759.9
+2025-06-22 13:32:40,999 [INFO] [Strategy Override] HOLD overridden to SELL due to negative momentum.
+2025-06-22 13:32:41,169 [INFO] [Position Check] Current position size: 0.0
+2025-06-22 13:32:41,170 [INFO] [Risk Check] OPEN_SHORT approval: True, Amount: 8702.32, Quantity: 0.085
+2025-06-22 13:32:41,170 [INFO] [Order Placement] Submitting SELL order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570345625, 'recvWindow': 60000}
+2025-06-22 13:32:41,326 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584669086, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102759.9, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:41,329 [INFO] Order events [contract=BTCUSDT, order_id=4584669086, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:41,330 [INFO] [ExecManager] SELL order executed successfully at 102759.9.
+2025-06-22 13:32:41,635 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:32:41,637 [INFO]       Wallet Balance: $11,599.60
+2025-06-22 13:32:41,637 [INFO]     Unrealized P&L: $0.98
+2025-06-22 13:32:41,637 [INFO]       Realized P&L: $-55.20
+2025-06-22 13:32:41,637 [INFO]       Sharpe Ratio: -0.6658
+2025-06-22 13:32:41,638 [INFO]    Maximum Drawdown: -0.47%
+2025-06-22 13:32:41,638 [INFO] --------------------------
+2025-06-22 13:32:42,842 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:42,986 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102759.90
+2025-06-22 13:32:43,393 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:43,394 [INFO] STOPLOSS (SHORT) CHECK: Price > 103787.499 (Entry: 102759.9)
+2025-06-22 13:32:43,395 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:43,395 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:43,395 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 42, 842688), '102759.90')
+2025-06-22 13:32:43,396 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:43,396 [INFO] [TradingStrategy] Data buffer length: 35
+2025-06-22 13:32:43,400 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:26.206372 2025-06-22 13:32:26.206372  102784.4
+2025-06-22 13:32:29.593976 2025-06-22 13:32:29.593976  102784.4
+2025-06-22 13:32:38.784321 2025-06-22 13:32:38.784321  102759.9
+2025-06-22 13:32:40.431760 2025-06-22 13:32:40.431760  102759.9
+2025-06-22 13:32:42.842688 2025-06-22 13:32:42.842688  102759.9
+2025-06-22 13:32:43,404 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (35, 5)
+2025-06-22 13:32:43,412 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+30 2025-06-22 13:32:26  102784.4  102784.4  102784.4  102784.4
+31 2025-06-22 13:32:29  102784.4  102784.4  102784.4  102784.4
+32 2025-06-22 13:32:38  102759.9  102759.9  102759.9  102759.9
+33 2025-06-22 13:32:40  102759.9  102759.9  102759.9  102759.9
+34 2025-06-22 13:32:42  102759.9  102759.9  102759.9  102759.9
+2025-06-22 13:32:43,462 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+30                        46.0                2.100000e+04                       72.0               5.250000e+03  ...  100.0  33.333333                 574.967176               76861.925475
+31                        46.0               -1.455192e-07                       72.0               1.455192e-07  ...  100.0  66.666667                 219.617919              -35534.925728
+32                      -444.0               -4.900000e+04                      -75.0              -1.470000e+04  ...    0.0  66.666667               -1430.296692             -164991.461084
+33                      -280.0                1.640000e+04                      -75.0              -1.455192e-07  ...    0.0  33.333333                -546.324722               88397.196963
+34                      -280.0               -1.455192e-07                      -75.0              -1.455192e-07  ...    0.0   0.000000                -208.677475               33764.724730
+
+[5 rows x 10 columns]
+2025-06-22 13:32:43,469 [INFO] [Predict] Prediction: Hold, Price: 102759.9, Time: 2025-06-22 13:32:43
+2025-06-22 13:32:43,469 [INFO] [Strategy] Model output: ('Hold', 102759.9, '2025-06-22 13:32:43')
+2025-06-22 13:32:43,470 [INFO] [Strategy] Initial model signal: HOLD at price: 102759.9
+2025-06-22 13:32:43,471 [INFO] [Strategy Override] HOLD overridden to SELL due to negative momentum.
+2025-06-22 13:32:43,643 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:43,644 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:32:45,404 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:45,561 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102759.90
+2025-06-22 13:32:45,893 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:45,894 [INFO] STOPLOSS (SHORT) CHECK: Price > 103787.499 (Entry: 102759.9)
+2025-06-22 13:32:45,895 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:45,895 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:45,895 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 45, 404009), '102759.90')
+2025-06-22 13:32:45,897 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:45,897 [INFO] [TradingStrategy] Data buffer length: 36
+2025-06-22 13:32:45,902 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:29.593976 2025-06-22 13:32:29.593976  102784.4
+2025-06-22 13:32:38.784321 2025-06-22 13:32:38.784321  102759.9
+2025-06-22 13:32:40.431760 2025-06-22 13:32:40.431760  102759.9
+2025-06-22 13:32:42.842688 2025-06-22 13:32:42.842688  102759.9
+2025-06-22 13:32:45.404009 2025-06-22 13:32:45.404009  102759.9
+2025-06-22 13:32:45,907 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (36, 5)
+2025-06-22 13:32:45,916 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+31 2025-06-22 13:32:29  102784.4  102784.4  102784.4  102784.4
+32 2025-06-22 13:32:38  102759.9  102759.9  102759.9  102759.9
+33 2025-06-22 13:32:40  102759.9  102759.9  102759.9  102759.9
+34 2025-06-22 13:32:42  102759.9  102759.9  102759.9  102759.9
+35 2025-06-22 13:32:45  102759.9  102759.9  102759.9  102759.9
+2025-06-22 13:32:45,966 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+31                        46.0               -1.455192e-07                       72.0               1.455192e-07  ...  100.0  66.666667                 219.617919              -35534.925728
+32                      -444.0               -4.900000e+04                      -75.0              -1.470000e+04  ...    0.0  66.666667               -1430.296692             -164991.461084
+33                      -280.0                1.640000e+04                      -75.0              -1.455192e-07  ...    0.0  33.333333                -546.324722               88397.196963
+34                      -280.0               -1.455192e-07                      -75.0              -1.455192e-07  ...    0.0   0.000000                -208.677475               33764.724730
+35                      -490.0               -2.100000e+04                     -113.5              -3.850000e+03  ...    0.0   0.000000                 -79.707703               12896.977226
+
+[5 rows x 10 columns]
+2025-06-22 13:32:45,971 [INFO] [Predict] Prediction: Buy, Price: 102759.9, Time: 2025-06-22 13:32:45
+2025-06-22 13:32:45,971 [INFO] [Strategy] Model output: ('Buy', 102759.9, '2025-06-22 13:32:45')
+2025-06-22 13:32:45,971 [INFO] [Strategy] Initial model signal: BUY at price: 102759.9
+2025-06-22 13:32:46,118 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:46,119 [INFO] [Risk Check] CLOSE_SHORT approval: True, Quantity: 0.085
+2025-06-22 13:32:46,119 [INFO] [Order Placement] Submitting BUY order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570350584, 'recvWindow': 60000}
+2025-06-22 13:32:46,260 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584669565, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102761.4, last_filled_qty=0.004, canceled_reason=None]
+2025-06-22 13:32:46,261 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584669565, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102764.6, last_filled_qty=0.049, canceled_reason=None]
+2025-06-22 13:32:46,264 [INFO] Order events [contract=BTCUSDT, order_id=4584669565, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:46,264 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584669565, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102764.6, last_filled_qty=0.032, canceled_reason=None]
+2025-06-22 13:32:46,268 [INFO] [ExecManager] BUY order executed successfully at 102759.9.
+2025-06-22 13:32:46,588 [ERROR] CANCEL read_loop
+2025-06-22 13:32:46,955 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:47,101 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102759.90
+2025-06-22 13:32:47,428 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:47,429 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:47,429 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:47,429 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 46, 955603), '102759.90')
+2025-06-22 13:32:47,430 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:47,430 [INFO] [TradingStrategy] Data buffer length: 37
+2025-06-22 13:32:47,435 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:38.784321 2025-06-22 13:32:38.784321  102759.9
+2025-06-22 13:32:40.431760 2025-06-22 13:32:40.431760  102759.9
+2025-06-22 13:32:42.842688 2025-06-22 13:32:42.842688  102759.9
+2025-06-22 13:32:45.404009 2025-06-22 13:32:45.404009  102759.9
+2025-06-22 13:32:46.955603 2025-06-22 13:32:46.955603  102759.9
+2025-06-22 13:32:47,439 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (37, 5)
+2025-06-22 13:32:47,446 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+32 2025-06-22 13:32:38  102759.9  102759.9  102759.9  102759.9
+33 2025-06-22 13:32:40  102759.9  102759.9  102759.9  102759.9
+34 2025-06-22 13:32:42  102759.9  102759.9  102759.9  102759.9
+35 2025-06-22 13:32:45  102759.9  102759.9  102759.9  102759.9
+36 2025-06-22 13:32:46  102759.9  102759.9  102759.9  102759.9
+2025-06-22 13:32:47,498 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...   %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+32                      -444.0               -4.900000e+04                      -75.0              -1.470000e+04  ...  0.0  66.666667               -1430.296692             -164991.461084
+33                      -280.0                1.640000e+04                      -75.0              -1.455192e-07  ...  0.0  33.333333                -546.324722               88397.196963
+34                      -280.0               -1.455192e-07                      -75.0              -1.455192e-07  ...  0.0   0.000000                -208.677475               33764.724730
+35                      -490.0               -2.100000e+04                     -113.5              -3.850000e+03  ...  0.0   0.000000                 -79.707703               12896.977226
+36                      -490.0               -2.910383e-07                     -113.5              -1.455192e-07  ...  0.0   0.000000                 -30.445633                4926.206948
+
+[5 rows x 10 columns]
+2025-06-22 13:32:47,502 [INFO] [Predict] Prediction: Hold, Price: 102759.9, Time: 2025-06-22 13:32:47
+2025-06-22 13:32:47,502 [INFO] [Strategy] Model output: ('Hold', 102759.9, '2025-06-22 13:32:47')
+2025-06-22 13:32:47,502 [INFO] [Strategy] Initial model signal: HOLD at price: 102759.9
+2025-06-22 13:32:47,503 [INFO] [Strategy Override] HOLD overridden to SELL due to negative momentum.
+2025-06-22 13:32:47,662 [INFO] [Position Check] Current position size: 0.0
+2025-06-22 13:32:47,663 [INFO] [Risk Check] OPEN_SHORT approval: True, Amount: 8696.80, Quantity: 0.085
+2025-06-22 13:32:47,663 [INFO] [Order Placement] Submitting SELL order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570352131, 'recvWindow': 60000}
+2025-06-22 13:32:47,810 [INFO] Order events [contract=BTCUSDT, order_id=4584669806, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:32:47,812 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584669806, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102763.9, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:32:47,812 [INFO] [ExecManager] SELL order executed successfully at 102759.9.
+2025-06-22 13:32:47,813 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584669806, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102759.9, last_filled_qty=0.083, canceled_reason=None]
+2025-06-22 13:32:50,049 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:50,203 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102764.60
+2025-06-22 13:32:50,515 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:50,516 [INFO] STOPLOSS (SHORT) CHECK: Price > 103787.594058776 (Entry: 102759.9941176)
+2025-06-22 13:32:50,517 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:50,517 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:50,517 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 50, 49207), '102764.60')
+2025-06-22 13:32:50,519 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:50,519 [INFO] [TradingStrategy] Data buffer length: 38
+2025-06-22 13:32:50,524 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:40.431760 2025-06-22 13:32:40.431760  102759.9
+2025-06-22 13:32:42.842688 2025-06-22 13:32:42.842688  102759.9
+2025-06-22 13:32:45.404009 2025-06-22 13:32:45.404009  102759.9
+2025-06-22 13:32:46.955603 2025-06-22 13:32:46.955603  102759.9
+2025-06-22 13:32:50.049207 2025-06-22 13:32:50.049207  102764.6
+2025-06-22 13:32:50,528 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (38, 5)
+2025-06-22 13:32:50,538 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+33 2025-06-22 13:32:40  102759.9  102759.9  102759.9  102759.9
+34 2025-06-22 13:32:42  102759.9  102759.9  102759.9  102759.9
+35 2025-06-22 13:32:45  102759.9  102759.9  102759.9  102759.9
+36 2025-06-22 13:32:46  102759.9  102759.9  102759.9  102759.9
+37 2025-06-22 13:32:50  102764.6  102764.6  102764.6  102764.6
+2025-06-22 13:32:50,596 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+33                      -280.0                1.640000e+04                      -75.0              -1.455192e-07  ...    0.0  33.333333                -546.324722               88397.196963
+34                      -280.0               -1.455192e-07                      -75.0              -1.455192e-07  ...    0.0   0.000000                -208.677475               33764.724730
+35                      -490.0               -2.100000e+04                     -113.5              -3.850000e+03  ...    0.0   0.000000                 -79.707703               12896.977226
+36                      -490.0               -2.910383e-07                     -113.5              -1.455192e-07  ...    0.0   0.000000                 -30.445633                4926.206948
+37                        94.0                5.840000e+04                     -101.5               1.200000e+03  ...  100.0  33.333333                 278.846778               30929.241090
+
+[5 rows x 10 columns]
+2025-06-22 13:32:50,599 [INFO] [Predict] Prediction: Sell, Price: 102764.6, Time: 2025-06-22 13:32:50
+2025-06-22 13:32:50,600 [INFO] [Strategy] Model output: ('Sell', 102764.6, '2025-06-22 13:32:50')
+2025-06-22 13:32:50,600 [INFO] [Strategy] Initial model signal: SELL at price: 102764.6
+2025-06-22 13:32:50,745 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:50,746 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:32:51,546 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:51,641 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:32:51,643 [INFO]       Wallet Balance: $11,592.42
+2025-06-22 13:32:51,643 [INFO]     Unrealized P&L: $-0.42
+2025-06-22 13:32:51,643 [INFO]       Realized P&L: $-62.37
+2025-06-22 13:32:51,643 [INFO]       Sharpe Ratio: -0.6669
+2025-06-22 13:32:51,643 [INFO]    Maximum Drawdown: -0.54%
+2025-06-22 13:32:51,644 [INFO] --------------------------
+2025-06-22 13:32:51,689 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102764.60
+2025-06-22 13:32:52,007 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:52,008 [INFO] STOPLOSS (SHORT) CHECK: Price > 103787.594058776 (Entry: 102759.9941176)
+2025-06-22 13:32:52,009 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:52,009 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:52,010 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 51, 546192), '102764.60')
+2025-06-22 13:32:52,012 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:52,012 [INFO] [TradingStrategy] Data buffer length: 39
+2025-06-22 13:32:52,018 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:42.842688 2025-06-22 13:32:42.842688  102759.9
+2025-06-22 13:32:45.404009 2025-06-22 13:32:45.404009  102759.9
+2025-06-22 13:32:46.955603 2025-06-22 13:32:46.955603  102759.9
+2025-06-22 13:32:50.049207 2025-06-22 13:32:50.049207  102764.6
+2025-06-22 13:32:51.546192 2025-06-22 13:32:51.546192  102764.6
+2025-06-22 13:32:52,023 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (39, 5)
+2025-06-22 13:32:52,031 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+34 2025-06-22 13:32:42  102759.9  102759.9  102759.9  102759.9
+35 2025-06-22 13:32:45  102759.9  102759.9  102759.9  102759.9
+36 2025-06-22 13:32:46  102759.9  102759.9  102759.9  102759.9
+37 2025-06-22 13:32:50  102764.6  102764.6  102764.6  102764.6
+38 2025-06-22 13:32:51  102764.6  102764.6  102764.6  102764.6
+2025-06-22 13:32:52,080 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+34                      -280.0               -1.455192e-07                      -75.0              -1.455192e-07  ...    0.0   0.000000                -208.677475               33764.724730
+35                      -490.0               -2.100000e+04                     -113.5              -3.850000e+03  ...    0.0   0.000000                 -79.707703               12896.977226
+36                      -490.0               -2.910383e-07                     -113.5              -1.455192e-07  ...    0.0   0.000000                 -30.445633                4926.206948
+37                        94.0                5.840000e+04                     -101.5               1.200000e+03  ...  100.0  33.333333                 278.846778               30929.241090
+38                        94.0                0.000000e+00                     -101.5              -2.910383e-07  ...  100.0  66.666667                 106.509991              -17233.678621
+
+[5 rows x 10 columns]
+2025-06-22 13:32:52,083 [INFO] [Predict] Prediction: Sell, Price: 102764.6, Time: 2025-06-22 13:32:52
+2025-06-22 13:32:52,084 [INFO] [Strategy] Model output: ('Sell', 102764.6, '2025-06-22 13:32:52')
+2025-06-22 13:32:52,084 [INFO] [Strategy] Initial model signal: SELL at price: 102764.6
+2025-06-22 13:32:52,229 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:52,230 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:32:52,409 [ERROR] CANCEL read_loop
+2025-06-22 13:32:52,761 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:52,912 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102764.60
+2025-06-22 13:32:53,232 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:53,233 [INFO] STOPLOSS (SHORT) CHECK: Price > 103787.594058776 (Entry: 102759.9941176)
+2025-06-22 13:32:53,234 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:53,234 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:53,234 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 52, 761956), '102764.60')
+2025-06-22 13:32:53,236 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:53,236 [INFO] [TradingStrategy] Data buffer length: 40
+2025-06-22 13:32:53,242 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:45.404009 2025-06-22 13:32:45.404009  102759.9
+2025-06-22 13:32:46.955603 2025-06-22 13:32:46.955603  102759.9
+2025-06-22 13:32:50.049207 2025-06-22 13:32:50.049207  102764.6
+2025-06-22 13:32:51.546192 2025-06-22 13:32:51.546192  102764.6
+2025-06-22 13:32:52.761956 2025-06-22 13:32:52.761956  102764.6
+2025-06-22 13:32:53,247 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (40, 5)
+2025-06-22 13:32:53,254 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+35 2025-06-22 13:32:45  102759.9  102759.9  102759.9  102759.9
+36 2025-06-22 13:32:46  102759.9  102759.9  102759.9  102759.9
+37 2025-06-22 13:32:50  102764.6  102764.6  102764.6  102764.6
+38 2025-06-22 13:32:51  102764.6  102764.6  102764.6  102764.6
+39 2025-06-22 13:32:52  102764.6  102764.6  102764.6  102764.6
+2025-06-22 13:32:53,314 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+35                      -490.0               -2.100000e+04                     -113.5              -3.850000e+03  ...    0.0    0.000000                 -79.707703               12896.977226
+36                      -490.0               -2.910383e-07                     -113.5              -1.455192e-07  ...    0.0    0.000000                 -30.445633                4926.206948
+37                        94.0                5.840000e+04                     -101.5               1.200000e+03  ...  100.0   33.333333                 278.846778               30929.241090
+38                        94.0                0.000000e+00                     -101.5              -2.910383e-07  ...  100.0   66.666667                 106.509991              -17233.678621
+39                        94.0                0.000000e+00                     -101.5               2.910383e-07  ...  100.0  100.000000                  40.683197               -6582.679482
+
+[5 rows x 10 columns]
+2025-06-22 13:32:53,318 [INFO] [Predict] Prediction: Sell, Price: 102764.6, Time: 2025-06-22 13:32:53
+2025-06-22 13:32:53,318 [INFO] [Strategy] Model output: ('Sell', 102764.6, '2025-06-22 13:32:53')
+2025-06-22 13:32:53,318 [INFO] [Strategy] Initial model signal: SELL at price: 102764.6
+2025-06-22 13:32:53,594 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:53,594 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:32:54,524 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:54,677 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102764.60
+2025-06-22 13:32:54,993 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:54,994 [INFO] STOPLOSS (SHORT) CHECK: Price > 103787.594058776 (Entry: 102759.9941176)
+2025-06-22 13:32:54,996 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:54,996 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:54,997 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 54, 524069), '102764.60')
+2025-06-22 13:32:54,999 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:54,999 [INFO] [TradingStrategy] Data buffer length: 41
+2025-06-22 13:32:55,004 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:46.955603 2025-06-22 13:32:46.955603  102759.9
+2025-06-22 13:32:50.049207 2025-06-22 13:32:50.049207  102764.6
+2025-06-22 13:32:51.546192 2025-06-22 13:32:51.546192  102764.6
+2025-06-22 13:32:52.761956 2025-06-22 13:32:52.761956  102764.6
+2025-06-22 13:32:54.524069 2025-06-22 13:32:54.524069  102764.6
+2025-06-22 13:32:55,009 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (41, 5)
+2025-06-22 13:32:55,016 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+36 2025-06-22 13:32:46  102759.9  102759.9  102759.9  102759.9
+37 2025-06-22 13:32:50  102764.6  102764.6  102764.6  102764.6
+38 2025-06-22 13:32:51  102764.6  102764.6  102764.6  102764.6
+39 2025-06-22 13:32:52  102764.6  102764.6  102764.6  102764.6
+40 2025-06-22 13:32:54  102764.6  102764.6  102764.6  102764.6
+2025-06-22 13:32:55,172 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+36                      -490.0               -2.910383e-07                     -113.5              -1.455192e-07  ...    0.0    0.000000                 -30.445633                4926.206948
+37                        94.0                5.840000e+04                     -101.5               1.200000e+03  ...  100.0   33.333333                 278.846778               30929.241090
+38                        94.0                0.000000e+00                     -101.5              -2.910383e-07  ...  100.0   66.666667                 106.509991              -17233.678621
+39                        94.0                0.000000e+00                     -101.5               2.910383e-07  ...  100.0  100.000000                  40.683197               -6582.679482
+40                        94.0                0.000000e+00                     -101.5              -1.455192e-07  ...  100.0  100.000000                  15.539598               -2514.359825
+
+[5 rows x 10 columns]
+2025-06-22 13:32:55,175 [INFO] [Predict] Prediction: Sell, Price: 102764.6, Time: 2025-06-22 13:32:55
+2025-06-22 13:32:55,175 [INFO] [Strategy] Model output: ('Sell', 102764.6, '2025-06-22 13:32:55')
+2025-06-22 13:32:55,175 [INFO] [Strategy] Initial model signal: SELL at price: 102764.6
+2025-06-22 13:32:55,323 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:55,323 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:32:58,069 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:58,238 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102764.60
+2025-06-22 13:32:58,559 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:58,560 [INFO] STOPLOSS (SHORT) CHECK: Price > 103787.594058776 (Entry: 102759.9941176)
+2025-06-22 13:32:58,560 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:58,560 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:58,561 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 58, 69381), '102764.60')
+2025-06-22 13:32:58,562 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:58,562 [INFO] [TradingStrategy] Data buffer length: 42
+2025-06-22 13:32:58,565 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:50.049207 2025-06-22 13:32:50.049207  102764.6
+2025-06-22 13:32:51.546192 2025-06-22 13:32:51.546192  102764.6
+2025-06-22 13:32:52.761956 2025-06-22 13:32:52.761956  102764.6
+2025-06-22 13:32:54.524069 2025-06-22 13:32:54.524069  102764.6
+2025-06-22 13:32:58.069381 2025-06-22 13:32:58.069381  102764.6
+2025-06-22 13:32:58,570 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (42, 5)
+2025-06-22 13:32:58,578 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+37 2025-06-22 13:32:50  102764.6  102764.6  102764.6  102764.6
+38 2025-06-22 13:32:51  102764.6  102764.6  102764.6  102764.6
+39 2025-06-22 13:32:52  102764.6  102764.6  102764.6  102764.6
+40 2025-06-22 13:32:54  102764.6  102764.6  102764.6  102764.6
+41 2025-06-22 13:32:58  102764.6  102764.6  102764.6  102764.6
+2025-06-22 13:32:58,630 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+37                        94.0                     58400.0                     -101.5               1.200000e+03  ...  100.0   33.333333                 278.846778               30929.241090
+38                        94.0                         0.0                     -101.5              -2.910383e-07  ...  100.0   66.666667                 106.509991              -17233.678621
+39                        94.0                         0.0                     -101.5               2.910383e-07  ...  100.0  100.000000                  40.683197               -6582.679482
+40                        94.0                         0.0                     -101.5              -1.455192e-07  ...  100.0  100.000000                  15.539598               -2514.359825
+41                        94.0                         0.0                      -87.5               1.400000e+03  ...    0.0   66.666667                   5.935598                -960.399993
+
+[5 rows x 10 columns]
+2025-06-22 13:32:58,633 [INFO] [Predict] Prediction: Sell, Price: 102764.6, Time: 2025-06-22 13:32:58
+2025-06-22 13:32:58,634 [INFO] [Strategy] Model output: ('Sell', 102764.6, '2025-06-22 13:32:58')
+2025-06-22 13:32:58,634 [INFO] [Strategy] Initial model signal: SELL at price: 102764.6
+2025-06-22 13:32:58,790 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:32:58,790 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:32:58,925 [ERROR] CANCEL read_loop
+2025-06-22 13:32:59,286 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:32:59,467 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102764.60
+2025-06-22 13:32:59,925 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:32:59,926 [INFO] STOPLOSS (SHORT) CHECK: Price > 103787.594058776 (Entry: 102759.9941176)
+2025-06-22 13:32:59,926 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:32:59,926 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:32:59,927 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 32, 59, 286377), '102764.60')
+2025-06-22 13:32:59,928 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:32:59,928 [INFO] [TradingStrategy] Data buffer length: 43
+2025-06-22 13:32:59,933 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:51.546192 2025-06-22 13:32:51.546192  102764.6
+2025-06-22 13:32:52.761956 2025-06-22 13:32:52.761956  102764.6
+2025-06-22 13:32:54.524069 2025-06-22 13:32:54.524069  102764.6
+2025-06-22 13:32:58.069381 2025-06-22 13:32:58.069381  102764.6
+2025-06-22 13:32:59.286377 2025-06-22 13:32:59.286377  102764.6
+2025-06-22 13:32:59,936 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (43, 5)
+2025-06-22 13:32:59,944 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+38 2025-06-22 13:32:51  102764.6  102764.6  102764.6  102764.6
+39 2025-06-22 13:32:52  102764.6  102764.6  102764.6  102764.6
+40 2025-06-22 13:32:54  102764.6  102764.6  102764.6  102764.6
+41 2025-06-22 13:32:58  102764.6  102764.6  102764.6  102764.6
+42 2025-06-22 13:32:59  102764.6  102764.6  102764.6  102764.6
+2025-06-22 13:32:59,994 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+38                        94.0                         0.0                     -101.5              -2.910383e-07  ...  100.0   66.666667                 106.509991              -17233.678621
+39                        94.0                         0.0                     -101.5               2.910383e-07  ...  100.0  100.000000                  40.683197               -6582.679482
+40                        94.0                         0.0                     -101.5              -1.455192e-07  ...  100.0  100.000000                  15.539598               -2514.359825
+41                        94.0                         0.0                      -87.5               1.400000e+03  ...    0.0   66.666667                   5.935598                -960.399993
+42                         0.0                     -9400.0                      -87.5               1.455192e-07  ...    0.0   33.333333                   2.267197                -366.840155
+
+[5 rows x 10 columns]
+2025-06-22 13:32:59,998 [INFO] [Predict] Prediction: Buy, Price: 102764.6, Time: 2025-06-22 13:32:59
+2025-06-22 13:32:59,998 [INFO] [Strategy] Model output: ('Buy', 102764.6, '2025-06-22 13:32:59')
+2025-06-22 13:32:59,998 [INFO] [Strategy] Initial model signal: BUY at price: 102764.6
+2025-06-22 13:33:00,189 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:33:00,190 [INFO] [Risk Check] CLOSE_SHORT approval: True, Quantity: 0.085
+2025-06-22 13:33:00,190 [INFO] [Order Placement] Submitting BUY order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570364498, 'recvWindow': 60000}
+2025-06-22 13:33:00,333 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584670684, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102764.6, last_filled_qty=0.016, canceled_reason=None]
+2025-06-22 13:33:00,334 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584670684, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102764.9, last_filled_qty=0.002, canceled_reason=None]
+2025-06-22 13:33:00,334 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584670684, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=102765.1, last_filled_qty=0.067, canceled_reason=None]
+2025-06-22 13:33:00,335 [INFO] Order events [contract=BTCUSDT, order_id=4584670684, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.BUY, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:33:00,337 [INFO] [ExecManager] BUY order executed successfully at 102764.6.
+2025-06-22 13:33:01,477 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:33:01,832 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:33:01,846 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102764.60
+2025-06-22 13:33:01,859 [INFO]       Wallet Balance: $11,588.51
+2025-06-22 13:33:01,859 [INFO]     Unrealized P&L: $0.00
+2025-06-22 13:33:01,860 [INFO]       Realized P&L: $-66.28
+2025-06-22 13:33:01,861 [INFO]       Sharpe Ratio: -0.6448
+2025-06-22 13:33:01,861 [INFO]    Maximum Drawdown: -0.57%
+2025-06-22 13:33:01,861 [INFO] --------------------------
+2025-06-22 13:33:02,253 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:33:02,255 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:33:02,255 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:33:02,256 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 33, 1, 477272), '102764.60')
+2025-06-22 13:33:02,259 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:33:02,259 [INFO] [TradingStrategy] Data buffer length: 44
+2025-06-22 13:33:02,264 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:52.761956 2025-06-22 13:32:52.761956  102764.6
+2025-06-22 13:32:54.524069 2025-06-22 13:32:54.524069  102764.6
+2025-06-22 13:32:58.069381 2025-06-22 13:32:58.069381  102764.6
+2025-06-22 13:32:59.286377 2025-06-22 13:32:59.286377  102764.6
+2025-06-22 13:33:01.477272 2025-06-22 13:33:01.477272  102764.6
+2025-06-22 13:33:02,273 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (44, 5)
+2025-06-22 13:33:02,283 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+39 2025-06-22 13:32:52  102764.6  102764.6  102764.6  102764.6
+40 2025-06-22 13:32:54  102764.6  102764.6  102764.6  102764.6
+41 2025-06-22 13:32:58  102764.6  102764.6  102764.6  102764.6
+42 2025-06-22 13:32:59  102764.6  102764.6  102764.6  102764.6
+43 2025-06-22 13:33:01  102764.6  102764.6  102764.6  102764.6
+2025-06-22 13:33:02,348 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+39                        94.0                         0.0                     -101.5               2.910383e-07  ...  100.0  100.000000                  40.683197               -6582.679482
+40                        94.0                         0.0                     -101.5              -1.455192e-07  ...  100.0  100.000000                  15.539598               -2514.359825
+41                        94.0                         0.0                      -87.5               1.400000e+03  ...    0.0   66.666667                   5.935598                -960.399993
+42                         0.0                     -9400.0                      -87.5               1.455192e-07  ...    0.0   33.333333                   2.267197                -366.840155
+43                         0.0                         0.0                      -87.5               1.455192e-07  ...    0.0    0.000000                   0.865992                -140.120471
+
+[5 rows x 10 columns]
+2025-06-22 13:33:02,353 [INFO] [Predict] Prediction: Sell, Price: 102764.6, Time: 2025-06-22 13:33:02
+2025-06-22 13:33:02,353 [INFO] [Strategy] Model output: ('Sell', 102764.6, '2025-06-22 13:33:02')
+2025-06-22 13:33:02,354 [INFO] [Strategy] Initial model signal: SELL at price: 102764.6
+2025-06-22 13:33:02,522 [INFO] [Position Check] Current position size: 0.0
+2025-06-22 13:33:02,523 [INFO] [Risk Check] OPEN_SHORT approval: True, Amount: 8691.27, Quantity: 0.085
+2025-06-22 13:33:02,523 [INFO] [Order Placement] Submitting SELL order: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.085, 'timestamp': 1750570366669, 'recvWindow': 60000}
+2025-06-22 13:33:02,678 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584670855, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102764.0, last_filled_qty=0.005, canceled_reason=None]
+2025-06-22 13:33:02,682 [INFO] Order events [contract=BTCUSDT, order_id=4584670855, status=OrderStatus.NEW, type=ExecutionType.NEW, side=Side.SELL, last_filled_price=0, last_filled_qty=0.085, canceled_reason=None]
+2025-06-22 13:33:02,684 [INFO] ORDER FILLED : Order events [contract=BTCUSDT, order_id=4584670855, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=102762.8, last_filled_qty=0.08, canceled_reason=None]
+2025-06-22 13:33:02,687 [INFO] [ExecManager] SELL order executed successfully at 102764.6.
+2025-06-22 13:33:03,113 [ERROR] CANCEL read_loop
+2025-06-22 13:33:03,484 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:33:03,641 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102764.60
+2025-06-22 13:33:04,068 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:33:04,071 [INFO] STOPLOSS (SHORT) CHECK: Price > 103790.49929408201 (Entry: 102762.8705882)
+2025-06-22 13:33:04,073 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:33:04,073 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:33:04,074 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 33, 3, 484371), '102764.60')
+2025-06-22 13:33:04,076 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:33:04,076 [INFO] [TradingStrategy] Data buffer length: 45
+2025-06-22 13:33:04,082 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:54.524069 2025-06-22 13:32:54.524069  102764.6
+2025-06-22 13:32:58.069381 2025-06-22 13:32:58.069381  102764.6
+2025-06-22 13:32:59.286377 2025-06-22 13:32:59.286377  102764.6
+2025-06-22 13:33:01.477272 2025-06-22 13:33:01.477272  102764.6
+2025-06-22 13:33:03.484371 2025-06-22 13:33:03.484371  102764.6
+2025-06-22 13:33:04,088 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (45, 5)
+2025-06-22 13:33:04,095 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+40 2025-06-22 13:32:54  102764.6  102764.6  102764.6  102764.6
+41 2025-06-22 13:32:58  102764.6  102764.6  102764.6  102764.6
+42 2025-06-22 13:32:59  102764.6  102764.6  102764.6  102764.6
+43 2025-06-22 13:33:01  102764.6  102764.6  102764.6  102764.6
+44 2025-06-22 13:33:03  102764.6  102764.6  102764.6  102764.6
+2025-06-22 13:33:04,171 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...     %K          %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+40                        94.0                         0.0                     -101.5              -1.455192e-07  ...  100.0  100.000000                  15.539598               -2514.359825
+41                        94.0                         0.0                      -87.5               1.400000e+03  ...    0.0   66.666667                   5.935598                -960.399993
+42                         0.0                     -9400.0                      -87.5               1.455192e-07  ...    0.0   33.333333                   2.267197                -366.840155
+43                         0.0                         0.0                      -87.5               1.455192e-07  ...    0.0    0.000000                   0.865992                -140.120471
+44                         0.0                         0.0                      -87.5              -2.910383e-07  ...    0.0    0.000000                   0.330780                 -53.521257
+
+[5 rows x 10 columns]
+2025-06-22 13:33:04,175 [INFO] [Predict] Prediction: Sell, Price: 102764.6, Time: 2025-06-22 13:33:04
+2025-06-22 13:33:04,175 [INFO] [Strategy] Model output: ('Sell', 102764.6, '2025-06-22 13:33:04')
+2025-06-22 13:33:04,176 [INFO] [Strategy] Initial model signal: SELL at price: 102764.6
+2025-06-22 13:33:04,331 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:33:04,331 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:33:05,613 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:33:05,772 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102764.60
+2025-06-22 13:33:06,085 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:33:06,086 [INFO] STOPLOSS (SHORT) CHECK: Price > 103790.49929408201 (Entry: 102762.8705882)
+2025-06-22 13:33:06,087 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:33:06,087 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:33:06,088 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 33, 5, 613465), '102764.60')
+2025-06-22 13:33:06,090 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:33:06,091 [INFO] [TradingStrategy] Data buffer length: 46
+2025-06-22 13:33:06,102 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:58.069381 2025-06-22 13:32:58.069381  102764.6
+2025-06-22 13:32:59.286377 2025-06-22 13:32:59.286377  102764.6
+2025-06-22 13:33:01.477272 2025-06-22 13:33:01.477272  102764.6
+2025-06-22 13:33:03.484371 2025-06-22 13:33:03.484371  102764.6
+2025-06-22 13:33:05.613465 2025-06-22 13:33:05.613465  102764.6
+2025-06-22 13:33:06,112 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (46, 5)
+2025-06-22 13:33:06,123 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+41 2025-06-22 13:32:58  102764.6  102764.6  102764.6  102764.6
+42 2025-06-22 13:32:59  102764.6  102764.6  102764.6  102764.6
+43 2025-06-22 13:33:01  102764.6  102764.6  102764.6  102764.6
+44 2025-06-22 13:33:03  102764.6  102764.6  102764.6  102764.6
+45 2025-06-22 13:33:05  102764.6  102764.6  102764.6  102764.6
+2025-06-22 13:33:06,180 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...   %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+41                        94.0                         0.0                      -87.5               1.400000e+03  ...  0.0  66.666667                   5.935598                -960.399993
+42                         0.0                     -9400.0                      -87.5               1.455192e-07  ...  0.0  33.333333                   2.267197                -366.840155
+43                         0.0                         0.0                      -87.5               1.455192e-07  ...  0.0   0.000000                   0.865992                -140.120471
+44                         0.0                         0.0                      -87.5              -2.910383e-07  ...  0.0   0.000000                   0.330780                 -53.521257
+45                         0.0                         0.0                      -87.5               1.455192e-07  ...  0.0   0.000000                   0.126347                 -20.443301
+
+[5 rows x 10 columns]
+2025-06-22 13:33:06,185 [INFO] [Predict] Prediction: Sell, Price: 102764.6, Time: 2025-06-22 13:33:06
+2025-06-22 13:33:06,185 [INFO] [Strategy] Model output: ('Sell', 102764.6, '2025-06-22 13:33:06')
+2025-06-22 13:33:06,185 [INFO] [Strategy] Initial model signal: SELL at price: 102764.6
+2025-06-22 13:33:06,340 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:33:06,340 [WARNING] [Risk Check] Trade not approved for action: NONE
+2025-06-22 13:33:11,901 [INFO] --- PERFORMANCE REPORT ---
+2025-06-22 13:33:11,907 [INFO]       Wallet Balance: $11,584.70
+2025-06-22 13:33:11,907 [INFO]     Unrealized P&L: $-0.18
+2025-06-22 13:33:11,913 [INFO]       Realized P&L: $-70.09
+2025-06-22 13:33:11,914 [INFO]       Sharpe Ratio: -0.6445
+2025-06-22 13:33:11,914 [INFO]    Maximum Drawdown: -0.60%
+2025-06-22 13:33:11,915 [INFO] --------------------------
+2025-06-22 13:33:13,751 [INFO] [ExecManager] Received new tick data.
+2025-06-22 13:33:13,915 [INFO] [ExecManager] Updating bookkeeper for date: 2025-06-22, price: 102764.60
+2025-06-22 13:33:14,239 [INFO] [Order Management] Open orders: 0; Queue OK: True
+2025-06-22 13:33:14,241 [INFO] STOPLOSS (SHORT) CHECK: Price > 103790.49929408201 (Entry: 102762.8705882)
+2025-06-22 13:33:14,242 [INFO] [Risk Manager] stop_loss: False, trading_halt: False
+2025-06-22 13:33:14,242 [INFO] [Strategy] Collecting new data and aggregating features.
+2025-06-22 13:33:14,243 [INFO] [TradingStrategy] New tick from queue: (datetime.datetime(2025, 6, 22, 13, 33, 13, 751523), '102764.60')
+2025-06-22 13:33:14,246 [INFO] [TradingStrategy] Collected 1 new ticks.
+2025-06-22 13:33:14,246 [INFO] [TradingStrategy] Data buffer length: 47
+2025-06-22 13:33:14,252 [INFO] [TradingStrategy] Sample buffer:
+                                            Timestamp     Price
+Timestamp                                                      
+2025-06-22 13:32:59.286377 2025-06-22 13:32:59.286377  102764.6
+2025-06-22 13:33:01.477272 2025-06-22 13:33:01.477272  102764.6
+2025-06-22 13:33:03.484371 2025-06-22 13:33:03.484371  102764.6
+2025-06-22 13:33:05.613465 2025-06-22 13:33:05.613465  102764.6
+2025-06-22 13:33:13.751523 2025-06-22 13:33:13.751523  102764.6
+2025-06-22 13:33:14,257 [INFO] [TradingStrategy] Aggregated data to 1S OHLC; shape: (47, 5)
+2025-06-22 13:33:14,265 [INFO] [TradingStrategy] Aggregated sample:
+             Timestamp      Open      High       Low     Close
+42 2025-06-22 13:32:59  102764.6  102764.6  102764.6  102764.6
+43 2025-06-22 13:33:01  102764.6  102764.6  102764.6  102764.6
+44 2025-06-22 13:33:03  102764.6  102764.6  102764.6  102764.6
+45 2025-06-22 13:33:05  102764.6  102764.6  102764.6  102764.6
+46 2025-06-22 13:33:13  102764.6  102764.6  102764.6  102764.6
+2025-06-22 13:33:14,317 [INFO] [Predict] Last 5 rows of feature data for prediction:
+    Short_Moving_Avg_1st_Deriv  Short_Moving_Avg_2nd_Deriv  Long_Moving_Avg_1st_Deriv  Long_Moving_Avg_2nd_Deriv  ...   %K         %D  KalmanFilterEst_1st_Deriv  KalmanFilterEst_2nd_Deriv
+42                         0.0                     -9400.0                      -87.5               1.455192e-07  ...  0.0  33.333333                   2.267197                -366.840155
+43                         0.0                         0.0                      -87.5               1.455192e-07  ...  0.0   0.000000                   0.865992                -140.120471
+44                         0.0                         0.0                      -87.5              -2.910383e-07  ...  0.0   0.000000                   0.330780                 -53.521257
+45                         0.0                         0.0                      -87.5               1.455192e-07  ...  0.0   0.000000                   0.126347                 -20.443301
+46                         0.0                         0.0                      -87.5               1.455192e-07  ...  0.0   0.000000                   0.048260                  -7.808646
+
+[5 rows x 10 columns]
+2025-06-22 13:33:14,321 [INFO] [Predict] Prediction: Sell, Price: 102764.6, Time: 2025-06-22 13:33:14
+2025-06-22 13:33:14,321 [INFO] [Strategy] Model output: ('Sell', 102764.6, '2025-06-22 13:33:14')
+2025-06-22 13:33:14,321 [INFO] [Strategy] Initial model signal: SELL at price: 102764.6
+2025-06-22 13:33:14,471 [INFO] [Position Check] Current position size: -0.085
+2025-06-22 13:33:14,471 [WARNING] [Risk Check] Trade not approved for action: NONE
