@@ -146,6 +146,9 @@ class TradingStrategy:
         """
         Analyze market data and return trade signal (Buy/Sell/Hold).
         """
+
+        print("[ANALYZE] Running feature engineering...")  # NEW DEBUG        
+
         # ---- FIX: REMOVE THE LINE BELOW ----
         # self.data = pd.read_csv(self.file_path) # DELETE THIS LINE
 

@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 import os
 import time
 import logging
+import csv
+
 
 # Setup logging
 logging.basicConfig(
@@ -24,7 +26,24 @@ from risk_manager.main_risk_manager import RiskManager
 from trading_engine.main_trading_strategy import TradingStrategy
 from rest_connect.rest_factory import RestFactory
 import sys
+from visualization.live_plotter import LivePlotter
 
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("trading_bot.log"),
+        logging.StreamHandler()
+    ]
+)
+
+# ANSI color codes for terminal output (works in most terminals)
+RED = "\033[91m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+CYAN = "\033[96m"
+RESET = "\033[0m"
 
 class Logger:
     def __init__(self, filename):
@@ -82,47 +101,71 @@ class ExecManager:
         - Calls the trading model and conditionally overrides HOLD based on strong signals.
         - Checks risk and executes trades.
         """
+        CYAN = "\033[96m"
+        GREEN = "\033[92m"
+        RED = "\033[91m"
+        YELLOW = "\033[93m"
+        RESET = "\033[0m"
+
         logging.info("[ExecManager] Received new tick data.")
 
         last_price = tick.get("lastprice")
-        if not last_price:
+        print(f"\n{CYAN}{'='*18} NEW TICK {'='*18}{RESET}")
+        print(f"{YELLOW}Tick received at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | Last price: {last_price}{RESET}")
+
+        if last_price == "":
+            print(f"{RED}No last price received; skipping tick.{RESET}")
             logging.warning("[ExecManager] Empty last price received; skipping tick.")
             return
 
+        # 1. Get server time and date
         server_response = self.rest_gateway.time()
         servertime = int(server_response.get("serverTime", 0))
         if not servertime:
+            print(f"{RED}Failed to fetch server time; aborting tick processing.{RESET}")
             logging.error("[ExecManager] Failed to fetch server time; aborting tick processing.")
             return
 
         today = datetime.fromtimestamp(servertime / 1000).date()
+        print(f"{CYAN}Updating bookkeeper for date: {today}, price: {last_price}...{RESET}")
         logging.info(f"[ExecManager] Updating bookkeeper for date: {today}, price: {last_price}")
         self.book_keeper.update_bookkeeper(today, last_price, servertime)
 
         # Order management
         open_orders = self.rest_gateway.get_all_open_orders("BTCUSDT", servertime)
         order_queue_ok = len(open_orders) < MAX_OPEN_ORDER_COUNT
+        print(f"{CYAN}Open orders:{RESET} {len(open_orders)} | Queue OK: {order_queue_ok}")
         logging.info(f"[Order Management] Open orders: {len(open_orders)}; Queue OK: {order_queue_ok}")
 
         # Risk trigger check
-        if self.risk_manager.trigger_stop_loss() or self.risk_manager.trigger_trading_halt():
+        stop_loss = self.risk_manager.trigger_stop_loss()
+        trading_halt = self.risk_manager.trigger_trading_halt()
+        print(f"{CYAN}Risk check:{RESET} stop_loss: {stop_loss}, trading_halt: {trading_halt}")
+        logging.info(f"[Risk Manager] stop_loss: {stop_loss}, trading_halt: {trading_halt}")
+        if stop_loss or trading_halt:
+            print(f"{RED}Stop-loss or trading halt triggered; initiating liquidation.{RESET}")
             logging.info("[Risk Manager] Stop-loss or trading halt triggered; initiating liquidation.")
-            # self.handle_liquidation(servertime) # Note: handle_liquidation needs to be implemented
+            # self.handle_liquidation(servertime) # If implemented
             return
 
         # Model analysis
+        print(f"{CYAN}Collecting new data and aggregating features...{RESET}")
         logging.info("[Strategy] Collecting new data and aggregating features.")
         self.update_queue(tick)
         self.strategy.collect_new_data()
-        self.strategy.aggregate_data()
+        self.strategy.aggregate_data(save_csv=True)
 
         model_output = self.strategy.analyze_data()
+        print(f"{CYAN}Model output:{RESET} {model_output}")
+        logging.info(f"[Strategy] Model output: {model_output}")
 
         # Check if model output is valid
         if not model_output:
             self.model_none_count += 1
+            print(f"{YELLOW}Model returned None ({self.model_none_count}/{MAX_MODEL_NONE_COUNT}){RESET}")
             logging.warning(f"[Strategy] Model returned None ({self.model_none_count}/{MAX_MODEL_NONE_COUNT}).")
             if self.model_none_count >= MAX_MODEL_NONE_COUNT:
+                print(f"{RED}Model failure limit reached; cancelling all orders.{RESET}")
                 logging.warning("[ExecManager] Model failure limit reached; cancelling all orders.")
                 self.rest_gateway.cancel_all_order("BTCUSDT", servertime)
             return
@@ -131,36 +174,40 @@ class ExecManager:
 
         # Get direction and limit_price from the model/strategy
         direction, limit_price = model_output[0].upper(), float(model_output[1])
+        print(f"{GREEN}Signal: {direction} | Limit price: {limit_price}{RESET}")
         logging.info(f"[Strategy] Initial model signal: {direction} at price: {limit_price}")
 
         # Handle HOLD signals with adaptive overrides based on strategy metrics
         if direction == "HOLD":
             data = self.strategy.data
-            # Ensure data and required columns exist before trying to access them
             if "Short_Moving_Avg_1st_Deriv" in data.columns and "KalmanFilterEst_1st_Deriv" in data.columns:
                 short_ma_deriv = data["Short_Moving_Avg_1st_Deriv"].iloc[-1]
                 kalman_deriv = data["KalmanFilterEst_1st_Deriv"].iloc[-1]
 
+                print(f"{YELLOW}Short_MA_1st_Deriv: {short_ma_deriv} | Kalman_1st_Deriv: {kalman_deriv}{RESET}")
                 logging.debug(f"[Strategy Debug] Short MA Derivative: {short_ma_deriv}, Kalman Derivative: {kalman_deriv}")
 
-                # Use very sensitive thresholds to increase trading activity
                 if short_ma_deriv > 10 and kalman_deriv > 0:
                     direction = "BUY"
+                    print(f"{YELLOW}[Override] HOLD overridden to BUY due to positive momentum.{RESET}")
                     logging.info("[Strategy Override] HOLD overridden to BUY due to positive momentum.")
                 elif short_ma_deriv < -10 and kalman_deriv < 0:
                     direction = "SELL"
+                    print(f"{YELLOW}[Override] HOLD overridden to SELL due to negative momentum.{RESET}")
                     logging.info("[Strategy Override] HOLD overridden to SELL due to negative momentum.")
                 else:
+                    print(f"{YELLOW}HOLD confirmed; insufficient momentum for override.{RESET}")
                     logging.info("[Strategy] HOLD signal confirmed; insufficient momentum for override.")
                     return  # Exit without placing an order
             else:
-                 logging.warning("[Strategy] HOLD override check skipped: Required feature columns not available.")
-                 return
+                print(f"{YELLOW}HOLD override check skipped: Required feature columns not available.{RESET}")
+                logging.warning("[Strategy] HOLD override check skipped: Required feature columns not available.")
+                return
 
         # Determine order quantity and perform risk checks
         order_quantity = 0
         approval = False
-        action = "NONE"  # For clearer logging
+        action = "NONE"
 
         # Get current position size once to determine action (open/close)
         pos_info = self.rest_gateway.get_position_info("BTCUSDT", servertime)
@@ -169,81 +216,79 @@ class ExecManager:
             if pos.get('symbol') == 'BTCUSDT':
                 current_btc_pos = float(pos.get('positionAmt', 0))
                 break
+        print(f"{CYAN}Current BTC position: {current_btc_pos}{RESET}")
         logging.info(f"[Position Check] Current position size: {current_btc_pos}")
 
         if direction == "BUY":
-            # If we are currently short, this BUY signal means CLOSE the short position.
             if current_btc_pos < 0:
                 action = "CLOSE_SHORT"
                 order_quantity = abs(current_btc_pos)
                 approval = (
-                        self.risk_manager.check_buy_order_value(limit_price) and
-                        self.risk_manager.check_buy_to_cover_value(limit_price)
+                    self.risk_manager.check_buy_order_value(limit_price) and
+                    self.risk_manager.check_buy_to_cover_value(limit_price)
                 )
+                print(f"{GREEN}[Risk Check] {action} approval: {approval}, Quantity: {order_quantity}{RESET}")
                 logging.info(f"[Risk Check] {action} approval: {approval}, Quantity: {order_quantity}")
 
-            # Otherwise, if we are flat, this BUY signal means OPEN a long position.
             elif current_btc_pos == 0:
                 action = "OPEN_LONG"
                 dollar_amt = self.risk_manager.get_available_tradable_balance()
+                print(f"{CYAN}Available to open long: {dollar_amt}{RESET}")
                 if dollar_amt < 10:
-                    logging.warning(
-                        f"[Risk Check] Available dollar amount {dollar_amt:.2f} too small for a BUY order; skipping.")
+                    print(f"{YELLOW}[Risk Check] Available dollar amount {dollar_amt:.2f} too small for a BUY order; skipping.{RESET}")
+                    logging.warning(f"[Risk Check] Available dollar amount {dollar_amt:.2f} too small for a BUY order; skipping.")
                 else:
                     order_quantity = round(dollar_amt / limit_price, 3)
-                    # Use the updated risk check for buying
                     approval = (
-                            self.risk_manager.check_available_balance(dollar_amt)
-                            and self.risk_manager.check_buy_order_value(limit_price)
-                            and self.risk_manager.check_buy_position()
+                        self.risk_manager.check_available_balance(dollar_amt)
+                        and self.risk_manager.check_buy_order_value(limit_price)
+                        and self.risk_manager.check_buy_position()
                     )
-                logging.info(
-                    f"[Risk Check] {action} approval: {approval}, Amount: {dollar_amt:.2f}, Quantity: {order_quantity}")
+                print(f"{GREEN}[Risk Check] {action} approval: {approval}, Amount: {dollar_amt:.2f}, Quantity: {order_quantity}{RESET}")
+                logging.info(f"[Risk Check] {action} approval: {approval}, Amount: {dollar_amt:.2f}, Quantity: {order_quantity}")
 
         elif direction == "SELL":
-            # If we are currently long, this SELL signal means CLOSE the long position.
             if current_btc_pos > 0:
                 action = "CLOSE_LONG"
                 order_quantity = current_btc_pos
-                # This is your original logic for closing a long
                 approval = (
-                        order_quantity > 0
-                        and self.risk_manager.check_short_position(order_quantity)
-                        and self.risk_manager.check_sell_order_value(limit_price)
+                    order_quantity > 0
+                    and self.risk_manager.check_short_position(order_quantity)
+                    and self.risk_manager.check_sell_order_value(limit_price)
                 )
+                print(f"{RED}[Risk Check] {action} approval: {approval}, Position quantity: {order_quantity}{RESET}")
                 logging.info(f"[Risk Check] {action} approval: {approval}, Position quantity: {order_quantity}")
 
-            # Otherwise, if we are flat, this SELL signal means OPEN a short position.
             elif current_btc_pos == 0:
                 action = "OPEN_SHORT"
                 dollar_amt = self.risk_manager.get_available_tradable_balance()
+                print(f"{CYAN}Available to open short: {dollar_amt}{RESET}")
                 if dollar_amt < 10:
-                    logging.warning(
-                        f"[Risk Check] Available dollar amount {dollar_amt:.2f} too small for a SELL order; skipping.")
+                    print(f"{YELLOW}[Risk Check] Available dollar amount {dollar_amt:.2f} too small for a SELL order; skipping.{RESET}")
+                    logging.warning(f"[Risk Check] Available dollar amount {dollar_amt:.2f} too small for a SELL order; skipping.")
                 else:
-                    # This logic mirrors opening a long position
                     order_quantity = round(dollar_amt / limit_price, 3)
-                    # Use the updated risk check for selling from flat
                     approval = (
-                            self.risk_manager.check_available_balance(dollar_amt)
-                            and self.risk_manager.check_buy_order_value(limit_price)  # Sanity check is fine
-                            and self.risk_manager.check_sell_position()
+                        self.risk_manager.check_available_balance(dollar_amt)
+                        and self.risk_manager.check_buy_order_value(limit_price)
+                        and self.risk_manager.check_sell_position()
                     )
-                logging.info(
-                    f"[Risk Check] {action} approval: {approval}, Amount: {dollar_amt:.2f}, Quantity: {order_quantity}")
+                print(f"{RED}[Risk Check] {action} approval: {approval}, Amount: {dollar_amt:.2f}, Quantity: {order_quantity}{RESET}")
+                logging.info(f"[Risk Check] {action} approval: {approval}, Amount: {dollar_amt:.2f}, Quantity: {order_quantity}")
 
-        # The final checks before placing the order
         if not approval:
+            print(f"{YELLOW}Trade not approved for action: {action}{RESET}")
             logging.warning(f"[Risk Check] Trade not approved for action: {action}")
             return
 
         if not order_queue_ok:
+            print(f"{YELLOW}Order queue limit reached; cannot place new orders.{RESET}")
             logging.warning("[Order Management] Order queue limit reached; cannot place new orders.")
             return
 
         if order_quantity <= 0:
-            logging.error(
-                f"[Order Placement] Calculated order quantity invalid or zero ({order_quantity}); aborting order.")
+            print(f"{RED}Calculated order quantity invalid or zero ({order_quantity}); aborting order.{RESET}")
+            logging.error(f"[Order Placement] Calculated order quantity invalid or zero ({order_quantity}); aborting order.")
             return
 
         # Construct and place order
@@ -257,15 +302,19 @@ class ExecManager:
             "recvWindow": 60000,
             # "timeInForce": "GTC", # Not needed for MARKET orders
         }
+        print(f"{GREEN}Submitting {direction} order: {order_data}{RESET}")
         logging.info(f"[Order Placement] Submitting {direction} order: {order_data}")
         trade_result = self.trade_executor.execute_trade(order_data, "trade")
 
         if trade_result:
+            print(f"{GREEN}{direction} order executed successfully at {limit_price}.{RESET}")
             logging.info(f"[ExecManager] {direction} order executed successfully at {limit_price}.")
             self.book_keeper.update_bookkeeper(datetime.now(), limit_price, servertime)
             self.book_keeper.return_historical_data().to_csv("historical_data.csv", mode='a', header=not os.path.exists("historical_data.csv"))
         else:
+            print(f"{RED}{direction} order placement failed.{RESET}")
             logging.error(f"[ExecManager] {direction} order placement failed.")
+
 
     def print_performance_report(self):
         """Calculates and prints a summary of key performance metrics."""
@@ -288,11 +337,41 @@ class ExecManager:
             wallet_balance = self.book_keeper.get_wallet_balance
 
             # Print the formatted report
+            print(f"{CYAN}--- PERFORMANCE REPORT ---{RESET}")
+            print(f"{GREEN}      Wallet Balance: ${wallet_balance:,.2f}{RESET}")
+            print(f"{GREEN}    Unrealized P&L: ${unrealized_pnl:,.2f}{RESET}")
+            print(f"{GREEN}      Realized P&L: ${realized_pnl:,.2f}{RESET}")
+            print(f"{CYAN}      Sharpe Ratio: {sharpe_ratio:.4f}{RESET}")
+            print(f"{CYAN}   Maximum Drawdown: {max_drawdown:.2%}{RESET}")
+            print(f"{CYAN}--------------------------{RESET}")
+
+            # Print the formatted report
             logging.info(f"      Wallet Balance: ${wallet_balance:,.2f}")
             logging.info(f"    Unrealized P&L: ${unrealized_pnl:,.2f}")
             logging.info(f"      Realized P&L: ${realized_pnl:,.2f}")
             logging.info(f"      Sharpe Ratio: {sharpe_ratio:.4f}")
             logging.info(f"   Maximum Drawdown: {max_drawdown:.2%}")
+
+            # --- Write to CSV ---
+            csv_file = "performance_report.csv"
+            file_exists = os.path.isfile(csv_file)
+            fieldnames = [
+                "timestamp", "wallet_balance", "unrealized_pnl", "realized_pnl", "sharpe_ratio", "max_drawdown"
+            ]
+
+            with open(csv_file, mode='a', newline='') as f:
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
+                # Write header only if file is new
+                if not file_exists:
+                    writer.writeheader()
+                writer.writerow({
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "wallet_balance": wallet_balance,
+                    "unrealized_pnl": unrealized_pnl,
+                    "realized_pnl": realized_pnl,
+                    "sharpe_ratio": sharpe_ratio,
+                    "max_drawdown": max_drawdown
+                })
 
         except Exception as e:
             logging.error(f"Could not generate performance report: {e}")
@@ -346,5 +425,5 @@ if __name__ == "__main__":
         print("Heartbeat: application running.")
 
         # Print a performance report every 5 heartbeats (50 seconds)
-        if heartbeat_count % 5 == 0:
+        if heartbeat_count % 1 == 0:
             exec_manager.print_performance_report()
