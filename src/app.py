@@ -162,6 +162,9 @@ class ExecManager:
         model_output = self.strategy.analyze_data()
         print(f"{CYAN}Model output:{RESET} {model_output}")
         logging.info(f"[Strategy] Model output: {model_output}")
+        
+        # <<<<<<<< PRINT REPORT >>>>>>>>
+        self.print_performance_report()
 
         # Check if model output is valid
         if not model_output:
@@ -207,6 +210,7 @@ class ExecManager:
                 print(f"{YELLOW}HOLD override check skipped: Required feature columns not available.{RESET}")
                 logging.warning("[Strategy] HOLD override check skipped: Required feature columns not available.")
                 return
+    
 
         # Determine order quantity and perform risk checks
         order_quantity = 0
@@ -315,6 +319,10 @@ class ExecManager:
             logging.info(f"[ExecManager] {direction} order executed successfully at {limit_price}.")
             self.book_keeper.update_bookkeeper(datetime.now(), limit_price, servertime)
             self.book_keeper.return_historical_data().to_csv("historical_data.csv", mode='a', header=not os.path.exists("historical_data.csv"))
+            
+            # <<<<<<<< PRINT REPORT >>>>>>>>
+            self.print_performance_report()
+        
         else:
             print(f"{RED}{direction} order placement failed.{RESET}")
             logging.error(f"[ExecManager] {direction} order placement failed.")
@@ -339,6 +347,8 @@ class ExecManager:
             realized_pnl = self.book_keeper.get_realized_pnl
             unrealized_pnl = self.book_keeper.get_unrealized_pnl
             wallet_balance = self.book_keeper.get_wallet_balance
+            
+            signal, signal_price, signal_timestamp = self.strategy.predict()
 
             # Print the formatted report
             print(f"{CYAN}--- PERFORMANCE REPORT ---{RESET}")
@@ -347,6 +357,8 @@ class ExecManager:
             print(f"{GREEN}      Realized P&L: ${realized_pnl:,.2f}{RESET}")
             print(f"{CYAN}      Sharpe Ratio: {sharpe_ratio:.4f}{RESET}")
             print(f"{CYAN}   Maximum Drawdown: {max_drawdown:.2%}{RESET}")
+            print(f"{CYAN}        Signal: {signal}{RESET}")
+            print(f"{CYAN}      Close: {signal_price}{RESET}")
             print(f"{CYAN}--------------------------{RESET}")
 
             # Print the formatted report
@@ -355,12 +367,15 @@ class ExecManager:
             logging.info(f"      Realized P&L: ${realized_pnl:,.2f}")
             logging.info(f"      Sharpe Ratio: {sharpe_ratio:.4f}")
             logging.info(f"   Maximum Drawdown: {max_drawdown:.2%}")
-
+            logging.info(f"      Signal: {signal}")
+            logging.info(f"      Close: {signal_price}")
+            
             # --- Write to CSV ---
             csv_file = "performance_report.csv"
             file_exists = os.path.isfile(csv_file)
             fieldnames = [
-                "timestamp", "wallet_balance", "unrealized_pnl", "realized_pnl", "sharpe_ratio", "max_drawdown"
+                "timestamp", "wallet_balance", "unrealized_pnl",
+                "realized_pnl", "sharpe_ratio", "max_drawdown", "Close", "signal"
             ]
 
             with open(csv_file, mode='a', newline='') as f:
@@ -374,7 +389,9 @@ class ExecManager:
                     "unrealized_pnl": unrealized_pnl,
                     "realized_pnl": realized_pnl,
                     "sharpe_ratio": sharpe_ratio,
-                    "max_drawdown": max_drawdown
+                    "max_drawdown": max_drawdown,
+                    "Close": signal_price, 
+                    "signal": signal 
                 })
 
         except Exception as e:

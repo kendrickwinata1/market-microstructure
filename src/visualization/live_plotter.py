@@ -19,6 +19,7 @@ def live_performance_plot():
             if "timestamp" in df.columns:
                 df['timestamp'] = pd.to_datetime(df['timestamp'])
             timestamps = df['timestamp']
+            
             for idx, param in enumerate(param_list):
                 ax = axs[idx]
                 ax.clear()
@@ -35,15 +36,51 @@ def live_performance_plot():
                     # Rotate x-labels for readability
                     for label in ax.get_xticklabels():
                         label.set_rotation(30)
+            
+            # --- 6th subplot: live price with signals ---
+            ax = axs[5]
+            ax.clear()
+            ax.set_title('Live Price + Signals', fontsize=14)
+            ax.set_xlabel('Time', fontsize=11)
+            ax.set_ylabel('Price', fontsize=11)
+            ax.grid(True, linestyle="--", alpha=0.6)
+
+            # Plot the live price line (from the 'Close' column)
+            if 'Close' in df.columns:
+                ax.plot(timestamps, df['Close'], label='Live Price', color='blue', linewidth=2)
+
+            # Overlay signal markers (if available)
+            if 'signal' in df.columns and 'Close' in df.columns:
+                # BUY signals (green up arrow)
+                buy_mask = df['signal'].str.upper() == 'BUY'
+                ax.scatter(
+                    df['timestamp'][buy_mask], df['Close'][buy_mask],
+                    marker='^', s=120, color='green', edgecolors='black', label='BUY', zorder=5
+                )
+                # SELL signals (red down arrow)
+                sell_mask = df['signal'].str.upper() == 'SELL'
+                ax.scatter(
+                    df['timestamp'][sell_mask], df['Close'][sell_mask],
+                    marker='v', s=120, color='red', edgecolors='black', label='SELL', zorder=5
+                )
+                # HOLD signals (gray dot, optional)
+                hold_mask = df['signal'].str.upper() == 'HOLD'
+                ax.scatter(
+                    df['timestamp'][hold_mask], df['Close'][hold_mask],
+                    marker='o', s=70, color='gray', edgecolors='black', alpha=0.3, label='HOLD', zorder=4
+                )
+                ax.legend(loc='best', fontsize=10)
+
+            for label in ax.get_xticklabels():
+                label.set_rotation(30)
+
             fig.suptitle("Live Performance Report", fontsize=18, fontweight='bold')
             fig.tight_layout(rect=[0, 0.03, 1, 0.95])
         except Exception as e:
             print("Plot update error:", e)
 
     ani = animation.FuncAnimation(fig, animate, interval=2000)
-    fig.delaxes(axs[5])  # Remove the 6th (unused) subplot
     plt.show()
-
 
 
 
