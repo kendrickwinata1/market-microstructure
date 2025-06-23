@@ -338,8 +338,7 @@ class TradingStrategy:
             self.data[f"{feature}_2nd_Deriv"] = self.data[f"{feature}_1st_Deriv"].diff() * 100
         self.data.bfill(inplace=True)
 
-def predict(self):
-    
+    def predict(self):
         """
         Improved Predict method with better logging and exception handling.
         """
@@ -373,7 +372,8 @@ def predict(self):
         except Exception as e:
             logging.error(f"[Predict] Model prediction error: {e}")
             price = self.data["Close"].iloc[-1]
-            return ("Hold", price, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+            return ("Hold", price, datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))    
+
 
 
     # def predict(self):
