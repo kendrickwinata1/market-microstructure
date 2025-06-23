@@ -3,211 +3,77 @@ initializing REST gateway factory
 CHECK MY API_KEY:  51fb4d95ffdcde08ad0ad2d29306b2a977fe46936529d4e40fdbe89cff33f4c5
 CHECK MY API_SECRET:  9bbde8457e093814063f5934880e69fba48d20a0ea032d259a5de6ac6cb67b54
 ################ REGISTERING CALLBACK ################
-/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/visualization/live_plotter.py:34: UserWarning: frames=None which we can infer the length of, did not pass an explicit *save_count* and passed cache_frame_data=True.  To avoid a possibly unbounded cache, frame data caching has been disabled. To suppress this warning either pass `cache_frame_data=False` or `save_count=MAX_FRAMES`.
-  ani = animation.FuncAnimation(fig, animate, interval=2000)  # Update every 2s
+/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/visualization/live_plotter.py:43: UserWarning: frames=None which we can infer the length of, did not pass an explicit *save_count* and passed cache_frame_data=True.  To avoid a possibly unbounded cache, frame data caching has been disabled. To suppress this warning either pass `cache_frame_data=False` or `save_count=MAX_FRAMES`.
+  ani = animation.FuncAnimation(fig, animate, interval=2000)
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:37 | Last price: [0m
-[91mNo last price received; skipping tick.[0m
-Plot update error: [Errno 2] No such file or directory: 'performance_report.csv'
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:38 | Last price: [0m
+[93mTick received at 2025-06-23 23:26:39 | Last price: [0m
 [91mNo last price received; skipping tick.[0m
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:39 | Last price: [0m
-[91mNo last price received; skipping tick.[0m
-Plot update error: [Errno 2] No such file or directory: 'performance_report.csv'
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:40 | Last price: [0m
-[91mNo last price received; skipping tick.[0m
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:41 | Last price: 101830.00[0m
-Response: {'serverTime': 1750692221533}
-[96mUpdating bookkeeper for date: 2025-06-23, price: 101830.00...[0m
+[93mTick received at 2025-06-23 23:26:40 | Last price: 101789.10[0m
+Response: {'serverTime': 1750692400198}
+[96mUpdating bookkeeper for date: 2025-06-23, price: 101789.10...[0m
 /Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/book_keeper/main_book_keeper.py:133: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
   self.historical_data = pd.concat(
 [96mOpen orders:[0m 0 | Queue OK: True
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mCollecting new data and aggregating features...[0m
-Callback: (datetime.datetime(2025, 6, 23, 23, 23, 41, 351272), '101830.00')
+Callback: (datetime.datetime(2025, 6, 23, 23, 26, 40, 16492), '101789.10')
 /Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/trading_engine/main_trading_strategy.py:98: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
   self.raw_data = pd.concat([self.raw_data, new_data], ignore_index=True)
 [ANALYZE] Running feature engineering...
 /Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/trading_engine/main_trading_strategy.py:255: FutureWarning: Series.replace without 'value' and with non-dict-like 'to_replace' is deprecated and will raise in a future version. Explicitly specify the new values instead.
   rs = gain / loss.replace(to_replace=0).ffill().bfill()
-[96mModel output:[0m ('Hold', 101830.0, '2025-06-23 23:23:41')
-[92mSignal: HOLD | Limit price: 101830.0[0m
+[96mModel output:[0m ('Hold', 101789.1, '2025-06-23 23:26:40')
+[92mSignal: HOLD | Limit price: 101789.1[0m
 [93mShort_MA_1st_Deriv: 0.0 | Kalman_1st_Deriv: 0.0[0m
 [93mHOLD confirmed; insufficient momentum for override.[0m
-Plot update error: [Errno 2] No such file or directory: 'performance_report.csv'
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:43 | Last price: 101830.00[0m
-Response: {'serverTime': 1750692223782}
-[96mUpdating bookkeeper for date: 2025-06-23, price: 101830.00...[0m
-Plot update error: [Errno 2] No such file or directory: 'performance_report.csv'
+[93mTick received at 2025-06-23 23:26:41 | Last price: 101789.10[0m
+Response: {'serverTime': 1750692401409}
+[96mUpdating bookkeeper for date: 2025-06-23, price: 101789.10...[0m
 [96mOpen orders:[0m 0 | Queue OK: True
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mCollecting new data and aggregating features...[0m
-Callback: (datetime.datetime(2025, 6, 23, 23, 23, 43, 599102), '101830.00')
+Callback: (datetime.datetime(2025, 6, 23, 23, 26, 41, 234704), '101789.10')
 [ANALYZE] Running feature engineering...
 /Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/trading_engine/main_trading_strategy.py:255: FutureWarning: Series.replace without 'value' and with non-dict-like 'to_replace' is deprecated and will raise in a future version. Explicitly specify the new values instead.
   rs = gain / loss.replace(to_replace=0).ffill().bfill()
-[96mModel output:[0m ('Hold', 101830.0, '2025-06-23 23:23:44')
-[92mSignal: HOLD | Limit price: 101830.0[0m
-[93mShort_MA_1st_Deriv: 0.0 | Kalman_1st_Deriv: 3054900.0[0m
-[93mHOLD confirmed; insufficient momentum for override.[0m
-Plot update error: [Errno 2] No such file or directory: 'performance_report.csv'
-Heartbeat: application running.
-[96m--- PERFORMANCE REPORT ---[0m
-[92m      Wallet Balance: $11,058.87[0m
-[92m    Unrealized P&L: $3.05[0m
-[92m      Realized P&L: $409.79[0m
-[96m      Sharpe Ratio: nan[0m
-[96m   Maximum Drawdown: 0.00%[0m
-[96m--------------------------[0m
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:47 | Last price: 101830.00[0m
-Response: {'serverTime': 1750692227437}
-[96mUpdating bookkeeper for date: 2025-06-23, price: 101830.00...[0m
-[96mOpen orders:[0m 0 | Queue OK: True
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mCollecting new data and aggregating features...[0m
-Callback: (datetime.datetime(2025, 6, 23, 23, 23, 47, 268738), '101830.00')
-[ANALYZE] Running feature engineering...
-/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/trading_engine/main_trading_strategy.py:255: FutureWarning: Series.replace without 'value' and with non-dict-like 'to_replace' is deprecated and will raise in a future version. Explicitly specify the new values instead.
-  rs = gain / loss.replace(to_replace=0).ffill().bfill()
-[96mModel output:[0m ('Hold', 101830.0, '2025-06-23 23:23:47')
-[92mSignal: HOLD | Limit price: 101830.0[0m
-[93mShort_MA_1st_Deriv: 0.0 | Kalman_1st_Deriv: 1253292.3076923077[0m
+[96mModel output:[0m ('Hold', 101789.1, '2025-06-23 23:26:41')
+[92mSignal: HOLD | Limit price: 101789.1[0m
+[93mShort_MA_1st_Deriv: 0.0 | Kalman_1st_Deriv: 3053673.000000001[0m
 [93mHOLD confirmed; insufficient momentum for override.[0m
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:49 | Last price: 101830.00[0m
-Response: {'serverTime': 1750692229591}
-[96mUpdating bookkeeper for date: 2025-06-23, price: 101830.00...[0m
+[93mTick received at 2025-06-23 23:26:43 | Last price: 101789.10[0m
+Response: {'serverTime': 1750692403175}
+[96mUpdating bookkeeper for date: 2025-06-23, price: 101789.10...[0m
 [96mOpen orders:[0m 0 | Queue OK: True
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mCollecting new data and aggregating features...[0m
-Callback: (datetime.datetime(2025, 6, 23, 23, 23, 49, 424480), '101830.00')
+Callback: (datetime.datetime(2025, 6, 23, 23, 26, 42, 999150), '101789.10')
 [ANALYZE] Running feature engineering...
 /Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/trading_engine/main_trading_strategy.py:255: FutureWarning: Series.replace without 'value' and with non-dict-like 'to_replace' is deprecated and will raise in a future version. Explicitly specify the new values instead.
   rs = gain / loss.replace(to_replace=0).ffill().bfill()
-[96mModel output:[0m ('Hold', 101830.0, '2025-06-23 23:23:49')
-[92mSignal: HOLD | Limit price: 101830.0[0m
-[93mShort_MA_1st_Deriv: 0.0 | Kalman_1st_Deriv: 483807.6923076922[0m
+[96mModel output:[0m ('Hold', 101789.1, '2025-06-23 23:26:43')
+[92mSignal: HOLD | Limit price: 101789.1[0m
+[93mShort_MA_1st_Deriv: 0.0 | Kalman_1st_Deriv: 1252788.923076923[0m
 [93mHOLD confirmed; insufficient momentum for override.[0m
 
 [96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:51 | Last price: 101829.90[0m
-Response: {'serverTime': 1750692231495}
-[96mUpdating bookkeeper for date: 2025-06-23, price: 101829.90...[0m
+[93mTick received at 2025-06-23 23:26:44 | Last price: 101782.10[0m
+Response: {'serverTime': 1750692404221}
+[96mUpdating bookkeeper for date: 2025-06-23, price: 101782.10...[0m
 [96mOpen orders:[0m 0 | Queue OK: True
 [96mRisk check:[0m stop_loss: False, trading_halt: False
 [96mCollecting new data and aggregating features...[0m
-Callback: (datetime.datetime(2025, 6, 23, 23, 23, 51, 312888), '101829.90')
+Callback: (datetime.datetime(2025, 6, 23, 23, 26, 44, 39308), '101782.10')
 [ANALYZE] Running feature engineering...
 /Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/trading_engine/main_trading_strategy.py:255: FutureWarning: Series.replace without 'value' and with non-dict-like 'to_replace' is deprecated and will raise in a future version. Explicitly specify the new values instead.
   rs = gain / loss.replace(to_replace=0).ffill().bfill()
-[96mModel output:[0m ('Sell', 101829.9, '2025-06-23 23:23:51')
-[92mSignal: SELL | Limit price: 101829.9[0m
-[96mCurrent BTC position: -0.081[0m
-[93mTrade not approved for action: NONE[0m
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:52 | Last price: 101829.90[0m
-Response: {'serverTime': 1750692232793}
-[96mUpdating bookkeeper for date: 2025-06-23, price: 101829.90...[0m
-[96mOpen orders:[0m 0 | Queue OK: True
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mCollecting new data and aggregating features...[0m
-Callback: (datetime.datetime(2025, 6, 23, 23, 23, 52, 622611), '101829.90')
-[ANALYZE] Running feature engineering...
-/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/trading_engine/main_trading_strategy.py:255: FutureWarning: Series.replace without 'value' and with non-dict-like 'to_replace' is deprecated and will raise in a future version. Explicitly specify the new values instead.
-  rs = gain / loss.replace(to_replace=0).ffill().bfill()
-[96mModel output:[0m ('Sell', 101829.9, '2025-06-23 23:23:53')
-[92mSignal: SELL | Limit price: 101829.9[0m
-[96mCurrent BTC position: -0.081[0m
-[93mTrade not approved for action: NONE[0m
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:54 | Last price: 101829.90[0m
-Response: {'serverTime': 1750692234599}
-[96mUpdating bookkeeper for date: 2025-06-23, price: 101829.90...[0m
-[96mOpen orders:[0m 0 | Queue OK: True
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mCollecting new data and aggregating features...[0m
-Callback: (datetime.datetime(2025, 6, 23, 23, 23, 54, 419905), '101829.90')
-[ANALYZE] Running feature engineering...
-/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/trading_engine/main_trading_strategy.py:255: FutureWarning: Series.replace without 'value' and with non-dict-like 'to_replace' is deprecated and will raise in a future version. Explicitly specify the new values instead.
-  rs = gain / loss.replace(to_replace=0).ffill().bfill()
-[96mModel output:[0m ('Sell', 101829.9, '2025-06-23 23:23:54')
-[92mSignal: SELL | Limit price: 101829.9[0m
-[96mCurrent BTC position: -0.081[0m
-[93mTrade not approved for action: NONE[0m
-Heartbeat: application running.
-[96m--- PERFORMANCE REPORT ---[0m
-[92m      Wallet Balance: $11,058.81[0m
-[92m    Unrealized P&L: $3.08[0m
-[92m      Realized P&L: $409.73[0m
-[96m      Sharpe Ratio: 0.2229[0m
-[96m   Maximum Drawdown: -0.00%[0m
-[96m--------------------------[0m
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:58 | Last price: 101829.90[0m
-Response: {'serverTime': 1750692238233}
-[96mUpdating bookkeeper for date: 2025-06-23, price: 101829.90...[0m
-[96mOpen orders:[0m 0 | Queue OK: True
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mCollecting new data and aggregating features...[0m
-Callback: (datetime.datetime(2025, 6, 23, 23, 23, 58, 41934), '101829.90')
-[ANALYZE] Running feature engineering...
-/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/trading_engine/main_trading_strategy.py:255: FutureWarning: Series.replace without 'value' and with non-dict-like 'to_replace' is deprecated and will raise in a future version. Explicitly specify the new values instead.
-  rs = gain / loss.replace(to_replace=0).ffill().bfill()
-[96mModel output:[0m ('Sell', 101829.9, '2025-06-23 23:23:58')
-[92mSignal: SELL | Limit price: 101829.9[0m
-[96mCurrent BTC position: -0.081[0m
-[93mTrade not approved for action: NONE[0m
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:23:59 | Last price: 101829.90[0m
-Response: {'serverTime': 1750692240094}
-[96mUpdating bookkeeper for date: 2025-06-23, price: 101829.90...[0m
-[96mOpen orders:[0m 0 | Queue OK: True
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mCollecting new data and aggregating features...[0m
-Callback: (datetime.datetime(2025, 6, 23, 23, 23, 59, 915478), '101829.90')
-[ANALYZE] Running feature engineering...
-/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/trading_engine/main_trading_strategy.py:255: FutureWarning: Series.replace without 'value' and with non-dict-like 'to_replace' is deprecated and will raise in a future version. Explicitly specify the new values instead.
-  rs = gain / loss.replace(to_replace=0).ffill().bfill()
-[96mModel output:[0m ('Sell', 101829.9, '2025-06-23 23:24:00')
-[92mSignal: SELL | Limit price: 101829.9[0m
-[96mCurrent BTC position: -0.081[0m
-[93mTrade not approved for action: NONE[0m
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:24:01 | Last price: 101830.00[0m
-Response: {'serverTime': 1750692241265}
-[96mUpdating bookkeeper for date: 2025-06-23, price: 101830.00...[0m
-[96mOpen orders:[0m 0 | Queue OK: True
-[96mRisk check:[0m stop_loss: False, trading_halt: False
-[96mCollecting new data and aggregating features...[0m
-Callback: (datetime.datetime(2025, 6, 23, 23, 24, 1, 100182), '101830.00')
-[ANALYZE] Running feature engineering...
-/Users/kendrickwinata/Desktop/QF625-Market microstructures/market-microstructure-main 2/market_microstructure_DY/market-microstructure-main/src/trading_engine/main_trading_strategy.py:255: FutureWarning: Series.replace without 'value' and with non-dict-like 'to_replace' is deprecated and will raise in a future version. Explicitly specify the new values instead.
-  rs = gain / loss.replace(to_replace=0).ffill().bfill()
-[96mModel output:[0m ('Sell', 101830.0, '2025-06-23 23:24:01')
-[92mSignal: SELL | Limit price: 101830.0[0m
-[96mCurrent BTC position: -0.081[0m
-[93mTrade not approved for action: NONE[0m
-
-[96m================== NEW TICK ==================[0m
-[93mTick received at 2025-06-23 23:24:02 | Last price: 101830.00[0m
-Response: {'serverTime': 1750692243055}
-[96mUpdating bookkeeper for date: 2025-06-23, price: 101830.00...[0m
+[96mModel output:[0m ('Hold', 101782.1, '2025-06-23 23:26:44')
+[92mSignal: HOLD | Limit price: 101782.1[0m
+[93mShort_MA_1st_Deriv: 0.0 | Kalman_1st_Deriv: 483181.0180995468[0m
+[93mHOLD confirmed; insufficient momentum for override.[0m

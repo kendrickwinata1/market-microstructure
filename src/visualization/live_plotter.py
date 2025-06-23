@@ -20,19 +20,28 @@ def live_performance_plot():
                 df['timestamp'] = pd.to_datetime(df['timestamp'])
             timestamps = df['timestamp']
             for idx, param in enumerate(param_list):
-                ax = axs.flat[idx]
+                ax = axs[idx]
                 ax.clear()
                 if param in df.columns:
-                    ax.plot(timestamps, df[param], marker='o')
-                    ax.set_title(param)
-                    ax.set_xlabel("Time")
-                    ax.set_ylabel(param)
-            fig.suptitle("Live Performance Report")
+                    ax.plot(
+                        timestamps, df[param],
+                        marker='o', linewidth=2, label=param
+                    )
+                    ax.set_title(param.replace('_', ' ').title(), fontsize=14)
+                    ax.set_xlabel("Time", fontsize=11)
+                    ax.set_ylabel(param.replace('_', ' ').title(), fontsize=11)
+                    ax.grid(True, linestyle="--", alpha=0.6)
+                    ax.legend(loc='best', fontsize=10)
+                    # Rotate x-labels for readability
+                    for label in ax.get_xticklabels():
+                        label.set_rotation(30)
+            fig.suptitle("Live Performance Report", fontsize=18, fontweight='bold')
+            fig.tight_layout(rect=[0, 0.03, 1, 0.95])
         except Exception as e:
             print("Plot update error:", e)
 
-    ani = animation.FuncAnimation(fig, animate, interval=2000)  # Update every 2s
-    fig.delaxes(axs[5])
+    ani = animation.FuncAnimation(fig, animate, interval=2000)
+    fig.delaxes(axs[5])  # Remove the 6th (unused) subplot
     plt.show()
 
 
