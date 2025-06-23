@@ -1,0 +1,1 @@
+2025-06-23 23:21:40 - Order events [contract=BTCUSDT, order_id=4632807201, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=101868.5, last_filled_qty=0.081, canceled_reason=None]

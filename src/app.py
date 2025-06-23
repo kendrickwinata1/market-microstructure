@@ -7,6 +7,10 @@ import os
 import time
 import logging
 import csv
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+import threading
 
 
 # Setup logging
@@ -25,8 +29,8 @@ from gateway.main_gateway import TradeExecutor
 from risk_manager.main_risk_manager import RiskManager
 from trading_engine.main_trading_strategy import TradingStrategy
 from rest_connect.rest_factory import RestFactory
+from visualization.live_plotter import live_performance_plot
 import sys
-from visualization.live_plotter import LivePlotter
 
 # Setup logging
 logging.basicConfig(
@@ -385,6 +389,14 @@ def on_exec():
     print("Execution callback triggered.")
 
 
+def heartbeat_loop(exec_manager):
+    heartbeat_count = 0
+    while True:
+        time.sleep(10)
+        heartbeat_count += 1
+        print("Heartbeat: application running.")
+        exec_manager.print_performance_report()
+
 if __name__ == "__main__":
     # --- Load credentials from .env and initialize main system objects ---
     load_dotenv(dotenv_path=".env")
@@ -418,12 +430,22 @@ if __name__ == "__main__":
     data_stream.connect()
 
     # --- Main application heartbeat to keep the process alive and provide basic monitoring ---
-    heartbeat_count = 0
-    while True:
-        time.sleep(10)
-        heartbeat_count += 1
-        print("Heartbeat: application running.")
+    
+    # --- Run heartbeat in a thread ---
+    t = threading.Thread(target=heartbeat_loop, args=(exec_manager,), daemon=True)
+    t.start()
 
-        # Print a performance report every 5 heartbeats (50 seconds)
-        if heartbeat_count % 1 == 0:
-            exec_manager.print_performance_report()
+    # --- Start live plotting (this MUST be on the main thread for macOS) ---
+    live_performance_plot()  # This blocks until you close the plot window
+            
+    # heartbeat_count = 0
+    # while True:
+    #     time.sleep(10)
+    #     heartbeat_count += 1
+    #     print("Heartbeat: application running.")
+
+    #     # Print a performance report every 5 heartbeats (50 seconds)
+    #     if heartbeat_count % 1 == 0:
+    #         exec_manager.print_performance_report()
+
+    # # After initializing exec_manager and before while True heartbeat
