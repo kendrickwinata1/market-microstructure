@@ -455,14 +455,3 @@ if __name__ == "__main__":
     # --- Start live plotting (this MUST be on the main thread for macOS) ---
     live_performance_plot()  # This blocks until you close the plot window
             
-    # heartbeat_count = 0
-    # while True:
-    #     time.sleep(10)
-    #     heartbeat_count += 1
-    #     print("Heartbeat: application running.")
-
-    #     # Print a performance report every 5 heartbeats (50 seconds)
-    #     if heartbeat_count % 1 == 0:
-    #         exec_manager.print_performance_report()
-
-    # # After initializing exec_manager and before while True heartbeat

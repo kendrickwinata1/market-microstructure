@@ -1,3 +1,0 @@
-2025-06-24 00:03:47 - Order events [contract=BTCUSDT, order_id=4635020217, status=OrderStatus.PARTIALLY_FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=101298.9, last_filled_qty=0.001, canceled_reason=None]
-2025-06-24 00:03:47 - Order events [contract=BTCUSDT, order_id=4635020217, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.BUY, last_filled_price=101299.2, last_filled_qty=0.08, canceled_reason=None]
-2025-06-24 00:03:55 - Order events [contract=BTCUSDT, order_id=4635024253, status=OrderStatus.FILLED, type=ExecutionType.TRADE, side=Side.SELL, last_filled_price=101303.1, last_filled_qty=0.081, canceled_reason=None]
